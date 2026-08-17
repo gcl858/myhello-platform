@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.acme.platform</groupId>
+        <artifactId>distribution</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>transfer-app</artifactId>
+    <name>transfer-app (Quarkus distribution)</name>
+    <description>
+        交易業務之可執行 Quarkus 應用。
+        組裝:
+          - platform-security
+          - platform-data-index
+          - transfer-api (含 A16229/A16220 mock Resource + DTO + OpenAPI specs)
+          - transfer-workflow (saga-transfer-workflow + saga2-transfer-workflow + 專屬 service)
+          - transfer-samples (3 個示範 workflow,可於上線前排除)
+        部署目標:獨立的 Pod / 主機,SLA 嚴格 (replica ≥ 3),不容忍對帳批次影響。
+    </description>
+
+    <dependencies>
+        <!-- platform 層 -->
+        <dependency>
+            <groupId>org.acme.platform</groupId>
+            <artifactId>platform-security</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.acme.platform</groupId>
+            <artifactId>platform-data-index</artifactId>
+        </dependency>
+
+        <!-- 業務域:transfer -->
+        <dependency>
+            <groupId>org.acme.platform</groupId>
+            <artifactId>transfer-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.acme.platform</groupId>
+            <artifactId>transfer-workflow</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.acme.platform</groupId>
+            <artifactId>transfer-samples</artifactId>
+        </dependency>
+
+        <!-- 業務域:reconciliation (僅 AuditLogService,因 saga2 workflow 對帳需要) -->
+        <dependency>
+            <groupId>org.acme.platform</groupId>
+            <artifactId>reconciliation-api</artifactId>
+        </dependency>
+
+        <!-- Kubernetes 部署描述 (可選) -->
+        <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-kubernetes</artifactId>
+        </dependency>
+
+        <!-- 測試 -->
+        <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-junit5</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>rest-assured</artifactId>
+            <version>${rest-assured.version}</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+            </resource>
+            <resource>
+                <directory>../../domain-transfer/transfer-workflow/src/main/resources</directory>
+            </resource>
+            <resource>
+                <directory>../../domain-transfer/transfer-api/src/main/resources</directory>
+            </resource>
+            <resource>
+                <directory>../../domain-transfer/transfer-samples/src/main/resources</directory>
+            </resource>
+        </resources>
+        <plugins>
+            <plugin>
+                <artifactId>maven-resources-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>sync-domain-resources</id>
+                        <phase>initialize</phase>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${project.basedir}/src/main/resources</outputDirectory>
+                            <overwrite>true</overwrite>
+                            <resources>
+                                <resource>
+                                    <directory>../../domain-transfer/transfer-workflow/src/main/resources</directory>
+                                </resource>
+                                <resource>
+                                    <directory>../../domain-transfer/transfer-api/src/main/resources</directory>
+                                </resource>
+                                <resource>
+                                    <directory>../../domain-transfer/transfer-samples/src/main/resources</directory>
+                                </resource>
+                            </resources>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>${quarkus.platform.group-id}</groupId>
+                <artifactId>quarkus-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+</project>

@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SonataFlow - Workflow Instances 實例管理控制台</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-color: #0b0f19;
+      --card-bg: rgba(22, 31, 49, 0.75);
+      --card-border: rgba(255, 255, 255, 0.08);
+      --primary: #3b82f6;
+      --primary-hover: #2563eb;
+      --accent: #8b5cf6;
+      --success: #10b981;
+      --warning: #f59e0b;
+      --danger: #ef4444;
+      --info: #06b6d4;
+      --text-main: #f3f4f6;
+      --text-muted: #9ca3af;
+      --code-bg: #111827;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      min-height: 100vh;
+      background-image: 
+        radial-gradient(circle at 15% 15%, rgba(59, 130, 246, 0.12) 0%, transparent 40%),
+        radial-gradient(circle at 85% 85%, rgba(139, 92, 246, 0.12) 0%, transparent 40%);
+      background-attachment: fixed;
+      padding-bottom: 40px;
+    }
+
+    /* Navbar Header */
+    .header {
+      background: rgba(11, 15, 25, 0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--card-border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 16px 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text-main);
+    }
+
+    .brand-logo {
+      width: 36px;
+      height: 36px;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 18px;
+      box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+    }
+
+    .brand-title {
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    .brand-subtitle {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+    }
+
+    .nav-link {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 8px 14px;
+      border-radius: 8px;
+      transition: all 0.2s ease;
+    }
+
+    .nav-link:hover, .nav-link.active {
+      color: #ffffff;
+      background: rgba(255, 255, 255, 0.06);
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 32px auto;
+      padding: 0 24px;
+    }
+
+    /* Controls Bar */
+    .controls-card {
+      background: var(--card-bg);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 20px 24px;
+      margin-bottom: 28px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    }
+
+    .search-group {
+      display: flex;
+      gap: 12px;
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .input-field {
+      background: rgba(17, 24, 39, 0.8);
+      border: 1px solid var(--card-border);
+      color: var(--text-main);
+      padding: 10px 16px;
+      border-radius: 10px;
+      font-size: 14px;
+      width: 100%;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .input-field:focus {
+      border-color: var(--primary);
+    }
+
+    .select-field {
+      background: rgba(17, 24, 39, 0.8);
+      border: 1px solid var(--card-border);
+      color: var(--text-main);
+      padding: 10px 16px;
+      border-radius: 10px;
+      font-size: 14px;
+      outline: none;
+      cursor: pointer;
+    }
+
+    .action-group {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .btn {
+      padding: 10px 18px;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s ease;
+      text-decoration: none;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary), var(--primary-hover));
+      color: #ffffff;
+      box-shadow: 0 4px 14px rgba(59, 130, 246, 0.3);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.08);
+      color: var(--text-main);
+      border: 1px solid var(--card-border);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.14);
+    }
+
+    .btn-success {
+      background: linear-gradient(135deg, #10b981, #059669);
+      color: #ffffff;
+      box-shadow: 0 4px 14px rgba(16, 185, 129, 0.3);
+    }
+
+    .btn-success:hover {
+      transform: translateY(-1px);
+    }
+
+    .auto-refresh {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .auto-refresh input {
+      accent-color: var(--primary);
+      cursor: pointer;
+    }
+
+    /* Stats Grid */
+    .stats-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      margin-bottom: 28px;
+    }
+
+    .stat-card {
+      background: var(--card-bg);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .stat-title {
+      font-size: 13px;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .stat-value {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    /* Table & Cards */
+    .table-container {
+      background: var(--card-bg);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+    }
+
+    .instances-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 14px;
+    }
+
+    .instances-table th {
+      background: rgba(17, 24, 39, 0.6);
+      padding: 16px 20px;
+      font-weight: 600;
+      color: var(--text-muted);
+      border-bottom: 1px solid var(--card-border);
+      text-transform: uppercase;
+      font-size: 11px;
+      letter-spacing: 0.05em;
+    }
+
+    .instances-table td {
+      padding: 18px 20px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+      vertical-align: middle;
+    }
+
+    .instances-table tr:hover {
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .instance-id {
+      font-family: 'Fira Code', monospace;
+      font-size: 13px;
+      color: #60a5fa;
+      background: rgba(59, 130, 246, 0.1);
+      padding: 4px 8px;
+      border-radius: 6px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .copy-btn {
+      cursor: pointer;
+      opacity: 0.6;
+      transition: opacity 0.2s;
+    }
+
+    .copy-btn:hover {
+      opacity: 1;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+
+    .badge-completed {
+      background: rgba(16, 185, 129, 0.15);
+      color: #34d399;
+      border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+
+    .badge-active {
+      background: rgba(59, 130, 246, 0.15);
+      color: #60a5fa;
+      border: 1px solid rgba(59, 130, 246, 0.3);
+    }
+
+    .badge-error {
+      background: rgba(239, 68, 68, 0.15);
+      color: #f87171;
+      border: 1px solid rgba(239, 68, 68, 0.3);
+    }
+
+    .badge-aborted {
+      background: rgba(245, 158, 11, 0.15);
+      color: #fbbf24;
+      border: 1px solid rgba(245, 158, 11, 0.3);
+    }
+
+    .details-row {
+      background: rgba(11, 15, 25, 0.5) !important;
+    }
+
+    .details-box {
+      padding: 16px 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .code-block {
+      background: var(--code-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 10px;
+      padding: 14px;
+      font-family: 'Fira Code', monospace;
+      font-size: 12px;
+      color: #e5e7eb;
+      max-height: 200px;
+      overflow-y: auto;
+      white-space: pre-wrap;
+    }
+
+    .details-title {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Modal / Drawer for Saga2 Trigger */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(8px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+
+    .modal-overlay.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .modal-card {
+      background: var(--bg-color);
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      width: 500px;
+      max-width: 90%;
+      padding: 28px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    }
+
+    .modal-title {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .modal-desc {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 16px;
+    }
+
+    .form-label {
+      display: block;
+      font-size: 13px;
+      font-weight: 500;
+      margin-bottom: 6px;
+      color: var(--text-muted);
+    }
+
+    .empty-state {
+      padding: 60px 20px;
+      text-align: center;
+      color: var(--text-muted);
+    }
+
+    .empty-icon {
+      font-size: 48px;
+      margin-bottom: 12px;
+      opacity: 0.5;
+    }
+
+    @media (max-width: 768px) {
+      .header { padding: 16px; flex-direction: column; gap: 12px; }
+      .details-box { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar Header -->
+  <header class="header">
+    <a href="./index.html" class="brand">
+      <div class="brand-logo">SF</div>
+      <div>
+        <div class="brand-title">SonataFlow Control Center</div>
+        <div class="brand-subtitle">SQLite Data Index Engine 10.2.0</div>
+      </div>
+    </a>
+    <nav class="nav-links">
+      <a href="./index.html" class="nav-link">🏠 門戶主頁</a>
+      <a href="./instances.html" class="nav-link active">🔄 Workflow Instances</a>
+      <a href="./dashboard.html" class="nav-link">📊 Custom Dashboard</a>
+      <a href="/q/dev-ui" class="nav-link" target="_blank">🛠️ Dev UI</a>
+      <a href="/q/swagger-ui/" class="nav-link" target="_blank">📖 Swagger UI</a>
+    </nav>
+  </header>
+
+  <div class="container">
+
+    <!-- Controls Bar -->
+    <div class="controls-card">
+      <div class="search-group">
+        <input type="text" id="searchInput" class="input-field" placeholder="🔍 搜尋 Instance ID 或 Workflow 名稱..." oninput="renderInstances()">
+        <select id="statusFilter" class="select-field" onchange="renderInstances()">
+          <option value="ALL">所有狀態 (All States)</option>
+          <option value="ACTIVE">ACTIVE (進行中)</option>
+          <option value="COMPLETED">COMPLETED (已完成)</option>
+          <option value="ERROR">ERROR (異常失敗)</option>
+          <option value="ABORTED">ABORTED (已中止)</option>
+        </select>
+      </div>
+      <div class="action-group">
+        <label class="auto-refresh">
+          <input type="checkbox" id="autoRefreshToggle" onchange="toggleAutoRefresh()"> 5s 自動更新
+        </label>
+        <button class="btn btn-secondary" onclick="fetchInstances()">🔄 重新整理</button>
+        <button class="btn btn-success" onclick="openTriggerModal()">⚡ 觸發新 Saga2 轉帳流程</button>
+      </div>
+    </div>
+
+    <!-- Stats Summary Row -->
+    <div class="stats-row">
+      <div class="stat-card">
+        <div class="stat-title">總 Process Instances 數</div>
+        <div class="stat-value" id="statTotal">0</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-title">進行中 (Active)</div>
+        <div class="stat-value" style="color: var(--primary)" id="statActive">0</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-title">成功完成 (Completed)</div>
+        <div class="stat-value" style="color: var(--success)" id="statCompleted">0</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-title">異常/中斷 (Error/Aborted)</div>
+        <div class="stat-value" style="color: var(--danger)" id="statError">0</div>
+      </div>
+    </div>
+
+    <!-- Instances Table -->
+    <div class="table-container">
+      <table class="instances-table">
+        <thead>
+          <tr>
+            <th>Instance ID</th>
+            <th>Workflow 名稱</th>
+            <th>狀態 (State)</th>
+            <th>開始時間</th>
+            <th>結束/耗時</th>
+            <th>操作</th>
+          </tr>
+        </thead>
+        <tbody id="instancesTableBody">
+          <!-- Dynamically Rendered -->
+        </tbody>
+      </table>
+      <div id="emptyState" class="empty-state" style="display: none;">
+        <div class="empty-icon">📭</div>
+        <h3>未找到符合條件的 Process Instances</h3>
+        <p style="margin-top: 6px; font-size: 13px;">點擊「⚡ 觸發新 Saga2 轉帳流程」按鈕，立即建立第一個工作流實例。</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Modal for Saga2 Trigger -->
+  <div class="modal-overlay" id="triggerModal">
+    <div class="modal-card">
+      <div class="modal-title">⚡ 觸發 Saga2 雙階段轉帳工作流</div>
+      <div class="modal-desc">此操作將發送 POST 請求至 <code>/saga2-transfer-workflow</code>，自動建立並執行全新 Saga 轉帳實例。</div>
+      <form id="triggerForm" onsubmit="handleTriggerSubmit(event)">
+        <div class="form-group">
+          <label class="form-label">扣款帳號 (Account A)</label>
+          <input type="text" id="accountA" class="input-field" value="Account_Web_UI_A" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">入帳帳號 (Account B)</label>
+          <input type="text" id="accountB" class="input-field" value="Account_Web_UI_B" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">轉帳金額 (AMT)</label>
+          <input type="number" id="amt" class="input-field" value="500" min="1" required>
+        </div>
+        <div style="display: flex; justify-content: flex-end; gap: 12px; margin-top: 24px;">
+          <button type="button" class="btn btn-secondary" onclick="closeTriggerModal()">取消</button>
+          <button type="submit" class="btn btn-primary" id="triggerSubmitBtn">發送觸發請求</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    let rawInstances = [];
+    let autoRefreshInterval = null;
+    let expandedRowId = null;
+
+    async function fetchInstances() {
+      try {
+        const response = await fetch('/graphql', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            query: `
+              query {
+                ProcessInstances {
+                  id
+                  processId
+                  processName
+                  state
+                  start
+                  end
+                  variables
+                  nodes {
+                    id
+                    name
+                    enter
+                    exit
+                  }
+                }
+              }
+            `
+          })
+        });
+
+        const result = await response.json();
+        if (result.data && result.data.ProcessInstances) {
+          rawInstances = result.data.ProcessInstances;
+        } else {
+          rawInstances = [];
+        }
+        updateStats();
+        renderInstances();
+      } catch (err) {
+        console.error('Failed to fetch instances from GraphQL:', err);
+      }
+    }
+
+    function updateStats() {
+      document.getElementById('statTotal').innerText = rawInstances.length;
+      document.getElementById('statActive').innerText = rawInstances.filter(i => i.state === 'ACTIVE').length;
+      document.getElementById('statCompleted').innerText = rawInstances.filter(i => i.state === 'COMPLETED').length;
+      document.getElementById('statError').innerText = rawInstances.filter(i => i.state === 'ERROR' || i.state === 'ABORTED').length;
+    }
+
+    function renderInstances() {
+      const tbody = document.getElementById('instancesTableBody');
+      const emptyState = document.getElementById('emptyState');
+      const search = document.getElementById('searchInput').value.toLowerCase().trim();
+      const statusFilter = document.getElementById('statusFilter').value;
+
+      const filtered = rawInstances.filter(inst => {
+        const matchSearch = inst.id.toLowerCase().includes(search) || (inst.processId && inst.processId.toLowerCase().includes(search));
+        const matchStatus = statusFilter === 'ALL' || inst.state === statusFilter;
+        return matchSearch && matchStatus;
+      });
+
+      if (filtered.length === 0) {
+        tbody.innerHTML = '';
+        emptyState.style.display = 'block';
+        return;
+      }
+
+      emptyState.style.display = 'none';
+      let html = '';
+
+      filtered.forEach(inst => {
+        const isExpanded = expandedRowId === inst.id;
+        const stateBadge = getBadgeHTML(inst.state);
+        const startTime = inst.start ? new Date(inst.start).toLocaleString('zh-TW') : '-';
+        const endTime = inst.end ? new Date(inst.end).toLocaleString('zh-TW') : (inst.state === 'ACTIVE' ? '⏳ 執行中' : '-');
+
+        html += `
+          <tr>
+            <td>
+              <span class="instance-id">
+                ${inst.id.substring(0, 8)}...
+                <span class="copy-btn" onclick="copyToClipboard('${inst.id}')" title="複製完整 ID">📋</span>
+              </span>
+            </td>
+            <td>
+              <strong style="color: var(--text-main); font-size: 14px;">${inst.processId || inst.processName || 'N/A'}</strong>
+            </td>
+            <td>${stateBadge}</td>
+            <td style="color: var(--text-muted); font-size: 13px;">${startTime}</td>
+            <td style="color: var(--text-muted); font-size: 13px;">${endTime}</td>
+            <td>
+              <button class="btn btn-secondary" style="padding: 6px 12px; font-size: 12px;" onclick="toggleDetails('${inst.id}')">
+                ${isExpanded ? '收起細節 ▲' : '檢視細節 ▼'}
+              </button>
+            </td>
+          </tr>
+        `;
+
+        if (isExpanded) {
+          const varJSON = parseVariables(inst.variables);
+          const nodesList = inst.nodes && inst.nodes.length > 0 
+            ? inst.nodes.map(n => `🔹 ${n.name || n.id} (enter: ${n.enter ? new Date(n.enter).toLocaleTimeString() : '-'})`).join('\n')
+            : '無節點軌跡';
+
+          html += `
+            <tr class="details-row">
+              <td colspan="6">
+                <div class="details-box">
+                  <div>
+                    <div class="details-title">📦 流程變數快照 (Process Variables)</div>
+                    <div class="code-block">${escapeHTML(JSON.stringify(varJSON, null, 2))}</div>
+                  </div>
+                  <div>
+                    <div class="details-title">📌 執行節點軌跡 (Node Execution Timeline)</div>
+                    <div class="code-block">${escapeHTML(nodesList)}</div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          `;
+        }
+      });
+
+      tbody.innerHTML = html;
+    }
+
+    function parseVariables(vars) {
+      if (!vars) return {};
+      if (typeof vars === 'object') return vars;
+      try {
+        return JSON.parse(vars);
+      } catch (e) {
+        return { raw: vars };
+      }
+    }
+
+    function getBadgeHTML(state) {
+      switch (state) {
+        case 'COMPLETED': return `<span class="badge badge-completed">✓ COMPLETED</span>`;
+        case 'ACTIVE': return `<span class="badge badge-active">⚡ ACTIVE</span>`;
+        case 'ERROR': return `<span class="badge badge-error">✕ ERROR</span>`;
+        case 'ABORTED': return `<span class="badge badge-aborted">🚫 ABORTED</span>`;
+        default: return `<span class="badge badge-secondary">${state}</span>`;
+      }
+    }
+
+    function toggleDetails(id) {
+      expandedRowId = expandedRowId === id ? null : id;
+      renderInstances();
+    }
+
+    function copyToClipboard(text) {
+      navigator.clipboard.writeText(text);
+      alert('已複製 ID: ' + text);
+    }
+
+    function toggleAutoRefresh() {
+      const isChecked = document.getElementById('autoRefreshToggle').checked;
+      if (isChecked) {
+        autoRefreshInterval = setInterval(fetchInstances, 5000);
+      } else if (autoRefreshInterval) {
+        clearInterval(autoRefreshInterval);
+        autoRefreshInterval = null;
+      }
+    }
+
+    function openTriggerModal() {
+      document.getElementById('triggerModal').classList.add('active');
+    }
+
+    function closeTriggerModal() {
+      document.getElementById('triggerModal').classList.remove('active');
+    }
+
+    async function handleTriggerSubmit(e) {
+      e.preventDefault();
+      const btn = document.getElementById('triggerSubmitBtn');
+      btn.innerText = '觸發中...';
+      btn.disabled = true;
+
+      const payload = {
+        Account_A: document.getElementById('accountA').value,
+        Account_B: document.getElementById('accountB').value,
+        AMT: parseInt(document.getElementById('amt').value, 10)
+      };
+
+      try {
+        const res = await fetch('/saga2-transfer-workflow', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        const result = await res.json();
+        closeTriggerModal();
+        alert('🎉 Saga2 轉帳流程執行完畢！狀態: ' + result.status + ' (' + result.message + ')');
+        await fetchInstances();
+      } catch (err) {
+        alert('❌ 觸發失敗: ' + err.message);
+      } finally {
+        btn.innerText = '發送觸發請求';
+        btn.disabled = false;
+      }
+    }
+
+    function escapeHTML(str) {
+      return str.replace(/[&<>'"]/g, 
+        tag => ({
+          '&': '&amp;',
+          '<': '&lt;',
+          '>': '&gt;',
+          "'": '&#39;',
+          '"': '&quot;'
+        }[tag] || tag)
+      );
+    }
+
+    // Initial Load
+    fetchInstances();
+  </script>
+</body>
+</html>

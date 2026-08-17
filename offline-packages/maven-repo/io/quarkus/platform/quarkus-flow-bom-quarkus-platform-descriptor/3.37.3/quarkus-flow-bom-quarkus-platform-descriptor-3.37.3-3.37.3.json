@@ -1,0 +1,209 @@
+{
+  "id" : "io.quarkus.platform:quarkus-flow-bom-quarkus-platform-descriptor:3.37.3:json:3.37.3",
+  "platform" : true,
+  "bom" : "io.quarkus.platform:quarkus-flow-bom::pom:3.37.3",
+  "quarkus-core-version" : "3.37.3",
+  "extensions" : [ {
+    "name" : "Flow Durable Kubernetes",
+    "description" : "Durable Workflows support on Kubernetes",
+    "metadata" : {
+      "built-with-quarkus-core" : "3.33.2.1",
+      "categories" : [ "integration", "kubernetes" ],
+      "extension-dependencies" : [ "io.quarkiverse.flow:quarkus-flow", "io.quarkus:quarkus-jackson", "io.quarkiverse.jackson-jq:quarkus-jackson-jq", "io.quarkus:quarkus-proxy-registry", "io.quarkus:quarkus-rest-client-jackson", "io.quarkus:quarkus-rest-jackson-common", "io.quarkus:quarkus-rest-common", "io.quarkus:quarkus-rest-client", "io.quarkus:quarkus-rest-client-jaxrs", "io.quarkus:quarkus-rest-client-config", "io.quarkus:quarkus-smallrye-fault-tolerance", "io.quarkus:quarkus-mutiny", "io.quarkus:quarkus-smallrye-context-propagation", "io.quarkus:quarkus-arc", "io.quarkus:quarkus-core", "io.quarkus:quarkus-kubernetes-client", "io.quarkus:quarkus-kubernetes-client-internal", "io.quarkus:quarkus-tls-registry", "io.quarkus:quarkus-vertx", "io.quarkus:quarkus-netty", "io.quarkus:quarkus-scheduler", "io.quarkus:quarkus-virtual-threads", "io.quarkus:quarkus-smallrye-health", "io.quarkus:quarkus-vertx-http", "io.quarkus:quarkus-jsonp" ],
+      "guide" : "https://docs.quarkiverse.io/quarkus-flow/dev/",
+      "keywords" : [ "workflow", "workflows", "cncf", "serverless", "cloudevents", "durable", "kubernetes" ],
+      "minimum-java-version" : "17",
+      "requires-quarkus-core" : "[3.33,)",
+      "scm-url" : "https://github.com/quarkiverse/quarkus-flow",
+      "status" : "preview"
+    },
+    "artifact" : "io.quarkiverse.flow:quarkus-flow-durable-kubernetes::jar:0.12.0",
+    "origins" : [ "io.quarkus.platform:quarkus-flow-bom-quarkus-platform-descriptor:3.37.3:json:3.37.3" ]
+  }, {
+    "name" : "Flow JPA",
+    "description" : "JPA Persistence Plugin\n",
+    "metadata" : {
+      "built-with-quarkus-core" : "3.33.2.1",
+      "categories" : [ "integration", "persistence" ],
+      "extension-dependencies" : [ "io.quarkus:quarkus-arc", "io.quarkus:quarkus-core", "io.quarkus:quarkus-hibernate-orm-panache", "io.quarkus:quarkus-hibernate-orm", "io.quarkus:quarkus-agroal", "io.quarkus:quarkus-datasource", "io.quarkus:quarkus-devservices", "io.quarkus:quarkus-narayana-jta", "io.quarkus:quarkus-mutiny", "io.quarkus:quarkus-caffeine", "io.quarkus:quarkus-hibernate-orm-panache-common", "io.quarkiverse.flow:quarkus-flow-persistence-common", "io.quarkiverse.flow:quarkus-flow", "io.quarkus:quarkus-jackson", "io.quarkiverse.jackson-jq:quarkus-jackson-jq", "io.quarkus:quarkus-proxy-registry", "io.quarkus:quarkus-rest-client-jackson", "io.quarkus:quarkus-rest-jackson-common", "io.quarkus:quarkus-rest-common", "io.quarkus:quarkus-vertx", "io.quarkus:quarkus-netty", "io.quarkus:quarkus-virtual-threads", "io.quarkus:quarkus-jsonp", "io.quarkus:quarkus-rest-client", "io.quarkus:quarkus-rest-client-jaxrs", "io.quarkus:quarkus-rest-client-config", "io.quarkus:quarkus-tls-registry", "io.quarkus:quarkus-smallrye-fault-tolerance", "io.quarkus:quarkus-smallrye-context-propagation" ],
+      "guide" : "https://docs.quarkiverse.io/quarkus-flow/dev/",
+      "keywords" : [ "workflow", "workflows", "cncf", "serverless", "cloudevents", "jpa", "postgresql", "persistence" ],
+      "minimum-java-version" : "17",
+      "requires-quarkus-core" : "[3.33,)",
+      "scm-url" : "https://github.com/quarkiverse/quarkus-flow",
+      "status" : "preview"
+    },
+    "artifact" : "io.quarkiverse.flow:quarkus-flow-jpa::jar:0.12.0",
+    "origins" : [ "io.quarkus.platform:quarkus-flow-bom-quarkus-platform-descriptor:3.37.3:json:3.37.3" ]
+  }, {
+    "name" : "Flow LangChain4j",
+    "description" : "LangChain4j Agentic Workflow implementation for Quarkus Flow.\n",
+    "metadata" : {
+      "built-with-quarkus-core" : "3.33.2.1",
+      "categories" : [ "integration", "ai" ],
+      "extension-dependencies" : [ "io.quarkus:quarkus-arc", "io.quarkus:quarkus-core", "io.quarkiverse.flow:quarkus-flow", "io.quarkus:quarkus-jackson", "io.quarkiverse.jackson-jq:quarkus-jackson-jq", "io.quarkus:quarkus-proxy-registry", "io.quarkus:quarkus-rest-client-jackson", "io.quarkus:quarkus-rest-jackson-common", "io.quarkus:quarkus-rest-common", "io.quarkus:quarkus-jsonp", "io.quarkus:quarkus-rest-client", "io.quarkus:quarkus-rest-client-jaxrs", "io.quarkus:quarkus-rest-client-config", "io.quarkus:quarkus-tls-registry", "io.quarkus:quarkus-smallrye-fault-tolerance", "io.quarkus:quarkus-mutiny", "io.quarkus:quarkus-smallrye-context-propagation", "io.quarkiverse.langchain4j:quarkus-langchain4j-agentic", "io.quarkiverse.langchain4j:quarkus-langchain4j-core", "io.quarkus:quarkus-qute", "io.quarkus:quarkus-vertx", "io.quarkus:quarkus-netty", "io.quarkus:quarkus-virtual-threads" ],
+      "guide" : "https://docs.quarkiverse.io/quarkus-flow/dev/",
+      "keywords" : [ "workflow", "workflows", "cncf", "serverless", "cloudevents", "langchain4j", "ai", "agentic" ],
+      "minimum-java-version" : "17",
+      "requires-quarkus-core" : "[3.33,)",
+      "scm-url" : "https://github.com/quarkiverse/quarkus-flow",
+      "status" : "preview"
+    },
+    "artifact" : "io.quarkiverse.flow:quarkus-flow-langchain4j::jar:0.12.0",
+    "origins" : [ "io.quarkus.platform:quarkus-flow-bom-quarkus-platform-descriptor:3.37.3:json:3.37.3" ]
+  }, {
+    "name" : "Flow Messaging",
+    "description" : "SmallRye Messaging support for Quarkus Flow.\nPlease see the main extension for more details.\n",
+    "metadata" : {
+      "built-with-quarkus-core" : "3.33.2.1",
+      "categories" : [ "integration", "messaging" ],
+      "extension-dependencies" : [ "io.quarkus:quarkus-arc", "io.quarkus:quarkus-core", "io.quarkus:quarkus-jackson", "io.quarkus:quarkus-messaging", "io.quarkus:quarkus-mutiny-reactive-streams-operators", "io.quarkus:quarkus-mutiny", "io.quarkus:quarkus-smallrye-context-propagation", "io.quarkus:quarkus-vertx", "io.quarkus:quarkus-netty", "io.quarkus:quarkus-virtual-threads" ],
+      "guide" : "https://docs.quarkiverse.io/quarkus-flow/dev/",
+      "keywords" : [ "workflow", "workflows", "cncf", "serverless", "cloudevents", "smallrye", "messaging" ],
+      "minimum-java-version" : "17",
+      "requires-quarkus-core" : "[3.33,)",
+      "scm-url" : "https://github.com/quarkiverse/quarkus-flow",
+      "status" : "preview"
+    },
+    "artifact" : "io.quarkiverse.flow:quarkus-flow-messaging::jar:0.12.0",
+    "origins" : [ "io.quarkus.platform:quarkus-flow-bom-quarkus-platform-descriptor:3.37.3:json:3.37.3" ]
+  }, {
+    "name" : "Flow MVStore",
+    "description" : "MVStore Persistence Plugin\n",
+    "metadata" : {
+      "built-with-quarkus-core" : "3.33.2.1",
+      "categories" : [ "integration", "persistence" ],
+      "extension-dependencies" : [ "io.quarkus:quarkus-arc", "io.quarkus:quarkus-core", "io.quarkiverse.flow:quarkus-flow-persistence-common", "io.quarkiverse.flow:quarkus-flow", "io.quarkus:quarkus-jackson", "io.quarkiverse.jackson-jq:quarkus-jackson-jq", "io.quarkus:quarkus-proxy-registry", "io.quarkus:quarkus-rest-client-jackson", "io.quarkus:quarkus-rest-jackson-common", "io.quarkus:quarkus-rest-common", "io.quarkus:quarkus-vertx", "io.quarkus:quarkus-netty", "io.quarkus:quarkus-virtual-threads", "io.quarkus:quarkus-jsonp", "io.quarkus:quarkus-rest-client", "io.quarkus:quarkus-rest-client-jaxrs", "io.quarkus:quarkus-rest-client-config", "io.quarkus:quarkus-tls-registry", "io.quarkus:quarkus-smallrye-fault-tolerance", "io.quarkus:quarkus-mutiny", "io.quarkus:quarkus-smallrye-context-propagation" ],
+      "guide" : "https://docs.quarkiverse.io/quarkus-flow/dev/",
+      "keywords" : [ "workflow", "workflows", "cncf", "serverless", "cloudevents", "mvstore", "persistence" ],
+      "minimum-java-version" : "17",
+      "requires-quarkus-core" : "[3.33,)",
+      "scm-url" : "https://github.com/quarkiverse/quarkus-flow",
+      "status" : "preview"
+    },
+    "artifact" : "io.quarkiverse.flow:quarkus-flow-mvstore::jar:0.12.0",
+    "origins" : [ "io.quarkus.platform:quarkus-flow-bom-quarkus-platform-descriptor:3.37.3:json:3.37.3" ]
+  }, {
+    "name" : "Flow Persistence Common",
+    "description" : "Common persistence components shared across Flow persistence implementations\n",
+    "metadata" : {
+      "built-with-quarkus-core" : "3.33.2.1",
+      "categories" : [ "integration", "persistence" ],
+      "extension-dependencies" : [ "io.quarkus:quarkus-arc", "io.quarkus:quarkus-core", "io.quarkiverse.flow:quarkus-flow", "io.quarkus:quarkus-jackson", "io.quarkiverse.jackson-jq:quarkus-jackson-jq", "io.quarkus:quarkus-proxy-registry", "io.quarkus:quarkus-rest-client-jackson", "io.quarkus:quarkus-rest-jackson-common", "io.quarkus:quarkus-rest-common", "io.quarkus:quarkus-vertx", "io.quarkus:quarkus-netty", "io.quarkus:quarkus-virtual-threads", "io.quarkus:quarkus-jsonp", "io.quarkus:quarkus-rest-client", "io.quarkus:quarkus-rest-client-jaxrs", "io.quarkus:quarkus-rest-client-config", "io.quarkus:quarkus-tls-registry", "io.quarkus:quarkus-smallrye-fault-tolerance", "io.quarkus:quarkus-mutiny", "io.quarkus:quarkus-smallrye-context-propagation" ],
+      "guide" : "https://docs.quarkiverse.io/quarkus-flow/dev/",
+      "keywords" : [ "workflow", "workflows", "persistence" ],
+      "minimum-java-version" : "17",
+      "requires-quarkus-core" : "[3.33,)",
+      "scm-url" : "https://github.com/quarkiverse/quarkus-flow",
+      "status" : "preview"
+    },
+    "artifact" : "io.quarkiverse.flow:quarkus-flow-persistence-common::jar:0.12.0",
+    "origins" : [ "io.quarkus.platform:quarkus-flow-bom-quarkus-platform-descriptor:3.37.3:json:3.37.3" ]
+  }, {
+    "name" : "Flow Quartz",
+    "description" : "Flow scheduler implemetation relying on quarkus quartz\n",
+    "metadata" : {
+      "built-with-quarkus-core" : "3.33.2.1",
+      "categories" : [ "integration", "scheduler" ],
+      "extension-dependencies" : [ "io.quarkus:quarkus-arc", "io.quarkus:quarkus-core", "io.quarkus:quarkus-quartz", "io.quarkus:quarkus-scheduler", "io.quarkus:quarkus-virtual-threads", "io.quarkus:quarkus-vertx", "io.quarkus:quarkus-netty", "io.quarkus:quarkus-flyway", "io.quarkus:quarkus-agroal", "io.quarkus:quarkus-datasource", "io.quarkus:quarkus-devservices", "io.quarkus:quarkus-narayana-jta", "io.quarkus:quarkus-mutiny", "io.quarkiverse.flow:quarkus-flow", "io.quarkus:quarkus-jackson", "io.quarkiverse.jackson-jq:quarkus-jackson-jq", "io.quarkus:quarkus-proxy-registry", "io.quarkus:quarkus-rest-client-jackson", "io.quarkus:quarkus-rest-jackson-common", "io.quarkus:quarkus-rest-common", "io.quarkus:quarkus-jsonp", "io.quarkus:quarkus-rest-client", "io.quarkus:quarkus-rest-client-jaxrs", "io.quarkus:quarkus-rest-client-config", "io.quarkus:quarkus-tls-registry", "io.quarkus:quarkus-smallrye-fault-tolerance", "io.quarkus:quarkus-smallrye-context-propagation" ],
+      "guide" : "https://docs.quarkiverse.io/quarkus-flow/dev/",
+      "keywords" : [ "workflow", "workflows", "cncf", "serverless", "cloudevents", "scheduler", "quartz" ],
+      "minimum-java-version" : "17",
+      "requires-quarkus-core" : "[3.33,)",
+      "scm-url" : "https://github.com/quarkiverse/quarkus-flow",
+      "status" : "preview"
+    },
+    "artifact" : "io.quarkiverse.flow:quarkus-flow-quartz-scheduler::jar:0.12.0",
+    "origins" : [ "io.quarkus.platform:quarkus-flow-bom-quarkus-platform-descriptor:3.37.3:json:3.37.3" ]
+  }, {
+    "name" : "Flow Redis",
+    "description" : "Redis Persistence Plugin\n",
+    "metadata" : {
+      "built-with-quarkus-core" : "3.33.2.1",
+      "categories" : [ "integration", "persistence" ],
+      "extension-dependencies" : [ "io.quarkus:quarkus-arc", "io.quarkus:quarkus-core", "io.quarkus:quarkus-redis-client", "io.quarkus:quarkus-vertx", "io.quarkus:quarkus-netty", "io.quarkus:quarkus-mutiny", "io.quarkus:quarkus-virtual-threads", "io.quarkus:quarkus-jackson", "io.quarkus:quarkus-tls-registry", "io.quarkus:quarkus-proxy-registry", "io.quarkus:quarkus-devservices", "io.quarkiverse.flow:quarkus-flow-persistence-common", "io.quarkiverse.flow:quarkus-flow", "io.quarkiverse.jackson-jq:quarkus-jackson-jq", "io.quarkus:quarkus-rest-client-jackson", "io.quarkus:quarkus-rest-jackson-common", "io.quarkus:quarkus-rest-common", "io.quarkus:quarkus-jsonp", "io.quarkus:quarkus-rest-client", "io.quarkus:quarkus-rest-client-jaxrs", "io.quarkus:quarkus-rest-client-config", "io.quarkus:quarkus-smallrye-fault-tolerance", "io.quarkus:quarkus-smallrye-context-propagation" ],
+      "guide" : "https://docs.quarkiverse.io/quarkus-flow/dev/",
+      "keywords" : [ "workflow", "workflows", "cncf", "serverless", "cloudevents", "redis", "persistence" ],
+      "minimum-java-version" : "17",
+      "requires-quarkus-core" : "[3.33,)",
+      "scm-url" : "https://github.com/quarkiverse/quarkus-flow",
+      "status" : "preview"
+    },
+    "artifact" : "io.quarkiverse.flow:quarkus-flow-redis::jar:0.12.0",
+    "origins" : [ "io.quarkus.platform:quarkus-flow-bom-quarkus-platform-descriptor:3.37.3:json:3.37.3" ]
+  }, {
+    "name" : "Flow Runner",
+    "description" : "API to enable running Quarkus Flow from HTTP endpoints\n",
+    "metadata" : {
+      "built-with-quarkus-core" : "3.33.2.1",
+      "categories" : [ "integration", "http", "api" ],
+      "extension-dependencies" : [ "io.quarkiverse.flow:quarkus-flow", "io.quarkus:quarkus-arc", "io.quarkus:quarkus-jackson", "io.quarkiverse.jackson-jq:quarkus-jackson-jq", "io.quarkus:quarkus-proxy-registry", "io.quarkus:quarkus-rest-client-jackson", "io.quarkus:quarkus-rest-client", "io.quarkus:quarkus-rest-client-jaxrs", "io.quarkus:quarkus-rest-client-config", "io.quarkus:quarkus-smallrye-fault-tolerance", "io.quarkus:quarkus-mutiny", "io.quarkus:quarkus-smallrye-context-propagation", "io.quarkus:quarkus-rest-jackson", "io.quarkus:quarkus-rest", "io.quarkus:quarkus-rest-common", "io.quarkus:quarkus-jsonp", "io.quarkus:quarkus-virtual-threads", "io.quarkus:quarkus-rest-jackson-common", "io.quarkus:quarkus-smallrye-openapi", "io.quarkus:quarkus-core", "io.quarkus:quarkus-vertx-http", "io.quarkus:quarkus-tls-registry", "io.quarkus:quarkus-vertx", "io.quarkus:quarkus-netty", "io.quarkus:quarkus-swagger-ui", "io.quarkus:quarkus-security" ],
+      "guide" : "https://docs.quarkiverse.io/quarkus-flow/dev/",
+      "keywords" : [ "workflow", "workflows", "cncf", "serverless", "cloudevents", "http", "runner" ],
+      "minimum-java-version" : "17",
+      "requires-quarkus-core" : "[3.33,)",
+      "scm-url" : "https://github.com/quarkiverse/quarkus-flow",
+      "status" : "preview"
+    },
+    "artifact" : "io.quarkiverse.flow:quarkus-flow-runner::jar:0.12.0",
+    "origins" : [ "io.quarkus.platform:quarkus-flow-bom-quarkus-platform-descriptor:3.37.3:json:3.37.3" ]
+  }, {
+    "name" : "Flow Scheduler",
+    "description" : "Flow scheduler implemetation relying on quarkus scheduler\n",
+    "metadata" : {
+      "built-with-quarkus-core" : "3.33.2.1",
+      "categories" : [ "integration", "scheduler" ],
+      "extension-dependencies" : [ "io.quarkus:quarkus-arc", "io.quarkus:quarkus-core", "io.quarkus:quarkus-scheduler", "io.quarkus:quarkus-virtual-threads", "io.quarkus:quarkus-vertx", "io.quarkus:quarkus-netty", "io.quarkus:quarkus-mutiny", "io.quarkiverse.flow:quarkus-flow", "io.quarkus:quarkus-jackson", "io.quarkiverse.jackson-jq:quarkus-jackson-jq", "io.quarkus:quarkus-proxy-registry", "io.quarkus:quarkus-rest-client-jackson", "io.quarkus:quarkus-rest-jackson-common", "io.quarkus:quarkus-rest-common", "io.quarkus:quarkus-jsonp", "io.quarkus:quarkus-rest-client", "io.quarkus:quarkus-rest-client-jaxrs", "io.quarkus:quarkus-rest-client-config", "io.quarkus:quarkus-tls-registry", "io.quarkus:quarkus-smallrye-fault-tolerance", "io.quarkus:quarkus-smallrye-context-propagation" ],
+      "guide" : "https://docs.quarkiverse.io/quarkus-flow/dev/",
+      "keywords" : [ "workflow", "workflows", "cncf", "serverless", "cloudevents", "scheduler" ],
+      "minimum-java-version" : "17",
+      "requires-quarkus-core" : "[3.33,)",
+      "scm-url" : "https://github.com/quarkiverse/quarkus-flow",
+      "status" : "preview"
+    },
+    "artifact" : "io.quarkiverse.flow:quarkus-flow-scheduler::jar:0.12.0",
+    "origins" : [ "io.quarkus.platform:quarkus-flow-bom-quarkus-platform-descriptor:3.37.3:json:3.37.3" ]
+  }, {
+    "name" : "Flow",
+    "description" : "Workflow engine for Quarkus based on the CNCF Workflow Specification, with Java DSL and Agentic AI support.\n",
+    "metadata" : {
+      "built-with-quarkus-core" : "3.33.2.1",
+      "categories" : [ "integration", "messaging" ],
+      "codestart" : {
+        "artifact" : "io.quarkiverse.flow:quarkus-flow:codestarts:jar:0.12.0",
+        "languages" : [ "java" ],
+        "name" : "Flow"
+      },
+      "config" : [ "quarkus.flow." ],
+      "extension-dependencies" : [ "io.quarkus:quarkus-arc", "io.quarkus:quarkus-core", "io.quarkus:quarkus-jackson", "io.quarkiverse.jackson-jq:quarkus-jackson-jq", "io.quarkus:quarkus-proxy-registry", "io.quarkus:quarkus-rest-client-jackson", "io.quarkus:quarkus-rest-jackson-common", "io.quarkus:quarkus-rest-common", "io.quarkus:quarkus-vertx", "io.quarkus:quarkus-netty", "io.quarkus:quarkus-virtual-threads", "io.quarkus:quarkus-jsonp", "io.quarkus:quarkus-rest-client", "io.quarkus:quarkus-rest-client-jaxrs", "io.quarkus:quarkus-rest-client-config", "io.quarkus:quarkus-tls-registry", "io.quarkus:quarkus-smallrye-fault-tolerance", "io.quarkus:quarkus-mutiny", "io.quarkus:quarkus-smallrye-context-propagation" ],
+      "guide" : "https://docs.quarkiverse.io/quarkus-flow/dev/",
+      "keywords" : [ "workflow", "workflows", "cncf", "serverless", "cloudevents" ],
+      "minimum-java-version" : "17",
+      "requires-quarkus-core" : "[3.33,)",
+      "scm-url" : "https://github.com/quarkiverse/quarkus-flow"
+    },
+    "artifact" : "io.quarkiverse.flow:quarkus-flow::jar:0.12.0",
+    "origins" : [ "io.quarkus.platform:quarkus-flow-bom-quarkus-platform-descriptor:3.37.3:json:3.37.3" ]
+  } ],
+  "categories" : [ {
+    "id" : "integration",
+    "name" : "Integration",
+    "description" : "Connectors to read to write from a skew of systems (file, S#, Twitter, etc)",
+    "metadata" : {
+      "pinned" : [ "org.apache.camel.quarkus:camel-quarkus-core", "org.apache.camel.quarkus:camel-quarkus-core-xml" ]
+    }
+  }, {
+    "id" : "business-automation",
+    "name" : "Business Automation",
+    "description" : "Rules engine, BPM, etc"
+  } ],
+  "metadata" : {
+    "last-bom-update" : "io.quarkus.platform:quarkus-flow-bom:3.37.2",
+    "platform-release" : {
+      "members" : [ "io.quarkus.platform:quarkus-bom-quarkus-platform-descriptor:3.37.3:json:3.37.3", "io.quarkus.platform:quarkus-qpid-jms-bom-quarkus-platform-descriptor:3.37.3:json:3.37.3", "io.quarkus.platform:quarkus-cassandra-bom-quarkus-platform-descriptor:3.37.3:json:3.37.3", "io.quarkus.platform:quarkus-amazon-services-bom-quarkus-platform-descriptor:3.37.3:json:3.37.3", "io.quarkus.platform:quarkus-cxf-bom-quarkus-platform-descriptor:3.37.3:json:3.37.3", "io.quarkus.platform:quarkus-camel-bom-quarkus-platform-descriptor:3.37.3:json:3.37.3", "io.quarkus.platform:quarkus-hazelcast-client-quarkus-platform-descriptor:3.37.3:json:3.37.3", "io.quarkus.platform:quarkus-debezium-bom-quarkus-platform-descriptor:3.37.3:json:3.37.3", "io.quarkus.platform:quarkus-blaze-persistence-bom-quarkus-platform-descriptor:3.37.3:json:3.37.3", "io.quarkus.platform:quarkus-google-cloud-services-bom-quarkus-platform-descriptor:3.37.3:json:3.37.3", "io.quarkus.platform:quarkus-operator-sdk-bom-quarkus-platform-descriptor:3.37.3:json:3.37.3", "io.quarkus.platform:quarkus-langchain4j-bom-quarkus-platform-descriptor:3.37.3:json:3.37.3", "io.quarkus.platform:quarkus-mcp-server-bom-quarkus-platform-descriptor:3.37.3:json:3.37.3", "io.quarkus.platform:quarkus-flow-bom-quarkus-platform-descriptor:3.37.3:json:3.37.3" ],
+      "platform-key" : "io.quarkus.platform",
+      "stream" : "3.37",
+      "version" : "3.37.3"
+    }
+  }
+}

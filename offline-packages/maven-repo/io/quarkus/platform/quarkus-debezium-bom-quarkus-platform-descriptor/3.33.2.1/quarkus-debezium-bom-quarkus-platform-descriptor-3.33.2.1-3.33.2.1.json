@@ -1,0 +1,155 @@
+{
+  "id" : "io.quarkus.platform:quarkus-debezium-bom-quarkus-platform-descriptor:3.33.2.1:json:3.33.2.1",
+  "platform" : true,
+  "bom" : "io.quarkus.platform:quarkus-debezium-bom::pom:3.33.2.1",
+  "quarkus-core-version" : "3.33.2.1",
+  "extensions" : [ {
+    "name" : "Quarkus Debezium :: Extension :: Agroal :: Runtime",
+    "description" : "Debezium Parent Module for Quarkus extensions",
+    "metadata" : {
+      "built-with-quarkus-core" : "3.28.4",
+      "capabilities" : {
+        "provides" : [ "io.quarkus.debezium.agroal" ]
+      },
+      "extension-dependencies" : [ "io.quarkus:quarkus-core", "io.quarkus:quarkus-arc", "io.quarkus:quarkus-agroal", "io.quarkus:quarkus-datasource", "io.quarkus:quarkus-narayana-jta", "io.quarkus:quarkus-mutiny", "io.quarkus:quarkus-smallrye-context-propagation", "io.quarkus:quarkus-jackson" ],
+      "minimum-java-version" : "21",
+      "requires-quarkus-core" : "[3.28,)",
+      "scm-url" : "https://github.com/debezium/debezium"
+    },
+    "artifact" : "io.debezium.quarkus:quarkus-debezium-agroal::jar:3.4.3.Final",
+    "origins" : [ "io.quarkus.platform:quarkus-debezium-bom-quarkus-platform-descriptor:3.33.2.1:json:3.33.2.1" ]
+  }, {
+    "name" : "MariaDB Debezium Extension for Quarkus",
+    "description" : "Debezium Extensions for Quarkus integrates the Debezium Runtime into Quarkus applications, enabling developers to consume change data capture (CDC) events from supported databases directly within a lightweight, cloud-native application.",
+    "metadata" : {
+      "built-with-quarkus-core" : "3.28.4",
+      "categories" : [ "integration", "cdc", "mariadb" ],
+      "extension-dependencies" : [ "io.quarkus:quarkus-core", "io.quarkus:quarkus-arc", "io.debezium.quarkus:quarkus-debezium-agroal", "io.quarkus:quarkus-agroal", "io.quarkus:quarkus-datasource", "io.quarkus:quarkus-narayana-jta", "io.quarkus:quarkus-mutiny", "io.quarkus:quarkus-smallrye-context-propagation", "io.quarkus:quarkus-jdbc-mariadb", "io.quarkus:quarkus-jackson" ],
+      "guide" : "https://debezium.io/documentation/reference/3.4/integrations/quarkus-debezium-engine-extension.html",
+      "keywords" : [ "debezium", "cdc", "mariadb" ],
+      "minimum-java-version" : "21",
+      "requires-quarkus-core" : "[3.28,)",
+      "scm-url" : "https://github.com/debezium/debezium",
+      "status" : "stable"
+    },
+    "artifact" : "io.debezium.quarkus:quarkus-debezium-mariadb::jar:3.4.3.Final",
+    "origins" : [ "io.quarkus.platform:quarkus-debezium-bom-quarkus-platform-descriptor:3.33.2.1:json:3.33.2.1" ]
+  }, {
+    "name" : "MongoDB Debezium Extension for Quarkus",
+    "description" : "Debezium Extensions for Quarkus integrates the Debezium Runtime into Quarkus applications, enabling developers to consume change data capture (CDC) events from supported databases directly within a lightweight, cloud-native application.",
+    "metadata" : {
+      "built-with-quarkus-core" : "3.28.4",
+      "categories" : [ "integration", "cdc", "mongoDB" ],
+      "extension-dependencies" : [ "io.quarkus:quarkus-core", "io.quarkus:quarkus-arc", "io.quarkus:quarkus-mongodb-client", "io.quarkus:quarkus-mutiny", "io.quarkus:quarkus-smallrye-context-propagation", "io.quarkus:quarkus-tls-registry", "io.quarkus:quarkus-vertx", "io.quarkus:quarkus-netty", "io.quarkus:quarkus-virtual-threads", "io.quarkus:quarkus-mutiny-reactive-streams-operators", "io.quarkus:quarkus-jackson" ],
+      "guide" : "https://debezium.io/documentation/reference/3.4/integrations/quarkus-debezium-engine-extension.html",
+      "keywords" : [ "debezium", "cdc", "mongoDB" ],
+      "minimum-java-version" : "21",
+      "requires-quarkus-core" : "[3.28,)",
+      "scm-url" : "https://github.com/debezium/debezium",
+      "status" : "stable"
+    },
+    "artifact" : "io.debezium.quarkus:quarkus-debezium-mongodb::jar:3.4.3.Final",
+    "origins" : [ "io.quarkus.platform:quarkus-debezium-bom-quarkus-platform-descriptor:3.33.2.1:json:3.33.2.1" ]
+  }, {
+    "name" : "MySQL Debezium Extension for Quarkus",
+    "description" : "Debezium Extensions for Quarkus integrates the Debezium Runtime into Quarkus applications, enabling developers to consume change data capture (CDC) events from supported databases directly within a lightweight, cloud-native application.",
+    "metadata" : {
+      "built-with-quarkus-core" : "3.28.4",
+      "categories" : [ "integration", "cdc", "mysql" ],
+      "extension-dependencies" : [ "io.quarkus:quarkus-core", "io.quarkus:quarkus-arc", "io.debezium.quarkus:quarkus-debezium-agroal", "io.quarkus:quarkus-agroal", "io.quarkus:quarkus-datasource", "io.quarkus:quarkus-narayana-jta", "io.quarkus:quarkus-mutiny", "io.quarkus:quarkus-smallrye-context-propagation", "io.quarkus:quarkus-jdbc-mysql", "io.quarkus:quarkus-jackson" ],
+      "guide" : "https://debezium.io/documentation/reference/3.4/integrations/quarkus-debezium-engine-extension.html",
+      "keywords" : [ "debezium", "cdc", "mysql" ],
+      "minimum-java-version" : "21",
+      "requires-quarkus-core" : "[3.28,)",
+      "scm-url" : "https://github.com/debezium/debezium",
+      "status" : "stable"
+    },
+    "artifact" : "io.debezium.quarkus:quarkus-debezium-mysql::jar:3.4.3.Final",
+    "origins" : [ "io.quarkus.platform:quarkus-debezium-bom-quarkus-platform-descriptor:3.33.2.1:json:3.33.2.1" ]
+  }, {
+    "name" : "Postgres Debezium Extension for Quarkus",
+    "description" : "Debezium Extensions for Quarkus integrates the Debezium Runtime into Quarkus applications, enabling developers to consume change data capture (CDC) events from supported databases directly within a lightweight, cloud-native application.",
+    "metadata" : {
+      "built-with-quarkus-core" : "3.28.4",
+      "categories" : [ "integration", "cdc", "postgres" ],
+      "extension-dependencies" : [ "io.quarkus:quarkus-core", "io.quarkus:quarkus-arc", "io.quarkus:quarkus-jackson", "io.quarkus:quarkus-jdbc-postgresql", "io.quarkus:quarkus-agroal", "io.quarkus:quarkus-datasource", "io.quarkus:quarkus-narayana-jta", "io.quarkus:quarkus-mutiny", "io.quarkus:quarkus-smallrye-context-propagation" ],
+      "guide" : "https://debezium.io/documentation/reference/3.4/integrations/quarkus-debezium-engine-extension.html",
+      "keywords" : [ "debezium", "cdc", "postgres" ],
+      "minimum-java-version" : "21",
+      "requires-quarkus-core" : "[3.28,)",
+      "scm-url" : "https://github.com/debezium/debezium",
+      "status" : "stable"
+    },
+    "artifact" : "io.debezium.quarkus:quarkus-debezium-postgres::jar:3.4.3.Final",
+    "origins" : [ "io.quarkus.platform:quarkus-debezium-bom-quarkus-platform-descriptor:3.33.2.1:json:3.33.2.1" ]
+  }, {
+    "name" : "Sql Server Debezium Extension for Quarkus",
+    "description" : "Debezium Extensions for Quarkus integrates the Debezium Runtime into Quarkus applications, enabling developers to consume change data capture (CDC) events from supported databases directly within a lightweight, cloud-native application.",
+    "metadata" : {
+      "built-with-quarkus-core" : "3.28.4",
+      "categories" : [ "integration", "cdc", "sqlserver" ],
+      "extension-dependencies" : [ "io.quarkus:quarkus-core", "io.quarkus:quarkus-arc", "io.quarkus:quarkus-jackson", "io.quarkus:quarkus-jdbc-mssql", "io.quarkus:quarkus-agroal", "io.quarkus:quarkus-datasource", "io.quarkus:quarkus-narayana-jta", "io.quarkus:quarkus-mutiny", "io.quarkus:quarkus-smallrye-context-propagation", "io.debezium.quarkus:quarkus-debezium-agroal" ],
+      "guide" : "https://debezium.io/documentation/reference/3.4/integrations/quarkus-debezium-engine-extension.html",
+      "keywords" : [ "debezium", "cdc", "sqlserver" ],
+      "minimum-java-version" : "21",
+      "requires-quarkus-core" : "[3.28,)",
+      "scm-url" : "https://github.com/debezium/debezium",
+      "status" : "stable"
+    },
+    "artifact" : "io.debezium.quarkus:quarkus-debezium-sqlserver::jar:3.4.3.Final",
+    "origins" : [ "io.quarkus.platform:quarkus-debezium-bom-quarkus-platform-descriptor:3.33.2.1:json:3.33.2.1" ]
+  }, {
+    "name" : "Debezium Quarkus Outbox Reactive",
+    "description" : "Implement the outbox pattern for reliable microservices data exchange with Debezium and change data capture for quarkus applications using reactive datasources",
+    "metadata" : {
+      "built-with-quarkus-core" : "3.28.4",
+      "categories" : [ "integration", "cdc" ],
+      "extension-dependencies" : [ "io.quarkus:quarkus-hibernate-reactive", "io.quarkus:quarkus-hibernate-orm", "io.quarkus:quarkus-core", "io.quarkus:quarkus-caffeine", "io.quarkus:quarkus-reactive-datasource", "io.quarkus:quarkus-datasource", "io.quarkus:quarkus-mutiny", "io.quarkus:quarkus-smallrye-context-propagation", "io.quarkus:quarkus-vertx", "io.quarkus:quarkus-arc", "io.quarkus:quarkus-netty", "io.quarkus:quarkus-virtual-threads", "io.quarkus:quarkus-jackson" ],
+      "guide" : "https://debezium.io/documentation/reference/3.4/transformations/outbox-event-router.html",
+      "keywords" : [ "debezium", "outbox", "cdc" ],
+      "minimum-java-version" : "21",
+      "requires-quarkus-core" : "[3.28,)",
+      "scm-url" : "https://github.com/debezium/debezium",
+      "status" : "stable"
+    },
+    "artifact" : "io.debezium:debezium-quarkus-outbox-reactive::jar:3.4.3.Final",
+    "origins" : [ "io.quarkus.platform:quarkus-debezium-bom-quarkus-platform-descriptor:3.33.2.1:json:3.33.2.1" ]
+  }, {
+    "name" : "Debezium Quarkus Outbox",
+    "description" : "Implement the outbox pattern for reliable microservices data exchange with Debezium and change data capture",
+    "metadata" : {
+      "built-with-quarkus-core" : "3.28.4",
+      "categories" : [ "integration", "cdc" ],
+      "extension-dependencies" : [ "io.quarkus:quarkus-hibernate-orm", "io.quarkus:quarkus-core", "io.quarkus:quarkus-agroal", "io.quarkus:quarkus-arc", "io.quarkus:quarkus-datasource", "io.quarkus:quarkus-narayana-jta", "io.quarkus:quarkus-mutiny", "io.quarkus:quarkus-smallrye-context-propagation", "io.quarkus:quarkus-caffeine", "io.quarkus:quarkus-jackson" ],
+      "guide" : "https://debezium.io/documentation/reference/3.4/transformations/outbox-event-router.html",
+      "keywords" : [ "debezium", "outbox", "cdc" ],
+      "minimum-java-version" : "21",
+      "requires-quarkus-core" : "[3.28,)",
+      "scm-url" : "https://github.com/debezium/debezium",
+      "status" : "stable"
+    },
+    "artifact" : "io.debezium:debezium-quarkus-outbox::jar:3.4.3.Final",
+    "origins" : [ "io.quarkus.platform:quarkus-debezium-bom-quarkus-platform-descriptor:3.33.2.1:json:3.33.2.1" ]
+  } ],
+  "categories" : [ {
+    "id" : "integration",
+    "name" : "Integration",
+    "description" : "Connectors to read to write from a skew of systems (file, S#, Twitter, etc)",
+    "metadata" : {
+      "pinned" : [ "org.apache.camel.quarkus:camel-quarkus-core", "org.apache.camel.quarkus:camel-quarkus-core-xml" ]
+    }
+  }, {
+    "id" : "business-automation",
+    "name" : "Business Automation",
+    "description" : "Rules engine, BPM, etc"
+  } ],
+  "metadata" : {
+    "last-bom-update" : "io.quarkus.platform:quarkus-debezium-bom:3.33.2",
+    "platform-release" : {
+      "members" : [ "io.quarkus.platform:quarkus-bom-quarkus-platform-descriptor:3.33.2.1:json:3.33.2.1", "io.quarkus.platform:quarkus-qpid-jms-bom-quarkus-platform-descriptor:3.33.2.1:json:3.33.2.1", "io.quarkus.platform:quarkus-cassandra-bom-quarkus-platform-descriptor:3.33.2.1:json:3.33.2.1", "io.quarkus.platform:quarkus-amazon-services-bom-quarkus-platform-descriptor:3.33.2.1:json:3.33.2.1", "io.quarkus.platform:quarkus-cxf-bom-quarkus-platform-descriptor:3.33.2.1:json:3.33.2.1", "io.quarkus.platform:quarkus-camel-bom-quarkus-platform-descriptor:3.33.2.1:json:3.33.2.1", "io.quarkus.platform:quarkus-hazelcast-client-quarkus-platform-descriptor:3.33.2.1:json:3.33.2.1", "io.quarkus.platform:quarkus-debezium-bom-quarkus-platform-descriptor:3.33.2.1:json:3.33.2.1", "io.quarkus.platform:quarkus-blaze-persistence-bom-quarkus-platform-descriptor:3.33.2.1:json:3.33.2.1", "io.quarkus.platform:quarkus-google-cloud-services-bom-quarkus-platform-descriptor:3.33.2.1:json:3.33.2.1", "io.quarkus.platform:quarkus-operator-sdk-bom-quarkus-platform-descriptor:3.33.2.1:json:3.33.2.1", "io.quarkus.platform:quarkus-langchain4j-bom-quarkus-platform-descriptor:3.33.2.1:json:3.33.2.1", "io.quarkus.platform:quarkus-mcp-server-bom-quarkus-platform-descriptor:3.33.2.1:json:3.33.2.1" ],
+      "platform-key" : "io.quarkus.platform",
+      "stream" : "3.33",
+      "version" : "3.33.2.1"
+    }
+  }
+}

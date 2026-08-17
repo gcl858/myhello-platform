@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.mvnpm</groupId>
+  <artifactId>style-observer</artifactId>
+  <version>0.0.8</version>
+  <name>style-observer</name>
+  <description>Observe CSS property changes on any elements</description>
+  <url>https://observe.style</url>
+  <organization>
+    <name>style-observer</name>
+    <url>https://observe.style</url>
+  </organization>
+  <licenses>
+    <license>
+      <name>MIT</name>
+    </license>
+  </licenses>
+  <developers>
+    <developer>
+      <name>leaverou</name>
+      <email>lea@verou.me</email>
+    </developer>
+    <developer>
+      <name>dmitrysharabin</name>
+      <email>dmitrysharabin@gmail.com</email>
+    </developer>
+  </developers>
+  <scm>
+    <connection>https://github.com/LeaVerou/style-observer.git</connection>
+    <developerConnection>https://github.com/LeaVerou/style-observer.git</developerConnection>
+    <url>https://github.com/LeaVerou/style-observer</url>
+  </scm>
+  <issueManagement>
+    <url>https://github.com/LeaVerou/style-observer/issues</url>
+  </issueManagement>
+</project>

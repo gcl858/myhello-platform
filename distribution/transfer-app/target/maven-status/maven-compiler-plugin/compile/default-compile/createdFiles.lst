@@ -1,0 +1,12 @@
+org/kie/kogito/openapi/openapi/model/A16229Response$A16229ResponseQueryParam.class
+org/kie/kogito/openapi/openapi/model/A16229Request$A16229RequestQueryParam.class
+org/kie/kogito/openapi/openapi/api/DefaultApi.class
+org/kie/kogito/openapi/openapi/model/A16229Response.class
+org/kie/kogito/openapi/openapi/model/A16220Response.class
+org/kie/kogito/openapi/openapi/model/A16229Request.class
+org/kie/kogito/openapi/openapi/model/A16220Response$A16220ResponseQueryParam.class
+org/kie/kogito/openapi/openapi/model/A16220Request.class
+org/kie/kogito/openapi/openapi/model/HealthResponse.class
+openapi.yaml
+org/kie/kogito/openapi/openapi/model/A16220Request$A16220RequestQueryParam.class
+org/kie/kogito/openapi/openapi/model/HealthResponse$HealthResponseQueryParam.class

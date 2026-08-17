@@ -1,0 +1,652 @@
+{
+  "id" : "io.quarkus.platform:quarkus-langchain4j-bom-quarkus-platform-descriptor:3.27.2:json:3.27.2",
+  "platform" : true,
+  "bom" : "io.quarkus.platform:quarkus-langchain4j-bom::pom:3.27.2",
+  "quarkus-core-version" : "3.27.2",
+  "extensions" : [ {
+    "name" : "LangChain4j Agentic",
+    "description" : "Provides integration with LangChain4j's Agentic module",
+    "metadata" : {
+      "built-with-quarkus-core" : "3.20.2.2",
+      "categories" : [ "ai" ],
+      "extension-dependencies" : [ "io.quarkiverse.langchain4j:quarkus-langchain4j-core", "io.quarkus:quarkus-arc", "io.quarkus:quarkus-core", "io.quarkus:quarkus-jackson", "io.quarkus:quarkus-qute", "io.quarkus:quarkus-vertx", "io.quarkus:quarkus-netty", "io.quarkus:quarkus-mutiny", "io.quarkus:quarkus-smallrye-context-propagation", "io.quarkus:quarkus-virtual-threads" ],
+      "guide" : "https://docs.quarkiverse.io/quarkus-langchain4j/dev/index.html",
+      "keywords" : [ "ai", "langchain4j" ],
+      "minimum-java-version" : "17",
+      "requires-quarkus-core" : "[3.20,)",
+      "scm-url" : "https://github.com/quarkiverse/quarkus-langchain4j",
+      "status" : "preview"
+    },
+    "artifact" : "io.quarkiverse.langchain4j:quarkus-langchain4j-agentic::jar:1.2.3",
+    "origins" : [ "io.quarkus.platform:quarkus-langchain4j-bom-quarkus-platform-descriptor:3.27.2:json:3.27.2" ]
+  }, {
+    "name" : "LangChain4j AI Gemini",
+    "description" : "Provides integration of Quarkus LangChain4j with AI Gemini",
+    "metadata" : {
+      "built-with-quarkus-core" : "3.20.2.2",
+      "categories" : [ "ai" ],
+      "extension-dependencies" : [ "io.quarkiverse.langchain4j:quarkus-langchain4j-gemini-common", "io.quarkus:quarkus-arc", "io.quarkus:quarkus-core", "io.quarkus:quarkus-rest-client-jackson", "io.quarkus:quarkus-rest-jackson-common", "io.quarkus:quarkus-rest-common", "io.quarkus:quarkus-jsonp", "io.quarkus:quarkus-rest-client", "io.quarkus:quarkus-rest-client-jaxrs", "io.quarkus:quarkus-smallrye-stork", "io.quarkus:quarkus-rest-client-config", "io.quarkus:quarkus-tls-registry", "io.quarkiverse.langchain4j:quarkus-langchain4j-core", "io.quarkus:quarkus-jackson", "io.quarkus:quarkus-qute", "io.quarkus:quarkus-vertx", "io.quarkus:quarkus-netty", "io.quarkus:quarkus-mutiny", "io.quarkus:quarkus-smallrye-context-propagation", "io.quarkus:quarkus-virtual-threads" ],
+      "guide" : "https://docs.quarkiverse.io/quarkus-langchain4j/dev/index.html",
+      "keywords" : [ "ai", "langchain4j", "gemini" ],
+      "minimum-java-version" : "17",
+      "requires-quarkus-core" : "[3.20,)",
+      "scm-url" : "https://github.com/quarkiverse/quarkus-langchain4j",
+      "status" : "preview"
+    },
+    "artifact" : "io.quarkiverse.langchain4j:quarkus-langchain4j-ai-gemini::jar:1.2.3",
+    "origins" : [ "io.quarkus.platform:quarkus-langchain4j-bom-quarkus-platform-descriptor:3.27.2:json:3.27.2" ]
+  }, {
+    "name" : "LangChain4j Anthropic",
+    "description" : "Provides integration of Quarkus LangChain4j with Anthropic",
+    "metadata" : {
+      "built-with-quarkus-core" : "3.20.2.2",
+      "categories" : [ "ai" ],
+      "extension-dependencies" : [ "io.quarkus:quarkus-arc", "io.quarkus:quarkus-core", "io.quarkus:quarkus-rest-client-jackson", "io.quarkus:quarkus-rest-jackson-common", "io.quarkus:quarkus-rest-common", "io.quarkus:quarkus-jsonp", "io.quarkus:quarkus-rest-client", "io.quarkus:quarkus-rest-client-jaxrs", "io.quarkus:quarkus-smallrye-stork", "io.quarkus:quarkus-rest-client-config", "io.quarkus:quarkus-tls-registry", "io.quarkiverse.langchain4j:quarkus-langchain4j-core", "io.quarkus:quarkus-jackson", "io.quarkus:quarkus-qute", "io.quarkus:quarkus-vertx", "io.quarkus:quarkus-netty", "io.quarkus:quarkus-mutiny", "io.quarkus:quarkus-smallrye-context-propagation", "io.quarkus:quarkus-virtual-threads" ],
+      "guide" : "https://docs.quarkiverse.io/quarkus-langchain4j/dev/index.html",
+      "keywords" : [ "ai", "langchain4j", "anthropic", "claude" ],
+      "minimum-java-version" : "17",
+      "requires-quarkus-core" : "[3.20,)",
+      "scm-url" : "https://github.com/quarkiverse/quarkus-langchain4j",
+      "status" : "preview"
+    },
+    "artifact" : "io.quarkiverse.langchain4j:quarkus-langchain4j-anthropic::jar:1.2.3",
+    "origins" : [ "io.quarkus.platform:quarkus-langchain4j-bom-quarkus-platform-descriptor:3.27.2:json:3.27.2" ]
+  }, {
+    "name" : "LangChain4j Azure OpenAI",
+    "description" : "Provides the basic integration of Azure OpenAi with LangChain4j",
+    "metadata" : {
+      "built-with-quarkus-core" : "3.20.2.2",
+      "categories" : [ "ai" ],
+      "extension-dependencies" : [ "io.quarkiverse.langchain4j:quarkus-langchain4j-openai-common", "io.quarkus:quarkus-arc", "io.quarkus:quarkus-core", "io.quarkus:quarkus-rest-client-jackson", "io.quarkus:quarkus-rest-jackson-common", "io.quarkus:quarkus-rest-common", "io.quarkus:quarkus-jsonp", "io.quarkus:quarkus-rest-client", "io.quarkus:quarkus-rest-client-jaxrs", "io.quarkus:quarkus-smallrye-stork", "io.quarkus:quarkus-rest-client-config", "io.quarkus:quarkus-tls-registry", "io.quarkus:quarkus-qute", "io.quarkiverse.langchain4j:quarkus-langchain4j-core", "io.quarkus:quarkus-jackson", "io.quarkus:quarkus-vertx", "io.quarkus:quarkus-netty", "io.quarkus:quarkus-mutiny", "io.quarkus:quarkus-smallrye-context-propagation", "io.quarkus:quarkus-virtual-threads" ],
+      "guide" : "https://docs.quarkiverse.io/quarkus-langchain4j/dev/index.html",
+      "keywords" : [ "ai", "langchain4j", "openai" ],
+      "minimum-java-version" : "17",
+      "requires-quarkus-core" : "[3.20,)",
+      "scm-url" : "https://github.com/quarkiverse/quarkus-langchain4j",
+      "status" : "preview"
+    },
+    "artifact" : "io.quarkiverse.langchain4j:quarkus-langchain4j-azure-openai::jar:1.2.3",
+    "origins" : [ "io.quarkus.platform:quarkus-langchain4j-bom-quarkus-platform-descriptor:3.27.2:json:3.27.2" ]
+  }, {
+    "name" : "LangChain4j Bedrock",
+    "description" : "Provides integration of Quarkus LangChain4j with Amazon Bedrock",
+    "metadata" : {
+      "built-with-quarkus-core" : "3.20.2.2",
+      "categories" : [ "ai" ],
+      "extension-dependencies" : [ "io.quarkus:quarkus-arc", "io.quarkus:quarkus-core", "io.quarkus:quarkus-rest-client-jackson", "io.quarkus:quarkus-rest-jackson-common", "io.quarkus:quarkus-jsonp", "io.quarkus:quarkus-rest-client", "io.quarkus:quarkus-smallrye-stork", "io.quarkus:quarkus-rest-client-config", "io.quarkus:quarkus-tls-registry", "io.quarkiverse.langchain4j:quarkus-langchain4j-core", "io.quarkus:quarkus-jackson", "io.quarkus:quarkus-qute", "io.quarkus:quarkus-vertx", "io.quarkus:quarkus-netty", "io.quarkus:quarkus-mutiny", "io.quarkus:quarkus-smallrye-context-propagation", "io.quarkus:quarkus-virtual-threads", "io.quarkus:quarkus-rest-client-jaxrs", "io.quarkus:quarkus-rest-common" ],
+      "guide" : "https://docs.quarkiverse.io/quarkus-langchain4j/dev/index.html",
+      "keywords" : [ "ai", "langchain4j", "bedrock" ],
+      "minimum-java-version" : "17",
+      "requires-quarkus-core" : "[3.20,)",
+      "scm-url" : "https://github.com/quarkiverse/quarkus-langchain4j",
+      "status" : "preview"
+    },
+    "artifact" : "io.quarkiverse.langchain4j:quarkus-langchain4j-bedrock::jar:1.2.3",
+    "origins" : [ "io.quarkus.platform:quarkus-langchain4j-bom-quarkus-platform-descriptor:3.27.2:json:3.27.2" ]
+  }, {
+    "name" : "Langchain4j - Codestarts - Chatbot",
+    "description" : "A chatbot, similar to the one used in the in quarkus-langchain4j-workshop.",
+    "metadata" : {
+      "built-with-quarkus-core" : "3.20.2.2",
+      "codestart" : {
+        "artifact" : "io.quarkiverse.langchain4j:quarkus-langchain4j-chatbot:codestarts:jar:1.2.3",
+        "languages" : [ "java" ],
+        "name" : "langchain4j-chatbot"
+      },
+      "extension-dependencies" : [ "io.quarkus:quarkus-arc", "io.quarkus:quarkus-core", "io.quarkus:quarkus-rest", "io.quarkus:quarkus-rest-common", "io.quarkus:quarkus-mutiny", "io.quarkus:quarkus-smallrye-context-propagation", "io.quarkus:quarkus-vertx-http", "io.quarkus:quarkus-jsonp", "io.quarkus:quarkus-virtual-threads", "io.quarkus:quarkus-websockets-next", "io.quarkus:quarkus-jackson", "io.quarkus:quarkus-tls-registry", "io.quarkiverse.langchain4j:quarkus-langchain4j-core", "io.quarkus:quarkus-qute", "io.quarkus:quarkus-vertx", "io.quarkus:quarkus-netty" ],
+      "minimum-java-version" : "17",
+      "requires-quarkus-core" : "[3.20,)",
+      "scm-url" : "https://github.com/quarkiverse/quarkus-langchain4j"
+    },
+    "artifact" : "io.quarkiverse.langchain4j:quarkus-langchain4j-chatbot::jar:1.2.3",
+    "origins" : [ "io.quarkus.platform:quarkus-langchain4j-bom-quarkus-platform-descriptor:3.27.2:json:3.27.2" ]
+  }, {
+    "name" : "LangChain4j Chroma",
+    "description" : "Provides integration of Quarkus LangChain4j with the Chroma vector database",
+    "metadata" : {
+      "built-with-quarkus-core" : "3.20.2.2",
+      "categories" : [ "ai" ],
+      "extension-dependencies" : [ "io.quarkus:quarkus-arc", "io.quarkus:quarkus-core", "io.quarkus:quarkus-rest-client-jackson", "io.quarkus:quarkus-rest-jackson-common", "io.quarkus:quarkus-rest-common", "io.quarkus:quarkus-jsonp", "io.quarkus:quarkus-rest-client", "io.quarkus:quarkus-rest-client-jaxrs", "io.quarkus:quarkus-smallrye-stork", "io.quarkus:quarkus-rest-client-config", "io.quarkus:quarkus-tls-registry", "io.quarkus:quarkus-qute", "io.quarkiverse.langchain4j:quarkus-langchain4j-core", "io.quarkus:quarkus-jackson", "io.quarkus:quarkus-vertx", "io.quarkus:quarkus-netty", "io.quarkus:quarkus-mutiny", "io.quarkus:quarkus-smallrye-context-propagation", "io.quarkus:quarkus-virtual-threads" ],
+      "guide" : "https://docs.quarkiverse.io/quarkus-langchain4j/dev/index.html",
+      "keywords" : [ "ai", "langchain4j", "chroma" ],
+      "minimum-java-version" : "17",
+      "requires-quarkus-core" : "[3.20,)",
+      "scm-url" : "https://github.com/quarkiverse/quarkus-langchain4j",
+      "status" : "preview"
+    },
+    "artifact" : "io.quarkiverse.langchain4j:quarkus-langchain4j-chroma::jar:1.2.3",
+    "origins" : [ "io.quarkus.platform:quarkus-langchain4j-bom-quarkus-platform-descriptor:3.27.2:json:3.27.2" ]
+  }, {
+    "name" : "Quarkus LangChain4j Cohere",
+    "description" : "Provides integration of Quarkus LangChain4j with the Cohere API",
+    "metadata" : {
+      "built-with-quarkus-core" : "3.20.2.2",
+      "categories" : [ "ai" ],
+      "extension-dependencies" : [ "io.quarkus:quarkus-arc", "io.quarkus:quarkus-core", "io.quarkus:quarkus-rest-client-jackson", "io.quarkus:quarkus-rest-jackson-common", "io.quarkus:quarkus-rest-common", "io.quarkus:quarkus-jsonp", "io.quarkus:quarkus-rest-client", "io.quarkus:quarkus-rest-client-jaxrs", "io.quarkus:quarkus-smallrye-stork", "io.quarkus:quarkus-rest-client-config", "io.quarkus:quarkus-tls-registry", "io.quarkiverse.langchain4j:quarkus-langchain4j-core", "io.quarkus:quarkus-jackson", "io.quarkus:quarkus-qute", "io.quarkus:quarkus-vertx", "io.quarkus:quarkus-netty", "io.quarkus:quarkus-mutiny", "io.quarkus:quarkus-smallrye-context-propagation", "io.quarkus:quarkus-virtual-threads" ],
+      "guide" : "https://docs.quarkiverse.io/quarkus-langchain4j/dev/index.html",
+      "keywords" : [ "ai", "langchain4j", "cohere", "search", "reranking" ],
+      "minimum-java-version" : "17",
+      "requires-quarkus-core" : "[3.20,)",
+      "scm-url" : "https://github.com/quarkiverse/quarkus-langchain4j",
+      "status" : "preview"
+    },
+    "artifact" : "io.quarkiverse.langchain4j:quarkus-langchain4j-cohere::jar:1.2.3",
+    "origins" : [ "io.quarkus.platform:quarkus-langchain4j-bom-quarkus-platform-descriptor:3.27.2:json:3.27.2" ]
+  }, {
+    "name" : "LangChain4j Core",
+    "description" : "Provides the basic integration with LangChain4j",
+    "metadata" : {
+      "built-with-quarkus-core" : "3.20.2.2",
+      "categories" : [ "ai" ],
+      "extension-dependencies" : [ "io.quarkus:quarkus-arc", "io.quarkus:quarkus-core", "io.quarkus:quarkus-jackson", "io.quarkus:quarkus-qute", "io.quarkus:quarkus-vertx", "io.quarkus:quarkus-netty", "io.quarkus:quarkus-mutiny", "io.quarkus:quarkus-smallrye-context-propagation", "io.quarkus:quarkus-virtual-threads" ],
+      "guide" : "https://docs.quarkiverse.io/quarkus-langchain4j/dev/index.html",
+      "keywords" : [ "ai", "langchain4j" ],
+      "minimum-java-version" : "17",
+      "requires-quarkus-core" : "[3.20,)",
+      "scm-url" : "https://github.com/quarkiverse/quarkus-langchain4j",
+      "status" : "preview"
+    },
+    "artifact" : "io.quarkiverse.langchain4j:quarkus-langchain4j-core::jar:1.2.3",
+    "origins" : [ "io.quarkus.platform:quarkus-langchain4j-bom-quarkus-platform-descriptor:3.27.2:json:3.27.2" ]
+  }, {
+    "name" : "LangChain4j Easy RAG",
+    "description" : "Provides the Easy RAG functionality with LangChain4j",
+    "metadata" : {
+      "built-with-quarkus-core" : "3.20.2.2",
+      "categories" : [ "ai" ],
+      "codestart" : {
+        "artifact" : "io.quarkiverse.langchain4j:quarkus-langchain4j-easy-rag:codestarts:jar:1.2.3",
+        "languages" : [ "java" ],
+        "name" : "langchain4j-easyrag"
+      },
+      "extension-dependencies" : [ "io.quarkiverse.langchain4j:quarkus-langchain4j-parsers-base", "io.quarkiverse.langchain4j:quarkus-langchain4j-core", "io.quarkus:quarkus-arc", "io.quarkus:quarkus-core", "io.quarkus:quarkus-jackson", "io.quarkus:quarkus-qute", "io.quarkus:quarkus-vertx", "io.quarkus:quarkus-netty", "io.quarkus:quarkus-mutiny", "io.quarkus:quarkus-smallrye-context-propagation", "io.quarkus:quarkus-virtual-threads", "io.quarkiverse.poi:quarkus-poi", "io.quarkus:quarkus-awt" ],
+      "guide" : "https://docs.quarkiverse.io/quarkus-langchain4j/dev/rag-easy-rag.html",
+      "keywords" : [ "ai", "langchain4j" ],
+      "minimum-java-version" : "17",
+      "requires-quarkus-core" : "[3.20,)",
+      "scm-url" : "https://github.com/quarkiverse/quarkus-langchain4j",
+      "status" : "preview"
+    },
+    "artifact" : "io.quarkiverse.langchain4j:quarkus-langchain4j-easy-rag::jar:1.2.3",
+    "origins" : [ "io.quarkus.platform:quarkus-langchain4j-bom-quarkus-platform-descriptor:3.27.2:json:3.27.2" ]
+  }, {
+    "name" : "Quarkus LangChain4j - Gemini - Common - Runtime",
+    "description" : "Parent POM for Quarkiverse projects that includes the default release and artifact publishing related\n    configuration",
+    "metadata" : {
+      "built-with-quarkus-core" : "3.20.2.2",
+      "extension-dependencies" : [ "io.quarkus:quarkus-arc", "io.quarkus:quarkus-core", "io.quarkus:quarkus-rest-client-jackson", "io.quarkus:quarkus-rest-jackson-common", "io.quarkus:quarkus-rest-common", "io.quarkus:quarkus-jsonp", "io.quarkus:quarkus-rest-client", "io.quarkus:quarkus-rest-client-jaxrs", "io.quarkus:quarkus-smallrye-stork", "io.quarkus:quarkus-rest-client-config", "io.quarkus:quarkus-tls-registry", "io.quarkiverse.langchain4j:quarkus-langchain4j-core", "io.quarkus:quarkus-jackson", "io.quarkus:quarkus-qute", "io.quarkus:quarkus-vertx", "io.quarkus:quarkus-netty", "io.quarkus:quarkus-mutiny", "io.quarkus:quarkus-smallrye-context-propagation", "io.quarkus:quarkus-virtual-threads" ],
+      "minimum-java-version" : "17",
+      "requires-quarkus-core" : "[3.20,)",
+      "scm-url" : "https://github.com/quarkiverse/quarkus-langchain4j"
+    },
+    "artifact" : "io.quarkiverse.langchain4j:quarkus-langchain4j-gemini-common::jar:1.2.3",
+    "origins" : [ "io.quarkus.platform:quarkus-langchain4j-bom-quarkus-platform-descriptor:3.27.2:json:3.27.2" ]
+  }, {
+    "name" : "LangChain4j Hugging Face",
+    "description" : "Provides integration of Quarkus LangChain4j with the Hugging Face API",
+    "metadata" : {
+      "built-with-quarkus-core" : "3.20.2.2",
+      "categories" : [ "ai" ],
+      "extension-dependencies" : [ "io.quarkus:quarkus-arc", "io.quarkus:quarkus-core", "io.quarkus:quarkus-rest-client-jackson", "io.quarkus:quarkus-rest-jackson-common", "io.quarkus:quarkus-rest-common", "io.quarkus:quarkus-jsonp", "io.quarkus:quarkus-rest-client", "io.quarkus:quarkus-rest-client-jaxrs", "io.quarkus:quarkus-smallrye-stork", "io.quarkus:quarkus-rest-client-config", "io.quarkus:quarkus-tls-registry", "io.quarkiverse.langchain4j:quarkus-langchain4j-core", "io.quarkus:quarkus-jackson", "io.quarkus:quarkus-qute", "io.quarkus:quarkus-vertx", "io.quarkus:quarkus-netty", "io.quarkus:quarkus-mutiny", "io.quarkus:quarkus-smallrye-context-propagation", "io.quarkus:quarkus-virtual-threads" ],
+      "guide" : "https://docs.quarkiverse.io/quarkus-langchain4j/dev/index.html",
+      "keywords" : [ "ai", "langchain4j", "chroma" ],
+      "minimum-java-version" : "17",
+      "requires-quarkus-core" : "[3.20,)",
+      "scm-url" : "https://github.com/quarkiverse/quarkus-langchain4j",
+      "status" : "preview"
+    },
+    "artifact" : "io.quarkiverse.langchain4j:quarkus-langchain4j-hugging-face::jar:1.2.3",
+    "origins" : [ "io.quarkus.platform:quarkus-langchain4j-bom-quarkus-platform-descriptor:3.27.2:json:3.27.2" ]
+  }, {
+    "name" : "LangChain4j Infinispan embedding store",
+    "description" : "Provides the Infinispan Embedding store for LangChain4j",
+    "metadata" : {
+      "built-with-quarkus-core" : "3.20.2.2",
+      "categories" : [ "ai" ],
+      "extension-dependencies" : [ "io.quarkus:quarkus-arc", "io.quarkus:quarkus-core", "io.quarkus:quarkus-infinispan-client", "io.quarkus:quarkus-caffeine", "io.quarkus:quarkus-mutiny", "io.quarkus:quarkus-smallrye-context-propagation", "io.quarkus:quarkus-netty", "io.quarkus:quarkus-jsonp", "io.quarkus:quarkus-elytron-security-common", "io.quarkiverse.langchain4j:quarkus-langchain4j-core", "io.quarkus:quarkus-jackson", "io.quarkus:quarkus-qute", "io.quarkus:quarkus-vertx", "io.quarkus:quarkus-virtual-threads" ],
+      "guide" : "https://docs.quarkiverse.io/quarkus-langchain4j/dev/index.html",
+      "keywords" : [ "ai", "langchain4j", "openai", "infinispan", "embedding" ],
+      "minimum-java-version" : "17",
+      "requires-quarkus-core" : "[3.20,)",
+      "scm-url" : "https://github.com/quarkiverse/quarkus-langchain4j",
+      "status" : "preview"
+    },
+    "artifact" : "io.quarkiverse.langchain4j:quarkus-langchain4j-infinispan::jar:1.2.3",
+    "origins" : [ "io.quarkus.platform:quarkus-langchain4j-bom-quarkus-platform-descriptor:3.27.2:json:3.27.2" ]
+  }, {
+    "name" : "LangChain4j Jlama",
+    "description" : "Provides integration of Quarkus LangChain4j with Jlama",
+    "metadata" : {
+      "built-with-quarkus-core" : "3.20.2.2",
+      "categories" : [ "ai" ],
+      "extension-dependencies" : [ "io.quarkus:quarkus-arc", "io.quarkus:quarkus-core", "io.quarkiverse.langchain4j:quarkus-langchain4j-core", "io.quarkus:quarkus-jackson", "io.quarkus:quarkus-qute", "io.quarkus:quarkus-vertx", "io.quarkus:quarkus-netty", "io.quarkus:quarkus-mutiny", "io.quarkus:quarkus-smallrye-context-propagation", "io.quarkus:quarkus-virtual-threads" ],
+      "guide" : "https://docs.quarkiverse.io/quarkus-langchain4j/dev/index.html",
+      "keywords" : [ "ai", "langchain4j", "jlama" ],
+      "minimum-java-version" : "21",
+      "requires-quarkus-core" : "[3.20,)",
+      "scm-url" : "https://github.com/quarkiverse/quarkus-langchain4j",
+      "status" : "preview"
+    },
+    "artifact" : "io.quarkiverse.langchain4j:quarkus-langchain4j-jlama::jar:1.2.3",
+    "origins" : [ "io.quarkus.platform:quarkus-langchain4j-bom-quarkus-platform-descriptor:3.27.2:json:3.27.2" ]
+  }, {
+    "name" : "LangChain4j Llama3 Java",
+    "description" : "Provides integration of Quarkus LangChain4j with Llama3 Java",
+    "metadata" : {
+      "built-with-quarkus-core" : "3.20.2.2",
+      "categories" : [ "ai" ],
+      "extension-dependencies" : [ "io.quarkus:quarkus-arc", "io.quarkus:quarkus-core", "io.quarkiverse.langchain4j:quarkus-langchain4j-core", "io.quarkus:quarkus-jackson", "io.quarkus:quarkus-qute", "io.quarkus:quarkus-vertx", "io.quarkus:quarkus-netty", "io.quarkus:quarkus-mutiny", "io.quarkus:quarkus-smallrye-context-propagation", "io.quarkus:quarkus-virtual-threads" ],
+      "guide" : "https://docs.quarkiverse.io/quarkus-langchain4j/dev/index.html",
+      "keywords" : [ "ai", "langchain4j", "llama3-java" ],
+      "minimum-java-version" : "21",
+      "requires-quarkus-core" : "[3.20,)",
+      "scm-url" : "https://github.com/quarkiverse/quarkus-langchain4j",
+      "status" : "preview"
+    },
+    "artifact" : "io.quarkiverse.langchain4j:quarkus-langchain4j-llama3-java::jar:1.2.3",
+    "origins" : [ "io.quarkus.platform:quarkus-langchain4j-bom-quarkus-platform-descriptor:3.27.2:json:3.27.2" ]
+  }, {
+    "name" : "LangChain4j Model Context Protocol client",
+    "description" : "Provides the Model Context Protocol client-side implementation for LangChain4j",
+    "metadata" : {
+      "built-with-quarkus-core" : "3.20.2.2",
+      "categories" : [ "ai" ],
+      "extension-dependencies" : [ "io.quarkus:quarkus-arc", "io.quarkus:quarkus-core", "io.quarkus:quarkus-rest-client-jackson", "io.quarkus:quarkus-rest-jackson-common", "io.quarkus:quarkus-rest-common", "io.quarkus:quarkus-jsonp", "io.quarkus:quarkus-rest-client", "io.quarkus:quarkus-rest-client-jaxrs", "io.quarkus:quarkus-smallrye-stork", "io.quarkus:quarkus-rest-client-config", "io.quarkus:quarkus-tls-registry", "io.quarkiverse.langchain4j:quarkus-langchain4j-core", "io.quarkus:quarkus-jackson", "io.quarkus:quarkus-qute", "io.quarkus:quarkus-vertx", "io.quarkus:quarkus-netty", "io.quarkus:quarkus-mutiny", "io.quarkus:quarkus-smallrye-context-propagation", "io.quarkus:quarkus-virtual-threads" ],
+      "guide" : "https://docs.quarkiverse.io/quarkus-langchain4j/dev/index.html",
+      "keywords" : [ "ai", "langchain4j" ],
+      "minimum-java-version" : "17",
+      "requires-quarkus-core" : "[3.20,)",
+      "scm-url" : "https://github.com/quarkiverse/quarkus-langchain4j",
+      "status" : "preview"
+    },
+    "artifact" : "io.quarkiverse.langchain4j:quarkus-langchain4j-mcp::jar:1.2.3",
+    "origins" : [ "io.quarkus.platform:quarkus-langchain4j-bom-quarkus-platform-descriptor:3.27.2:json:3.27.2" ]
+  }, {
+    "name" : "Quarkus Langchain4j - Memory Store - MongoDB",
+    "description" : "Provides a MongoDB Chat Memory Store",
+    "metadata" : {
+      "built-with-quarkus-core" : "3.20.2.2",
+      "categories" : [ "ai" ],
+      "extension-dependencies" : [ "io.quarkus:quarkus-arc", "io.quarkus:quarkus-core", "io.quarkus:quarkus-mongodb-client", "io.quarkus:quarkus-mutiny", "io.quarkus:quarkus-smallrye-context-propagation", "io.quarkus:quarkus-vertx", "io.quarkus:quarkus-netty", "io.quarkus:quarkus-virtual-threads", "io.quarkus:quarkus-mutiny-reactive-streams-operators", "io.quarkus:quarkus-jackson", "io.quarkiverse.langchain4j:quarkus-langchain4j-core", "io.quarkus:quarkus-qute" ],
+      "guide" : "https://docs.quarkiverse.io/quarkus-langchain4j/dev/index.html",
+      "keywords" : [ "ai", "langchain4j", "mongodb" ],
+      "minimum-java-version" : "17",
+      "requires-quarkus-core" : "[3.20,)",
+      "scm-url" : "https://github.com/quarkiverse/quarkus-langchain4j",
+      "status" : "preview"
+    },
+    "artifact" : "io.quarkiverse.langchain4j:quarkus-langchain4j-memory-store-mongodb::jar:1.2.3",
+    "origins" : [ "io.quarkus.platform:quarkus-langchain4j-bom-quarkus-platform-descriptor:3.27.2:json:3.27.2" ]
+  }, {
+    "name" : "Quarkus Langchain4j - Memory Store - Redis",
+    "description" : "Provides a Redis Chat Memory Store",
+    "metadata" : {
+      "built-with-quarkus-core" : "3.20.2.2",
+      "categories" : [ "ai" ],
+      "extension-dependencies" : [ "io.quarkus:quarkus-arc", "io.quarkus:quarkus-core", "io.quarkus:quarkus-redis-client", "io.quarkus:quarkus-vertx", "io.quarkus:quarkus-netty", "io.quarkus:quarkus-mutiny", "io.quarkus:quarkus-smallrye-context-propagation", "io.quarkus:quarkus-virtual-threads", "io.quarkus:quarkus-tls-registry", "io.quarkus:quarkus-jackson", "io.quarkiverse.langchain4j:quarkus-langchain4j-core", "io.quarkus:quarkus-qute" ],
+      "guide" : "https://docs.quarkiverse.io/quarkus-langchain4j/dev/index.html",
+      "keywords" : [ "ai", "langchain4j", "redis" ],
+      "minimum-java-version" : "17",
+      "requires-quarkus-core" : "[3.20,)",
+      "scm-url" : "https://github.com/quarkiverse/quarkus-langchain4j",
+      "status" : "preview"
+    },
+    "artifact" : "io.quarkiverse.langchain4j:quarkus-langchain4j-memory-store-redis::jar:1.2.3",
+    "origins" : [ "io.quarkus.platform:quarkus-langchain4j-bom-quarkus-platform-descriptor:3.27.2:json:3.27.2" ]
+  }, {
+    "name" : "LangChain4j Milvus embedding store",
+    "description" : "Provides the Milvus Embedding store for LangChain4j",
+    "metadata" : {
+      "built-with-quarkus-core" : "3.20.2.2",
+      "categories" : [ "ai" ],
+      "extension-dependencies" : [ "io.quarkus:quarkus-arc", "io.quarkus:quarkus-core", "io.quarkiverse.langchain4j:quarkus-langchain4j-core", "io.quarkus:quarkus-jackson", "io.quarkus:quarkus-qute", "io.quarkus:quarkus-vertx", "io.quarkus:quarkus-netty", "io.quarkus:quarkus-mutiny", "io.quarkus:quarkus-smallrye-context-propagation", "io.quarkus:quarkus-virtual-threads" ],
+      "guide" : "https://docs.quarkiverse.io/quarkus-langchain4j/dev/index.html",
+      "keywords" : [ "ai", "langchain4j", "openai", "milvus" ],
+      "minimum-java-version" : "17",
+      "requires-quarkus-core" : "[3.20,)",
+      "scm-url" : "https://github.com/quarkiverse/quarkus-langchain4j",
+      "status" : "preview"
+    },
+    "artifact" : "io.quarkiverse.langchain4j:quarkus-langchain4j-milvus::jar:1.2.3",
+    "origins" : [ "io.quarkus.platform:quarkus-langchain4j-bom-quarkus-platform-descriptor:3.27.2:json:3.27.2" ]
+  }, {
+    "name" : "LangChain4j Mistral AI",
+    "description" : "Provides integration of Quarkus LangChain4j with Mistral AI",
+    "metadata" : {
+      "built-with-quarkus-core" : "3.20.2.2",
+      "categories" : [ "ai" ],
+      "extension-dependencies" : [ "io.quarkus:quarkus-arc", "io.quarkus:quarkus-core", "io.quarkus:quarkus-rest-client-jackson", "io.quarkus:quarkus-rest-jackson-common", "io.quarkus:quarkus-rest-common", "io.quarkus:quarkus-jsonp", "io.quarkus:quarkus-rest-client", "io.quarkus:quarkus-rest-client-jaxrs", "io.quarkus:quarkus-smallrye-stork", "io.quarkus:quarkus-rest-client-config", "io.quarkus:quarkus-tls-registry", "io.quarkiverse.langchain4j:quarkus-langchain4j-core", "io.quarkus:quarkus-jackson", "io.quarkus:quarkus-qute", "io.quarkus:quarkus-vertx", "io.quarkus:quarkus-netty", "io.quarkus:quarkus-mutiny", "io.quarkus:quarkus-smallrye-context-propagation", "io.quarkus:quarkus-virtual-threads" ],
+      "guide" : "https://docs.quarkiverse.io/quarkus-langchain4j/dev/index.html",
+      "keywords" : [ "ai", "langchain4j", "mistral" ],
+      "minimum-java-version" : "17",
+      "requires-quarkus-core" : "[3.20,)",
+      "scm-url" : "https://github.com/quarkiverse/quarkus-langchain4j",
+      "status" : "preview"
+    },
+    "artifact" : "io.quarkiverse.langchain4j:quarkus-langchain4j-mistral-ai::jar:1.2.3",
+    "origins" : [ "io.quarkus.platform:quarkus-langchain4j-bom-quarkus-platform-descriptor:3.27.2:json:3.27.2" ]
+  }, {
+    "name" : "LangChain4j Neo4j embedding store",
+    "description" : "Provides the Neo4j embedding store for Quarkus LangChain4j",
+    "metadata" : {
+      "built-with-quarkus-core" : "3.20.2.2",
+      "categories" : [ "ai" ],
+      "extension-dependencies" : [ "io.quarkus:quarkus-arc", "io.quarkus:quarkus-core", "io.quarkiverse.neo4j:quarkus-neo4j", "io.quarkiverse.langchain4j:quarkus-langchain4j-core", "io.quarkus:quarkus-jackson", "io.quarkus:quarkus-qute", "io.quarkus:quarkus-vertx", "io.quarkus:quarkus-netty", "io.quarkus:quarkus-mutiny", "io.quarkus:quarkus-smallrye-context-propagation", "io.quarkus:quarkus-virtual-threads" ],
+      "guide" : "https://docs.quarkiverse.io/quarkus-langchain4j/dev/index.html",
+      "keywords" : [ "ai", "langchain4j", "neo4j" ],
+      "minimum-java-version" : "17",
+      "requires-quarkus-core" : "[3.20,)",
+      "scm-url" : "https://github.com/quarkiverse/quarkus-langchain4j",
+      "status" : "preview"
+    },
+    "artifact" : "io.quarkiverse.langchain4j:quarkus-langchain4j-neo4j::jar:1.2.3",
+    "origins" : [ "io.quarkus.platform:quarkus-langchain4j-bom-quarkus-platform-descriptor:3.27.2:json:3.27.2" ]
+  }, {
+    "name" : "LangChain4j McpClientAuthProvider that acquires access tokens using OAuth2 grants such as 'client_credentials'.",
+    "description" : "Provides McpClientAuthProvider implementation that uses the quarkus-oidc-client extension to acquire access tokens using OAuth2 grants such as 'client_credentials' and propagate them to MCP servers.",
+    "metadata" : {
+      "built-with-quarkus-core" : "3.20.2.2",
+      "categories" : [ "security" ],
+      "extension-dependencies" : [ "io.quarkus:quarkus-arc", "io.quarkus:quarkus-core", "io.quarkus:quarkus-oidc-client", "io.quarkus:quarkus-vertx", "io.quarkus:quarkus-netty", "io.quarkus:quarkus-mutiny", "io.quarkus:quarkus-smallrye-context-propagation", "io.quarkus:quarkus-virtual-threads", "io.quarkus:quarkus-oidc-common", "io.quarkus:quarkus-tls-registry", "io.quarkus:quarkus-smallrye-jwt-build", "io.quarkus:quarkus-jsonp", "io.quarkiverse.langchain4j:quarkus-langchain4j-core", "io.quarkus:quarkus-jackson", "io.quarkus:quarkus-qute", "io.quarkiverse.langchain4j:quarkus-langchain4j-mcp", "io.quarkus:quarkus-rest-client-jackson", "io.quarkus:quarkus-rest-jackson-common", "io.quarkus:quarkus-rest-common", "io.quarkus:quarkus-rest-client", "io.quarkus:quarkus-rest-client-jaxrs", "io.quarkus:quarkus-smallrye-stork", "io.quarkus:quarkus-rest-client-config" ],
+      "guide" : "https://docs.quarkiverse.io/quarkus-langchain4j/dev/index.html",
+      "keywords" : [ "ai", "langchain4j", "oidc", "mcp" ],
+      "minimum-java-version" : "17",
+      "requires-quarkus-core" : "[3.20,)",
+      "scm-url" : "https://github.com/quarkiverse/quarkus-langchain4j",
+      "status" : "preview"
+    },
+    "artifact" : "io.quarkiverse.langchain4j:quarkus-langchain4j-oidc-client-mcp-auth-provider::jar:1.2.3",
+    "origins" : [ "io.quarkus.platform:quarkus-langchain4j-bom-quarkus-platform-descriptor:3.27.2:json:3.27.2" ]
+  }, {
+    "name" : "LangChain4j McpClientAuthProvider that can propagate OpenId Connect (OIDC) and OAuth2 authorization code flow or bearer access tokens.",
+    "description" : "Provides McpClientAuthProvider implementation that can be used to collect authorization code flow or bearer access tokens verified by the quarkus-oidc extension and propagate them to MCP servers.",
+    "metadata" : {
+      "built-with-quarkus-core" : "3.20.2.2",
+      "categories" : [ "security" ],
+      "extension-dependencies" : [ "io.quarkus:quarkus-arc", "io.quarkus:quarkus-core", "io.quarkiverse.langchain4j:quarkus-langchain4j-core", "io.quarkus:quarkus-jackson", "io.quarkus:quarkus-qute", "io.quarkus:quarkus-vertx", "io.quarkus:quarkus-netty", "io.quarkus:quarkus-mutiny", "io.quarkus:quarkus-smallrye-context-propagation", "io.quarkus:quarkus-virtual-threads", "io.quarkiverse.langchain4j:quarkus-langchain4j-mcp", "io.quarkus:quarkus-rest-client-jackson", "io.quarkus:quarkus-rest-jackson-common", "io.quarkus:quarkus-rest-common", "io.quarkus:quarkus-jsonp", "io.quarkus:quarkus-rest-client", "io.quarkus:quarkus-rest-client-jaxrs", "io.quarkus:quarkus-smallrye-stork", "io.quarkus:quarkus-rest-client-config", "io.quarkus:quarkus-tls-registry" ],
+      "guide" : "https://docs.quarkiverse.io/quarkus-langchain4j/dev/index.html",
+      "keywords" : [ "ai", "langchain4j", "oidc", "mcp" ],
+      "minimum-java-version" : "17",
+      "requires-quarkus-core" : "[3.20,)",
+      "scm-url" : "https://github.com/quarkiverse/quarkus-langchain4j",
+      "status" : "preview"
+    },
+    "artifact" : "io.quarkiverse.langchain4j:quarkus-langchain4j-oidc-mcp-auth-provider::jar:1.2.3",
+    "origins" : [ "io.quarkus.platform:quarkus-langchain4j-bom-quarkus-platform-descriptor:3.27.2:json:3.27.2" ]
+  }, {
+    "name" : "LangChain4j OpenId Connect (OIDC) ModelAuthProvider",
+    "description" : "Provides ModelAuthProvider which uses OIDC bearer or authorization code flow access tokens",
+    "metadata" : {
+      "built-with-quarkus-core" : "3.20.2.2",
+      "categories" : [ "security" ],
+      "extension-dependencies" : [ "io.quarkus:quarkus-arc", "io.quarkus:quarkus-core", "io.quarkiverse.langchain4j:quarkus-langchain4j-core", "io.quarkus:quarkus-jackson", "io.quarkus:quarkus-qute", "io.quarkus:quarkus-vertx", "io.quarkus:quarkus-netty", "io.quarkus:quarkus-mutiny", "io.quarkus:quarkus-smallrye-context-propagation", "io.quarkus:quarkus-virtual-threads" ],
+      "guide" : "https://docs.quarkiverse.io/quarkus-langchain4j/dev/index.html",
+      "keywords" : [ "ai", "langchain4j", "oidc", "security" ],
+      "minimum-java-version" : "17",
+      "requires-quarkus-core" : "[3.20,)",
+      "scm-url" : "https://github.com/quarkiverse/quarkus-langchain4j",
+      "status" : "preview"
+    },
+    "artifact" : "io.quarkiverse.langchain4j:quarkus-langchain4j-oidc-model-auth-provider::jar:1.2.3",
+    "origins" : [ "io.quarkus.platform:quarkus-langchain4j-bom-quarkus-platform-descriptor:3.27.2:json:3.27.2" ]
+  }, {
+    "name" : "LangChain4j Ollama",
+    "description" : "Provides the basic integration of Ollama with LangChain4j",
+    "metadata" : {
+      "built-with-quarkus-core" : "3.20.2.2",
+      "categories" : [ "ai" ],
+      "extension-dependencies" : [ "io.quarkus:quarkus-arc", "io.quarkus:quarkus-core", "io.quarkus:quarkus-rest-client-jackson", "io.quarkus:quarkus-rest-jackson-common", "io.quarkus:quarkus-rest-common", "io.quarkus:quarkus-jsonp", "io.quarkus:quarkus-rest-client", "io.quarkus:quarkus-smallrye-stork", "io.quarkus:quarkus-rest-client-config", "io.quarkus:quarkus-qute", "io.quarkiverse.langchain4j:quarkus-langchain4j-core", "io.quarkus:quarkus-jackson", "io.quarkus:quarkus-vertx", "io.quarkus:quarkus-netty", "io.quarkus:quarkus-mutiny", "io.quarkus:quarkus-smallrye-context-propagation", "io.quarkus:quarkus-virtual-threads", "io.quarkus:quarkus-rest-client-jaxrs", "io.quarkus:quarkus-tls-registry" ],
+      "guide" : "https://docs.quarkiverse.io/quarkus-langchain4j/dev/index.html",
+      "keywords" : [ "ai", "langchain4j", "openai" ],
+      "minimum-java-version" : "17",
+      "requires-quarkus-core" : "[3.20,)",
+      "scm-url" : "https://github.com/quarkiverse/quarkus-langchain4j",
+      "status" : "preview"
+    },
+    "artifact" : "io.quarkiverse.langchain4j:quarkus-langchain4j-ollama::jar:1.2.3",
+    "origins" : [ "io.quarkus.platform:quarkus-langchain4j-bom-quarkus-platform-descriptor:3.27.2:json:3.27.2" ]
+  }, {
+    "name" : "LangChain4j OpenAI Common",
+    "description" : "Parent POM for Quarkiverse projects that includes the default release and artifact publishing related\n    configuration",
+    "metadata" : {
+      "built-with-quarkus-core" : "3.20.2.2",
+      "extension-dependencies" : [ "io.quarkus:quarkus-arc", "io.quarkus:quarkus-core", "io.quarkus:quarkus-rest-client-jackson", "io.quarkus:quarkus-rest-jackson-common", "io.quarkus:quarkus-rest-common", "io.quarkus:quarkus-jsonp", "io.quarkus:quarkus-rest-client", "io.quarkus:quarkus-rest-client-jaxrs", "io.quarkus:quarkus-smallrye-stork", "io.quarkus:quarkus-rest-client-config", "io.quarkus:quarkus-tls-registry", "io.quarkus:quarkus-qute", "io.quarkiverse.langchain4j:quarkus-langchain4j-core", "io.quarkus:quarkus-jackson", "io.quarkus:quarkus-vertx", "io.quarkus:quarkus-netty", "io.quarkus:quarkus-mutiny", "io.quarkus:quarkus-smallrye-context-propagation", "io.quarkus:quarkus-virtual-threads" ],
+      "minimum-java-version" : "17",
+      "requires-quarkus-core" : "[3.20,)",
+      "scm-url" : "https://github.com/quarkiverse/quarkus-langchain4j",
+      "unlisted" : true
+    },
+    "artifact" : "io.quarkiverse.langchain4j:quarkus-langchain4j-openai-common::jar:1.2.3",
+    "origins" : [ "io.quarkus.platform:quarkus-langchain4j-bom-quarkus-platform-descriptor:3.27.2:json:3.27.2" ]
+  }, {
+    "name" : "LangChain4j OpenAI",
+    "description" : "Provides the basic integration with LangChain4j",
+    "metadata" : {
+      "built-with-quarkus-core" : "3.20.2.2",
+      "categories" : [ "ai" ],
+      "extension-dependencies" : [ "io.quarkiverse.langchain4j:quarkus-langchain4j-openai-common", "io.quarkus:quarkus-arc", "io.quarkus:quarkus-core", "io.quarkus:quarkus-rest-client-jackson", "io.quarkus:quarkus-rest-jackson-common", "io.quarkus:quarkus-rest-common", "io.quarkus:quarkus-jsonp", "io.quarkus:quarkus-rest-client", "io.quarkus:quarkus-rest-client-jaxrs", "io.quarkus:quarkus-smallrye-stork", "io.quarkus:quarkus-rest-client-config", "io.quarkus:quarkus-tls-registry", "io.quarkus:quarkus-qute", "io.quarkiverse.langchain4j:quarkus-langchain4j-core", "io.quarkus:quarkus-jackson", "io.quarkus:quarkus-vertx", "io.quarkus:quarkus-netty", "io.quarkus:quarkus-mutiny", "io.quarkus:quarkus-smallrye-context-propagation", "io.quarkus:quarkus-virtual-threads" ],
+      "guide" : "https://docs.quarkiverse.io/quarkus-langchain4j/dev/index.html",
+      "keywords" : [ "ai", "langchain4j", "openai" ],
+      "minimum-java-version" : "17",
+      "requires-quarkus-core" : "[3.20,)",
+      "scm-url" : "https://github.com/quarkiverse/quarkus-langchain4j",
+      "status" : "preview"
+    },
+    "artifact" : "io.quarkiverse.langchain4j:quarkus-langchain4j-openai::jar:1.2.3",
+    "origins" : [ "io.quarkus.platform:quarkus-langchain4j-bom-quarkus-platform-descriptor:3.27.2:json:3.27.2" ]
+  }, {
+    "name" : "Quarkus LangChain4j OpenShift AI",
+    "description" : "Provides integration of Quarkus LangChain4j with the OpenShift AI",
+    "metadata" : {
+      "built-with-quarkus-core" : "3.20.2.2",
+      "categories" : [ "ai" ],
+      "extension-dependencies" : [ "io.quarkus:quarkus-arc", "io.quarkus:quarkus-core", "io.quarkus:quarkus-rest-client-jackson", "io.quarkus:quarkus-rest-jackson-common", "io.quarkus:quarkus-rest-common", "io.quarkus:quarkus-jsonp", "io.quarkus:quarkus-rest-client", "io.quarkus:quarkus-rest-client-jaxrs", "io.quarkus:quarkus-smallrye-stork", "io.quarkus:quarkus-rest-client-config", "io.quarkus:quarkus-tls-registry", "io.quarkiverse.langchain4j:quarkus-langchain4j-core", "io.quarkus:quarkus-jackson", "io.quarkus:quarkus-qute", "io.quarkus:quarkus-vertx", "io.quarkus:quarkus-netty", "io.quarkus:quarkus-mutiny", "io.quarkus:quarkus-smallrye-context-propagation", "io.quarkus:quarkus-virtual-threads" ],
+      "guide" : "https://docs.quarkiverse.io/quarkus-langchain4j/dev/index.html",
+      "keywords" : [ "ai", "langchain4j", "openshift" ],
+      "minimum-java-version" : "17",
+      "requires-quarkus-core" : "[3.20,)",
+      "scm-url" : "https://github.com/quarkiverse/quarkus-langchain4j",
+      "status" : "preview"
+    },
+    "artifact" : "io.quarkiverse.langchain4j:quarkus-langchain4j-openshift-ai::jar:1.2.3",
+    "origins" : [ "io.quarkus.platform:quarkus-langchain4j-bom-quarkus-platform-descriptor:3.27.2:json:3.27.2" ]
+  }, {
+    "name" : "Quarkus LangChain4j Parsers Base",
+    "description" : "Provides the base module for making LangChain4j parsers work in Quarkus LangChain4j",
+    "metadata" : {
+      "built-with-quarkus-core" : "3.20.2.2",
+      "categories" : [ "ai" ],
+      "extension-dependencies" : [ "io.quarkiverse.langchain4j:quarkus-langchain4j-core", "io.quarkus:quarkus-arc", "io.quarkus:quarkus-core", "io.quarkus:quarkus-jackson", "io.quarkus:quarkus-qute", "io.quarkus:quarkus-vertx", "io.quarkus:quarkus-netty", "io.quarkus:quarkus-mutiny", "io.quarkus:quarkus-smallrye-context-propagation", "io.quarkus:quarkus-virtual-threads", "io.quarkiverse.poi:quarkus-poi", "io.quarkus:quarkus-awt" ],
+      "guide" : "https://docs.quarkiverse.io/quarkus-langchain4j/dev/index.html",
+      "keywords" : [ "ai", "langchain4j" ],
+      "minimum-java-version" : "17",
+      "requires-quarkus-core" : "[3.20,)",
+      "scm-url" : "https://github.com/quarkiverse/quarkus-langchain4j",
+      "status" : "preview"
+    },
+    "artifact" : "io.quarkiverse.langchain4j:quarkus-langchain4j-parsers-base::jar:1.2.3",
+    "origins" : [ "io.quarkus.platform:quarkus-langchain4j-bom-quarkus-platform-descriptor:3.27.2:json:3.27.2" ]
+  }, {
+    "name" : "LangChain4j pgvector embedding store",
+    "description" : "Provides the pgvector Embedding store for Quarkus LangChain4j",
+    "metadata" : {
+      "built-with-quarkus-core" : "3.20.2.2",
+      "categories" : [ "ai" ],
+      "extension-dependencies" : [ "io.quarkus:quarkus-arc", "io.quarkus:quarkus-core", "io.quarkiverse.langchain4j:quarkus-langchain4j-core", "io.quarkus:quarkus-qute", "io.quarkus:quarkus-vertx", "io.quarkus:quarkus-netty", "io.quarkus:quarkus-mutiny", "io.quarkus:quarkus-smallrye-context-propagation", "io.quarkus:quarkus-virtual-threads", "io.quarkus:quarkus-jackson", "io.quarkus:quarkus-agroal", "io.quarkus:quarkus-datasource", "io.quarkus:quarkus-narayana-jta", "io.quarkus:quarkus-jdbc-postgresql" ],
+      "guide" : "https://docs.quarkiverse.io/quarkus-langchain4j/dev/index.html",
+      "keywords" : [ "ai", "langchain4j", "openai", "pgvector" ],
+      "minimum-java-version" : "17",
+      "requires-quarkus-core" : "[3.20,)",
+      "scm-url" : "https://github.com/quarkiverse/quarkus-langchain4j",
+      "status" : "preview"
+    },
+    "artifact" : "io.quarkiverse.langchain4j:quarkus-langchain4j-pgvector::jar:1.2.3",
+    "origins" : [ "io.quarkus.platform:quarkus-langchain4j-bom-quarkus-platform-descriptor:3.27.2:json:3.27.2" ]
+  }, {
+    "name" : "LangChain4j Pinecone embedding store",
+    "description" : "Provides the Pinecone Embedding store for LangChain4j",
+    "metadata" : {
+      "built-with-quarkus-core" : "3.20.2.2",
+      "categories" : [ "ai" ],
+      "extension-dependencies" : [ "io.quarkus:quarkus-arc", "io.quarkus:quarkus-core", "io.quarkus:quarkus-rest-client-jackson", "io.quarkus:quarkus-rest-jackson-common", "io.quarkus:quarkus-rest-common", "io.quarkus:quarkus-jsonp", "io.quarkus:quarkus-rest-client", "io.quarkus:quarkus-rest-client-jaxrs", "io.quarkus:quarkus-smallrye-stork", "io.quarkus:quarkus-rest-client-config", "io.quarkus:quarkus-tls-registry", "io.quarkiverse.langchain4j:quarkus-langchain4j-core", "io.quarkus:quarkus-jackson", "io.quarkus:quarkus-qute", "io.quarkus:quarkus-vertx", "io.quarkus:quarkus-netty", "io.quarkus:quarkus-mutiny", "io.quarkus:quarkus-smallrye-context-propagation", "io.quarkus:quarkus-virtual-threads" ],
+      "guide" : "https://docs.quarkiverse.io/quarkus-langchain4j/dev/index.html",
+      "keywords" : [ "ai", "langchain4j", "openai", "pinecone" ],
+      "minimum-java-version" : "17",
+      "requires-quarkus-core" : "[3.20,)",
+      "scm-url" : "https://github.com/quarkiverse/quarkus-langchain4j",
+      "status" : "preview"
+    },
+    "artifact" : "io.quarkiverse.langchain4j:quarkus-langchain4j-pinecone::jar:1.2.3",
+    "origins" : [ "io.quarkus.platform:quarkus-langchain4j-bom-quarkus-platform-descriptor:3.27.2:json:3.27.2" ]
+  }, {
+    "name" : "LangChain4j Qdrant embedding store",
+    "description" : "Provides the Qdrant Embedding store for LangChain4j",
+    "metadata" : {
+      "built-with-quarkus-core" : "3.20.2.2",
+      "categories" : [ "ai" ],
+      "extension-dependencies" : [ "io.quarkus:quarkus-arc", "io.quarkus:quarkus-core", "io.quarkiverse.langchain4j:quarkus-langchain4j-core", "io.quarkus:quarkus-jackson", "io.quarkus:quarkus-qute", "io.quarkus:quarkus-vertx", "io.quarkus:quarkus-netty", "io.quarkus:quarkus-mutiny", "io.quarkus:quarkus-smallrye-context-propagation", "io.quarkus:quarkus-virtual-threads" ],
+      "guide" : "https://docs.quarkiverse.io/quarkus-langchain4j/dev/index.html",
+      "keywords" : [ "ai", "langchain4j", "openai", "qdrant" ],
+      "minimum-java-version" : "17",
+      "requires-quarkus-core" : "[3.20,)",
+      "scm-url" : "https://github.com/quarkiverse/quarkus-langchain4j",
+      "status" : "preview"
+    },
+    "artifact" : "io.quarkiverse.langchain4j:quarkus-langchain4j-qdrant::jar:1.2.3",
+    "origins" : [ "io.quarkus.platform:quarkus-langchain4j-bom-quarkus-platform-descriptor:3.27.2:json:3.27.2" ]
+  }, {
+    "name" : "LangChain4j Redis embedding store",
+    "description" : "Provides the Redis Embedding store for LangChain4j",
+    "metadata" : {
+      "built-with-quarkus-core" : "3.20.2.2",
+      "categories" : [ "ai" ],
+      "extension-dependencies" : [ "io.quarkus:quarkus-arc", "io.quarkus:quarkus-core", "io.quarkus:quarkus-redis-client", "io.quarkus:quarkus-vertx", "io.quarkus:quarkus-netty", "io.quarkus:quarkus-mutiny", "io.quarkus:quarkus-smallrye-context-propagation", "io.quarkus:quarkus-virtual-threads", "io.quarkus:quarkus-tls-registry", "io.quarkus:quarkus-jackson", "io.quarkiverse.langchain4j:quarkus-langchain4j-core", "io.quarkus:quarkus-qute" ],
+      "guide" : "https://docs.quarkiverse.io/quarkus-langchain4j/dev/index.html",
+      "keywords" : [ "ai", "langchain4j", "openai", "redis" ],
+      "minimum-java-version" : "17",
+      "requires-quarkus-core" : "[3.20,)",
+      "scm-url" : "https://github.com/quarkiverse/quarkus-langchain4j",
+      "status" : "preview"
+    },
+    "artifact" : "io.quarkiverse.langchain4j:quarkus-langchain4j-redis::jar:1.2.3",
+    "origins" : [ "io.quarkus.platform:quarkus-langchain4j-bom-quarkus-platform-descriptor:3.27.2:json:3.27.2" ]
+  }, {
+    "name" : "LangChain4j Tavily Web Search Engine",
+    "description" : "Provides the Tavily Web search engine for LangChain4j",
+    "metadata" : {
+      "built-with-quarkus-core" : "3.20.2.2",
+      "categories" : [ "ai" ],
+      "extension-dependencies" : [ "io.quarkus:quarkus-arc", "io.quarkus:quarkus-core", "io.quarkus:quarkus-rest-client-jackson", "io.quarkus:quarkus-rest-jackson-common", "io.quarkus:quarkus-rest-common", "io.quarkus:quarkus-jsonp", "io.quarkus:quarkus-rest-client", "io.quarkus:quarkus-rest-client-jaxrs", "io.quarkus:quarkus-smallrye-stork", "io.quarkus:quarkus-rest-client-config", "io.quarkus:quarkus-tls-registry", "io.quarkiverse.langchain4j:quarkus-langchain4j-core", "io.quarkus:quarkus-jackson", "io.quarkus:quarkus-qute", "io.quarkus:quarkus-vertx", "io.quarkus:quarkus-netty", "io.quarkus:quarkus-mutiny", "io.quarkus:quarkus-smallrye-context-propagation", "io.quarkus:quarkus-virtual-threads" ],
+      "guide" : "https://docs.quarkiverse.io/quarkus-langchain4j/dev/index.html",
+      "keywords" : [ "ai", "langchain4j" ],
+      "minimum-java-version" : "17",
+      "requires-quarkus-core" : "[3.20,)",
+      "scm-url" : "https://github.com/quarkiverse/quarkus-langchain4j",
+      "status" : "preview"
+    },
+    "artifact" : "io.quarkiverse.langchain4j:quarkus-langchain4j-tavily::jar:1.2.3",
+    "origins" : [ "io.quarkus.platform:quarkus-langchain4j-bom-quarkus-platform-descriptor:3.27.2:json:3.27.2" ]
+  }, {
+    "name" : "LangChain4j Vertex AI Gemini",
+    "description" : "Provides integration of Quarkus LangChain4j with Vertex AI Gemini",
+    "metadata" : {
+      "built-with-quarkus-core" : "3.20.2.2",
+      "categories" : [ "ai" ],
+      "extension-dependencies" : [ "io.quarkus:quarkus-arc", "io.quarkus:quarkus-core", "io.quarkiverse.langchain4j:quarkus-langchain4j-core", "io.quarkus:quarkus-jackson", "io.quarkus:quarkus-qute", "io.quarkus:quarkus-vertx", "io.quarkus:quarkus-netty", "io.quarkus:quarkus-mutiny", "io.quarkus:quarkus-smallrye-context-propagation", "io.quarkus:quarkus-virtual-threads", "io.quarkiverse.langchain4j:quarkus-langchain4j-gemini-common", "io.quarkus:quarkus-rest-client-jackson", "io.quarkus:quarkus-rest-jackson-common", "io.quarkus:quarkus-rest-common", "io.quarkus:quarkus-jsonp", "io.quarkus:quarkus-rest-client", "io.quarkus:quarkus-rest-client-jaxrs", "io.quarkus:quarkus-smallrye-stork", "io.quarkus:quarkus-rest-client-config", "io.quarkus:quarkus-tls-registry" ],
+      "guide" : "https://docs.quarkiverse.io/quarkus-langchain4j/dev/index.html",
+      "keywords" : [ "ai", "langchain4j", "vertex" ],
+      "minimum-java-version" : "17",
+      "requires-quarkus-core" : "[3.20,)",
+      "scm-url" : "https://github.com/quarkiverse/quarkus-langchain4j",
+      "status" : "preview"
+    },
+    "artifact" : "io.quarkiverse.langchain4j:quarkus-langchain4j-vertex-ai-gemini::jar:1.2.3",
+    "origins" : [ "io.quarkus.platform:quarkus-langchain4j-bom-quarkus-platform-descriptor:3.27.2:json:3.27.2" ]
+  }, {
+    "name" : "LangChain4j Vertex AI",
+    "description" : "Provides integration of Quarkus LangChain4j with Vertex AI",
+    "metadata" : {
+      "built-with-quarkus-core" : "3.20.2.2",
+      "categories" : [ "ai" ],
+      "extension-dependencies" : [ "io.quarkus:quarkus-arc", "io.quarkus:quarkus-core", "io.quarkiverse.langchain4j:quarkus-langchain4j-core", "io.quarkus:quarkus-jackson", "io.quarkus:quarkus-qute", "io.quarkus:quarkus-vertx", "io.quarkus:quarkus-netty", "io.quarkus:quarkus-mutiny", "io.quarkus:quarkus-smallrye-context-propagation", "io.quarkus:quarkus-virtual-threads", "io.quarkus:quarkus-rest-client-jackson", "io.quarkus:quarkus-rest-jackson-common", "io.quarkus:quarkus-rest-common", "io.quarkus:quarkus-jsonp", "io.quarkus:quarkus-rest-client", "io.quarkus:quarkus-rest-client-jaxrs", "io.quarkus:quarkus-smallrye-stork", "io.quarkus:quarkus-rest-client-config", "io.quarkus:quarkus-tls-registry" ],
+      "guide" : "https://docs.quarkiverse.io/quarkus-langchain4j/dev/index.html",
+      "keywords" : [ "ai", "langchain4j", "vertex" ],
+      "minimum-java-version" : "17",
+      "requires-quarkus-core" : "[3.20,)",
+      "scm-url" : "https://github.com/quarkiverse/quarkus-langchain4j",
+      "status" : "preview"
+    },
+    "artifact" : "io.quarkiverse.langchain4j:quarkus-langchain4j-vertex-ai::jar:1.2.3",
+    "origins" : [ "io.quarkus.platform:quarkus-langchain4j-bom-quarkus-platform-descriptor:3.27.2:json:3.27.2" ]
+  }, {
+    "name" : "LangChain4j Watsonx",
+    "description" : "Provides integration of Quarkus LangChain4j with the IBM Watsonx API",
+    "metadata" : {
+      "built-with-quarkus-core" : "3.20.2.2",
+      "categories" : [ "ai" ],
+      "extension-dependencies" : [ "io.quarkus:quarkus-arc", "io.quarkus:quarkus-core", "io.quarkus:quarkus-rest-client-jackson", "io.quarkus:quarkus-rest-jackson-common", "io.quarkus:quarkus-rest-common", "io.quarkus:quarkus-jsonp", "io.quarkus:quarkus-rest-client", "io.quarkus:quarkus-rest-client-jaxrs", "io.quarkus:quarkus-smallrye-stork", "io.quarkus:quarkus-rest-client-config", "io.quarkus:quarkus-tls-registry", "io.quarkus:quarkus-rest-client-jaxb", "io.quarkus:quarkus-jaxb", "io.quarkus:quarkus-jaxp", "io.quarkiverse.langchain4j:quarkus-langchain4j-core", "io.quarkus:quarkus-jackson", "io.quarkus:quarkus-qute", "io.quarkus:quarkus-vertx", "io.quarkus:quarkus-netty", "io.quarkus:quarkus-mutiny", "io.quarkus:quarkus-smallrye-context-propagation", "io.quarkus:quarkus-virtual-threads" ],
+      "guide" : "https://docs.quarkiverse.io/quarkus-langchain4j/dev/index.html",
+      "keywords" : [ "ai", "langchain4j", "watsonx" ],
+      "minimum-java-version" : "17",
+      "requires-quarkus-core" : "[3.20,)",
+      "scm-url" : "https://github.com/quarkiverse/quarkus-langchain4j",
+      "status" : "preview"
+    },
+    "artifact" : "io.quarkiverse.langchain4j:quarkus-langchain4j-watsonx::jar:1.2.3",
+    "origins" : [ "io.quarkus.platform:quarkus-langchain4j-bom-quarkus-platform-descriptor:3.27.2:json:3.27.2" ]
+  }, {
+    "name" : "LangChain4j Weaviate",
+    "description" : "Provides integration of Quarkus LangChain4j with the Weaviate vector database",
+    "metadata" : {
+      "built-with-quarkus-core" : "3.20.2.2",
+      "categories" : [ "ai" ],
+      "extension-dependencies" : [ "io.quarkus:quarkus-arc", "io.quarkus:quarkus-core", "io.quarkiverse.langchain4j:quarkus-langchain4j-core", "io.quarkus:quarkus-jackson", "io.quarkus:quarkus-qute", "io.quarkus:quarkus-vertx", "io.quarkus:quarkus-netty", "io.quarkus:quarkus-mutiny", "io.quarkus:quarkus-smallrye-context-propagation", "io.quarkus:quarkus-virtual-threads" ],
+      "guide" : "https://docs.quarkiverse.io/quarkus-langchain4j/dev/index.html",
+      "keywords" : [ "ai", "langchain4j", "weaviate" ],
+      "minimum-java-version" : "17",
+      "requires-quarkus-core" : "[3.20,)",
+      "scm-url" : "https://github.com/quarkiverse/quarkus-langchain4j",
+      "status" : "preview"
+    },
+    "artifact" : "io.quarkiverse.langchain4j:quarkus-langchain4j-weaviate::jar:1.2.3",
+    "origins" : [ "io.quarkus.platform:quarkus-langchain4j-bom-quarkus-platform-descriptor:3.27.2:json:3.27.2" ]
+  }, {
+    "name" : "Quarkus LangChain4j WebSockets Next",
+    "description" : "Provides integration of Quarkus LangChain4j with WebSockets Next",
+    "metadata" : {
+      "built-with-quarkus-core" : "3.20.0",
+      "categories" : [ "ai" ],
+      "extension-dependencies" : [ "io.quarkus:quarkus-core" ],
+      "guide" : "https://docs.quarkiverse.io/quarkus-langchain4j/dev/index.html",
+      "keywords" : [ "ai", "langchain4j", "websockets" ],
+      "minimum-java-version" : "17",
+      "requires-quarkus-core" : "[3.20,)",
+      "scm-url" : "https://github.com/quarkiverse/quarkus-langchain4j",
+      "status" : "preview",
+      "unlisted" : true
+    },
+    "artifact" : "io.quarkiverse.langchain4j:quarkus-langchain4j-websockets-next::jar:1.2.3",
+    "origins" : [ "io.quarkus.platform:quarkus-langchain4j-bom-quarkus-platform-descriptor:3.27.2:json:3.27.2" ]
+  } ],
+  "categories" : [ {
+    "id" : "integration",
+    "name" : "Integration",
+    "description" : "Connectors to read to write from a skew of systems (file, S#, Twitter, etc)",
+    "metadata" : {
+      "pinned" : [ "org.apache.camel.quarkus:camel-quarkus-core", "org.apache.camel.quarkus:camel-quarkus-core-xml" ]
+    }
+  }, {
+    "id" : "business-automation",
+    "name" : "Business Automation",
+    "description" : "Rules engine, BPM, etc"
+  } ],
+  "metadata" : {
+    "last-bom-update" : "io.quarkus.platform:quarkus-langchain4j-bom:3.27.2",
+    "platform-release" : {
+      "members" : [ "io.quarkus.platform:quarkus-bom-quarkus-platform-descriptor:3.27.2:json:3.27.2", "io.quarkus.platform:quarkus-qpid-jms-bom-quarkus-platform-descriptor:3.27.2:json:3.27.2", "io.quarkus.platform:quarkus-cassandra-bom-quarkus-platform-descriptor:3.27.2:json:3.27.2", "io.quarkus.platform:quarkus-amazon-services-bom-quarkus-platform-descriptor:3.27.2:json:3.27.2", "io.quarkus.platform:quarkus-cxf-bom-quarkus-platform-descriptor:3.27.2:json:3.27.2", "io.quarkus.platform:quarkus-camel-bom-quarkus-platform-descriptor:3.27.2:json:3.27.2", "io.quarkus.platform:quarkus-hazelcast-client-quarkus-platform-descriptor:3.27.2:json:3.27.2", "io.quarkus.platform:quarkus-debezium-bom-quarkus-platform-descriptor:3.27.2:json:3.27.2", "io.quarkus.platform:quarkus-blaze-persistence-bom-quarkus-platform-descriptor:3.27.2:json:3.27.2", "io.quarkus.platform:quarkus-google-cloud-services-bom-quarkus-platform-descriptor:3.27.2:json:3.27.2", "io.quarkus.platform:quarkus-operator-sdk-bom-quarkus-platform-descriptor:3.27.2:json:3.27.2", "io.quarkus.platform:quarkus-langchain4j-bom-quarkus-platform-descriptor:3.27.2:json:3.27.2", "io.quarkus.platform:quarkus-mcp-server-bom-quarkus-platform-descriptor:3.27.2:json:3.27.2" ],
+      "platform-key" : "io.quarkus.platform",
+      "stream" : "3.27",
+      "version" : "3.27.2"
+    }
+  }
+}

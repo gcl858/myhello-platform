@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.mvnpm.at.viz-js</groupId>
+  <artifactId>viz</artifactId>
+  <version>3.12.0</version>
+  <name>viz-js viz</name>
+  <description>WebAssembly build of Graphviz with a simple wrapper for using it on the web</description>
+  <url>https://github.com/mdaines/viz-js#readme</url>
+  <organization>
+    <name>viz-js viz</name>
+    <url>https://github.com/mdaines/viz-js#readme</url>
+  </organization>
+  <licenses>
+    <license>
+      <name>MIT</name>
+    </license>
+  </licenses>
+  <developers>
+    <developer>
+      <name>mdaines</name>
+      <email>mdaines@fastmail.com</email>
+    </developer>
+  </developers>
+  <scm>
+    <connection>https://github.com/mdaines/viz-js.git</connection>
+    <developerConnection>https://github.com/mdaines/viz-js.git</developerConnection>
+    <url>https://github.com/mdaines/viz-js</url>
+  </scm>
+  <issueManagement>
+    <url>https://github.com/mdaines/viz-js/issues</url>
+  </issueManagement>
+</project>

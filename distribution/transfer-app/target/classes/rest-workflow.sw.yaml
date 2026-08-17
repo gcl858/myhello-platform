@@ -1,0 +1,202 @@
+# =============================================================
+#  SonataFlow 工作流程定義檔 (Serverless Workflow 規格 0.8 版)
+# =============================================================
+#  本檔案示範「純 REST」呼叫外部 API 的寫法,目的是與
+#  OpenAPI-workflow.sw.yaml 形成對照,展示不需要 OpenAPI 規格
+#  也能呼叫 REST API。
+#
+#  本檔案展示的核心概念:
+#    1. 工作流程的基本中繼資料 (id / version / name / description)
+#    2. 輸入資料的 JSON Schema 驗證 (dataInputSchema)
+#    3. 透過「純 REST」方式呼叫外部 API (functions / type: custom)
+#       - 不需要 OpenAPI 規格檔
+#       - operation 使用 rest:<method>:<path> 指定 HTTP 方法與 URI
+#       - protocol / host / port 透過 application.properties 設定
+#    4. operation 類型的 state (用來執行動作 actions)
+#    5. actionDataFilter 與 stateDataFilter 對資料進行轉換
+#    6. 使用 jq 風格的運算式 ($.xxx) 來擷取與重組 JSON
+#    7. 工作流程的終止 (end: true)
+#
+#  整體執行流程概述:
+#  -------------------------------------------------
+#  Client 啟動工作流程
+#        │
+#        ▼
+#  SonataFlow 引擎驗證輸入 (依 dataInputSchema 的 JSON Schema)
+#        │
+#        ▼
+#  進入 FetchDataState (type: operation)
+#        │
+#        ▼
+#  執行 callApiAction 動作──呼叫 fetchHealthData 函式
+#  (此函式以純 REST 方式 GET /q/health,不走 OpenAPI 規格)
+#        │
+#        ▼
+#  actionDataFilter 將 API 回應放到 .apiResponse
+#        │
+#        ▼
+#  stateDataFilter 過濾最終輸出
+#  (組合 greeting + data 兩個欄位)
+#        │
+#        ▼
+#  end: true → 工作流程結束,回傳產出資料
+#  -------------------------------------------------
+#  package: sonataflow-addons-quarkus-openapi (此套件可保留,
+#            但本 workflow 不依賴它;移除亦可)
+# =============================================================
+
+# -----------------------------------------------------------------
+# id: 工作流程的唯一識別碼
+#     - 在同一個 SonataFlow 應用程式中必須唯一
+#     - 與 OpenAPI-workflow 區隔,使用 rest-workflow 作為識別
+# -----------------------------------------------------------------
+id: rest-workflow
+
+# -----------------------------------------------------------------
+# version: 工作流程的版本字串
+#     - 任何字串皆可,建議遵循語意化版本 (Semantic Versioning)
+#     - 當您升級流程時,應同步修改此版本,避免客戶端呼叫到舊版
+# -----------------------------------------------------------------
+version: '1.0.0'
+
+# -----------------------------------------------------------------
+# specVersion: 對應的 CNCF Serverless Workflow 規格版本
+#     - 本檔案採用 0.8 版
+#     - 必須與 SonataFlow 目前支援的版本匹配,否則引擎會拒絕載入
+# -----------------------------------------------------------------
+specVersion: '0.8'
+
+# -----------------------------------------------------------------
+# name: 給人閱讀的工作流程名稱
+#     - 通常會顯示在 SonataFlow 管理介面、追蹤記錄中
+# -----------------------------------------------------------------
+name: My First REST Workflow
+
+# -----------------------------------------------------------------
+# description: 工作流程的詳細說明
+#     - 用於文件、管理介面或監控儀表板
+#     - 建議使用完整句子,說明工作流程目的與使用情境
+# -----------------------------------------------------------------
+description: A simple workflow that demonstrates calling external REST APIs without OpenAPI spec
+
+# -----------------------------------------------------------------
+# start: 進入工作流程後第一個要被執行的 state 名稱
+#     - 工作流程一定由此開始
+#     - 對應下方 states 清單中的 FetchDataState
+# -----------------------------------------------------------------
+start: FetchDataState
+
+# -----------------------------------------------------------------
+# 沿用 OpenAPI-workflow 使用的輸入 Schema
+#   - 此 Schema 要求呼叫端必須提供一個字串欄位 `name`,
+#     否則啟動會失敗
+#   - 兩個 workflow 使用相同輸入契約,方便對照測試結果
+# -----------------------------------------------------------------
+dataInputSchema: classpath:schemas/input-schema.json
+
+# =============================================================
+# functions: 自訂函式清單
+#   - 這裡宣告的是「工作流程可呼叫的函式」
+#   - 其中 type: custom 搭配 operation 前綴 rest: 代表純 REST work item
+#   - operation 直接寫 HTTP 方法與 REST URI,這是「純 REST」的核心
+#     (不必再用 <檔案>#<operationId> 指向 OpenAPI 規格)
+# =============================================================
+functions:
+  # ---------------------------------------------------------------
+  # fetchHealthData: 以純 REST 方式呼叫 /q/health 取得健康狀態資料
+  # ---------------------------------------------------------------
+  #   - name: 函式名稱,稍後在 actions[*].functionRef.refName 引用
+  #   - type: custom 表示 SonataFlow 會依 operation 前綴尋找自訂 handler
+  #   - operation: rest:get:/q/health
+  #                rest = 使用純 REST handler
+  #                get  = HTTP 方法
+  #                /q/health = 相對 URI
+  #   - application.properties 補上 protocol/host/port
+  #     (也可直接寫完整 URL,例如 "http://localhost:8080/q/health",
+  #      但拆開寫更利於多環境部署切換)
+  #
+  #   為什麼採用「純 REST」(不透過 OpenAPI)?
+  #     - 不需維護 OpenAPI 規格檔,降低維護成本
+  #     - 對內部 API 或簡單端點特別合適
+  #     - 端點異動只需改 application.properties,不用重新編譯
+  #
+  #   與 OpenAPI-workflow.sw.yaml 的差異:
+  #     - OpenAPI 版 type = rest
+  #       operation = classpath:specs/openapi.yaml#getData
+  #       (必須有 OpenAPI 規格 + operationId 才能定位)
+  #     - 純 REST 版 type = custom
+  #       operation = rest:get:/q/health
+  #       (直接寫路徑,不依賴任何外部規格檔)
+  # ---------------------------------------------------------------
+  - name: fetchHealthData
+    operation: "rest:get:/q/health"
+    type: custom
+
+# =============================================================
+# states: 工作流程所有狀態的集合
+#   - 一個工作流程由多個 state 組成
+#   - 每個 state 都有自己的 type
+#     (operation / switch / event / foreach / inject / parallel ...)
+#   - state 之間可透過 transition 串接,本範例只有一個 state
+# =============================================================
+states:
+  # -------------------------------------------------------------
+  # FetchDataState: 第一個也是唯一的狀態
+  # type: operation 表示這個 state 會「執行某些動作」
+  # -------------------------------------------------------------
+  # 工作流程進入此 state 後,會依序執行:
+  #   1. actions 內所有動作 (這裡只有 callApiAction)
+  #   2. 套用 stateDataFilter 將 state 內部資料轉成最終輸出
+  #   3. 依 end 旗標決定是否結束工作流程
+  # -------------------------------------------------------------
+  - name: FetchDataState
+    type: operation
+
+    # -----------------------------------------------------------
+    # actions: 此 state 要執行的一連串動作
+    #   - 動作會依序列出順序執行
+    #   - 每個動作可對應到 functions 中宣告的函式
+    # -----------------------------------------------------------
+    actions:
+      # ---------------------------------------------------------
+      # callApiAction: 呼叫 fetchHealthData 函式
+      # ---------------------------------------------------------
+      # functionRef:
+      #   refName: 對應到 functions[*].name = fetchHealthData
+      #   (其他欄位如 arguments / selectionSet /
+      #    retry / timeout 等可省略,本範例使用預設值)
+      #
+      # actionDataFilter: 對「動作結果」做資料過濾
+      #   - results: "." 表示完整保留函式回傳的結果
+      #     (jq 風格,"." 代表原始 payload)
+      #   - toStateData: "${ .apiResponse }"
+      #     將動作結果包進 .apiResponse 這個欄位
+      #     最終存放到 state 內部資料 (state.data.apiResponse)
+      # ---------------------------------------------------------
+      - name: callApiAction
+        functionRef:
+          refName: fetchHealthData
+        actionDataFilter:
+          results: "."
+          toStateData: "${ .apiResponse }"
+
+    # -----------------------------------------------------------
+    # stateDataFilter: 對「整個 state 的最終輸出」做過濾
+    #   - output: 用 jq 風格的字串模板生成最終 JSON
+    #     '{ greeting: "Hello, \(.name)!", data: .apiResponse }'
+    #       - greeting: 從 input 取 .name 組合成招呼語
+    #         (注意: \(.name) 是字串插值,等同於模板字串)
+    #       - data: 來自前面 actionDataFilter 放的 .apiResponse
+    #
+    #   輸出形狀刻意與 OpenAPI-workflow 保持一致,
+    #   才能在同一輸入下比較兩種呼叫方式的回傳差異
+    # -----------------------------------------------------------
+    stateDataFilter:
+      output: '{ greeting: "Hello, \(.name)!", data: .apiResponse }'
+
+    # -----------------------------------------------------------
+    # end: true 代表這個 state 結束後工作流程即結束
+    #   - false 則會等待 transition 指向下一個 state
+    #   - 本範例只有一個 state,因此直接結束
+    # -----------------------------------------------------------
+    end: true

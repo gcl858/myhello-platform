@@ -1,0 +1,44 @@
+{
+  "id" : "io.quarkus.platform:quarkus-qpid-jms-bom-quarkus-platform-descriptor:3.27.2:json:3.27.2",
+  "platform" : true,
+  "bom" : "io.quarkus.platform:quarkus-qpid-jms-bom::pom:3.27.2",
+  "quarkus-core-version" : "3.27.2",
+  "extensions" : [ {
+    "name" : "AMQP 1.0 JMS client - Apache Qpid JMS",
+    "description" : "Use JMS APIs with AMQP 1.0 servers such as ActiveMQ Artemis, ActiveMQ 5, Qpid Broker-J, Qpid Dispatch router, Azure Service Bus, and more",
+    "metadata" : {
+      "built-with-quarkus-core" : "3.27.0",
+      "categories" : [ "messaging" ],
+      "extension-dependencies" : [ "io.quarkus:quarkus-core", "io.quarkus:quarkus-arc", "io.quarkus:quarkus-netty" ],
+      "guide" : "https://quarkus.io/guides/jms",
+      "keywords" : [ "amqp", "qpid-jms", "qpid", "jms", "artemis" ],
+      "minimum-java-version" : "17",
+      "requires-quarkus-core" : "[3.27,)",
+      "scm-url" : "https://github.com/amqphub/quarkus-qpid-jms",
+      "status" : "stable"
+    },
+    "artifact" : "org.amqphub.quarkus:quarkus-qpid-jms::jar:2.10.0",
+    "origins" : [ "io.quarkus.platform:quarkus-qpid-jms-bom-quarkus-platform-descriptor:3.27.2:json:3.27.2" ]
+  } ],
+  "categories" : [ {
+    "id" : "integration",
+    "name" : "Integration",
+    "description" : "Connectors to read to write from a skew of systems (file, S#, Twitter, etc)",
+    "metadata" : {
+      "pinned" : [ "org.apache.camel.quarkus:camel-quarkus-core", "org.apache.camel.quarkus:camel-quarkus-core-xml" ]
+    }
+  }, {
+    "id" : "business-automation",
+    "name" : "Business Automation",
+    "description" : "Rules engine, BPM, etc"
+  } ],
+  "metadata" : {
+    "last-bom-update" : "io.quarkus.platform:quarkus-qpid-jms-bom:3.27.0",
+    "platform-release" : {
+      "members" : [ "io.quarkus.platform:quarkus-bom-quarkus-platform-descriptor:3.27.2:json:3.27.2", "io.quarkus.platform:quarkus-qpid-jms-bom-quarkus-platform-descriptor:3.27.2:json:3.27.2", "io.quarkus.platform:quarkus-cassandra-bom-quarkus-platform-descriptor:3.27.2:json:3.27.2", "io.quarkus.platform:quarkus-amazon-services-bom-quarkus-platform-descriptor:3.27.2:json:3.27.2", "io.quarkus.platform:quarkus-cxf-bom-quarkus-platform-descriptor:3.27.2:json:3.27.2", "io.quarkus.platform:quarkus-camel-bom-quarkus-platform-descriptor:3.27.2:json:3.27.2", "io.quarkus.platform:quarkus-hazelcast-client-quarkus-platform-descriptor:3.27.2:json:3.27.2", "io.quarkus.platform:quarkus-debezium-bom-quarkus-platform-descriptor:3.27.2:json:3.27.2", "io.quarkus.platform:quarkus-blaze-persistence-bom-quarkus-platform-descriptor:3.27.2:json:3.27.2", "io.quarkus.platform:quarkus-google-cloud-services-bom-quarkus-platform-descriptor:3.27.2:json:3.27.2", "io.quarkus.platform:quarkus-operator-sdk-bom-quarkus-platform-descriptor:3.27.2:json:3.27.2", "io.quarkus.platform:quarkus-langchain4j-bom-quarkus-platform-descriptor:3.27.2:json:3.27.2", "io.quarkus.platform:quarkus-mcp-server-bom-quarkus-platform-descriptor:3.27.2:json:3.27.2" ],
+      "platform-key" : "io.quarkus.platform",
+      "stream" : "3.27",
+      "version" : "3.27.2"
+    }
+  }
+}

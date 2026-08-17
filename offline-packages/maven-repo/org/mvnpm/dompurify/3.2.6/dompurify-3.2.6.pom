@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.mvnpm</groupId>
+  <artifactId>dompurify</artifactId>
+  <version>3.2.6</version>
+  <name>dompurify</name>
+  <description>DOMPurify is a DOM-only, super-fast, uber-tolerant XSS sanitizer for HTML, MathML and SVG. It's written in JavaScript and works in all modern browsers (Safari, Opera (15+), Internet Explorer (10+), Firefox and Chrome - as well as almost anything else usin</description>
+  <url>https://github.com/cure53/DOMPurify</url>
+  <organization>
+    <name>Dr.-Ing. Mario Heiderich, Cure53</name>
+    <url>https://github.com/cure53/DOMPurify</url>
+  </organization>
+  <licenses>
+    <license>
+      <name>(MPL-2.0 OR Apache-2.0)</name>
+    </license>
+  </licenses>
+  <developers>
+    <developer>
+      <name>cure53</name>
+      <email>mario@cure53.de</email>
+    </developer>
+  </developers>
+  <scm>
+    <connection>git://github.com/cure53/DOMPurify.git</connection>
+    <developerConnection>git://github.com/cure53/DOMPurify.git</developerConnection>
+    <url>git://github.com/cure53/DOMPurify</url>
+  </scm>
+  <issueManagement>
+    <url>https://github.com/cure53/DOMPurify/issues</url>
+  </issueManagement>
+  <properties>
+    <org.mvnpm.at.types-trusted-types.version>[2.0.7,3)</org.mvnpm.at.types-trusted-types.version>
+  </properties>
+  <dependencies>
+    <dependency>
+      <groupId>org.mvnpm.at.types</groupId>
+      <artifactId>trusted-types</artifactId>
+      <version>${org.mvnpm.at.types-trusted-types.version}</version>
+    </dependency>
+  </dependencies>
+</project>

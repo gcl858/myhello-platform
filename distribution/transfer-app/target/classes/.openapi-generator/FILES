@@ -1,0 +1,7 @@
+.openapi-generator-ignore
+org/kie/kogito/openapi/openapi/api/DefaultApi.java
+org/kie/kogito/openapi/openapi/model/A16220Request.java
+org/kie/kogito/openapi/openapi/model/A16220Response.java
+org/kie/kogito/openapi/openapi/model/A16229Request.java
+org/kie/kogito/openapi/openapi/model/A16229Response.java
+org/kie/kogito/openapi/openapi/model/HealthResponse.java

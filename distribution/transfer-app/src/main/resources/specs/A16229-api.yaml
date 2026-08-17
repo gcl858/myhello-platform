@@ -1,0 +1,106 @@
+openapi: 3.0.0
+info:
+  title: A16229 API
+  description: A16229 交易處理 API
+  version: 1.0.0
+servers:
+  - url: http://localhost:8080/
+paths:
+  /A16229:
+    post:
+      operationId: executeA16229
+      summary: 執行 A16229 交易
+      description: |
+        處理 A16229 交易請求。當 AMT 大於 50 時交易成功，
+        否則回傳 403 錯誤。
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/A16229Request'
+      responses:
+        '200':
+          description: 交易成功
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/A16229Response'
+              examples:
+                success:
+                  summary: 一般成功
+                  value:
+                    code: "100"
+                    message: "成功"
+                    Account: "A123456789"
+                successEC:
+                  summary: EC 成功
+                  value:
+                    code: "100"
+                    message: "成功(EC)"
+                    Account: "A123456789"
+        '403':
+          description: 交易失敗 (Request 為空或 AMT 不符合條件)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/A16229Response'
+              examples:
+                emptyRequest:
+                  summary: Request 為空
+                  value:
+                    code: "999"
+                    message: "Request不可為空"
+                    Account: null
+                amtTooSmall:
+                  summary: AMT 不符合條件
+                  value:
+                    code: "999"
+                    message: "AMT必須大於50"
+                    Account: "A123456789"
+components:
+  schemas:
+    A16229Request:
+      type: object
+      description: A16229 交易請求
+      required:
+        - Account_A
+        - AMT
+        - EC
+      properties:
+        Account_A:
+          type: string
+          description: 帳號
+          example: "A123456789"
+        AMT:
+          type: integer
+          description: 交易金額，必須大於 50
+          format: int32
+          example: 100
+        EC:
+          type: boolean
+          description: 是否為 EC 交易
+          example: false
+    A16229Response:
+      type: object
+      description: A16229 交易回應
+      required:
+        - code
+        - message
+      properties:
+        code:
+          type: string
+          description: |
+            交易結果代碼。
+            * `100` - 成功
+            * `999` - 失敗
+          example: "100"
+        message:
+          type: string
+          description: 交易結果訊息
+          example: "成功"
+        Account:
+          type: string
+          description: 帳號 (失敗時可能為 null)
+          nullable: true
+          example: "A123456789"

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.acme.platform</groupId>
+        <artifactId>myhello-platform</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>distribution</artifactId>
+    <packaging>pom</packaging>
+    <name>distribution (parent)</name>
+    <description>
+        可執行 Quarkus 應用之 distribution 層。
+        每個子模組都會組裝成一個 quarkus-run.jar,可在不同 Pod / 主機上獨立部署。
+        原則:
+          - 一個 bounded context = 一個 distribution
+          - 一個 distribution = 一個 release train
+          - distribution 之間不共用 application.properties 檔 (僅共享 platform-data-index 內之 base properties)
+    </description>
+
+    <modules>
+        <module>transfer-app</module>
+        <module>reconciliation-app</module>
+    </modules>
+</project>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.acme.platform</groupId>
+        <artifactId>domain-transfer</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>transfer-workflow</artifactId>
+    <name>transfer-workflow</name>
+    <description>
+        Transfer 業務域之工作流程模組。
+        包含兩個 Saga 流程:
+          - saga-transfer-workflow (v15.0.0,使用 SagaApiService 直接打 REST)
+          - saga2-transfer-workflow (v2.0.0,使用 MyOpenApiService 動態從 OpenAPI 規格呼叫)
+        與其專屬 service (SagaApiService / MyOpenApiService)、schema、input 驗證。
+        注意:本模組依賴 reconciliation-api 之 AuditLogService(用於 saga2 對帳記錄)。
+    </description>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.acme.platform</groupId>
+            <artifactId>platform-common</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.acme.platform</groupId>
+            <artifactId>transfer-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.acme.platform</groupId>
+            <artifactId>reconciliation-api</artifactId>
+        </dependency>
+
+        <!-- Kogito / SonataFlow 引擎 (KIE 10.2.0) -->
+        <dependency>
+            <groupId>org.kie</groupId>
+            <artifactId>kie-addons-quarkus-process-management</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.kie</groupId>
+            <artifactId>kie-addons-quarkus-source-files</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.kie.sonataflow</groupId>
+            <artifactId>sonataflow-quarkus</artifactId>
+        </dependency>
+    </dependencies>
+</project>

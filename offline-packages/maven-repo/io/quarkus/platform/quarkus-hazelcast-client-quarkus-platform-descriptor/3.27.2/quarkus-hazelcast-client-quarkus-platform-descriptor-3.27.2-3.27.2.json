@@ -1,0 +1,44 @@
+{
+  "id" : "io.quarkus.platform:quarkus-hazelcast-client-quarkus-platform-descriptor:3.27.2:json:3.27.2",
+  "platform" : true,
+  "bom" : "io.quarkus.platform:quarkus-hazelcast-client::pom:3.27.2",
+  "quarkus-core-version" : "3.27.2",
+  "extensions" : [ {
+    "name" : "Hazelcast Client",
+    "description" : "Connect to the Hazelcast IMDG for distributed caching and in-memory computing",
+    "metadata" : {
+      "built-with-quarkus-core" : "3.26.2",
+      "categories" : [ "data" ],
+      "extension-dependencies" : [ "io.quarkus:quarkus-core", "io.quarkus:quarkus-arc", "io.quarkus:quarkus-jaxb", "io.quarkus:quarkus-jaxp" ],
+      "guide" : "https://guides.hazelcast.org/hazelcast-client-quarkus/",
+      "keywords" : [ "hazelcast-client", "hazelcast", "cache", "distributed cache", "caching" ],
+      "minimum-java-version" : "11",
+      "requires-quarkus-core" : "[3.26,)",
+      "scm-url" : "https://github.com/hazelcast/quarkus-hazelcast-client",
+      "status" : "stable"
+    },
+    "artifact" : "com.hazelcast:quarkus-hazelcast-client::jar:4.1.0",
+    "origins" : [ "io.quarkus.platform:quarkus-hazelcast-client-quarkus-platform-descriptor:3.27.2:json:3.27.2" ]
+  } ],
+  "categories" : [ {
+    "id" : "integration",
+    "name" : "Integration",
+    "description" : "Connectors to read to write from a skew of systems (file, S#, Twitter, etc)",
+    "metadata" : {
+      "pinned" : [ "org.apache.camel.quarkus:camel-quarkus-core", "org.apache.camel.quarkus:camel-quarkus-core-xml" ]
+    }
+  }, {
+    "id" : "business-automation",
+    "name" : "Business Automation",
+    "description" : "Rules engine, BPM, etc"
+  } ],
+  "metadata" : {
+    "last-bom-update" : "io.quarkus.platform:quarkus-hazelcast-client:3.27.0.CR1",
+    "platform-release" : {
+      "members" : [ "io.quarkus.platform:quarkus-bom-quarkus-platform-descriptor:3.27.2:json:3.27.2", "io.quarkus.platform:quarkus-qpid-jms-bom-quarkus-platform-descriptor:3.27.2:json:3.27.2", "io.quarkus.platform:quarkus-cassandra-bom-quarkus-platform-descriptor:3.27.2:json:3.27.2", "io.quarkus.platform:quarkus-amazon-services-bom-quarkus-platform-descriptor:3.27.2:json:3.27.2", "io.quarkus.platform:quarkus-cxf-bom-quarkus-platform-descriptor:3.27.2:json:3.27.2", "io.quarkus.platform:quarkus-camel-bom-quarkus-platform-descriptor:3.27.2:json:3.27.2", "io.quarkus.platform:quarkus-hazelcast-client-quarkus-platform-descriptor:3.27.2:json:3.27.2", "io.quarkus.platform:quarkus-debezium-bom-quarkus-platform-descriptor:3.27.2:json:3.27.2", "io.quarkus.platform:quarkus-blaze-persistence-bom-quarkus-platform-descriptor:3.27.2:json:3.27.2", "io.quarkus.platform:quarkus-google-cloud-services-bom-quarkus-platform-descriptor:3.27.2:json:3.27.2", "io.quarkus.platform:quarkus-operator-sdk-bom-quarkus-platform-descriptor:3.27.2:json:3.27.2", "io.quarkus.platform:quarkus-langchain4j-bom-quarkus-platform-descriptor:3.27.2:json:3.27.2", "io.quarkus.platform:quarkus-mcp-server-bom-quarkus-platform-descriptor:3.27.2:json:3.27.2" ],
+      "platform-key" : "io.quarkus.platform",
+      "stream" : "3.27",
+      "version" : "3.27.2"
+    }
+  }
+}

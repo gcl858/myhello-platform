@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ JBoss, Home of Professional Open Source.
+  ~
+  ~ Copyright 2021 Red Hat, Inc., and individual contributors
+  ~ as indicated by the @author tags.
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>org.jboss.resteasy.microprofile</groupId>
+        <artifactId>resteasy-microprofile-parent</artifactId>
+        <version>3.0.1.Final</version>
+        <relativePath>../../pom.xml</relativePath>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>resteasy-microprofile-test-bom</artifactId>
+    <packaging>pom</packaging>
+    <name>RESTEasy MicroProfile: Test BOM</name>
+
+    <properties>
+
+        <version.jakarta.enterprise.concurrent>2.0.0</version.jakarta.enterprise.concurrent>
+        <version.jakarta.json.json-api>2.1.3</version.jakarta.json.json-api>
+        <version.jakarta.json.bind-api>3.0.1</version.jakarta.json.bind-api>
+
+        <version.org.eclipse.parsson>1.1.7</version.org.eclipse.parsson>
+        <version.org.eclipse.yasson>3.0.2</version.org.eclipse.yasson>
+
+        <version.org.jboss.arquillian>1.9.3.Final</version.org.jboss.arquillian>
+        <version.org.jboss.arquillian.container.arquillian-weld-embedded>4.0.0.Final</version.org.jboss.arquillian.container.arquillian-weld-embedded>
+        <version.org.jboss.dmr>1.7.0.Final</version.org.jboss.dmr>
+        <version.org.jboss.shrinkwrap.resolver>3.3.3</version.org.jboss.shrinkwrap.resolver>
+        <version.org.jboss.weld>5.1.0.Final</version.org.jboss.weld>
+
+        <version.org.testng>7.10.2</version.org.testng>
+
+        <version.org.wildfly.arquillian>5.1.0.Beta9</version.org.wildfly.arquillian>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- First import the production BOM -->
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>project-bom</artifactId>
+                <version>${project.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.jboss.resteasy</groupId>
+                <artifactId>resteasy-bom</artifactId>
+                <version>${version.org.jboss.resteasy}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.jboss.arquillian</groupId>
+                <artifactId>arquillian-bom</artifactId>
+                <version>${version.org.jboss.arquillian}</version>
+                <scope>import</scope>
+                <type>pom</type>
+            </dependency>
+            <dependency>
+                <groupId>org.wildfly.arquillian</groupId>
+                <artifactId>wildfly-arquillian-bom</artifactId>
+                <version>${version.org.wildfly.arquillian}</version>
+                <scope>import</scope>
+                <type>pom</type>
+            </dependency>
+            <dependency>
+                <groupId>org.jboss.shrinkwrap.resolver</groupId>
+                <artifactId>shrinkwrap-resolver-depchain</artifactId>
+                <version>${version.org.jboss.shrinkwrap.resolver}</version>
+                <type>pom</type>
+                <scope>import</scope>
+                <exclusions>
+                    <exclusion>
+                        <groupId>javax.enterprise</groupId>
+                        <artifactId>cdi-api</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+            <!-- Required by the MicroProfile REST TCK -->
+            <dependency>
+                <groupId>org.wiremock</groupId>
+                <artifactId>wiremock</artifactId>
+                <version>${version.org.wiremock}</version>
+                <scope>test</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>jakarta.enterprise.concurrent</groupId>
+                <artifactId>jakarta.enterprise.concurrent-api</artifactId>
+                <version>${version.jakarta.enterprise.concurrent}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>jakarta.json</groupId>
+                <artifactId>jakarta.json-api</artifactId>
+                <version>${version.jakarta.json.json-api}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>jakarta.json.bind</groupId>
+                <artifactId>jakarta.json.bind-api</artifactId>
+                <version>${version.jakarta.json.bind-api}</version>
+                <scope>test</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.junit.jupiter</groupId>
+                <artifactId>junit-jupiter</artifactId>
+                <version>${version.org.junit}</version>
+                <scope>test</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.eclipse.microprofile.rest.client</groupId>
+                <artifactId>microprofile-rest-client-tck</artifactId>
+                <version>${version.org.eclipse.microprofile.rest.client}</version>
+                <scope>test</scope>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.reactivestreams</groupId>
+                        <artifactId>reactive-streams</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+            <dependency>
+                <groupId>org.eclipse.parsson</groupId>
+                <artifactId>parsson</artifactId>
+                <version>${version.org.eclipse.parsson}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.eclipse</groupId>
+                <artifactId>yasson</artifactId>
+                <version>${version.org.eclipse.yasson}</version>
+                <scope>test</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.jboss</groupId>
+                <artifactId>jboss-dmr</artifactId>
+                <version>${version.org.jboss.dmr}</version>
+                <scope>test</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.jboss.arquillian.container</groupId>
+                <artifactId>arquillian-weld-embedded</artifactId>
+                <version>${version.org.jboss.arquillian.container.arquillian-weld-embedded}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>jakarta.interceptor</groupId>
+                        <artifactId>jakarta.interceptor-api</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.jboss.weld</groupId>
+                        <artifactId>weld-lite-extension-translator</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+            <dependency>
+                <groupId>org.jboss.resteasy</groupId>
+                <artifactId>arquillian-utils</artifactId>
+                <version>${version.org.jboss.resteasy}</version>
+                <scope>test</scope>
+                <exclusions>
+                    <exclusion>
+                        <groupId>*</groupId>
+                        <artifactId>*</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+            <dependency>
+                <groupId>org.jboss.resteasy</groupId>
+                <artifactId>resteasy-undertow</artifactId>
+                <version>${version.org.jboss.resteasy}</version>
+                <scope>test</scope>
+                <exclusions>
+                    <exclusion>
+                        <groupId>jakarta.annotation</groupId>
+                        <artifactId>jakarta.annotation-api</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>org.jboss.resteasy</groupId>
+                <artifactId>resteasy-netty4</artifactId>
+                <version>${version.org.jboss.resteasy}</version>
+                <scope>test</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.jboss.weld.se</groupId>
+                <artifactId>weld-se-core</artifactId>
+                <version>${version.org.jboss.weld}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>jakarta.enterprise</groupId>
+                        <artifactId>jakarta.enterprise.cdi-api</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>jakarta.inject</groupId>
+                        <artifactId>jakarta.inject-api</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+            <!-- Required until WFARQ-201 is resolved -->
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>2.0.16</version>
+                <scope>test</scope>
+            </dependency>
+
+            <!-- Required for the MicroProfile TCK -->
+            <dependency>
+                <groupId>org.testng</groupId>
+                <artifactId>testng</artifactId>
+                <version>${version.org.testng}</version>
+                <scope>test</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>

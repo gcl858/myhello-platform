@@ -1,0 +1,6 @@
+com/example/platform/security/SonataFlowSecurityConfig$SwaggerFilter.class
+com/example/platform/security/SonataFlowSecurityConfig.class
+com/example/platform/security/SonataFlowSecurityConfig$RuntimeFilter.class
+com/example/platform/security/UnwrapResponseFilter.class
+com/example/platform/security/SonataFlowSecurityConfig$WorkflowStatusFilter.class
+com/example/platform/security/OpenApiFilter.class

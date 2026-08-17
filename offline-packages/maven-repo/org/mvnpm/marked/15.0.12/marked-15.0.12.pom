@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.mvnpm</groupId>
+  <artifactId>marked</artifactId>
+  <version>15.0.12</version>
+  <name>marked</name>
+  <description>A markdown parser built for speed</description>
+  <url>https://marked.js.org</url>
+  <organization>
+    <name>Christopher Jeffrey</name>
+    <url>https://marked.js.org</url>
+  </organization>
+  <licenses>
+    <license>
+      <name>MIT</name>
+    </license>
+  </licenses>
+  <developers>
+    <developer>
+      <name>chjj</name>
+      <email>chjjeffrey@gmail.com</email>
+    </developer>
+    <developer>
+      <name>styfle</name>
+      <email>steven@ceriously.com</email>
+    </developer>
+    <developer>
+      <name>amidknight</name>
+      <email>josh@8fold.pro</email>
+    </developer>
+    <developer>
+      <name>tonybrix</name>
+      <email>tony@brix.ninja</email>
+    </developer>
+  </developers>
+  <scm>
+    <connection>git://github.com/markedjs/marked.git</connection>
+    <developerConnection>git://github.com/markedjs/marked.git</developerConnection>
+    <url>git://github.com/markedjs/marked</url>
+  </scm>
+  <issueManagement>
+    <url>http://github.com/markedjs/marked/issues</url>
+  </issueManagement>
+</project>

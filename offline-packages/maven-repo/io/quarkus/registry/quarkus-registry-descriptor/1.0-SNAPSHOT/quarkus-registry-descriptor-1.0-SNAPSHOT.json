@@ -1,0 +1,17 @@
+{
+  "descriptor" : {
+    "artifact" : "io.quarkus.registry:quarkus-registry-descriptor::json:1.0-SNAPSHOT"
+  },
+  "platforms" : {
+    "artifact" : "io.quarkus.registry:quarkus-platforms::json:1.0-SNAPSHOT"
+  },
+  "non-platform-extensions" : {
+    "artifact" : "io.quarkus.registry:quarkus-non-platform-extensions::json:1.0-SNAPSHOT"
+  },
+  "maven" : {
+    "repository" : {
+      "id" : "registry.quarkus.io",
+      "url" : "https://registry.quarkus.io/maven"
+    }
+  }
+}

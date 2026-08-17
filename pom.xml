@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!--
+      myhello-platform  —  parent POM
+      重構自原本單一 myhello-sonataflow 模組,採多模組分層。
+      模組切分決策請見 docs/MODULE-SPLIT-DECISION.md 與 rationale DOCX。
+    -->
+    <groupId>org.acme.platform</groupId>
+    <artifactId>myhello-platform</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>myhello-platform (parent)</name>
+    <description>
+        Enterprise-grade multi-module refactor of myhello-sonataflow.
+        Platform layer + bounded contexts (transfer / reconciliation) + distribution apps.
+    </description>
+
+    <modules>
+        <!-- platform layer (基礎設施,可橫向重複使用) -->
+        <module>platform-common</module>
+        <module>platform-security</module>
+        <module>platform-data-index</module>
+
+        <!-- bounded contexts (業務域) -->
+        <module>domain-transfer</module>
+        <module>domain-reconciliation</module>
+
+        <!-- runnable distributions (Quarkus 應用) -->
+        <module>distribution</module>
+    </modules>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <maven.compiler.release>17</maven.compiler.release>
+
+        <!-- 統一版本管理:子模組不直接寫版本號,只用 artifactId -->
+        <quarkus.platform.artifact-id>quarkus-bom</quarkus.platform.artifact-id>
+        <quarkus.platform.group-id>io.quarkus.platform</quarkus.platform.group-id>
+        <quarkus.platform.version>3.27.2</quarkus.platform.version>
+        <compiler-plugin.version>3.15.0</compiler-plugin.version>
+        <surefire-plugin.version>3.5.6</surefire-plugin.version>
+        <kie.version>10.2.0</kie.version>
+        <kie.tooling.version>10.2.0</kie.tooling.version>
+
+        <!-- 修補模組本地版本(仍由各 distribution 自行 mvn install) -->
+        <sqlite-jdbc.version>3.45.1.0</sqlite-jdbc.version>
+        <rest-assured.version>5.5.0</rest-assured.version>
+
+        <!-- 模組座標(子模組引用,避免硬編 groupId:artifactId) -->
+        <platform-common.version>${project.version}</platform-common.version>
+        <platform-security.version>${project.version}</platform-security.version>
+        <platform-data-index.version>${project.version}</platform-data-index.version>
+        <transfer-api.version>${project.version}</transfer-api.version>
+        <transfer-workflow.version>${project.version}</transfer-workflow.version>
+        <transfer-samples.version>${project.version}</transfer-samples.version>
+        <reconciliation-api.version>${project.version}</reconciliation-api.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>${quarkus.platform.group-id}</groupId>
+                <artifactId>${quarkus.platform.artifact-id}</artifactId>
+                <version>${quarkus.platform.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.kie.kogito</groupId>
+                <artifactId>kogito-bom</artifactId>
+                <version>${kie.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!-- 平台層內部座標(讓子模組用 ${...} 引用) -->
+            <dependency>
+                <groupId>org.acme.platform</groupId>
+                <artifactId>platform-common</artifactId>
+                <version>${platform-common.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.acme.platform</groupId>
+                <artifactId>platform-security</artifactId>
+                <version>${platform-security.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.acme.platform</groupId>
+                <artifactId>platform-data-index</artifactId>
+                <version>${platform-data-index.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.acme.platform</groupId>
+                <artifactId>transfer-api</artifactId>
+                <version>${transfer-api.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.acme.platform</groupId>
+                <artifactId>transfer-workflow</artifactId>
+                <version>${transfer-workflow.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.acme.platform</groupId>
+                <artifactId>transfer-samples</artifactId>
+                <version>${transfer-samples.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.acme.platform</groupId>
+                <artifactId>reconciliation-api</artifactId>
+                <version>${reconciliation-api.version}</version>
+            </dependency>
+
+            <!-- SQLite JDBC (xerial) — 全平台唯一允許的 sqlite 驅動 -->
+            <dependency>
+                <groupId>org.xerial</groupId>
+                <artifactId>sqlite-jdbc</artifactId>
+                <version>${sqlite-jdbc.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>${quarkus.platform.group-id}</groupId>
+                    <artifactId>quarkus-maven-plugin</artifactId>
+                    <version>${quarkus.platform.version}</version>
+                    <extensions>true</extensions>
+                    <executions>
+                        <execution>
+                            <goals>
+                                <goal>build</goal>
+                                <goal>generate-code</goal>
+                                <goal>generate-code-tests</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>${compiler-plugin.version}</version>
+                    <configuration>
+                        <parameters>true</parameters>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>${surefire-plugin.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>io.smallrye</groupId>
+                    <artifactId>jandex-maven-plugin</artifactId>
+                    <version>3.2.7</version>
+                    <executions>
+                        <execution>
+                            <id>make-index</id>
+                            <goals>
+                                <goal>jandex</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+        <plugins>
+            <plugin>
+                <groupId>io.smallrye</groupId>
+                <artifactId>jandex-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+    <repositories>
+        <repository>
+            <id>central</id>
+            <name>Central Repository</name>
+            <url>https://repo.maven.apache.org/maven2</url>
+        </repository>
+        <repository>
+            <id>apache-public-repository-group</id>
+            <name>Apache Public Repository Group</name>
+            <url>https://repository.apache.org/content/groups/public/</url>
+        </repository>
+    </repositories>
+</project>

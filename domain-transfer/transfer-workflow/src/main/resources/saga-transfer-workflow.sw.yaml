@@ -1,0 +1,218 @@
+id: saga-transfer-workflow
+version: '15.0.0'
+specVersion: '0.8'
+name: Saga Transfer Workflow
+description: |
+  兩階段交易流程,Saga 模式回沖。
+  AMT <= 500 成功;AMT > 500 觸發 saga 回沖 (LIFO 順序);
+  每個 API 呼叫後用 jq switch 檢查 body.code 判斷成敗。
+
+  v15 改動 (Saga 回沖邏輯重構):
+    - A16220 失敗時:只回沖 A16229,不再呼叫 RollbackA16220
+      (階段 2 本來就沒扣款,呼叫 RollbackA16220 會送出多餘的失敗請求)
+    - AMT > 500 時:改用 LIFO 回沖順序
+      先回沖 A16220(後執行先回沖)→ 再回沖 A16229(先執行最後回沖)
+    - 新增終點 RollbackA16229Only:只回沖 A16229 就結束 (output 不含 a16220Rollback)
+    - 對調 RollbackA16220 / RollbackA16229 的角色:
+      RollbackA16220 變成中間步驟(transition → RollbackA16229)
+      RollbackA16229 變成 LIFO 終點(end: true + stateDataFilter)
+
+  v14 改動:
+    - functions 從 type: rest (OpenAPI addon) 改為 type: custom (SagaApiService)
+    - 原因: SonataFlow OpenAPI addon 4xx/5xx 寫死拋例外 + v0.8 onErrors 攔不到
+    - SagaApiService 用 JDK HttpClient 直接打,4xx body 也會回傳
+    - workflow 用 jq switch 看 .code == "100" 判斷成敗
+
+start: CallA16229State
+
+timeouts:
+  workflowExecTimeout: PT5M
+
+dataInputSchema: classpath:schemas/saga-transfer-input-schema.json
+
+functions:
+  # 用 custom service,直接用 SagaApiService
+  # operation 格式: service:<完整類別路徑>::<方法名稱>
+  - name: callA16229
+    operation: 'service:com.example.transfer.workflow.SagaApiService::callA16229'
+    type: custom
+  - name: callA16220
+    operation: 'service:com.example.transfer.workflow.SagaApiService::callA16220'
+    type: custom
+
+states:
+
+  # 階段 1: 呼叫 A16229 (EC=false)
+  - name: CallA16229State
+    type: operation
+    actions:
+      - name: callA16229Action
+        functionRef:
+          refName: callA16229
+          arguments:
+            Account_A: '${ .Account_A }'
+            AMT: '${ .AMT }'
+            EC: false
+        actionDataFilter:
+          results: '{code: .code, message: .message, Account: .Account, _httpStatus: ._httpStatus}'
+          toStateData: '${ .a16229Result }'
+    transition: CheckA16229Result
+
+  # 檢查 A16229 結果 (jq switch 看 code,不是看 HTTP status)
+  - name: CheckA16229Result
+    type: switch
+    dataConditions:
+      - name: a16229Success
+        condition: '${ .a16229Result.code == "100" }'
+        transition: CallA16220State
+      - name: a16229Failed
+        condition: '${ .a16229Result.code != "100" }'
+        transition: FailedState
+    defaultCondition:
+      transition: FailedState
+
+  # 階段 2: 呼叫 A16220 (EC=false)
+  - name: CallA16220State
+    type: operation
+    actions:
+      - name: callA16220Action
+        functionRef:
+          refName: callA16220
+          arguments:
+            Account_B: '${ .Account_B }'
+            AMT: '${ .AMT }'
+            EC: false
+        actionDataFilter:
+          results: '{code: .code, message: .message, Account: .Account, _httpStatus: ._httpStatus}'
+          toStateData: '${ .a16220Result }'
+    transition: CheckA16220Result
+
+  # 檢查 A16220 結果
+  # A16220 失敗時只回沖 A16229(階段 2 沒扣款,不需要 RollbackA16220)
+  - name: CheckA16220Result
+    type: switch
+    dataConditions:
+      - name: a16220Success
+        condition: '${ .a16220Result.code == "100" }'
+        transition: DecideByEvaluation
+      - name: a16220Failed
+        condition: '${ .a16220Result.code != "100" }'
+        transition: RollbackA16229Only
+    defaultCondition:
+      transition: RollbackA16229Only
+
+  # 業務規則判斷
+  # AMT > 500 → LIFO 回沖: 先回沖 A16220(後執行先回沖),再回沖 A16229(先執行最後回沖)
+  - name: DecideByEvaluation
+    type: switch
+    dataConditions:
+      - name: rollbackPath
+        condition: '${ .AMT > 500 }'
+        transition: RollbackA16220
+      - name: successPath
+        condition: '${ .AMT <= 500 }'
+        transition: SuccessState
+    defaultCondition:
+      transition: RollbackA16220
+
+  # 成功終點
+  - name: SuccessState
+    type: operation
+    actions: []
+    stateDataFilter:
+      output: |
+        {
+          status: "SUCCESS",
+          message: "交易成功",
+          AMT: .AMT,
+          a16229Result: .a16229Result,
+          a16220Result: .a16220Result
+        }
+    end: true
+
+  # 失敗終點 (A16229 失敗,或 API 連線錯誤)
+  - name: FailedState
+    type: operation
+    actions: []
+    stateDataFilter:
+      output: |
+        {
+          status: "FAILED",
+          message: "業務失敗或 API 錯誤",
+          AMT: .AMT,
+          a16229Result: .a16229Result,
+          a16220Result: .a16220Result,
+          a16229Rollback: .a16229Rollback,
+          a16220Rollback: .a16220Rollback
+        }
+    end: true
+
+  # Saga 回沖終點 (LIFO): A16229 是最先執行的,所以最後回沖
+  - name: RollbackA16229
+    type: operation
+    actions:
+      - name: rollbackA16229Action
+        functionRef:
+          refName: callA16229
+          arguments:
+            Account_A: '${ .Account_A }'
+            AMT: '${ .AMT }'
+            EC: true
+        actionDataFilter:
+          results: '{code: .code, message: .message, Account: .Account, _httpStatus: ._httpStatus}'
+          toStateData: '${ .a16229Rollback }'
+    stateDataFilter:
+      output: |
+        {
+          status: "ROLLED_BACK",
+          message: "AMT > 500 觸發 saga 回沖 (LIFO)",
+          AMT: .AMT,
+          a16229Result: .a16229Result,
+          a16220Result: .a16220Result,
+          a16229Rollback: .a16229Rollback,
+          a16220Rollback: .a16220Rollback
+        }
+    end: true
+
+  # LIFO 第一步: A16220 是後執行的,所以先回沖,完後再進 RollbackA16229
+  - name: RollbackA16220
+    type: operation
+    actions:
+      - name: rollbackA16220Action
+        functionRef:
+          refName: callA16220
+          arguments:
+            Account_B: '${ .Account_B }'
+            AMT: '${ .AMT }'
+            EC: true
+        actionDataFilter:
+          results: '{code: .code, message: .message, Account: .Account, _httpStatus: ._httpStatus}'
+          toStateData: '${ .a16220Rollback }'
+    transition: RollbackA16229
+
+  # A16220 原本就失敗時的終點
+  # 只回沖 A16229(階段 1 扣的錢),不再嘗試回沖 A16220(本來就沒扣)
+  - name: RollbackA16229Only
+    type: operation
+    actions:
+      - name: rollbackA16229OnlyAction
+        functionRef:
+          refName: callA16229
+          arguments:
+            Account_A: '${ .Account_A }'
+            AMT: '${ .AMT }'
+            EC: true
+        actionDataFilter:
+          results: '{code: .code, message: .message, Account: .Account, _httpStatus: ._httpStatus}'
+          toStateData: '${ .a16229Rollback }'
+    stateDataFilter:
+      output: |
+        {
+          status: "ROLLED_BACK",
+          message: "A16220 業務失敗,僅回沖 A16229",
+          AMT: .AMT,
+          a16229Result: .a16229Result,
+          a16220Result: .a16220Result,
+          a16229Rollback: .a16229Rollback
+        }
+    end: true

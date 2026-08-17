@@ -1,0 +1,1116 @@
+2026-08-17 16:38:46,873 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.fly.ini.db.KieFlywayDataBaseHelper] (main) Reading DataBase Product: 'SQLite' Version: '3.45.1'
+2026-08-17 16:38:46,900 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.fly.cor.FlywayExecutor] (main) Database: jdbc:sqlite:target/test-reconciliation.db (SQLite 3.45)
+2026-08-17 16:38:46,934 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.fly.cor.int.sch.JdbcTableSchemaHistory] (main) Schema history table "main"."kie_flyway_history_data_index" does not exist yet
+2026-08-17 16:38:46,936 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.fly.cor.int.com.DbValidate] (main) Successfully validated 22 migrations (execution time 00:00.011s)
+2026-08-17 16:38:46,938 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.fly.cor.Flyway] (main) All configured schemas are empty; baseline operation skipped. A baseline or migration script with a lower version than the baseline version may execute if available. Check the Schemas parameter if this is not intended.
+2026-08-17 16:38:46,939 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.fly.cor.int.sch.JdbcTableSchemaHistory] (main) Creating Schema History table "main"."kie_flyway_history_data_index" ...
+2026-08-17 16:38:46,956 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.fly.cor.int.com.DbMigrate] (main) Current version of schema "main": << Empty Schema >>
+2026-08-17 16:38:46,965 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.fly.cor.int.com.DbMigrate] (main) Migrating schema "main" to version "1.32.0 - data index create"
+2026-08-17 16:38:46,973 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.fly.cor.int.com.DbMigrate] (main) Migrating schema "main" to version "1.44.0 - data index definitions"
+2026-08-17 16:38:46,977 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.fly.cor.int.com.DbMigrate] (main) Migrating schema "main" to version "1.45.0.0 - data index node definitions"
+2026-08-17 16:38:46,979 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.fly.cor.int.com.DbMigrate] (main) Migrating schema "main" to version "1.45.0.1 - add identity to process instance"
+2026-08-17 16:38:46,984 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.fly.cor.int.com.DbMigrate] (main) Migrating schema "main" to version "1.45.0.2 - data index definitions add columns"
+2026-08-17 16:38:46,993 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.fly.cor.int.com.DbMigrate] (main) Migrating schema "main" to version "1.45.0.3 - add fk index"
+2026-08-17 16:38:47,002 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.fly.cor.int.com.DbMigrate] (main) Migrating schema "main" to version "1.45.0.4 - increase varchar length"
+2026-08-17 16:38:47,006 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.fly.cor.int.com.DbMigrate] (main) Migrating schema "main" to version "1.45.0.5 - add external reference id"
+2026-08-17 16:38:47,013 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.fly.cor.int.com.DbMigrate] (main) Migrating schema "main" to version "1.45.0.6 - add sla due date columns"
+2026-08-17 16:38:47,020 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.fly.cor.int.com.DbMigrate] (main) Migrating schema "main" to version "1.45.0.7 - add sla due date tasks"
+2026-08-17 16:38:47,033 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.fly.cor.int.com.DbMigrate] (main) Migrating schema "main" to version "1.45.0.8 - modify columns with reserved words"
+2026-08-17 16:38:47,045 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.fly.cor.int.com.DbMigrate] (main) Migrating schema "main" to version "1.45.0.9 - increase comments content size"
+2026-08-17 16:38:47,048 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.fly.cor.int.com.DbMigrate] (main) Migrating schema "main" to version "1.45.1.0 - metadata as jsonb"
+2026-08-17 16:38:47,050 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.fly.cor.int.com.DbMigrate] (main) Migrating schema "main" to version "1.45.1.1 - retrigger"
+2026-08-17 16:38:47,053 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.fly.cor.int.com.DbMigrate] (main) Migrating schema "main" to version "1.45.1.2 - cloudevent"
+2026-08-17 16:38:47,056 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.fly.cor.int.com.DbMigrate] (main) Migrating schema "main" to version "1.45.1.3 - add cancelled type nodes"
+2026-08-17 16:38:47,058 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.fly.cor.int.com.DbMigrate] (main) Migrating schema "main" to version "1.45.1.4 - add indexes for jobs and tasks"
+2026-08-17 16:38:47,061 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.fly.cor.int.com.DbMigrate] (main) Migrating schema "main" to version "1.46.0 - add user task id column"
+2026-08-17 16:38:47,063 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.fly.cor.int.com.DbMigrate] (main) Migrating schema "main" to version "1.47.0 - adjust column sizes in tables updated by hibernate"
+2026-08-17 16:38:47,065 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.fly.cor.int.com.DbMigrate] (main) Migrating schema "main" to version "1.48.0 - add input output args"
+2026-08-17 16:38:47,069 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.fly.cor.int.com.DbMigrate] (main) Migrating schema "main" to version "1.49.0 - add job exception details"
+2026-08-17 16:38:47,071 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.fly.cor.int.com.DbMigrate] (main) Migrating schema "main" to version "1.50.0 - definitions upsert trigger"
+2026-08-17 16:38:47,078 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.fly.cor.int.com.DbMigrate] (main) Successfully applied 22 migrations to schema "main", now at version v1.50.0 (execution time 00:00.029s)
+2026-08-17 16:38:47,484 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] WARN  [io.ver.ext.web.han.gra.GraphiQLHandler] (main) This instance of GraphiQLHandler has been created with a deprecated method, which will be removed in the next major version.
+2026-08-17 16:38:47,532 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.con.ServerlessWorkflowWorkItemHandlerConfig] (main) Registering OpenAPI work item handler named: openapi_executeA16229
+2026-08-17 16:38:47,533 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.con.ServerlessWorkflowWorkItemHandlerConfig] (main) Registering OpenAPI work item handler named: openapi_getData
+2026-08-17 16:38:47,534 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.con.ServerlessWorkflowWorkItemHandlerConfig] (main) Registering OpenAPI work item handler named: openapi_executeA16220
+2026-08-17 16:38:47,989 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [com.exa.rec.AuditLogService] (main) [AuditLogService] SQLite 通用資料表 (WAL 模式) workflow_execution_log 及對帳視圖 vw_saga_reconciliation 已就緒。
+2026-08-17 16:38:48,091 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.add.qua.mes.com.QuarkusKogitoExtensionInitializer] (main) Registered Kogito CloudEvent extension
+2026-08-17 16:38:48,954 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ind.gra.AbstractGraphQLSchemaManager] (executor-thread-1) Custom mutations are {}
+2026-08-17 16:38:49,523 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdatainput' changed value from: 'null', to: '{"Account_A":"A123","Account_B":"B123","AMT":100}'
+2026-08-17 16:38:49,524 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Workflow data change
+{
+  "Account_A" : "A123",
+  "Account_B" : "B123",
+  "AMT" : 100
+}
+2026-08-17 16:38:49,528 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Starting workflow 'saga2-transfer-workflow' (d9e984b2-cdd1-4768-83fc-80bb35fc47ea)
+2026-08-17 16:38:49,528 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Workflow data 
+{
+  "Account_A" : "A123",
+  "Account_B" : "B123",
+  "AMT" : 100
+}
+2026-08-17 16:38:49,541 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'Start' for process 'saga2-transfer-workflow' (d9e984b2-cdd1-4768-83fc-80bb35fc47ea)
+2026-08-17 16:38:49,542 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'ValidateInput' for process 'saga2-transfer-workflow' (d9e984b2-cdd1-4768-83fc-80bb35fc47ea)
+2026-08-17 16:38:49,543 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.exp.jq.JqExpressionHandler] (executor-thread-1) Using default scope
+2026-08-17 16:38:49,588 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'CallA16229State' for process 'saga2-transfer-workflow' (d9e984b2-cdd1-4768-83fc-80bb35fc47ea)
+2026-08-17 16:38:49,589 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'callApiViaOpenAPI' for process 'saga2-transfer-workflow' (d9e984b2-cdd1-4768-83fc-80bb35fc47ea)
+2026-08-17 16:38:49,709 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.a16229Result' changed value from: 'null', to: '{"code":"100","message":"成功","Account":"A123","_httpStatus":200}'
+2026-08-17 16:38:49,710 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'CheckA16229Result' for process 'saga2-transfer-workflow' (d9e984b2-cdd1-4768-83fc-80bb35fc47ea)
+2026-08-17 16:38:49,711 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'CallA16220State' for process 'saga2-transfer-workflow' (d9e984b2-cdd1-4768-83fc-80bb35fc47ea)
+2026-08-17 16:38:49,712 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'callApiViaOpenAPI' for process 'saga2-transfer-workflow' (d9e984b2-cdd1-4768-83fc-80bb35fc47ea)
+2026-08-17 16:38:49,728 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.a16220Result' changed value from: 'null', to: '{"code":"100","message":"成功","Account":"B123","_httpStatus":200}'
+2026-08-17 16:38:49,729 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'CheckA16220Result' for process 'saga2-transfer-workflow' (d9e984b2-cdd1-4768-83fc-80bb35fc47ea)
+2026-08-17 16:38:49,729 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'DecideByEvaluation' for process 'saga2-transfer-workflow' (d9e984b2-cdd1-4768-83fc-80bb35fc47ea)
+2026-08-17 16:38:49,730 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'InjectSuccessStatus' for process 'saga2-transfer-workflow' (d9e984b2-cdd1-4768-83fc-80bb35fc47ea)
+2026-08-17 16:38:49,731 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.finalStatus' changed value from: 'null', to: '"SUCCESS"'
+2026-08-17 16:38:49,731 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.finalMessage' changed value from: 'null', to: '"交易成功"'
+2026-08-17 16:38:49,732 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'Join-FinalAuditAndEnd' for process 'saga2-transfer-workflow' (d9e984b2-cdd1-4768-83fc-80bb35fc47ea)
+2026-08-17 16:38:49,733 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'FinalAuditAndEnd' for process 'saga2-transfer-workflow' (d9e984b2-cdd1-4768-83fc-80bb35fc47ea)
+2026-08-17 16:38:49,733 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'recordAuditLog' for process 'saga2-transfer-workflow' (d9e984b2-cdd1-4768-83fc-80bb35fc47ea)
+2026-08-17 16:38:49,736 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [com.exa.rec.AuditLogService] (executor-thread-1) [AuditLogService] 成功寫入對帳紀錄! Workflow: saga2-transfer-workflow, BusinessKey: A123, Status: SUCCESS, Rows: 1
+2026-08-17 16:38:49,738 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.saved' changed value from: 'null', to: 'true'
+2026-08-17 16:38:49,739 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.workflowId' changed value from: 'null', to: '"saga2-transfer-workflow"'
+2026-08-17 16:38:49,739 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.status' changed value from: 'null', to: '"SUCCESS"'
+2026-08-17 16:38:49,740 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Workflow data change
+{
+  "status" : "SUCCESS",
+  "message" : "交易成功",
+  "AMT" : 100,
+  "a16229Result" : {
+    "code" : "100",
+    "message" : "成功",
+    "Account" : "A123",
+    "_httpStatus" : 200
+  },
+  "a16220Result" : {
+    "code" : "100",
+    "message" : "成功",
+    "Account" : "B123",
+    "_httpStatus" : 200
+  },
+  "a16229Rollback" : null,
+  "a16220Rollback" : null
+}
+2026-08-17 16:38:49,741 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'End' for process 'saga2-transfer-workflow' (d9e984b2-cdd1-4768-83fc-80bb35fc47ea)
+2026-08-17 16:38:49,744 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Workflow 'saga2-transfer-workflow' (d9e984b2-cdd1-4768-83fc-80bb35fc47ea) completed
+2026-08-17 16:38:49,833 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdatainput' changed value from: 'null', to: '{"Account_A":"A123","Account_B":"B123","AMT":100}'
+2026-08-17 16:38:49,833 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Workflow data change
+{
+  "Account_A" : "A123",
+  "Account_B" : "B123",
+  "AMT" : 100
+}
+2026-08-17 16:38:49,834 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Starting workflow 'saga2-transfer-workflow' (2aa31350-13f2-4ac4-aa66-58e5629ca8a0)
+2026-08-17 16:38:49,834 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Workflow data 
+{
+  "Account_A" : "A123",
+  "Account_B" : "B123",
+  "AMT" : 100
+}
+2026-08-17 16:38:49,834 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'Start' for process 'saga2-transfer-workflow' (2aa31350-13f2-4ac4-aa66-58e5629ca8a0)
+2026-08-17 16:38:49,834 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'ValidateInput' for process 'saga2-transfer-workflow' (2aa31350-13f2-4ac4-aa66-58e5629ca8a0)
+2026-08-17 16:38:49,838 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'CallA16229State' for process 'saga2-transfer-workflow' (2aa31350-13f2-4ac4-aa66-58e5629ca8a0)
+2026-08-17 16:38:49,838 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'callApiViaOpenAPI' for process 'saga2-transfer-workflow' (2aa31350-13f2-4ac4-aa66-58e5629ca8a0)
+2026-08-17 16:38:49,844 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.a16229Result' changed value from: 'null', to: '{"code":"100","message":"成功","Account":"A123","_httpStatus":200}'
+2026-08-17 16:38:49,845 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'CheckA16229Result' for process 'saga2-transfer-workflow' (2aa31350-13f2-4ac4-aa66-58e5629ca8a0)
+2026-08-17 16:38:49,845 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'CallA16220State' for process 'saga2-transfer-workflow' (2aa31350-13f2-4ac4-aa66-58e5629ca8a0)
+2026-08-17 16:38:49,846 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'callApiViaOpenAPI' for process 'saga2-transfer-workflow' (2aa31350-13f2-4ac4-aa66-58e5629ca8a0)
+2026-08-17 16:38:49,853 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.a16220Result' changed value from: 'null', to: '{"code":"100","message":"成功","Account":"B123","_httpStatus":200}'
+2026-08-17 16:38:49,853 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'CheckA16220Result' for process 'saga2-transfer-workflow' (2aa31350-13f2-4ac4-aa66-58e5629ca8a0)
+2026-08-17 16:38:49,854 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'DecideByEvaluation' for process 'saga2-transfer-workflow' (2aa31350-13f2-4ac4-aa66-58e5629ca8a0)
+2026-08-17 16:38:49,854 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'InjectSuccessStatus' for process 'saga2-transfer-workflow' (2aa31350-13f2-4ac4-aa66-58e5629ca8a0)
+2026-08-17 16:38:49,855 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.finalStatus' changed value from: 'null', to: '"SUCCESS"'
+2026-08-17 16:38:49,855 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.finalMessage' changed value from: 'null', to: '"交易成功"'
+2026-08-17 16:38:49,855 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'Join-FinalAuditAndEnd' for process 'saga2-transfer-workflow' (2aa31350-13f2-4ac4-aa66-58e5629ca8a0)
+2026-08-17 16:38:49,856 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'FinalAuditAndEnd' for process 'saga2-transfer-workflow' (2aa31350-13f2-4ac4-aa66-58e5629ca8a0)
+2026-08-17 16:38:49,856 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'recordAuditLog' for process 'saga2-transfer-workflow' (2aa31350-13f2-4ac4-aa66-58e5629ca8a0)
+2026-08-17 16:38:49,858 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [com.exa.rec.AuditLogService] (executor-thread-1) [AuditLogService] 成功寫入對帳紀錄! Workflow: saga2-transfer-workflow, BusinessKey: A123, Status: SUCCESS, Rows: 1
+2026-08-17 16:38:49,860 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.saved' changed value from: 'null', to: 'true'
+2026-08-17 16:38:49,860 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.workflowId' changed value from: 'null', to: '"saga2-transfer-workflow"'
+2026-08-17 16:38:49,860 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.status' changed value from: 'null', to: '"SUCCESS"'
+2026-08-17 16:38:49,861 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Workflow data change
+{
+  "status" : "SUCCESS",
+  "message" : "交易成功",
+  "AMT" : 100,
+  "a16229Result" : {
+    "code" : "100",
+    "message" : "成功",
+    "Account" : "A123",
+    "_httpStatus" : 200
+  },
+  "a16220Result" : {
+    "code" : "100",
+    "message" : "成功",
+    "Account" : "B123",
+    "_httpStatus" : 200
+  },
+  "a16229Rollback" : null,
+  "a16220Rollback" : null
+}
+2026-08-17 16:38:49,862 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'End' for process 'saga2-transfer-workflow' (2aa31350-13f2-4ac4-aa66-58e5629ca8a0)
+2026-08-17 16:38:49,862 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Workflow 'saga2-transfer-workflow' (2aa31350-13f2-4ac4-aa66-58e5629ca8a0) completed
+2026-08-17 16:38:49,898 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdatainput' changed value from: 'null', to: '{"Account_A":"A123","Account_B":"B123","AMT":30}'
+2026-08-17 16:38:49,899 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Workflow data change
+{
+  "Account_A" : "A123",
+  "Account_B" : "B123",
+  "AMT" : 30
+}
+2026-08-17 16:38:49,900 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Starting workflow 'saga2-transfer-workflow' (cfe8d6af-2ed6-461a-abad-818df4af642b)
+2026-08-17 16:38:49,900 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Workflow data 
+{
+  "Account_A" : "A123",
+  "Account_B" : "B123",
+  "AMT" : 30
+}
+2026-08-17 16:38:49,900 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'Start' for process 'saga2-transfer-workflow' (cfe8d6af-2ed6-461a-abad-818df4af642b)
+2026-08-17 16:38:49,900 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'ValidateInput' for process 'saga2-transfer-workflow' (cfe8d6af-2ed6-461a-abad-818df4af642b)
+2026-08-17 16:38:49,905 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'CallA16229State' for process 'saga2-transfer-workflow' (cfe8d6af-2ed6-461a-abad-818df4af642b)
+2026-08-17 16:38:49,906 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'callApiViaOpenAPI' for process 'saga2-transfer-workflow' (cfe8d6af-2ed6-461a-abad-818df4af642b)
+2026-08-17 16:38:49,913 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.a16229Result' changed value from: 'null', to: '{"code":"999","message":"AMT必須大於50","Account":"A123","_httpStatus":403}'
+2026-08-17 16:38:49,913 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'CheckA16229Result' for process 'saga2-transfer-workflow' (cfe8d6af-2ed6-461a-abad-818df4af642b)
+2026-08-17 16:38:49,914 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'Join-InjectFailedStatus' for process 'saga2-transfer-workflow' (cfe8d6af-2ed6-461a-abad-818df4af642b)
+2026-08-17 16:38:49,914 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'InjectFailedStatus' for process 'saga2-transfer-workflow' (cfe8d6af-2ed6-461a-abad-818df4af642b)
+2026-08-17 16:38:49,915 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.finalStatus' changed value from: 'null', to: '"FAILED"'
+2026-08-17 16:38:49,915 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.finalMessage' changed value from: 'null', to: '"業務失敗或 API 錯誤"'
+2026-08-17 16:38:49,915 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'Join-FinalAuditAndEnd' for process 'saga2-transfer-workflow' (cfe8d6af-2ed6-461a-abad-818df4af642b)
+2026-08-17 16:38:49,915 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'FinalAuditAndEnd' for process 'saga2-transfer-workflow' (cfe8d6af-2ed6-461a-abad-818df4af642b)
+2026-08-17 16:38:49,915 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'recordAuditLog' for process 'saga2-transfer-workflow' (cfe8d6af-2ed6-461a-abad-818df4af642b)
+2026-08-17 16:38:49,916 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [com.exa.rec.AuditLogService] (executor-thread-1) [AuditLogService] 成功寫入對帳紀錄! Workflow: saga2-transfer-workflow, BusinessKey: A123, Status: FAILED, Rows: 1
+2026-08-17 16:38:49,917 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.saved' changed value from: 'null', to: 'true'
+2026-08-17 16:38:49,918 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.workflowId' changed value from: 'null', to: '"saga2-transfer-workflow"'
+2026-08-17 16:38:49,918 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.status' changed value from: 'null', to: '"FAILED"'
+2026-08-17 16:38:49,918 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Workflow data change
+{
+  "status" : "FAILED",
+  "message" : "業務失敗或 API 錯誤",
+  "AMT" : 30,
+  "a16229Result" : {
+    "code" : "999",
+    "message" : "AMT必須大於50",
+    "Account" : "A123",
+    "_httpStatus" : 403
+  },
+  "a16220Result" : null,
+  "a16229Rollback" : null,
+  "a16220Rollback" : null
+}
+2026-08-17 16:38:49,919 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'End' for process 'saga2-transfer-workflow' (cfe8d6af-2ed6-461a-abad-818df4af642b)
+2026-08-17 16:38:49,919 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Workflow 'saga2-transfer-workflow' (cfe8d6af-2ed6-461a-abad-818df4af642b) completed
+2026-08-17 16:38:49,939 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdatainput' changed value from: 'null', to: '{"Account_A":"A123","Account_B":"B123","AMT":600}'
+2026-08-17 16:38:49,939 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Workflow data change
+{
+  "Account_A" : "A123",
+  "Account_B" : "B123",
+  "AMT" : 600
+}
+2026-08-17 16:38:49,939 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Starting workflow 'saga2-transfer-workflow' (139b4bf4-a035-404b-9136-d52ce398f6ba)
+2026-08-17 16:38:49,940 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Workflow data 
+{
+  "Account_A" : "A123",
+  "Account_B" : "B123",
+  "AMT" : 600
+}
+2026-08-17 16:38:49,940 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'Start' for process 'saga2-transfer-workflow' (139b4bf4-a035-404b-9136-d52ce398f6ba)
+2026-08-17 16:38:49,940 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'ValidateInput' for process 'saga2-transfer-workflow' (139b4bf4-a035-404b-9136-d52ce398f6ba)
+2026-08-17 16:38:49,943 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'CallA16229State' for process 'saga2-transfer-workflow' (139b4bf4-a035-404b-9136-d52ce398f6ba)
+2026-08-17 16:38:49,943 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'callApiViaOpenAPI' for process 'saga2-transfer-workflow' (139b4bf4-a035-404b-9136-d52ce398f6ba)
+2026-08-17 16:38:49,950 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.a16229Result' changed value from: 'null', to: '{"code":"100","message":"成功","Account":"A123","_httpStatus":200}'
+2026-08-17 16:38:49,950 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'CheckA16229Result' for process 'saga2-transfer-workflow' (139b4bf4-a035-404b-9136-d52ce398f6ba)
+2026-08-17 16:38:49,951 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'CallA16220State' for process 'saga2-transfer-workflow' (139b4bf4-a035-404b-9136-d52ce398f6ba)
+2026-08-17 16:38:49,951 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'callApiViaOpenAPI' for process 'saga2-transfer-workflow' (139b4bf4-a035-404b-9136-d52ce398f6ba)
+2026-08-17 16:38:49,958 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.a16220Result' changed value from: 'null', to: '{"code":"100","message":"成功","Account":"B123","_httpStatus":200}'
+2026-08-17 16:38:49,958 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'CheckA16220Result' for process 'saga2-transfer-workflow' (139b4bf4-a035-404b-9136-d52ce398f6ba)
+2026-08-17 16:38:49,959 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'DecideByEvaluation' for process 'saga2-transfer-workflow' (139b4bf4-a035-404b-9136-d52ce398f6ba)
+2026-08-17 16:38:49,959 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'Join-RollbackA16220' for process 'saga2-transfer-workflow' (139b4bf4-a035-404b-9136-d52ce398f6ba)
+2026-08-17 16:38:49,960 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'RollbackA16220' for process 'saga2-transfer-workflow' (139b4bf4-a035-404b-9136-d52ce398f6ba)
+2026-08-17 16:38:49,960 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'callApiViaOpenAPI' for process 'saga2-transfer-workflow' (139b4bf4-a035-404b-9136-d52ce398f6ba)
+2026-08-17 16:38:49,967 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.a16220Rollback' changed value from: 'null', to: '{"code":"100","message":"成功(EC)","Account":"B123","_httpStatus":200}'
+2026-08-17 16:38:49,967 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'RollbackA16229' for process 'saga2-transfer-workflow' (139b4bf4-a035-404b-9136-d52ce398f6ba)
+2026-08-17 16:38:49,968 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'callApiViaOpenAPI' for process 'saga2-transfer-workflow' (139b4bf4-a035-404b-9136-d52ce398f6ba)
+2026-08-17 16:38:49,974 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.a16229Rollback' changed value from: 'null', to: '{"code":"100","message":"成功(EC)","Account":"A123","_httpStatus":200}'
+2026-08-17 16:38:49,975 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'CheckRollbackResults' for process 'saga2-transfer-workflow' (139b4bf4-a035-404b-9136-d52ce398f6ba)
+2026-08-17 16:38:49,975 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'InjectRolledBackStatus' for process 'saga2-transfer-workflow' (139b4bf4-a035-404b-9136-d52ce398f6ba)
+2026-08-17 16:38:49,976 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.finalStatus' changed value from: 'null', to: '"ROLLED_BACK"'
+2026-08-17 16:38:49,976 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.finalMessage' changed value from: 'null', to: '"AMT > 500 觸發 saga 回沖 (LIFO)"'
+2026-08-17 16:38:49,977 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'Join-FinalAuditAndEnd' for process 'saga2-transfer-workflow' (139b4bf4-a035-404b-9136-d52ce398f6ba)
+2026-08-17 16:38:49,977 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'FinalAuditAndEnd' for process 'saga2-transfer-workflow' (139b4bf4-a035-404b-9136-d52ce398f6ba)
+2026-08-17 16:38:49,977 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'recordAuditLog' for process 'saga2-transfer-workflow' (139b4bf4-a035-404b-9136-d52ce398f6ba)
+2026-08-17 16:38:49,978 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [com.exa.rec.AuditLogService] (executor-thread-1) [AuditLogService] 成功寫入對帳紀錄! Workflow: saga2-transfer-workflow, BusinessKey: A123, Status: ROLLED_BACK, Rows: 1
+2026-08-17 16:38:49,979 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.saved' changed value from: 'null', to: 'true'
+2026-08-17 16:38:49,980 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.workflowId' changed value from: 'null', to: '"saga2-transfer-workflow"'
+2026-08-17 16:38:49,980 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.status' changed value from: 'null', to: '"ROLLED_BACK"'
+2026-08-17 16:38:49,980 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Workflow data change
+{
+  "status" : "ROLLED_BACK",
+  "message" : "AMT > 500 觸發 saga 回沖 (LIFO)",
+  "AMT" : 600,
+  "a16229Result" : {
+    "code" : "100",
+    "message" : "成功",
+    "Account" : "A123",
+    "_httpStatus" : 200
+  },
+  "a16220Result" : {
+    "code" : "100",
+    "message" : "成功",
+    "Account" : "B123",
+    "_httpStatus" : 200
+  },
+  "a16229Rollback" : {
+    "code" : "100",
+    "message" : "成功(EC)",
+    "Account" : "A123",
+    "_httpStatus" : 200
+  },
+  "a16220Rollback" : {
+    "code" : "100",
+    "message" : "成功(EC)",
+    "Account" : "B123",
+    "_httpStatus" : 200
+  }
+}
+2026-08-17 16:38:49,981 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'End' for process 'saga2-transfer-workflow' (139b4bf4-a035-404b-9136-d52ce398f6ba)
+2026-08-17 16:38:49,981 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Workflow 'saga2-transfer-workflow' (139b4bf4-a035-404b-9136-d52ce398f6ba) completed
+2026-08-17 16:38:50,009 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdatainput' changed value from: 'null', to: '{"Account_A":"A123","Account_B":"B123","AMT":2000}'
+2026-08-17 16:38:50,010 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Workflow data change
+{
+  "Account_A" : "A123",
+  "Account_B" : "B123",
+  "AMT" : 2000
+}
+2026-08-17 16:38:50,010 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Starting workflow 'saga2-transfer-workflow' (54464672-a1f8-4655-b6f6-36b2f95b6c77)
+2026-08-17 16:38:50,010 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Workflow data 
+{
+  "Account_A" : "A123",
+  "Account_B" : "B123",
+  "AMT" : 2000
+}
+2026-08-17 16:38:50,010 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'Start' for process 'saga2-transfer-workflow' (54464672-a1f8-4655-b6f6-36b2f95b6c77)
+2026-08-17 16:38:50,011 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'ValidateInput' for process 'saga2-transfer-workflow' (54464672-a1f8-4655-b6f6-36b2f95b6c77)
+2026-08-17 16:38:50,014 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'CallA16229State' for process 'saga2-transfer-workflow' (54464672-a1f8-4655-b6f6-36b2f95b6c77)
+2026-08-17 16:38:50,015 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'callApiViaOpenAPI' for process 'saga2-transfer-workflow' (54464672-a1f8-4655-b6f6-36b2f95b6c77)
+2026-08-17 16:38:50,023 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.a16229Result' changed value from: 'null', to: '{"code":"100","message":"成功","Account":"A123","_httpStatus":200}'
+2026-08-17 16:38:50,023 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'CheckA16229Result' for process 'saga2-transfer-workflow' (54464672-a1f8-4655-b6f6-36b2f95b6c77)
+2026-08-17 16:38:50,024 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'CallA16220State' for process 'saga2-transfer-workflow' (54464672-a1f8-4655-b6f6-36b2f95b6c77)
+2026-08-17 16:38:50,024 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'callApiViaOpenAPI' for process 'saga2-transfer-workflow' (54464672-a1f8-4655-b6f6-36b2f95b6c77)
+2026-08-17 16:38:50,030 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.a16220Result' changed value from: 'null', to: '{"code":"999","message":"AMT必須小於1000","Account":"B123","_httpStatus":403}'
+2026-08-17 16:38:50,030 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'CheckA16220Result' for process 'saga2-transfer-workflow' (54464672-a1f8-4655-b6f6-36b2f95b6c77)
+2026-08-17 16:38:50,031 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'Join-RollbackA16229Only' for process 'saga2-transfer-workflow' (54464672-a1f8-4655-b6f6-36b2f95b6c77)
+2026-08-17 16:38:50,031 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'RollbackA16229Only' for process 'saga2-transfer-workflow' (54464672-a1f8-4655-b6f6-36b2f95b6c77)
+2026-08-17 16:38:50,032 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'callApiViaOpenAPI' for process 'saga2-transfer-workflow' (54464672-a1f8-4655-b6f6-36b2f95b6c77)
+2026-08-17 16:38:50,037 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.a16229Rollback' changed value from: 'null', to: '{"code":"100","message":"成功(EC)","Account":"A123","_httpStatus":200}'
+2026-08-17 16:38:50,037 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'CheckRollbackA16229OnlyResult' for process 'saga2-transfer-workflow' (54464672-a1f8-4655-b6f6-36b2f95b6c77)
+2026-08-17 16:38:50,039 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'InjectRolledBackOnlyStatus' for process 'saga2-transfer-workflow' (54464672-a1f8-4655-b6f6-36b2f95b6c77)
+2026-08-17 16:38:50,039 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.finalStatus' changed value from: 'null', to: '"ROLLED_BACK"'
+2026-08-17 16:38:50,039 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.finalMessage' changed value from: 'null', to: '"A16220 業務失敗,僅回沖 A16229"'
+2026-08-17 16:38:50,040 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'Join-FinalAuditAndEnd' for process 'saga2-transfer-workflow' (54464672-a1f8-4655-b6f6-36b2f95b6c77)
+2026-08-17 16:38:50,040 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'FinalAuditAndEnd' for process 'saga2-transfer-workflow' (54464672-a1f8-4655-b6f6-36b2f95b6c77)
+2026-08-17 16:38:50,040 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'recordAuditLog' for process 'saga2-transfer-workflow' (54464672-a1f8-4655-b6f6-36b2f95b6c77)
+2026-08-17 16:38:50,041 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [com.exa.rec.AuditLogService] (executor-thread-1) [AuditLogService] 成功寫入對帳紀錄! Workflow: saga2-transfer-workflow, BusinessKey: A123, Status: ROLLED_BACK, Rows: 1
+2026-08-17 16:38:50,042 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.saved' changed value from: 'null', to: 'true'
+2026-08-17 16:38:50,042 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.workflowId' changed value from: 'null', to: '"saga2-transfer-workflow"'
+2026-08-17 16:38:50,042 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.status' changed value from: 'null', to: '"ROLLED_BACK"'
+2026-08-17 16:38:50,043 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Workflow data change
+{
+  "status" : "ROLLED_BACK",
+  "message" : "A16220 業務失敗,僅回沖 A16229",
+  "AMT" : 2000,
+  "a16229Result" : {
+    "code" : "100",
+    "message" : "成功",
+    "Account" : "A123",
+    "_httpStatus" : 200
+  },
+  "a16220Result" : {
+    "code" : "999",
+    "message" : "AMT必須小於1000",
+    "Account" : "B123",
+    "_httpStatus" : 403
+  },
+  "a16229Rollback" : {
+    "code" : "100",
+    "message" : "成功(EC)",
+    "Account" : "A123",
+    "_httpStatus" : 200
+  },
+  "a16220Rollback" : null
+}
+2026-08-17 16:38:50,043 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'End' for process 'saga2-transfer-workflow' (54464672-a1f8-4655-b6f6-36b2f95b6c77)
+2026-08-17 16:38:50,043 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Workflow 'saga2-transfer-workflow' (54464672-a1f8-4655-b6f6-36b2f95b6c77) completed
+2026-08-17 16:38:50,066 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdatainput' changed value from: 'null', to: '{"Account_A":"A123","Account_B":"B123","AMT":500}'
+2026-08-17 16:38:50,066 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Workflow data change
+{
+  "Account_A" : "A123",
+  "Account_B" : "B123",
+  "AMT" : 500
+}
+2026-08-17 16:38:50,067 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Starting workflow 'saga2-transfer-workflow' (c2ca6cfa-6ce7-43ca-8346-f6aff1d8f41b)
+2026-08-17 16:38:50,067 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Workflow data 
+{
+  "Account_A" : "A123",
+  "Account_B" : "B123",
+  "AMT" : 500
+}
+2026-08-17 16:38:50,067 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'Start' for process 'saga2-transfer-workflow' (c2ca6cfa-6ce7-43ca-8346-f6aff1d8f41b)
+2026-08-17 16:38:50,067 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'ValidateInput' for process 'saga2-transfer-workflow' (c2ca6cfa-6ce7-43ca-8346-f6aff1d8f41b)
+2026-08-17 16:38:50,070 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'CallA16229State' for process 'saga2-transfer-workflow' (c2ca6cfa-6ce7-43ca-8346-f6aff1d8f41b)
+2026-08-17 16:38:50,070 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'callApiViaOpenAPI' for process 'saga2-transfer-workflow' (c2ca6cfa-6ce7-43ca-8346-f6aff1d8f41b)
+2026-08-17 16:38:50,075 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.a16229Result' changed value from: 'null', to: '{"code":"100","message":"成功","Account":"A123","_httpStatus":200}'
+2026-08-17 16:38:50,075 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'CheckA16229Result' for process 'saga2-transfer-workflow' (c2ca6cfa-6ce7-43ca-8346-f6aff1d8f41b)
+2026-08-17 16:38:50,076 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'CallA16220State' for process 'saga2-transfer-workflow' (c2ca6cfa-6ce7-43ca-8346-f6aff1d8f41b)
+2026-08-17 16:38:50,076 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'callApiViaOpenAPI' for process 'saga2-transfer-workflow' (c2ca6cfa-6ce7-43ca-8346-f6aff1d8f41b)
+2026-08-17 16:38:50,081 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.a16220Result' changed value from: 'null', to: '{"code":"100","message":"成功","Account":"B123","_httpStatus":200}'
+2026-08-17 16:38:50,082 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'CheckA16220Result' for process 'saga2-transfer-workflow' (c2ca6cfa-6ce7-43ca-8346-f6aff1d8f41b)
+2026-08-17 16:38:50,082 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'DecideByEvaluation' for process 'saga2-transfer-workflow' (c2ca6cfa-6ce7-43ca-8346-f6aff1d8f41b)
+2026-08-17 16:38:50,082 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'InjectSuccessStatus' for process 'saga2-transfer-workflow' (c2ca6cfa-6ce7-43ca-8346-f6aff1d8f41b)
+2026-08-17 16:38:50,082 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.finalStatus' changed value from: 'null', to: '"SUCCESS"'
+2026-08-17 16:38:50,082 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.finalMessage' changed value from: 'null', to: '"交易成功"'
+2026-08-17 16:38:50,083 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'Join-FinalAuditAndEnd' for process 'saga2-transfer-workflow' (c2ca6cfa-6ce7-43ca-8346-f6aff1d8f41b)
+2026-08-17 16:38:50,083 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'FinalAuditAndEnd' for process 'saga2-transfer-workflow' (c2ca6cfa-6ce7-43ca-8346-f6aff1d8f41b)
+2026-08-17 16:38:50,083 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'recordAuditLog' for process 'saga2-transfer-workflow' (c2ca6cfa-6ce7-43ca-8346-f6aff1d8f41b)
+2026-08-17 16:38:50,084 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [com.exa.rec.AuditLogService] (executor-thread-1) [AuditLogService] 成功寫入對帳紀錄! Workflow: saga2-transfer-workflow, BusinessKey: A123, Status: SUCCESS, Rows: 1
+2026-08-17 16:38:50,085 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.saved' changed value from: 'null', to: 'true'
+2026-08-17 16:38:50,085 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.workflowId' changed value from: 'null', to: '"saga2-transfer-workflow"'
+2026-08-17 16:38:50,085 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.status' changed value from: 'null', to: '"SUCCESS"'
+2026-08-17 16:38:50,085 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Workflow data change
+{
+  "status" : "SUCCESS",
+  "message" : "交易成功",
+  "AMT" : 500,
+  "a16229Result" : {
+    "code" : "100",
+    "message" : "成功",
+    "Account" : "A123",
+    "_httpStatus" : 200
+  },
+  "a16220Result" : {
+    "code" : "100",
+    "message" : "成功",
+    "Account" : "B123",
+    "_httpStatus" : 200
+  },
+  "a16229Rollback" : null,
+  "a16220Rollback" : null
+}
+2026-08-17 16:38:50,086 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'End' for process 'saga2-transfer-workflow' (c2ca6cfa-6ce7-43ca-8346-f6aff1d8f41b)
+2026-08-17 16:38:50,086 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Workflow 'saga2-transfer-workflow' (c2ca6cfa-6ce7-43ca-8346-f6aff1d8f41b) completed
+2026-08-17 16:38:50,106 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdatainput' changed value from: 'null', to: '{"Account_A":"A123","Account_B":"B123","AMT":501}'
+2026-08-17 16:38:50,106 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Workflow data change
+{
+  "Account_A" : "A123",
+  "Account_B" : "B123",
+  "AMT" : 501
+}
+2026-08-17 16:38:50,106 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Starting workflow 'saga2-transfer-workflow' (48c06f1e-2d4d-4963-8008-bd7882af1136)
+2026-08-17 16:38:50,107 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Workflow data 
+{
+  "Account_A" : "A123",
+  "Account_B" : "B123",
+  "AMT" : 501
+}
+2026-08-17 16:38:50,107 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'Start' for process 'saga2-transfer-workflow' (48c06f1e-2d4d-4963-8008-bd7882af1136)
+2026-08-17 16:38:50,107 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'ValidateInput' for process 'saga2-transfer-workflow' (48c06f1e-2d4d-4963-8008-bd7882af1136)
+2026-08-17 16:38:50,108 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'CallA16229State' for process 'saga2-transfer-workflow' (48c06f1e-2d4d-4963-8008-bd7882af1136)
+2026-08-17 16:38:50,109 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'callApiViaOpenAPI' for process 'saga2-transfer-workflow' (48c06f1e-2d4d-4963-8008-bd7882af1136)
+2026-08-17 16:38:50,114 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.a16229Result' changed value from: 'null', to: '{"code":"100","message":"成功","Account":"A123","_httpStatus":200}'
+2026-08-17 16:38:50,114 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'CheckA16229Result' for process 'saga2-transfer-workflow' (48c06f1e-2d4d-4963-8008-bd7882af1136)
+2026-08-17 16:38:50,115 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'CallA16220State' for process 'saga2-transfer-workflow' (48c06f1e-2d4d-4963-8008-bd7882af1136)
+2026-08-17 16:38:50,115 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'callApiViaOpenAPI' for process 'saga2-transfer-workflow' (48c06f1e-2d4d-4963-8008-bd7882af1136)
+2026-08-17 16:38:50,120 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.a16220Result' changed value from: 'null', to: '{"code":"100","message":"成功","Account":"B123","_httpStatus":200}'
+2026-08-17 16:38:50,121 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'CheckA16220Result' for process 'saga2-transfer-workflow' (48c06f1e-2d4d-4963-8008-bd7882af1136)
+2026-08-17 16:38:50,121 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'DecideByEvaluation' for process 'saga2-transfer-workflow' (48c06f1e-2d4d-4963-8008-bd7882af1136)
+2026-08-17 16:38:50,121 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'Join-RollbackA16220' for process 'saga2-transfer-workflow' (48c06f1e-2d4d-4963-8008-bd7882af1136)
+2026-08-17 16:38:50,121 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'RollbackA16220' for process 'saga2-transfer-workflow' (48c06f1e-2d4d-4963-8008-bd7882af1136)
+2026-08-17 16:38:50,121 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'callApiViaOpenAPI' for process 'saga2-transfer-workflow' (48c06f1e-2d4d-4963-8008-bd7882af1136)
+2026-08-17 16:38:50,128 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.a16220Rollback' changed value from: 'null', to: '{"code":"100","message":"成功(EC)","Account":"B123","_httpStatus":200}'
+2026-08-17 16:38:50,128 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'RollbackA16229' for process 'saga2-transfer-workflow' (48c06f1e-2d4d-4963-8008-bd7882af1136)
+2026-08-17 16:38:50,129 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'callApiViaOpenAPI' for process 'saga2-transfer-workflow' (48c06f1e-2d4d-4963-8008-bd7882af1136)
+2026-08-17 16:38:50,135 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.a16229Rollback' changed value from: 'null', to: '{"code":"100","message":"成功(EC)","Account":"A123","_httpStatus":200}'
+2026-08-17 16:38:50,136 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'CheckRollbackResults' for process 'saga2-transfer-workflow' (48c06f1e-2d4d-4963-8008-bd7882af1136)
+2026-08-17 16:38:50,136 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'InjectRolledBackStatus' for process 'saga2-transfer-workflow' (48c06f1e-2d4d-4963-8008-bd7882af1136)
+2026-08-17 16:38:50,136 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.finalStatus' changed value from: 'null', to: '"ROLLED_BACK"'
+2026-08-17 16:38:50,136 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.finalMessage' changed value from: 'null', to: '"AMT > 500 觸發 saga 回沖 (LIFO)"'
+2026-08-17 16:38:50,136 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'Join-FinalAuditAndEnd' for process 'saga2-transfer-workflow' (48c06f1e-2d4d-4963-8008-bd7882af1136)
+2026-08-17 16:38:50,136 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'FinalAuditAndEnd' for process 'saga2-transfer-workflow' (48c06f1e-2d4d-4963-8008-bd7882af1136)
+2026-08-17 16:38:50,136 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'recordAuditLog' for process 'saga2-transfer-workflow' (48c06f1e-2d4d-4963-8008-bd7882af1136)
+2026-08-17 16:38:50,137 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [com.exa.rec.AuditLogService] (executor-thread-1) [AuditLogService] 成功寫入對帳紀錄! Workflow: saga2-transfer-workflow, BusinessKey: A123, Status: ROLLED_BACK, Rows: 1
+2026-08-17 16:38:50,138 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.saved' changed value from: 'null', to: 'true'
+2026-08-17 16:38:50,138 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.workflowId' changed value from: 'null', to: '"saga2-transfer-workflow"'
+2026-08-17 16:38:50,138 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.status' changed value from: 'null', to: '"ROLLED_BACK"'
+2026-08-17 16:38:50,138 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Workflow data change
+{
+  "status" : "ROLLED_BACK",
+  "message" : "AMT > 500 觸發 saga 回沖 (LIFO)",
+  "AMT" : 501,
+  "a16229Result" : {
+    "code" : "100",
+    "message" : "成功",
+    "Account" : "A123",
+    "_httpStatus" : 200
+  },
+  "a16220Result" : {
+    "code" : "100",
+    "message" : "成功",
+    "Account" : "B123",
+    "_httpStatus" : 200
+  },
+  "a16229Rollback" : {
+    "code" : "100",
+    "message" : "成功(EC)",
+    "Account" : "A123",
+    "_httpStatus" : 200
+  },
+  "a16220Rollback" : {
+    "code" : "100",
+    "message" : "成功(EC)",
+    "Account" : "B123",
+    "_httpStatus" : 200
+  }
+}
+2026-08-17 16:38:50,138 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'End' for process 'saga2-transfer-workflow' (48c06f1e-2d4d-4963-8008-bd7882af1136)
+2026-08-17 16:38:50,138 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Workflow 'saga2-transfer-workflow' (48c06f1e-2d4d-4963-8008-bd7882af1136) completed
+2026-08-17 16:38:50,165 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [com.exa.rec.ReconciliationCsvExporter] (executor-thread-1) [ReconciliationCsvExporter] 匯出完成: file=reconciliation-20260817-163850.csv, rows=7, bytes=1066
+2026-08-17 16:38:51,315 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [com.exa.rec.ReconciliationCsvExporter] (executor-thread-1) [ReconciliationCsvExporter] 匯出完成: file=reconciliation-20260817-163851.csv, rows=7, bytes=1066
+2026-08-17 16:38:51,343 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [com.exa.rec.ReconciliationCsvExporter] (executor-thread-1) [ReconciliationCsvExporter] 匯出完成: file=reconciliation-20260817-163851.csv, rows=0, bytes=169
+2026-08-17 16:38:51,371 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [com.exa.rec.ReconciliationCsvExporter] (executor-thread-1) [ReconciliationCsvExporter] 匯出完成: file=reconciliation-20260817-163851.csv, rows=1, bytes=293
+2026-08-17 16:38:51,398 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [com.exa.rec.ReconciliationCsvExporter] (executor-thread-1) [ReconciliationCsvExporter] 匯出完成: file=reconciliation-20260817-163851.csv, rows=3, bytes=612
+2026-08-17 16:38:51,429 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [com.exa.rec.ReconciliationCsvExporter] (executor-thread-1) [ReconciliationCsvExporter] 匯出完成: file=reconciliation-20260817-163851.csv, rows=7, bytes=1066
+2026-08-17 16:38:51,454 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [com.exa.rec.ReconciliationCsvExporter] (executor-thread-1) [ReconciliationCsvExporter] 匯出完成: file=reconciliation-20260817-163851.csv, rows=7, bytes=1066
+2026-08-17 16:38:51,485 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [com.exa.rec.ReconciliationCsvExporter] (executor-thread-1) [ReconciliationCsvExporter] 匯出完成: file=reconciliation-20260817-163851.csv, rows=3, bytes=612
+2026-08-17 16:38:51,513 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [com.exa.rec.ReconciliationCsvExporter] (executor-thread-1) [ReconciliationCsvExporter] 匯出完成: file=reconciliation-20260817-163851.csv, rows=3, bytes=499
+2026-08-17 16:38:51,538 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [com.exa.rec.ReconciliationCsvExporter] (executor-thread-1) [ReconciliationCsvExporter] 匯出完成: file=reconciliation-20260817-163851.csv, rows=1, bytes=293
+2026-08-17 16:38:51,565 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [com.exa.rec.ReconciliationCsvExporter] (executor-thread-1) [ReconciliationCsvExporter] 匯出完成: file=reconciliation-20260817-163851.csv, rows=7, bytes=1066
+2026-08-17 16:38:51,599 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdatainput' changed value from: 'null', to: '{"Account_A":"931592_S","Account_B":"X","AMT":100}'
+2026-08-17 16:38:51,599 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Workflow data change
+{
+  "Account_A" : "931592_S",
+  "Account_B" : "X",
+  "AMT" : 100
+}
+2026-08-17 16:38:51,599 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Starting workflow 'saga2-transfer-workflow' (d4f8d57c-c09f-4d12-930f-8e372b67588c)
+2026-08-17 16:38:51,600 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Workflow data 
+{
+  "Account_A" : "931592_S",
+  "Account_B" : "X",
+  "AMT" : 100
+}
+2026-08-17 16:38:51,600 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'Start' for process 'saga2-transfer-workflow' (d4f8d57c-c09f-4d12-930f-8e372b67588c)
+2026-08-17 16:38:51,600 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'ValidateInput' for process 'saga2-transfer-workflow' (d4f8d57c-c09f-4d12-930f-8e372b67588c)
+2026-08-17 16:38:51,602 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'CallA16229State' for process 'saga2-transfer-workflow' (d4f8d57c-c09f-4d12-930f-8e372b67588c)
+2026-08-17 16:38:51,602 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'callApiViaOpenAPI' for process 'saga2-transfer-workflow' (d4f8d57c-c09f-4d12-930f-8e372b67588c)
+2026-08-17 16:38:51,607 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.a16229Result' changed value from: 'null', to: '{"code":"100","message":"成功","Account":"931592_S","_httpStatus":200}'
+2026-08-17 16:38:51,608 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'CheckA16229Result' for process 'saga2-transfer-workflow' (d4f8d57c-c09f-4d12-930f-8e372b67588c)
+2026-08-17 16:38:51,608 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'CallA16220State' for process 'saga2-transfer-workflow' (d4f8d57c-c09f-4d12-930f-8e372b67588c)
+2026-08-17 16:38:51,608 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'callApiViaOpenAPI' for process 'saga2-transfer-workflow' (d4f8d57c-c09f-4d12-930f-8e372b67588c)
+2026-08-17 16:38:51,613 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.a16220Result' changed value from: 'null', to: '{"code":"100","message":"成功","Account":"X","_httpStatus":200}'
+2026-08-17 16:38:51,614 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'CheckA16220Result' for process 'saga2-transfer-workflow' (d4f8d57c-c09f-4d12-930f-8e372b67588c)
+2026-08-17 16:38:51,614 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'DecideByEvaluation' for process 'saga2-transfer-workflow' (d4f8d57c-c09f-4d12-930f-8e372b67588c)
+2026-08-17 16:38:51,614 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'InjectSuccessStatus' for process 'saga2-transfer-workflow' (d4f8d57c-c09f-4d12-930f-8e372b67588c)
+2026-08-17 16:38:51,614 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.finalStatus' changed value from: 'null', to: '"SUCCESS"'
+2026-08-17 16:38:51,614 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.finalMessage' changed value from: 'null', to: '"交易成功"'
+2026-08-17 16:38:51,614 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'Join-FinalAuditAndEnd' for process 'saga2-transfer-workflow' (d4f8d57c-c09f-4d12-930f-8e372b67588c)
+2026-08-17 16:38:51,614 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'FinalAuditAndEnd' for process 'saga2-transfer-workflow' (d4f8d57c-c09f-4d12-930f-8e372b67588c)
+2026-08-17 16:38:51,615 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'recordAuditLog' for process 'saga2-transfer-workflow' (d4f8d57c-c09f-4d12-930f-8e372b67588c)
+2026-08-17 16:38:51,615 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [com.exa.rec.AuditLogService] (executor-thread-1) [AuditLogService] 成功寫入對帳紀錄! Workflow: saga2-transfer-workflow, BusinessKey: 931592_S, Status: SUCCESS, Rows: 1
+2026-08-17 16:38:51,616 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.saved' changed value from: 'null', to: 'true'
+2026-08-17 16:38:51,617 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.workflowId' changed value from: 'null', to: '"saga2-transfer-workflow"'
+2026-08-17 16:38:51,617 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.status' changed value from: 'null', to: '"SUCCESS"'
+2026-08-17 16:38:51,617 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Workflow data change
+{
+  "status" : "SUCCESS",
+  "message" : "交易成功",
+  "AMT" : 100,
+  "a16229Result" : {
+    "code" : "100",
+    "message" : "成功",
+    "Account" : "931592_S",
+    "_httpStatus" : 200
+  },
+  "a16220Result" : {
+    "code" : "100",
+    "message" : "成功",
+    "Account" : "X",
+    "_httpStatus" : 200
+  },
+  "a16229Rollback" : null,
+  "a16220Rollback" : null
+}
+2026-08-17 16:38:51,617 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'End' for process 'saga2-transfer-workflow' (d4f8d57c-c09f-4d12-930f-8e372b67588c)
+2026-08-17 16:38:51,618 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Workflow 'saga2-transfer-workflow' (d4f8d57c-c09f-4d12-930f-8e372b67588c) completed
+2026-08-17 16:38:51,646 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdatainput' changed value from: 'null', to: '{"Account_A":"931592_F","Account_B":"X","AMT":30}'
+2026-08-17 16:38:51,647 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Workflow data change
+{
+  "Account_A" : "931592_F",
+  "Account_B" : "X",
+  "AMT" : 30
+}
+2026-08-17 16:38:51,647 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Starting workflow 'saga2-transfer-workflow' (b40cf9b5-57b3-4306-8727-d01c0c26d963)
+2026-08-17 16:38:51,647 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Workflow data 
+{
+  "Account_A" : "931592_F",
+  "Account_B" : "X",
+  "AMT" : 30
+}
+2026-08-17 16:38:51,647 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'Start' for process 'saga2-transfer-workflow' (b40cf9b5-57b3-4306-8727-d01c0c26d963)
+2026-08-17 16:38:51,647 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'ValidateInput' for process 'saga2-transfer-workflow' (b40cf9b5-57b3-4306-8727-d01c0c26d963)
+2026-08-17 16:38:51,649 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'CallA16229State' for process 'saga2-transfer-workflow' (b40cf9b5-57b3-4306-8727-d01c0c26d963)
+2026-08-17 16:38:51,649 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'callApiViaOpenAPI' for process 'saga2-transfer-workflow' (b40cf9b5-57b3-4306-8727-d01c0c26d963)
+2026-08-17 16:38:51,666 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.a16229Result' changed value from: 'null', to: '{"code":"999","message":"AMT必須大於50","Account":"931592_F","_httpStatus":403}'
+2026-08-17 16:38:51,667 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'CheckA16229Result' for process 'saga2-transfer-workflow' (b40cf9b5-57b3-4306-8727-d01c0c26d963)
+2026-08-17 16:38:51,667 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'Join-InjectFailedStatus' for process 'saga2-transfer-workflow' (b40cf9b5-57b3-4306-8727-d01c0c26d963)
+2026-08-17 16:38:51,667 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'InjectFailedStatus' for process 'saga2-transfer-workflow' (b40cf9b5-57b3-4306-8727-d01c0c26d963)
+2026-08-17 16:38:51,668 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.finalStatus' changed value from: 'null', to: '"FAILED"'
+2026-08-17 16:38:51,668 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.finalMessage' changed value from: 'null', to: '"業務失敗或 API 錯誤"'
+2026-08-17 16:38:51,668 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'Join-FinalAuditAndEnd' for process 'saga2-transfer-workflow' (b40cf9b5-57b3-4306-8727-d01c0c26d963)
+2026-08-17 16:38:51,668 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'FinalAuditAndEnd' for process 'saga2-transfer-workflow' (b40cf9b5-57b3-4306-8727-d01c0c26d963)
+2026-08-17 16:38:51,668 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'recordAuditLog' for process 'saga2-transfer-workflow' (b40cf9b5-57b3-4306-8727-d01c0c26d963)
+2026-08-17 16:38:51,669 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [com.exa.rec.AuditLogService] (executor-thread-1) [AuditLogService] 成功寫入對帳紀錄! Workflow: saga2-transfer-workflow, BusinessKey: 931592_F, Status: FAILED, Rows: 1
+2026-08-17 16:38:51,670 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.saved' changed value from: 'null', to: 'true'
+2026-08-17 16:38:51,670 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.workflowId' changed value from: 'null', to: '"saga2-transfer-workflow"'
+2026-08-17 16:38:51,671 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.status' changed value from: 'null', to: '"FAILED"'
+2026-08-17 16:38:51,671 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Workflow data change
+{
+  "status" : "FAILED",
+  "message" : "業務失敗或 API 錯誤",
+  "AMT" : 30,
+  "a16229Result" : {
+    "code" : "999",
+    "message" : "AMT必須大於50",
+    "Account" : "931592_F",
+    "_httpStatus" : 403
+  },
+  "a16220Result" : null,
+  "a16229Rollback" : null,
+  "a16220Rollback" : null
+}
+2026-08-17 16:38:51,671 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'End' for process 'saga2-transfer-workflow' (b40cf9b5-57b3-4306-8727-d01c0c26d963)
+2026-08-17 16:38:51,672 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Workflow 'saga2-transfer-workflow' (b40cf9b5-57b3-4306-8727-d01c0c26d963) completed
+2026-08-17 16:38:51,698 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdatainput' changed value from: 'null', to: '{"Account_A":"931592_R","Account_B":"X","AMT":600}'
+2026-08-17 16:38:51,699 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Workflow data change
+{
+  "Account_A" : "931592_R",
+  "Account_B" : "X",
+  "AMT" : 600
+}
+2026-08-17 16:38:51,699 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Starting workflow 'saga2-transfer-workflow' (c1f42b0b-91d7-49c3-a963-d2364a6ce683)
+2026-08-17 16:38:51,699 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Workflow data 
+{
+  "Account_A" : "931592_R",
+  "Account_B" : "X",
+  "AMT" : 600
+}
+2026-08-17 16:38:51,700 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'Start' for process 'saga2-transfer-workflow' (c1f42b0b-91d7-49c3-a963-d2364a6ce683)
+2026-08-17 16:38:51,700 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'ValidateInput' for process 'saga2-transfer-workflow' (c1f42b0b-91d7-49c3-a963-d2364a6ce683)
+2026-08-17 16:38:51,703 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'CallA16229State' for process 'saga2-transfer-workflow' (c1f42b0b-91d7-49c3-a963-d2364a6ce683)
+2026-08-17 16:38:51,704 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'callApiViaOpenAPI' for process 'saga2-transfer-workflow' (c1f42b0b-91d7-49c3-a963-d2364a6ce683)
+2026-08-17 16:38:51,710 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.a16229Result' changed value from: 'null', to: '{"code":"100","message":"成功","Account":"931592_R","_httpStatus":200}'
+2026-08-17 16:38:51,711 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'CheckA16229Result' for process 'saga2-transfer-workflow' (c1f42b0b-91d7-49c3-a963-d2364a6ce683)
+2026-08-17 16:38:51,711 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'CallA16220State' for process 'saga2-transfer-workflow' (c1f42b0b-91d7-49c3-a963-d2364a6ce683)
+2026-08-17 16:38:51,711 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'callApiViaOpenAPI' for process 'saga2-transfer-workflow' (c1f42b0b-91d7-49c3-a963-d2364a6ce683)
+2026-08-17 16:38:51,717 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.a16220Result' changed value from: 'null', to: '{"code":"100","message":"成功","Account":"X","_httpStatus":200}'
+2026-08-17 16:38:51,717 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'CheckA16220Result' for process 'saga2-transfer-workflow' (c1f42b0b-91d7-49c3-a963-d2364a6ce683)
+2026-08-17 16:38:51,717 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'DecideByEvaluation' for process 'saga2-transfer-workflow' (c1f42b0b-91d7-49c3-a963-d2364a6ce683)
+2026-08-17 16:38:51,717 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'Join-RollbackA16220' for process 'saga2-transfer-workflow' (c1f42b0b-91d7-49c3-a963-d2364a6ce683)
+2026-08-17 16:38:51,717 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'RollbackA16220' for process 'saga2-transfer-workflow' (c1f42b0b-91d7-49c3-a963-d2364a6ce683)
+2026-08-17 16:38:51,717 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'callApiViaOpenAPI' for process 'saga2-transfer-workflow' (c1f42b0b-91d7-49c3-a963-d2364a6ce683)
+2026-08-17 16:38:51,723 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.a16220Rollback' changed value from: 'null', to: '{"code":"100","message":"成功(EC)","Account":"X","_httpStatus":200}'
+2026-08-17 16:38:51,723 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'RollbackA16229' for process 'saga2-transfer-workflow' (c1f42b0b-91d7-49c3-a963-d2364a6ce683)
+2026-08-17 16:38:51,724 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'callApiViaOpenAPI' for process 'saga2-transfer-workflow' (c1f42b0b-91d7-49c3-a963-d2364a6ce683)
+2026-08-17 16:38:51,728 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.a16229Rollback' changed value from: 'null', to: '{"code":"100","message":"成功(EC)","Account":"931592_R","_httpStatus":200}'
+2026-08-17 16:38:51,729 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'CheckRollbackResults' for process 'saga2-transfer-workflow' (c1f42b0b-91d7-49c3-a963-d2364a6ce683)
+2026-08-17 16:38:51,729 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'InjectRolledBackStatus' for process 'saga2-transfer-workflow' (c1f42b0b-91d7-49c3-a963-d2364a6ce683)
+2026-08-17 16:38:51,729 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.finalStatus' changed value from: 'null', to: '"ROLLED_BACK"'
+2026-08-17 16:38:51,729 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.finalMessage' changed value from: 'null', to: '"AMT > 500 觸發 saga 回沖 (LIFO)"'
+2026-08-17 16:38:51,729 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'Join-FinalAuditAndEnd' for process 'saga2-transfer-workflow' (c1f42b0b-91d7-49c3-a963-d2364a6ce683)
+2026-08-17 16:38:51,729 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'FinalAuditAndEnd' for process 'saga2-transfer-workflow' (c1f42b0b-91d7-49c3-a963-d2364a6ce683)
+2026-08-17 16:38:51,729 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'recordAuditLog' for process 'saga2-transfer-workflow' (c1f42b0b-91d7-49c3-a963-d2364a6ce683)
+2026-08-17 16:38:51,730 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [com.exa.rec.AuditLogService] (executor-thread-1) [AuditLogService] 成功寫入對帳紀錄! Workflow: saga2-transfer-workflow, BusinessKey: 931592_R, Status: ROLLED_BACK, Rows: 1
+2026-08-17 16:38:51,731 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.saved' changed value from: 'null', to: 'true'
+2026-08-17 16:38:51,731 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.workflowId' changed value from: 'null', to: '"saga2-transfer-workflow"'
+2026-08-17 16:38:51,731 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.status' changed value from: 'null', to: '"ROLLED_BACK"'
+2026-08-17 16:38:51,731 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Workflow data change
+{
+  "status" : "ROLLED_BACK",
+  "message" : "AMT > 500 觸發 saga 回沖 (LIFO)",
+  "AMT" : 600,
+  "a16229Result" : {
+    "code" : "100",
+    "message" : "成功",
+    "Account" : "931592_R",
+    "_httpStatus" : 200
+  },
+  "a16220Result" : {
+    "code" : "100",
+    "message" : "成功",
+    "Account" : "X",
+    "_httpStatus" : 200
+  },
+  "a16229Rollback" : {
+    "code" : "100",
+    "message" : "成功(EC)",
+    "Account" : "931592_R",
+    "_httpStatus" : 200
+  },
+  "a16220Rollback" : {
+    "code" : "100",
+    "message" : "成功(EC)",
+    "Account" : "X",
+    "_httpStatus" : 200
+  }
+}
+2026-08-17 16:38:51,731 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'End' for process 'saga2-transfer-workflow' (c1f42b0b-91d7-49c3-a963-d2364a6ce683)
+2026-08-17 16:38:51,731 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Workflow 'saga2-transfer-workflow' (c1f42b0b-91d7-49c3-a963-d2364a6ce683) completed
+2026-08-17 16:38:51,759 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdatainput' changed value from: 'null', to: '{"Account_A":"931592_P","Account_B":"X","AMT":2000}'
+2026-08-17 16:38:51,759 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Workflow data change
+{
+  "Account_A" : "931592_P",
+  "Account_B" : "X",
+  "AMT" : 2000
+}
+2026-08-17 16:38:51,759 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Starting workflow 'saga2-transfer-workflow' (91ba2003-d7c3-4c9a-850b-69895f19eb6f)
+2026-08-17 16:38:51,759 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Workflow data 
+{
+  "Account_A" : "931592_P",
+  "Account_B" : "X",
+  "AMT" : 2000
+}
+2026-08-17 16:38:51,759 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'Start' for process 'saga2-transfer-workflow' (91ba2003-d7c3-4c9a-850b-69895f19eb6f)
+2026-08-17 16:38:51,759 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'ValidateInput' for process 'saga2-transfer-workflow' (91ba2003-d7c3-4c9a-850b-69895f19eb6f)
+2026-08-17 16:38:51,762 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'CallA16229State' for process 'saga2-transfer-workflow' (91ba2003-d7c3-4c9a-850b-69895f19eb6f)
+2026-08-17 16:38:51,763 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'callApiViaOpenAPI' for process 'saga2-transfer-workflow' (91ba2003-d7c3-4c9a-850b-69895f19eb6f)
+2026-08-17 16:38:51,767 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.a16229Result' changed value from: 'null', to: '{"code":"100","message":"成功","Account":"931592_P","_httpStatus":200}'
+2026-08-17 16:38:51,768 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'CheckA16229Result' for process 'saga2-transfer-workflow' (91ba2003-d7c3-4c9a-850b-69895f19eb6f)
+2026-08-17 16:38:51,768 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'CallA16220State' for process 'saga2-transfer-workflow' (91ba2003-d7c3-4c9a-850b-69895f19eb6f)
+2026-08-17 16:38:51,768 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'callApiViaOpenAPI' for process 'saga2-transfer-workflow' (91ba2003-d7c3-4c9a-850b-69895f19eb6f)
+2026-08-17 16:38:51,773 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.a16220Result' changed value from: 'null', to: '{"code":"999","message":"AMT必須小於1000","Account":"X","_httpStatus":403}'
+2026-08-17 16:38:51,773 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'CheckA16220Result' for process 'saga2-transfer-workflow' (91ba2003-d7c3-4c9a-850b-69895f19eb6f)
+2026-08-17 16:38:51,773 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'Join-RollbackA16229Only' for process 'saga2-transfer-workflow' (91ba2003-d7c3-4c9a-850b-69895f19eb6f)
+2026-08-17 16:38:51,774 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'RollbackA16229Only' for process 'saga2-transfer-workflow' (91ba2003-d7c3-4c9a-850b-69895f19eb6f)
+2026-08-17 16:38:51,774 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'callApiViaOpenAPI' for process 'saga2-transfer-workflow' (91ba2003-d7c3-4c9a-850b-69895f19eb6f)
+2026-08-17 16:38:51,779 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.a16229Rollback' changed value from: 'null', to: '{"code":"100","message":"成功(EC)","Account":"931592_P","_httpStatus":200}'
+2026-08-17 16:38:51,779 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'CheckRollbackA16229OnlyResult' for process 'saga2-transfer-workflow' (91ba2003-d7c3-4c9a-850b-69895f19eb6f)
+2026-08-17 16:38:51,780 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'InjectRolledBackOnlyStatus' for process 'saga2-transfer-workflow' (91ba2003-d7c3-4c9a-850b-69895f19eb6f)
+2026-08-17 16:38:51,780 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.finalStatus' changed value from: 'null', to: '"ROLLED_BACK"'
+2026-08-17 16:38:51,780 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.finalMessage' changed value from: 'null', to: '"A16220 業務失敗,僅回沖 A16229"'
+2026-08-17 16:38:51,780 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'Join-FinalAuditAndEnd' for process 'saga2-transfer-workflow' (91ba2003-d7c3-4c9a-850b-69895f19eb6f)
+2026-08-17 16:38:51,780 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'FinalAuditAndEnd' for process 'saga2-transfer-workflow' (91ba2003-d7c3-4c9a-850b-69895f19eb6f)
+2026-08-17 16:38:51,780 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'recordAuditLog' for process 'saga2-transfer-workflow' (91ba2003-d7c3-4c9a-850b-69895f19eb6f)
+2026-08-17 16:38:51,781 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [com.exa.rec.AuditLogService] (executor-thread-1) [AuditLogService] 成功寫入對帳紀錄! Workflow: saga2-transfer-workflow, BusinessKey: 931592_P, Status: ROLLED_BACK, Rows: 1
+2026-08-17 16:38:51,781 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.saved' changed value from: 'null', to: 'true'
+2026-08-17 16:38:51,781 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.workflowId' changed value from: 'null', to: '"saga2-transfer-workflow"'
+2026-08-17 16:38:51,782 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.status' changed value from: 'null', to: '"ROLLED_BACK"'
+2026-08-17 16:38:51,782 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Workflow data change
+{
+  "status" : "ROLLED_BACK",
+  "message" : "A16220 業務失敗,僅回沖 A16229",
+  "AMT" : 2000,
+  "a16229Result" : {
+    "code" : "100",
+    "message" : "成功",
+    "Account" : "931592_P",
+    "_httpStatus" : 200
+  },
+  "a16220Result" : {
+    "code" : "999",
+    "message" : "AMT必須小於1000",
+    "Account" : "X",
+    "_httpStatus" : 403
+  },
+  "a16229Rollback" : {
+    "code" : "100",
+    "message" : "成功(EC)",
+    "Account" : "931592_P",
+    "_httpStatus" : 200
+  },
+  "a16220Rollback" : null
+}
+2026-08-17 16:38:51,782 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'End' for process 'saga2-transfer-workflow' (91ba2003-d7c3-4c9a-850b-69895f19eb6f)
+2026-08-17 16:38:51,782 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Workflow 'saga2-transfer-workflow' (91ba2003-d7c3-4c9a-850b-69895f19eb6f) completed
+2026-08-17 16:38:51,810 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [com.exa.rec.ReconciliationCsvExporter] (executor-thread-1) [ReconciliationCsvExporter] 匯出完成: file=reconciliation-20260817-163851.csv, rows=11, bytes=1622
+2026-08-17 16:38:51,833 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [com.exa.rec.ReconciliationCsvExporter] (executor-thread-1) [ReconciliationCsvExporter] 匯出完成: file=reconciliation-20260817-163851.csv, rows=11, bytes=1622
+2026-08-17 16:38:51,853 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [com.exa.rec.ReconciliationCsvExporter] (executor-thread-1) [ReconciliationCsvExporter] 匯出完成: file=reconciliation-20260817-163851.csv, rows=11, bytes=1622
+2026-08-17 16:38:51,873 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [com.exa.rec.ReconciliationCsvExporter] (executor-thread-1) [ReconciliationCsvExporter] 匯出完成: file=reconciliation-20260817-163851.csv, rows=4, bytes=614
+2026-08-17 16:38:51,892 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [com.exa.rec.ReconciliationCsvExporter] (executor-thread-1) [ReconciliationCsvExporter] 匯出完成: file=reconciliation-20260817-163851.csv, rows=4, bytes=614
+2026-08-17 16:38:51,918 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdatainput' changed value from: 'null', to: '{"Account_A":"A123","Account_B":"B123","AMT":501}'
+2026-08-17 16:38:51,918 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Workflow data change
+{
+  "Account_A" : "A123",
+  "Account_B" : "B123",
+  "AMT" : 501
+}
+2026-08-17 16:38:51,918 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Starting workflow 'saga2-transfer-workflow' (e5a25a6a-e949-4d4d-a099-e670102a3093)
+2026-08-17 16:38:51,918 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Workflow data 
+{
+  "Account_A" : "A123",
+  "Account_B" : "B123",
+  "AMT" : 501
+}
+2026-08-17 16:38:51,918 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'Start' for process 'saga2-transfer-workflow' (e5a25a6a-e949-4d4d-a099-e670102a3093)
+2026-08-17 16:38:51,918 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'ValidateInput' for process 'saga2-transfer-workflow' (e5a25a6a-e949-4d4d-a099-e670102a3093)
+2026-08-17 16:38:51,920 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'CallA16229State' for process 'saga2-transfer-workflow' (e5a25a6a-e949-4d4d-a099-e670102a3093)
+2026-08-17 16:38:51,920 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'callApiViaOpenAPI' for process 'saga2-transfer-workflow' (e5a25a6a-e949-4d4d-a099-e670102a3093)
+2026-08-17 16:38:51,925 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.a16229Result' changed value from: 'null', to: '{"code":"100","message":"成功","Account":"A123","_httpStatus":200}'
+2026-08-17 16:38:51,925 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'CheckA16229Result' for process 'saga2-transfer-workflow' (e5a25a6a-e949-4d4d-a099-e670102a3093)
+2026-08-17 16:38:51,926 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'CallA16220State' for process 'saga2-transfer-workflow' (e5a25a6a-e949-4d4d-a099-e670102a3093)
+2026-08-17 16:38:51,926 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'callApiViaOpenAPI' for process 'saga2-transfer-workflow' (e5a25a6a-e949-4d4d-a099-e670102a3093)
+2026-08-17 16:38:51,930 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.a16220Result' changed value from: 'null', to: '{"code":"100","message":"成功","Account":"B123","_httpStatus":200}'
+2026-08-17 16:38:51,930 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'CheckA16220Result' for process 'saga2-transfer-workflow' (e5a25a6a-e949-4d4d-a099-e670102a3093)
+2026-08-17 16:38:51,931 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'DecideByEvaluation' for process 'saga2-transfer-workflow' (e5a25a6a-e949-4d4d-a099-e670102a3093)
+2026-08-17 16:38:51,931 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'Join-RollbackA16220' for process 'saga2-transfer-workflow' (e5a25a6a-e949-4d4d-a099-e670102a3093)
+2026-08-17 16:38:51,931 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'RollbackA16220' for process 'saga2-transfer-workflow' (e5a25a6a-e949-4d4d-a099-e670102a3093)
+2026-08-17 16:38:51,931 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'callApiViaOpenAPI' for process 'saga2-transfer-workflow' (e5a25a6a-e949-4d4d-a099-e670102a3093)
+2026-08-17 16:38:51,936 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.a16220Rollback' changed value from: 'null', to: '{"code":"100","message":"成功(EC)","Account":"B123","_httpStatus":200}'
+2026-08-17 16:38:51,936 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'RollbackA16229' for process 'saga2-transfer-workflow' (e5a25a6a-e949-4d4d-a099-e670102a3093)
+2026-08-17 16:38:51,937 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'callApiViaOpenAPI' for process 'saga2-transfer-workflow' (e5a25a6a-e949-4d4d-a099-e670102a3093)
+2026-08-17 16:38:51,942 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.a16229Rollback' changed value from: 'null', to: '{"code":"100","message":"成功(EC)","Account":"A123","_httpStatus":200}'
+2026-08-17 16:38:51,942 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'CheckRollbackResults' for process 'saga2-transfer-workflow' (e5a25a6a-e949-4d4d-a099-e670102a3093)
+2026-08-17 16:38:51,942 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'InjectRolledBackStatus' for process 'saga2-transfer-workflow' (e5a25a6a-e949-4d4d-a099-e670102a3093)
+2026-08-17 16:38:51,942 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.finalStatus' changed value from: 'null', to: '"ROLLED_BACK"'
+2026-08-17 16:38:51,942 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.finalMessage' changed value from: 'null', to: '"AMT > 500 觸發 saga 回沖 (LIFO)"'
+2026-08-17 16:38:51,942 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'Join-FinalAuditAndEnd' for process 'saga2-transfer-workflow' (e5a25a6a-e949-4d4d-a099-e670102a3093)
+2026-08-17 16:38:51,942 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'FinalAuditAndEnd' for process 'saga2-transfer-workflow' (e5a25a6a-e949-4d4d-a099-e670102a3093)
+2026-08-17 16:38:51,943 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'recordAuditLog' for process 'saga2-transfer-workflow' (e5a25a6a-e949-4d4d-a099-e670102a3093)
+2026-08-17 16:38:51,943 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [com.exa.rec.AuditLogService] (executor-thread-1) [AuditLogService] 成功寫入對帳紀錄! Workflow: saga2-transfer-workflow, BusinessKey: A123, Status: ROLLED_BACK, Rows: 1
+2026-08-17 16:38:51,944 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.saved' changed value from: 'null', to: 'true'
+2026-08-17 16:38:51,944 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.workflowId' changed value from: 'null', to: '"saga2-transfer-workflow"'
+2026-08-17 16:38:51,944 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.status' changed value from: 'null', to: '"ROLLED_BACK"'
+2026-08-17 16:38:51,944 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Workflow data change
+{
+  "status" : "ROLLED_BACK",
+  "message" : "AMT > 500 觸發 saga 回沖 (LIFO)",
+  "AMT" : 501,
+  "a16229Result" : {
+    "code" : "100",
+    "message" : "成功",
+    "Account" : "A123",
+    "_httpStatus" : 200
+  },
+  "a16220Result" : {
+    "code" : "100",
+    "message" : "成功",
+    "Account" : "B123",
+    "_httpStatus" : 200
+  },
+  "a16229Rollback" : {
+    "code" : "100",
+    "message" : "成功(EC)",
+    "Account" : "A123",
+    "_httpStatus" : 200
+  },
+  "a16220Rollback" : {
+    "code" : "100",
+    "message" : "成功(EC)",
+    "Account" : "B123",
+    "_httpStatus" : 200
+  }
+}
+2026-08-17 16:38:51,944 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'End' for process 'saga2-transfer-workflow' (e5a25a6a-e949-4d4d-a099-e670102a3093)
+2026-08-17 16:38:51,944 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Workflow 'saga2-transfer-workflow' (e5a25a6a-e949-4d4d-a099-e670102a3093) completed
+2026-08-17 16:38:51,974 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdatainput' changed value from: 'null', to: '{"Account_A":"A123","Account_B":"B123","AMT":100}'
+2026-08-17 16:38:51,974 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Workflow data change
+{
+  "Account_A" : "A123",
+  "Account_B" : "B123",
+  "AMT" : 100
+}
+2026-08-17 16:38:51,974 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Starting workflow 'saga2-transfer-workflow' (5379621b-ac2f-4f63-958c-176b5a108f8e)
+2026-08-17 16:38:51,974 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Workflow data 
+{
+  "Account_A" : "A123",
+  "Account_B" : "B123",
+  "AMT" : 100
+}
+2026-08-17 16:38:51,974 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'Start' for process 'saga2-transfer-workflow' (5379621b-ac2f-4f63-958c-176b5a108f8e)
+2026-08-17 16:38:51,975 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'ValidateInput' for process 'saga2-transfer-workflow' (5379621b-ac2f-4f63-958c-176b5a108f8e)
+2026-08-17 16:38:51,976 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'CallA16229State' for process 'saga2-transfer-workflow' (5379621b-ac2f-4f63-958c-176b5a108f8e)
+2026-08-17 16:38:51,976 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'callApiViaOpenAPI' for process 'saga2-transfer-workflow' (5379621b-ac2f-4f63-958c-176b5a108f8e)
+2026-08-17 16:38:51,981 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.a16229Result' changed value from: 'null', to: '{"code":"100","message":"成功","Account":"A123","_httpStatus":200}'
+2026-08-17 16:38:51,981 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'CheckA16229Result' for process 'saga2-transfer-workflow' (5379621b-ac2f-4f63-958c-176b5a108f8e)
+2026-08-17 16:38:51,981 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'CallA16220State' for process 'saga2-transfer-workflow' (5379621b-ac2f-4f63-958c-176b5a108f8e)
+2026-08-17 16:38:51,981 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'callApiViaOpenAPI' for process 'saga2-transfer-workflow' (5379621b-ac2f-4f63-958c-176b5a108f8e)
+2026-08-17 16:38:51,986 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.a16220Result' changed value from: 'null', to: '{"code":"100","message":"成功","Account":"B123","_httpStatus":200}'
+2026-08-17 16:38:51,987 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'CheckA16220Result' for process 'saga2-transfer-workflow' (5379621b-ac2f-4f63-958c-176b5a108f8e)
+2026-08-17 16:38:51,987 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'DecideByEvaluation' for process 'saga2-transfer-workflow' (5379621b-ac2f-4f63-958c-176b5a108f8e)
+2026-08-17 16:38:51,987 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'InjectSuccessStatus' for process 'saga2-transfer-workflow' (5379621b-ac2f-4f63-958c-176b5a108f8e)
+2026-08-17 16:38:51,987 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.finalStatus' changed value from: 'null', to: '"SUCCESS"'
+2026-08-17 16:38:51,987 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.finalMessage' changed value from: 'null', to: '"交易成功"'
+2026-08-17 16:38:51,987 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'Join-FinalAuditAndEnd' for process 'saga2-transfer-workflow' (5379621b-ac2f-4f63-958c-176b5a108f8e)
+2026-08-17 16:38:51,988 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'FinalAuditAndEnd' for process 'saga2-transfer-workflow' (5379621b-ac2f-4f63-958c-176b5a108f8e)
+2026-08-17 16:38:51,988 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'recordAuditLog' for process 'saga2-transfer-workflow' (5379621b-ac2f-4f63-958c-176b5a108f8e)
+2026-08-17 16:38:51,988 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [com.exa.rec.AuditLogService] (executor-thread-1) [AuditLogService] 成功寫入對帳紀錄! Workflow: saga2-transfer-workflow, BusinessKey: A123, Status: SUCCESS, Rows: 1
+2026-08-17 16:38:51,989 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.saved' changed value from: 'null', to: 'true'
+2026-08-17 16:38:51,989 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.workflowId' changed value from: 'null', to: '"saga2-transfer-workflow"'
+2026-08-17 16:38:51,989 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.status' changed value from: 'null', to: '"SUCCESS"'
+2026-08-17 16:38:51,989 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Workflow data change
+{
+  "status" : "SUCCESS",
+  "message" : "交易成功",
+  "AMT" : 100,
+  "a16229Result" : {
+    "code" : "100",
+    "message" : "成功",
+    "Account" : "A123",
+    "_httpStatus" : 200
+  },
+  "a16220Result" : {
+    "code" : "100",
+    "message" : "成功",
+    "Account" : "B123",
+    "_httpStatus" : 200
+  },
+  "a16229Rollback" : null,
+  "a16220Rollback" : null
+}
+2026-08-17 16:38:51,989 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'End' for process 'saga2-transfer-workflow' (5379621b-ac2f-4f63-958c-176b5a108f8e)
+2026-08-17 16:38:51,989 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Workflow 'saga2-transfer-workflow' (5379621b-ac2f-4f63-958c-176b5a108f8e) completed
+2026-08-17 16:38:52,052 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdatainput' changed value from: 'null', to: '{"Account_A":"A123","Account_B":"B123","AMT":30}'
+2026-08-17 16:38:52,052 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Workflow data change
+{
+  "Account_A" : "A123",
+  "Account_B" : "B123",
+  "AMT" : 30
+}
+2026-08-17 16:38:52,052 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Starting workflow 'saga2-transfer-workflow' (f6262667-b2bd-4b0f-bda8-f9891cfb1239)
+2026-08-17 16:38:52,053 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Workflow data 
+{
+  "Account_A" : "A123",
+  "Account_B" : "B123",
+  "AMT" : 30
+}
+2026-08-17 16:38:52,053 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'Start' for process 'saga2-transfer-workflow' (f6262667-b2bd-4b0f-bda8-f9891cfb1239)
+2026-08-17 16:38:52,053 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'ValidateInput' for process 'saga2-transfer-workflow' (f6262667-b2bd-4b0f-bda8-f9891cfb1239)
+2026-08-17 16:38:52,054 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'CallA16229State' for process 'saga2-transfer-workflow' (f6262667-b2bd-4b0f-bda8-f9891cfb1239)
+2026-08-17 16:38:52,054 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'callApiViaOpenAPI' for process 'saga2-transfer-workflow' (f6262667-b2bd-4b0f-bda8-f9891cfb1239)
+2026-08-17 16:38:52,059 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.a16229Result' changed value from: 'null', to: '{"code":"999","message":"AMT必須大於50","Account":"A123","_httpStatus":403}'
+2026-08-17 16:38:52,059 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'CheckA16229Result' for process 'saga2-transfer-workflow' (f6262667-b2bd-4b0f-bda8-f9891cfb1239)
+2026-08-17 16:38:52,060 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'Join-InjectFailedStatus' for process 'saga2-transfer-workflow' (f6262667-b2bd-4b0f-bda8-f9891cfb1239)
+2026-08-17 16:38:52,060 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'InjectFailedStatus' for process 'saga2-transfer-workflow' (f6262667-b2bd-4b0f-bda8-f9891cfb1239)
+2026-08-17 16:38:52,060 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.finalStatus' changed value from: 'null', to: '"FAILED"'
+2026-08-17 16:38:52,060 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.finalMessage' changed value from: 'null', to: '"業務失敗或 API 錯誤"'
+2026-08-17 16:38:52,060 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'Join-FinalAuditAndEnd' for process 'saga2-transfer-workflow' (f6262667-b2bd-4b0f-bda8-f9891cfb1239)
+2026-08-17 16:38:52,060 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'FinalAuditAndEnd' for process 'saga2-transfer-workflow' (f6262667-b2bd-4b0f-bda8-f9891cfb1239)
+2026-08-17 16:38:52,060 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'recordAuditLog' for process 'saga2-transfer-workflow' (f6262667-b2bd-4b0f-bda8-f9891cfb1239)
+2026-08-17 16:38:52,061 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [com.exa.rec.AuditLogService] (executor-thread-1) [AuditLogService] 成功寫入對帳紀錄! Workflow: saga2-transfer-workflow, BusinessKey: A123, Status: FAILED, Rows: 1
+2026-08-17 16:38:52,061 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.saved' changed value from: 'null', to: 'true'
+2026-08-17 16:38:52,061 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.workflowId' changed value from: 'null', to: '"saga2-transfer-workflow"'
+2026-08-17 16:38:52,061 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.status' changed value from: 'null', to: '"FAILED"'
+2026-08-17 16:38:52,062 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Workflow data change
+{
+  "status" : "FAILED",
+  "message" : "業務失敗或 API 錯誤",
+  "AMT" : 30,
+  "a16229Result" : {
+    "code" : "999",
+    "message" : "AMT必須大於50",
+    "Account" : "A123",
+    "_httpStatus" : 403
+  },
+  "a16220Result" : null,
+  "a16229Rollback" : null,
+  "a16220Rollback" : null
+}
+2026-08-17 16:38:52,062 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'End' for process 'saga2-transfer-workflow' (f6262667-b2bd-4b0f-bda8-f9891cfb1239)
+2026-08-17 16:38:52,062 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Workflow 'saga2-transfer-workflow' (f6262667-b2bd-4b0f-bda8-f9891cfb1239) completed
+2026-08-17 16:38:52,128 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdatainput' changed value from: 'null', to: '{"Account_A":"A123","Account_B":"B123","AMT":2000}'
+2026-08-17 16:38:52,128 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Workflow data change
+{
+  "Account_A" : "A123",
+  "Account_B" : "B123",
+  "AMT" : 2000
+}
+2026-08-17 16:38:52,129 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Starting workflow 'saga2-transfer-workflow' (a0f17d19-7fcc-47b6-84d8-15835fe029eb)
+2026-08-17 16:38:52,129 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Workflow data 
+{
+  "Account_A" : "A123",
+  "Account_B" : "B123",
+  "AMT" : 2000
+}
+2026-08-17 16:38:52,129 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'Start' for process 'saga2-transfer-workflow' (a0f17d19-7fcc-47b6-84d8-15835fe029eb)
+2026-08-17 16:38:52,129 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'ValidateInput' for process 'saga2-transfer-workflow' (a0f17d19-7fcc-47b6-84d8-15835fe029eb)
+2026-08-17 16:38:52,131 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'CallA16229State' for process 'saga2-transfer-workflow' (a0f17d19-7fcc-47b6-84d8-15835fe029eb)
+2026-08-17 16:38:52,132 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'callApiViaOpenAPI' for process 'saga2-transfer-workflow' (a0f17d19-7fcc-47b6-84d8-15835fe029eb)
+2026-08-17 16:38:52,139 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.a16229Result' changed value from: 'null', to: '{"code":"100","message":"成功","Account":"A123","_httpStatus":200}'
+2026-08-17 16:38:52,139 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'CheckA16229Result' for process 'saga2-transfer-workflow' (a0f17d19-7fcc-47b6-84d8-15835fe029eb)
+2026-08-17 16:38:52,139 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'CallA16220State' for process 'saga2-transfer-workflow' (a0f17d19-7fcc-47b6-84d8-15835fe029eb)
+2026-08-17 16:38:52,139 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'callApiViaOpenAPI' for process 'saga2-transfer-workflow' (a0f17d19-7fcc-47b6-84d8-15835fe029eb)
+2026-08-17 16:38:52,146 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.a16220Result' changed value from: 'null', to: '{"code":"999","message":"AMT必須小於1000","Account":"B123","_httpStatus":403}'
+2026-08-17 16:38:52,146 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'CheckA16220Result' for process 'saga2-transfer-workflow' (a0f17d19-7fcc-47b6-84d8-15835fe029eb)
+2026-08-17 16:38:52,147 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'Join-RollbackA16229Only' for process 'saga2-transfer-workflow' (a0f17d19-7fcc-47b6-84d8-15835fe029eb)
+2026-08-17 16:38:52,147 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'RollbackA16229Only' for process 'saga2-transfer-workflow' (a0f17d19-7fcc-47b6-84d8-15835fe029eb)
+2026-08-17 16:38:52,147 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'callApiViaOpenAPI' for process 'saga2-transfer-workflow' (a0f17d19-7fcc-47b6-84d8-15835fe029eb)
+2026-08-17 16:38:52,155 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.a16229Rollback' changed value from: 'null', to: '{"code":"100","message":"成功(EC)","Account":"A123","_httpStatus":200}'
+2026-08-17 16:38:52,155 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'CheckRollbackA16229OnlyResult' for process 'saga2-transfer-workflow' (a0f17d19-7fcc-47b6-84d8-15835fe029eb)
+2026-08-17 16:38:52,155 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'InjectRolledBackOnlyStatus' for process 'saga2-transfer-workflow' (a0f17d19-7fcc-47b6-84d8-15835fe029eb)
+2026-08-17 16:38:52,156 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.finalStatus' changed value from: 'null', to: '"ROLLED_BACK"'
+2026-08-17 16:38:52,156 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.finalMessage' changed value from: 'null', to: '"A16220 業務失敗,僅回沖 A16229"'
+2026-08-17 16:38:52,156 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'Join-FinalAuditAndEnd' for process 'saga2-transfer-workflow' (a0f17d19-7fcc-47b6-84d8-15835fe029eb)
+2026-08-17 16:38:52,156 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'FinalAuditAndEnd' for process 'saga2-transfer-workflow' (a0f17d19-7fcc-47b6-84d8-15835fe029eb)
+2026-08-17 16:38:52,156 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'recordAuditLog' for process 'saga2-transfer-workflow' (a0f17d19-7fcc-47b6-84d8-15835fe029eb)
+2026-08-17 16:38:52,157 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [com.exa.rec.AuditLogService] (executor-thread-1) [AuditLogService] 成功寫入對帳紀錄! Workflow: saga2-transfer-workflow, BusinessKey: A123, Status: ROLLED_BACK, Rows: 1
+2026-08-17 16:38:52,159 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.saved' changed value from: 'null', to: 'true'
+2026-08-17 16:38:52,159 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.workflowId' changed value from: 'null', to: '"saga2-transfer-workflow"'
+2026-08-17 16:38:52,159 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.status' changed value from: 'null', to: '"ROLLED_BACK"'
+2026-08-17 16:38:52,160 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Workflow data change
+{
+  "status" : "ROLLED_BACK",
+  "message" : "A16220 業務失敗,僅回沖 A16229",
+  "AMT" : 2000,
+  "a16229Result" : {
+    "code" : "100",
+    "message" : "成功",
+    "Account" : "A123",
+    "_httpStatus" : 200
+  },
+  "a16220Result" : {
+    "code" : "999",
+    "message" : "AMT必須小於1000",
+    "Account" : "B123",
+    "_httpStatus" : 403
+  },
+  "a16229Rollback" : {
+    "code" : "100",
+    "message" : "成功(EC)",
+    "Account" : "A123",
+    "_httpStatus" : 200
+  },
+  "a16220Rollback" : null
+}
+2026-08-17 16:38:52,160 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'End' for process 'saga2-transfer-workflow' (a0f17d19-7fcc-47b6-84d8-15835fe029eb)
+2026-08-17 16:38:52,161 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Workflow 'saga2-transfer-workflow' (a0f17d19-7fcc-47b6-84d8-15835fe029eb) completed
+2026-08-17 16:38:52,244 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [com.exa.rec.ReconciliationCsvExporter] (executor-thread-1) [ReconciliationCsvExporter] 匯出完成: file=reconciliation-20260817-163852.csv, rows=7, bytes=1226
+2026-08-17 16:38:52,279 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [com.exa.rec.ReconciliationCsvExporter] (executor-thread-1) [ReconciliationCsvExporter] 匯出完成: file=reconciliation-20260817-163852.csv, rows=0, bytes=169
+2026-08-17 16:38:52,303 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdatainput' changed value from: 'null', to: '{"Account_A":"A123","Account_B":"B123","AMT":600}'
+2026-08-17 16:38:52,303 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Workflow data change
+{
+  "Account_A" : "A123",
+  "Account_B" : "B123",
+  "AMT" : 600
+}
+2026-08-17 16:38:52,303 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Starting workflow 'saga2-transfer-workflow' (210c4296-8f09-4fa2-bcf2-6fa99011e36c)
+2026-08-17 16:38:52,304 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Workflow data 
+{
+  "Account_A" : "A123",
+  "Account_B" : "B123",
+  "AMT" : 600
+}
+2026-08-17 16:38:52,304 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'Start' for process 'saga2-transfer-workflow' (210c4296-8f09-4fa2-bcf2-6fa99011e36c)
+2026-08-17 16:38:52,304 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'ValidateInput' for process 'saga2-transfer-workflow' (210c4296-8f09-4fa2-bcf2-6fa99011e36c)
+2026-08-17 16:38:52,305 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'CallA16229State' for process 'saga2-transfer-workflow' (210c4296-8f09-4fa2-bcf2-6fa99011e36c)
+2026-08-17 16:38:52,305 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'callApiViaOpenAPI' for process 'saga2-transfer-workflow' (210c4296-8f09-4fa2-bcf2-6fa99011e36c)
+2026-08-17 16:38:52,309 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.a16229Result' changed value from: 'null', to: '{"code":"100","message":"成功","Account":"A123","_httpStatus":200}'
+2026-08-17 16:38:52,309 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'CheckA16229Result' for process 'saga2-transfer-workflow' (210c4296-8f09-4fa2-bcf2-6fa99011e36c)
+2026-08-17 16:38:52,309 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'CallA16220State' for process 'saga2-transfer-workflow' (210c4296-8f09-4fa2-bcf2-6fa99011e36c)
+2026-08-17 16:38:52,310 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'callApiViaOpenAPI' for process 'saga2-transfer-workflow' (210c4296-8f09-4fa2-bcf2-6fa99011e36c)
+2026-08-17 16:38:52,314 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.a16220Result' changed value from: 'null', to: '{"code":"100","message":"成功","Account":"B123","_httpStatus":200}'
+2026-08-17 16:38:52,314 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'CheckA16220Result' for process 'saga2-transfer-workflow' (210c4296-8f09-4fa2-bcf2-6fa99011e36c)
+2026-08-17 16:38:52,314 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'DecideByEvaluation' for process 'saga2-transfer-workflow' (210c4296-8f09-4fa2-bcf2-6fa99011e36c)
+2026-08-17 16:38:52,314 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'Join-RollbackA16220' for process 'saga2-transfer-workflow' (210c4296-8f09-4fa2-bcf2-6fa99011e36c)
+2026-08-17 16:38:52,314 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'RollbackA16220' for process 'saga2-transfer-workflow' (210c4296-8f09-4fa2-bcf2-6fa99011e36c)
+2026-08-17 16:38:52,314 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'callApiViaOpenAPI' for process 'saga2-transfer-workflow' (210c4296-8f09-4fa2-bcf2-6fa99011e36c)
+2026-08-17 16:38:52,318 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.a16220Rollback' changed value from: 'null', to: '{"code":"100","message":"成功(EC)","Account":"B123","_httpStatus":200}'
+2026-08-17 16:38:52,318 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'RollbackA16229' for process 'saga2-transfer-workflow' (210c4296-8f09-4fa2-bcf2-6fa99011e36c)
+2026-08-17 16:38:52,318 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'callApiViaOpenAPI' for process 'saga2-transfer-workflow' (210c4296-8f09-4fa2-bcf2-6fa99011e36c)
+2026-08-17 16:38:52,322 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.a16229Rollback' changed value from: 'null', to: '{"code":"100","message":"成功(EC)","Account":"A123","_httpStatus":200}'
+2026-08-17 16:38:52,322 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'CheckRollbackResults' for process 'saga2-transfer-workflow' (210c4296-8f09-4fa2-bcf2-6fa99011e36c)
+2026-08-17 16:38:52,322 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'InjectRolledBackStatus' for process 'saga2-transfer-workflow' (210c4296-8f09-4fa2-bcf2-6fa99011e36c)
+2026-08-17 16:38:52,322 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.finalStatus' changed value from: 'null', to: '"ROLLED_BACK"'
+2026-08-17 16:38:52,323 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.finalMessage' changed value from: 'null', to: '"AMT > 500 觸發 saga 回沖 (LIFO)"'
+2026-08-17 16:38:52,323 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'Join-FinalAuditAndEnd' for process 'saga2-transfer-workflow' (210c4296-8f09-4fa2-bcf2-6fa99011e36c)
+2026-08-17 16:38:52,323 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'FinalAuditAndEnd' for process 'saga2-transfer-workflow' (210c4296-8f09-4fa2-bcf2-6fa99011e36c)
+2026-08-17 16:38:52,323 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'recordAuditLog' for process 'saga2-transfer-workflow' (210c4296-8f09-4fa2-bcf2-6fa99011e36c)
+2026-08-17 16:38:52,323 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [com.exa.rec.AuditLogService] (executor-thread-1) [AuditLogService] 成功寫入對帳紀錄! Workflow: saga2-transfer-workflow, BusinessKey: A123, Status: ROLLED_BACK, Rows: 1
+2026-08-17 16:38:52,324 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.saved' changed value from: 'null', to: 'true'
+2026-08-17 16:38:52,324 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.workflowId' changed value from: 'null', to: '"saga2-transfer-workflow"'
+2026-08-17 16:38:52,324 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.status' changed value from: 'null', to: '"ROLLED_BACK"'
+2026-08-17 16:38:52,324 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Workflow data change
+{
+  "status" : "ROLLED_BACK",
+  "message" : "AMT > 500 觸發 saga 回沖 (LIFO)",
+  "AMT" : 600,
+  "a16229Result" : {
+    "code" : "100",
+    "message" : "成功",
+    "Account" : "A123",
+    "_httpStatus" : 200
+  },
+  "a16220Result" : {
+    "code" : "100",
+    "message" : "成功",
+    "Account" : "B123",
+    "_httpStatus" : 200
+  },
+  "a16229Rollback" : {
+    "code" : "100",
+    "message" : "成功(EC)",
+    "Account" : "A123",
+    "_httpStatus" : 200
+  },
+  "a16220Rollback" : {
+    "code" : "100",
+    "message" : "成功(EC)",
+    "Account" : "B123",
+    "_httpStatus" : 200
+  }
+}
+2026-08-17 16:38:52,324 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'End' for process 'saga2-transfer-workflow' (210c4296-8f09-4fa2-bcf2-6fa99011e36c)
+2026-08-17 16:38:52,324 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Workflow 'saga2-transfer-workflow' (210c4296-8f09-4fa2-bcf2-6fa99011e36c) completed
+2026-08-17 16:38:52,382 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [com.exa.rec.ReconciliationCsvExporter] (executor-thread-1) [ReconciliationCsvExporter] 匯出完成: file=reconciliation-20260817-163852.csv, rows=16, bytes=2304
+2026-08-17 16:38:52,430 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdatainput' changed value from: 'null', to: '{"Account_A":"A123","Account_B":"B123","AMT":500}'
+2026-08-17 16:38:52,430 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Workflow data change
+{
+  "Account_A" : "A123",
+  "Account_B" : "B123",
+  "AMT" : 500
+}
+2026-08-17 16:38:52,430 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Starting workflow 'saga2-transfer-workflow' (6b2cd67d-6b12-4bf2-bdf2-1bb9a28cbe82)
+2026-08-17 16:38:52,430 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Workflow data 
+{
+  "Account_A" : "A123",
+  "Account_B" : "B123",
+  "AMT" : 500
+}
+2026-08-17 16:38:52,430 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'Start' for process 'saga2-transfer-workflow' (6b2cd67d-6b12-4bf2-bdf2-1bb9a28cbe82)
+2026-08-17 16:38:52,430 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'ValidateInput' for process 'saga2-transfer-workflow' (6b2cd67d-6b12-4bf2-bdf2-1bb9a28cbe82)
+2026-08-17 16:38:52,431 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'CallA16229State' for process 'saga2-transfer-workflow' (6b2cd67d-6b12-4bf2-bdf2-1bb9a28cbe82)
+2026-08-17 16:38:52,431 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'callApiViaOpenAPI' for process 'saga2-transfer-workflow' (6b2cd67d-6b12-4bf2-bdf2-1bb9a28cbe82)
+2026-08-17 16:38:52,436 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.a16229Result' changed value from: 'null', to: '{"code":"100","message":"成功","Account":"A123","_httpStatus":200}'
+2026-08-17 16:38:52,436 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'CheckA16229Result' for process 'saga2-transfer-workflow' (6b2cd67d-6b12-4bf2-bdf2-1bb9a28cbe82)
+2026-08-17 16:38:52,436 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'CallA16220State' for process 'saga2-transfer-workflow' (6b2cd67d-6b12-4bf2-bdf2-1bb9a28cbe82)
+2026-08-17 16:38:52,437 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'callApiViaOpenAPI' for process 'saga2-transfer-workflow' (6b2cd67d-6b12-4bf2-bdf2-1bb9a28cbe82)
+2026-08-17 16:38:52,441 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.a16220Result' changed value from: 'null', to: '{"code":"100","message":"成功","Account":"B123","_httpStatus":200}'
+2026-08-17 16:38:52,442 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'CheckA16220Result' for process 'saga2-transfer-workflow' (6b2cd67d-6b12-4bf2-bdf2-1bb9a28cbe82)
+2026-08-17 16:38:52,442 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'DecideByEvaluation' for process 'saga2-transfer-workflow' (6b2cd67d-6b12-4bf2-bdf2-1bb9a28cbe82)
+2026-08-17 16:38:52,442 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'InjectSuccessStatus' for process 'saga2-transfer-workflow' (6b2cd67d-6b12-4bf2-bdf2-1bb9a28cbe82)
+2026-08-17 16:38:52,442 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.finalStatus' changed value from: 'null', to: '"SUCCESS"'
+2026-08-17 16:38:52,442 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.finalMessage' changed value from: 'null', to: '"交易成功"'
+2026-08-17 16:38:52,442 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'Join-FinalAuditAndEnd' for process 'saga2-transfer-workflow' (6b2cd67d-6b12-4bf2-bdf2-1bb9a28cbe82)
+2026-08-17 16:38:52,442 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'FinalAuditAndEnd' for process 'saga2-transfer-workflow' (6b2cd67d-6b12-4bf2-bdf2-1bb9a28cbe82)
+2026-08-17 16:38:52,442 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'recordAuditLog' for process 'saga2-transfer-workflow' (6b2cd67d-6b12-4bf2-bdf2-1bb9a28cbe82)
+2026-08-17 16:38:52,443 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [com.exa.rec.AuditLogService] (executor-thread-1) [AuditLogService] 成功寫入對帳紀錄! Workflow: saga2-transfer-workflow, BusinessKey: A123, Status: SUCCESS, Rows: 1
+2026-08-17 16:38:52,443 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.saved' changed value from: 'null', to: 'true'
+2026-08-17 16:38:52,443 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.workflowId' changed value from: 'null', to: '"saga2-transfer-workflow"'
+2026-08-17 16:38:52,443 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Property 'workflowdata.status' changed value from: 'null', to: '"SUCCESS"'
+2026-08-17 16:38:52,444 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Workflow data change
+{
+  "status" : "SUCCESS",
+  "message" : "交易成功",
+  "AMT" : 500,
+  "a16229Result" : {
+    "code" : "100",
+    "message" : "成功",
+    "Account" : "A123",
+    "_httpStatus" : 200
+  },
+  "a16220Result" : {
+    "code" : "100",
+    "message" : "成功",
+    "Account" : "B123",
+    "_httpStatus" : 200
+  },
+  "a16229Rollback" : null,
+  "a16220Rollback" : null
+}
+2026-08-17 16:38:52,444 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Triggered node 'End' for process 'saga2-transfer-workflow' (6b2cd67d-6b12-4bf2-bdf2-1bb9a28cbe82)
+2026-08-17 16:38:52,444 op-nuc12wshi5 /usr/lib/jvm/java-21-openjdk-amd64/bin/java[299322] INFO  [org.kie.kog.ser.wor.dev.DevModeServerlessWorkflowLogger] (executor-thread-1) Workflow 'saga2-transfer-workflow' (6b2cd67d-6b12-4bf2-bdf2-1bb9a28cbe82) completed

@@ -1,0 +1,5 @@
+﻿id,created_at,workflow_id,business_key,status,message,account_a,account_b,amt,a16229_code,a16229_msg,a16220_code,a16220_msg,a16229_rollback_code,a16220_rollback_code
+1,2026-08-17 07:32:24,saga2-transfer-workflow,123456,SUCCESS,交易成功,123456,A12345,100,100,成功,100,成功,,
+2,2026-08-17 07:32:30,saga2-transfer-workflow,123456,ROLLED_BACK,AMT > 500 觸發 saga 回沖 (LIFO),123456,A12345,600,100,成功,100,成功,100,100
+3,2026-08-17 07:32:36,saga2-transfer-workflow,123456,FAILED,業務失敗或 API 錯誤,123456,A12345,30,999,AMT必須大於50,,,,
+4,2026-08-17 07:32:40,saga2-transfer-workflow,123456,ROLLED_BACK,"A16220 業務失敗,僅回沖 A16229",123456,A12345,2000,100,成功,999,AMT必須小於1000,100,

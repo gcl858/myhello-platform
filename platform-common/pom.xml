@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.acme.platform</groupId>
+        <artifactId>myhello-platform</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>platform-common</artifactId>
+    <name>platform-common</name>
+    <description>
+        共用工具層,無 Quarkus 依賴 (pure Java only)。
+        目前僅放 package-info,留作未來共用的 utility (例:JsonNode 擴充、統一的 error shape)。
+    </description>
+
+    <dependencies>
+        <!-- 不放任何 Quarkus / framework 依賴,確保 platform-common 可被任何模組重用而不污染 classpath -->
+    </dependencies>
+</project>

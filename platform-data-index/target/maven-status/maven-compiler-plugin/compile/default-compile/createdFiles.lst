@@ -1,0 +1,5 @@
+org/acme/platform/dataindex/SqliteZonedDateTimeJdbcType$1.class
+org/acme/platform/dataindex/SqliteZonedDateTimeJdbcType$2.class
+org/acme/platform/dataindex/KogitoSQLiteDialect.class
+org/acme/platform/dataindex/MyLivenessCheck.class
+org/acme/platform/dataindex/SqliteZonedDateTimeJdbcType.class

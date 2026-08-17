@@ -1,0 +1,136 @@
+openapi: 3.0.0
+info:
+  title: Combined Transfer API
+  description: 包含 A16229 與 A16220 的合併 OpenAPI 規格
+  version: 1.0.0
+servers:
+  - url: http://localhost:8080/
+paths:
+  /A16229:
+    post:
+      operationId: executeA16229
+      summary: 執行 A16229 交易
+      description: |
+        處理 A16229 交易請求。當 AMT 大於 50 時交易成功，
+        否則回傳 403 錯誤。
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/A16229Request'
+      responses:
+        '200':
+          description: 交易成功
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/A16229Response'
+        '403':
+          description: 交易失敗
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/A16229Response'
+  /A16220:
+    post:
+      operationId: executeA16220
+      summary: 執行 A16220 交易
+      description: |
+        處理 A16220 交易請求。當 AMT 小於 1000 時交易成功，
+        否則回傳 403 錯誤。
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/A16220Request'
+      responses:
+        '200':
+          description: 交易成功
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/A16220Response'
+        '403':
+          description: 交易失敗
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/A16220Response'
+  /q/health:
+    get:
+      operationId: getData
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HealthResponse'
+components:
+  schemas:
+    A16229Request:
+      type: object
+      required:
+        - Account_A
+        - AMT
+        - EC
+      properties:
+        Account_A:
+          type: string
+        AMT:
+          type: integer
+          format: int32
+        EC:
+          type: boolean
+    A16229Response:
+      type: object
+      required:
+        - code
+        - message
+      properties:
+        code:
+          type: string
+        message:
+          type: string
+        Account:
+          type: string
+          nullable: true
+    A16220Request:
+      type: object
+      required:
+        - Account_B
+        - AMT
+        - EC
+      properties:
+        Account_B:
+          type: string
+        AMT:
+          type: integer
+          format: int32
+        EC:
+          type: boolean
+    A16220Response:
+      type: object
+      required:
+        - code
+        - message
+      properties:
+        code:
+          type: string
+        message:
+          type: string
+        Account:
+          type: string
+          nullable: true
+    HealthResponse:
+      type: object
+      properties:
+        status:
+          type: string
+        checks:
+          type: array
+          items:
+            type: object
+            additionalProperties: true

@@ -1,0 +1,105 @@
+# =============================================================
+#  SonataFlow Java Service 工作流程定義檔 (Serverless Workflow Specification 0.8)
+# =============================================================
+#  本檔案將原本直接在工作流呼叫 REST 服務的方式，
+#  改為透過「Workflow -> Java Service (Quarkus Bean) -> 外部 HTTP 端點」的呼叫架構。
+#
+#  呼叫流程架構 (Call Flow):
+#    Client (用戶端)
+#      │ (傳入 JSON 輸入資料，如 { "name": "John" })
+#      ▼
+#    java-workflow (SonataFlow 工作流程引擎)
+#      │ (執行 FetchDataState 狀態中的 callApiAction 動作)
+#      ▼
+#    com.example.ApiService.callHealthApi() (Java 服務類別與方法)
+#      │ (發起內部/外部 REST HTTP 請求)
+#      ▼
+#    http://localhost:8080/q/health (Quarkus 微服務健康檢查端點)
+#
+#  重要架構與規範說明:
+#    - SonataFlow Custom Java Service Function:
+#      在 Serverless Workflow 0.8 規格中，呼叫 Java Service 使用 type: custom
+#      語法格式為 operation: "service:<完整類別路徑 (Fully Qualified Class Name)>::<方法名稱 (Method Name)>"
+#    - 參數傳遞 (Arguments):
+#      若 Java 方法不需參數，則 action 的 functionRef 不需要設定 arguments。
+#    - 端點說明:
+#      端點為本機 Quarkus 健康檢查，不需 SSL 設定。
+#    - 資料過濾與轉譯 (JQ Data Filtering):
+#      SonataFlow 採用 JQ 語法對工作流程傳遞的 JSON 數據進行萃取、儲存與格式轉譯。
+# =============================================================
+
+# -------------------------------------------------------------
+# 1. 工作流程基本元數據 (Workflow Metadata)
+# -------------------------------------------------------------
+# id: 工作流程的唯一標示符 (Unique Identifier)，用作 REST API 路由與引擎識別
+id: java-workflow
+
+# version: 此工作流程定義檔的版本號 (語意化版本格式 SemVer)
+version: '1.0.0'
+
+# specVersion: 所遵從的 CNCF Serverless Workflow 規範版本 (目前 SonataFlow 支援 0.8)
+specVersion: '0.8'
+
+# name: 工作流程的易讀名稱 (Display Name)
+name: My First Java Service Workflow
+
+# description: 工作流程的功能詳細描述
+description: A workflow that calls a Quarkus health endpoint through a Java service
+
+# start: 工作流程啟動時首先執行的起始狀態 (Initial State Name)
+start: FetchDataState
+
+# -------------------------------------------------------------
+# 2. 輸入資料結構校驗 (Data Input Schema)
+# -------------------------------------------------------------
+# dataInputSchema: 用於校驗傳入此工作流程之 JSON Data payload 的 JSON Schema 檔案路徑
+# classpath: 參照專案路徑中的 src/main/resources/schemas/input-schema.json
+dataInputSchema: classpath:schemas/input-schema.json
+
+# -------------------------------------------------------------
+# 3. 函式/服務定義區塊 (Functions Definition)
+# -------------------------------------------------------------
+# functions: 定義工作流程狀態中可被呼叫的所有外部服務或自訂函式清單
+functions:
+    # 函式自訂標籤名稱，供 State 中的 action 進行引用的 reference name
+  - name: callHealthApiService
+    # operation: 具體的呼叫目標。這裡採用 SonataFlow 的 custom service 語法:
+    # "service:包名.類別名::方法名" -> 代表會實例化/注入該 Java Bean 並執行該方法
+    operation: "service:com.example.platform.transfer.samples.ApiService::callHealthApi"
+    # type: 函式類型。自訂 Java 服務必須指定為 custom (非 rest, asyncapi, graphql 等)
+    type: custom
+
+# -------------------------------------------------------------
+# 4. 狀態機定義區塊 (States Definition)
+# -------------------------------------------------------------
+# states: 工作流程的狀態鏈 (State Machine)，定義各個步驟的執行邏輯與轉場
+states:
+    # 狀態 1: FetchDataState (擷取資料狀態)
+  - name: FetchDataState
+    # type: 狀態類型。operation 代表執行一個或多個具體動作 (Actions) 的操作型狀態
+    type: operation
+    
+    # actions: 該狀態下要執行的動作陣列列表 (會依序或平行執行)
+    actions:
+        # action 的識別名稱
+      - name: callApiAction
+        # functionRef: 指定要執行的函式引用
+        functionRef:
+          # refName: 對應上方 functions 清單中定義的 name (callHealthApiService)
+          refName: callHealthApiService
+          
+        # actionDataFilter: 動作層級的資料過濾器，處理函式執行後的傳回結果
+        actionDataFilter:
+          # results: 用 JQ 選擇器萃取函式傳回值的目標欄位 ( "." 代表保留完整的傳回 JSON 物件)
+          results: "."
+          # toStateData: 將萃取出來的結果寫入 State Data (工作流程當前上下文資料) 的指定 JSON key 名稱 (${ .apiResponse })
+          toStateData: "${ .apiResponse }"
+
+    # stateDataFilter: 狀態層級的資料過濾器，定義該狀態結束時要輸出給下游或作為工作流最終結果的數據格式
+    stateDataFilter:
+      # output: 使用 JQ 構造最終輸出的 JSON 結構。
+      # 將原本輸入的 .name 與 API 傳回值 .apiResponse 組合為自訂的 JSON 格式
+      output: '{ greeting: "Hello, \(.name)!", data: .apiResponse }'
+
+    # end: 標示此狀態為工作流程的終點狀態 (End State)。若為 true 則執行完成後結束工作流。
+    end: true

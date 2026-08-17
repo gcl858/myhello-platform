@@ -1,0 +1,14 @@
+﻿id,created_at,workflow_id,business_key,status,message,account_a,account_b,amt,a16229_code,a16229_msg,a16220_code,a16220_msg,a16229_rollback_code,a16220_rollback_code
+1,2026-08-17 07:29:47,saga2-transfer-workflow,A123,SUCCESS,交易成功,A123,B123,100,100,成功,100,成功,,
+2,2026-08-17 07:29:47,saga2-transfer-workflow,A123,SUCCESS,交易成功,A123,B123,100,100,成功,100,成功,,
+3,2026-08-17 07:29:47,saga2-transfer-workflow,A123,FAILED,業務失敗或 API 錯誤,A123,B123,30,999,AMT必須大於50,,,,
+4,2026-08-17 07:29:47,saga2-transfer-workflow,A123,ROLLED_BACK,AMT > 500 觸發 saga 回沖 (LIFO),A123,B123,600,100,成功,100,成功,100,100
+5,2026-08-17 07:29:47,saga2-transfer-workflow,A123,ROLLED_BACK,"A16220 業務失敗,僅回沖 A16229",A123,B123,2000,100,成功,999,AMT必須小於1000,100,
+6,2026-08-17 07:29:47,saga2-transfer-workflow,A123,SUCCESS,交易成功,A123,B123,500,100,成功,100,成功,,
+7,2026-08-17 07:29:47,saga2-transfer-workflow,A123,ROLLED_BACK,AMT > 500 觸發 saga 回沖 (LIFO),A123,B123,501,100,成功,100,成功,100,100
+8,2026-08-17 07:29:48,saga2-transfer-workflow,788865_S,VALIDATION_FAILED,"輸入欄位格式錯誤 (Account_A 須為 6 位數字,Account_B 須為 1 大寫 + 5 數字,AMT 須為數字)",788865_S,X,100,,,,,,
+9,2026-08-17 07:29:49,saga2-transfer-workflow,A123,ROLLED_BACK,AMT > 500 觸發 saga 回沖 (LIFO),A123,B123,501,100,成功,100,成功,100,100
+10,2026-08-17 07:29:49,saga2-transfer-workflow,A123,SUCCESS,交易成功,A123,B123,100,100,成功,100,成功,,
+11,2026-08-17 07:29:49,saga2-transfer-workflow,A123,FAILED,業務失敗或 API 錯誤,A123,B123,30,999,AMT必須大於50,,,,
+12,2026-08-17 07:29:49,saga2-transfer-workflow,A123,ROLLED_BACK,"A16220 業務失敗,僅回沖 A16229",A123,B123,2000,100,成功,999,AMT必須小於1000,100,
+13,2026-08-17 07:29:49,saga2-transfer-workflow,A123,ROLLED_BACK,AMT > 500 觸發 saga 回沖 (LIFO),A123,B123,600,100,成功,100,成功,100,100

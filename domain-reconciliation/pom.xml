@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.acme.platform</groupId>
+        <artifactId>myhello-platform</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>domain-reconciliation</artifactId>
+    <packaging>pom</packaging>
+    <name>domain-reconciliation (parent)</name>
+    <description>
+        Bounded Context: 對帳。
+        包含 reconciliation-api (查詢 + CSV 匯出 + AuditLog)。
+        未來 reconciliation-scheduler 將容納批次排程 (預留)。
+        變更節奏:對帳邏輯,可獨立加速,與交易業務脫鉤。
+    </description>
+
+    <modules>
+        <module>reconciliation-api</module>
+    </modules>
+</project>

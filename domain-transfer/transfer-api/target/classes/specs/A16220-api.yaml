@@ -1,0 +1,106 @@
+openapi: 3.0.0
+info:
+  title: A16220 API
+  description: A16220 交易處理 API
+  version: 1.0.0
+servers:
+  - url: http://localhost:8080/
+paths:
+  /A16220:
+    post:
+      operationId: executeA16220
+      summary: 執行 A16220 交易
+      description: |
+        處理 A16220 交易請求。當 AMT 小於 1000 時交易成功，
+        否則回傳 403 錯誤。
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/A16220Request'
+      responses:
+        '200':
+          description: 交易成功
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/A16220Response'
+              examples:
+                success:
+                  summary: 一般成功
+                  value:
+                    code: "100"
+                    message: "成功"
+                    Account: "B123456789"
+                successEC:
+                  summary: EC 成功
+                  value:
+                    code: "100"
+                    message: "成功(EC)"
+                    Account: "B123456789"
+        '403':
+          description: 交易失敗 (Request 為空或 AMT 不符合條件)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/A16220Response'
+              examples:
+                emptyRequest:
+                  summary: Request 為空
+                  value:
+                    code: "999"
+                    message: "Request不可為空"
+                    Account: null
+                amtTooLarge:
+                  summary: AMT 不符合條件
+                  value:
+                    code: "999"
+                    message: "AMT必須小於1000"
+                    Account: "B123456789"
+components:
+  schemas:
+    A16220Request:
+      type: object
+      description: A16220 交易請求
+      required:
+        - Account_B
+        - AMT
+        - EC
+      properties:
+        Account_B:
+          type: string
+          description: 帳號
+          example: "B123456789"
+        AMT:
+          type: integer
+          description: 交易金額，必須小於 1000
+          format: int32
+          example: 500
+        EC:
+          type: boolean
+          description: 是否為 EC 交易
+          example: false
+    A16220Response:
+      type: object
+      description: A16220 交易回應
+      required:
+        - code
+        - message
+      properties:
+        code:
+          type: string
+          description: |
+            交易結果代碼。
+            * `100` - 成功
+            * `999` - 失敗
+          example: "100"
+        message:
+          type: string
+          description: 交易結果訊息
+          example: "成功"
+        Account:
+          type: string
+          description: 帳號 (失敗時可能為 null)
+          nullable: true
+          example: "B123456789"

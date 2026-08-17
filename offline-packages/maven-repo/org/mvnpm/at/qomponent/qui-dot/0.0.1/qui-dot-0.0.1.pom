@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.mvnpm.at.qomponent</groupId>
+  <artifactId>qui-dot</artifactId>
+  <version>0.0.1</version>
+  <name>qomponent qui-dot</name>
+  <description>A Lit-based web component to show dot files</description>
+  <url>https://quarkus.io</url>
+  <organization>
+    <name>Phillip Kruger</name>
+    <url>https://quarkus.io</url>
+  </organization>
+  <licenses>
+    <license>
+      <name>Apache-2.0</name>
+    </license>
+  </licenses>
+  <developers>
+    <developer>
+      <name>phillip.kruger</name>
+      <email>phillip.kruger@gmail.com</email>
+    </developer>
+  </developers>
+  <scm>
+    <connection>https://github.com/mvnpm/mvnpm.git</connection>
+    <developerConnection>https://github.com/mvnpm/mvnpm.git</developerConnection>
+    <url>https://github.com/mvnpm/mvnpm.git</url>
+  </scm>
+  <properties>
+    <org.mvnpm.at.viz-js-viz.version>[3.12.0,4)</org.mvnpm.at.viz-js-viz.version>
+    <org.mvnpm-lit.version>[3.2.0,3.3)</org.mvnpm-lit.version>
+  </properties>
+  <dependencies>
+    <dependency>
+      <groupId>org.mvnpm</groupId>
+      <artifactId>lit</artifactId>
+      <version>${org.mvnpm-lit.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.mvnpm.at.viz-js</groupId>
+      <artifactId>viz</artifactId>
+      <version>${org.mvnpm.at.viz-js-viz.version}</version>
+    </dependency>
+  </dependencies>
+</project>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.acme.platform</groupId>
+        <artifactId>myhello-platform</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>platform-data-index</artifactId>
+    <name>platform-data-index</name>
+    <description>
+        Kogito Data Index (SQLite) 之平台層封裝。
+        提供:
+          1) 自訂 KogitoSQLiteDialect 解決 ZonedDateTime 解析問題
+          2) SqliteZonedDateTimeJdbcType 處理 Unix epoch ms 字串
+          3) 統一 Liveness 健康檢查
+        任何需要 Kogito Data Index 的 distribution 模組都應依賴本模組。
+    </description>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.acme.platform</groupId>
+            <artifactId>platform-common</artifactId>
+        </dependency>
+
+        <!-- Quarkus 基礎設施 -->
+        <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-arc</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-smallrye-health</artifactId>
+        </dependency>
+
+        <!-- SQLite JDBC + Hibernate Community Dialects -->
+        <dependency>
+            <groupId>org.xerial</groupId>
+            <artifactId>sqlite-jdbc</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate.orm</groupId>
+            <artifactId>hibernate-community-dialects</artifactId>
+        </dependency>
+
+        <!--
+          修補的 Kogito SQLite addon — 需先在環境內 mvn install kogito-sqlite-modules-10.2.0-patched
+          (見平台根目錄 docs/QUICKSTART-RHEL9.md 與 myhello-sonataflow 原專案 SQLITE_DATA_INDEX_INSTALL.md)
+        -->
+        <dependency>
+            <groupId>org.kie</groupId>
+            <artifactId>kogito-addons-quarkus-data-index-sqlite</artifactId>
+            <version>${kie.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.kie.sonataflow</groupId>
+            <artifactId>sonataflow-quarkus</artifactId>
+        </dependency>
+    </dependencies>
+</project>

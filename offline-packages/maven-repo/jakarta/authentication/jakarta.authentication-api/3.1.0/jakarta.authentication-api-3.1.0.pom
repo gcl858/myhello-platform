@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    Copyright (c) 2020, 2024 Contributors to Eclipse Foundation. All rights reserved.
+    Copyright (c) 2013, 2020 Oracle and/or its affiliates. All rights reserved.
+
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Public License v. 2.0, which is available at
+    http://www.eclipse.org/legal/epl-2.0.
+
+    This Source Code may also be made available under the following Secondary
+    Licenses when the conditions for such availability set forth in the
+    Eclipse Public License v. 2.0 are satisfied: GNU General Public License,
+    version 2 with the GNU Classpath Exception, which is available at
+    https://www.gnu.org/software/classpath/license.html.
+
+    SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
+
+-->
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>jakarta.authentication</groupId>
+  <artifactId>jakarta.authentication-api</artifactId>
+  <version>3.1.0</version>
+  <name>Jakarta Authentication</name>
+  <description>Jakarta Authentication defines a general low-level SPI for authentication mechanisms, which are controllers
+        that interact with a caller and a container's environment to obtain the caller's credentials, validate these,
+        and pass an authenticated identity (such as name and groups) to the container. 
+        
+        Jakarta Authentication consists of several profiles, with each profile telling how a specific container
+        (such as Jakarta Servlet) can integrate with- and adapt to this SPI.</description>
+  <url>https://github.com/jakartaee/authentication</url>
+  <licenses>
+    <license>
+      <name>EPL 2.0</name>
+      <url>http://www.eclipse.org/legal/epl-2.0</url>
+      <distribution>repo</distribution>
+    </license>
+    <license>
+      <name>GPL2 w/ CPE</name>
+      <url>https://www.gnu.org/software/classpath/license.html</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+  <developers>
+    <developer>
+      <id>atijms</id>
+      <name>Arjan Tijms</name>
+      <email>arjan.tijms@gmail.com</email>
+      <roles>
+        <role>Project-Lead</role>
+        <role>comitter</role>
+        <role>developer</role>
+      </roles>
+      <timezone>+1</timezone>
+    </developer>
+    <developer>
+      <id>yaminikb</id>
+      <name>Yamini K B</name>
+      <organization>Oracle Corporation</organization>
+      <organizationUrl>http://www.oracle.com/</organizationUrl>
+    </developer>
+  </developers>
+  <scm>
+    <connection>scm:git:ssh://git@github.com/jakartaee/authentication.git</connection>
+    <developerConnection>scm:git:ssh://git@github.com/jakartaee/authentication.git</developerConnection>
+    <url>https://github.com/jakartaee/authentication</url>
+  </scm>
+</project>

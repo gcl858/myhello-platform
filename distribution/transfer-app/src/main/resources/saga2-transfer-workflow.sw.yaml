@@ -1,0 +1,316 @@
+id: saga2-transfer-workflow
+version: '2.0.0'
+specVersion: '0.8'
+name: Saga2 Transfer Workflow
+description: |
+  兩階段交易流程 (Saga 模式回沖) - 套用 MyOpenApiService。
+  透過 MyOpenApiService 動態套用 specs/A16229-api.yaml (executeA16229)
+  與 specs/A16220-api.yaml (executeA16220) 規格發送 API 請求。
+
+start: ValidateInput
+
+timeouts:
+  workflowExecTimeout: PT5M
+
+# dataInputSchema 已停用:由 workflow 內 ValidateInput state 統一驗證,
+#   失敗時透過 InjectValidationFailedStatus 走 FinalAuditAndEnd 共用 body 模板,
+#   HTTP 400 由 WorkflowStatusFilter (ContainerResponseFilter) 改寫。
+#   保留 schemas/saga-transfer-input-schema.json 僅作為文件化契約,不於 runtime 強制。
+# dataInputSchema: classpath:schemas/saga-transfer-input-schema.json
+
+functions:
+  # 使用通用 OpenAPI 服務 MyOpenApiService
+  - name: callApiViaOpenAPI
+    operation: 'service:com.example.transfer.workflow.MyOpenApiService::callOpenApi'
+    type: custom
+  # 使用通用對帳紀錄服務 AuditLogService
+  - name: recordAuditLog
+    operation: 'service:com.example.reconciliation.AuditLogService::saveLog'
+    type: custom
+
+states:
+
+  # ═══════════════════════════════════════════════
+  # 階段 0: 輸入欄位驗證 (workflow 內 jq 驗證,不再依賴 dataInputSchema)
+  #   失敗 → InjectValidationFailedStatus → FinalAuditAndEnd
+  #   與其它終點共用同一個 stateDataFilter.output 模板
+  #   HTTP 400 由 WorkflowStatusFilter 在 JAX-RS 層改寫
+  # ═══════════════════════════════════════════════
+
+  - name: ValidateInput
+    type: switch
+    dataConditions:
+      - name: accountAInvalid
+        # jackson-jq 不支援 test(),改用 match() // false == false 判斷是否匹配
+        condition: '${ (.Account_A | match("^[A-Za-z0-9_]+$") // false) == false }'
+        transition: InjectValidationFailedStatus
+      - name: accountBInvalid
+        condition: '${ (.Account_B | match("^[A-Za-z0-9_]+$") // false) == false }'
+        transition: InjectValidationFailedStatus
+      - name: amtInvalid
+        condition: '${ .AMT | type != "number" }'
+        transition: InjectValidationFailedStatus
+    defaultCondition:
+      transition: CallA16229State
+
+  # ═══════════════════════════════════════════════
+  # 階段 1: 呼叫 A16229 (EC=false)
+  # ═══════════════════════════════════════════════
+
+  - name: CallA16229State
+    type: operation
+    actions:
+      - name: callA16229Action
+        functionRef:
+          refName: callApiViaOpenAPI
+          arguments:
+            functionName: "callApiViaOpenAPI"
+            schemaRef: 'specs/A16229-api.yaml#executeA16229'
+            payload:
+              Account_A: '${ .Account_A }'
+              AMT: '${ .AMT }'
+              EC: false
+        actionDataFilter:
+          results: '{code: .code, message: .message, Account: .Account, _httpStatus: ._httpStatus}'
+          toStateData: '${ .a16229Result }'
+    transition: CheckA16229Result
+
+  - name: CheckA16229Result
+    type: switch
+    dataConditions:
+      - name: a16229Success
+        condition: '${ .a16229Result.code == "100" }'
+        transition: CallA16220State
+      - name: a16229Failed
+        condition: '${ .a16229Result.code != "100" }'
+        transition: InjectFailedStatus
+    defaultCondition:
+      transition: InjectFailedStatus
+
+  # ═══════════════════════════════════════════════
+  # 階段 2: 呼叫 A16220 (EC=false)
+  # ═══════════════════════════════════════════════
+
+  - name: CallA16220State
+    type: operation
+    actions:
+      - name: callA16220Action
+        functionRef:
+          refName: callApiViaOpenAPI
+          arguments:
+            functionName: "callApiViaOpenAPI"
+            schemaRef: 'specs/A16220-api.yaml#executeA16220'
+            payload:
+              Account_B: '${ .Account_B }'
+              AMT: '${ .AMT }'
+              EC: false
+        actionDataFilter:
+          results: '{code: .code, message: .message, Account: .Account, _httpStatus: ._httpStatus}'
+          toStateData: '${ .a16220Result }'
+    transition: CheckA16220Result
+
+  - name: CheckA16220Result
+    type: switch
+    dataConditions:
+      - name: a16220Success
+        condition: '${ .a16220Result.code == "100" }'
+        transition: DecideByEvaluation
+      - name: a16220Failed
+        condition: '${ .a16220Result.code != "100" }'
+        transition: RollbackA16229Only
+    defaultCondition:
+      transition: RollbackA16229Only
+
+  # ═══════════════════════════════════════════════
+  # 業務規則判斷 (AMT > 500 → 觸發 Saga LIFO 回沖)
+  # ═══════════════════════════════════════════════
+
+  - name: DecideByEvaluation
+    type: switch
+    dataConditions:
+      - name: rollbackPath
+        condition: '${ .AMT > 500 }'
+        transition: RollbackA16220
+      - name: successPath
+        condition: '${ .AMT <= 500 }'
+        transition: InjectSuccessStatus
+    defaultCondition:
+      # 安全策略：異常時全回沖,避免雙邊扣款卻無回沖
+      transition: RollbackA16220
+
+  # ═══════════════════════════════════════════════
+  # Saga LIFO 回沖
+  #   先回沖後執行的 A16220,再回沖先執行的 A16229
+  # ═══════════════════════════════════════════════
+
+  # LIFO 第一步: 回沖 A16220 (EC=true)
+  - name: RollbackA16220
+    type: operation
+    actions:
+      - name: rollbackA16220Action
+        functionRef:
+          refName: callApiViaOpenAPI
+          arguments:
+            functionName: "callApiViaOpenAPI"
+            schemaRef: 'specs/A16220-api.yaml#executeA16220'
+            payload:
+              Account_B: '${ .Account_B }'
+              AMT: '${ .AMT }'
+              EC: true
+        actionDataFilter:
+          results: '{code: .code, message: .message, Account: .Account, _httpStatus: ._httpStatus}'
+          toStateData: '${ .a16220Rollback }'
+    transition: RollbackA16229
+
+  # LIFO 第二步: 回沖 A16229 (最先執行的最後回沖, EC=true)
+  - name: RollbackA16229
+    type: operation
+    actions:
+      - name: rollbackA16229Action
+        functionRef:
+          refName: callApiViaOpenAPI
+          arguments:
+            functionName: "callApiViaOpenAPI"
+            schemaRef: 'specs/A16229-api.yaml#executeA16229'
+            payload:
+              Account_A: '${ .Account_A }'
+              AMT: '${ .AMT }'
+              EC: true
+        actionDataFilter:
+          results: '{code: .code, message: .message, Account: .Account, _httpStatus: ._httpStatus}'
+          toStateData: '${ .a16229Rollback }'
+    transition: CheckRollbackResults
+
+  # 僅回沖 A16229 (A16220 失敗時,階段 2 未扣款,無需回沖)
+  - name: RollbackA16229Only
+    type: operation
+    actions:
+      - name: rollbackA16229OnlyAction
+        functionRef:
+          refName: callApiViaOpenAPI
+          arguments:
+            functionName: "callApiViaOpenAPI"
+            schemaRef: 'specs/A16229-api.yaml#executeA16229'
+            payload:
+              Account_A: '${ .Account_A }'
+              AMT: '${ .AMT }'
+              EC: true
+        actionDataFilter:
+          results: '{code: .code, message: .message, Account: .Account, _httpStatus: ._httpStatus}'
+          toStateData: '${ .a16229Rollback }'
+    transition: CheckRollbackA16229OnlyResult
+
+  # ═══════════════════════════════════════════════
+  # 回沖結果檢查 (偵測回沖失敗 → 標記需人工介入)
+  # ═══════════════════════════════════════════════
+
+  # LIFO 全回沖路徑: 檢查 A16220 + A16229 回沖結果
+  - name: CheckRollbackResults
+    type: switch
+    dataConditions:
+      - name: a16229RollbackFailed
+        condition: '${ .a16229Rollback.code != "100" }'
+        transition: InjectRollbackFailedStatus
+      - name: a16220RollbackFailed
+        condition: '${ .a16220Rollback.code != "100" }'
+        transition: InjectRollbackFailedStatus
+    defaultCondition:
+      # 到此表示兩者皆回沖成功
+      transition: InjectRolledBackStatus
+
+  # A16229-only 路徑: 檢查 A16229 回沖結果
+  - name: CheckRollbackA16229OnlyResult
+    type: switch
+    dataConditions:
+      - name: rollbackSuccess
+        condition: '${ .a16229Rollback.code == "100" }'
+        transition: InjectRolledBackOnlyStatus
+      - name: rollbackFailed
+        condition: '${ .a16229Rollback.code != "100" }'
+        transition: InjectRollbackFailedStatus
+    defaultCondition:
+      transition: InjectRollbackFailedStatus
+
+  # ═══════════════════════════════════════════════
+  # Inject: 設定最終狀態與訊息 (進入統一終點前)
+  # ═══════════════════════════════════════════════
+
+  - name: InjectValidationFailedStatus
+    type: inject
+    data:
+      finalStatus: "VALIDATION_FAILED"
+      finalMessage: "輸入欄位格式錯誤 (Account_A 須為 6 位數字,Account_B 須為 1 大寫 + 5 數字,AMT 須為數字)"
+    transition: FinalAuditAndEnd
+
+  - name: InjectSuccessStatus
+    type: inject
+    data:
+      finalStatus: "SUCCESS"
+      finalMessage: "交易成功"
+    transition: FinalAuditAndEnd
+
+  - name: InjectFailedStatus
+    type: inject
+    data:
+      finalStatus: "FAILED"
+      finalMessage: "業務失敗或 API 錯誤"
+    transition: FinalAuditAndEnd
+
+  - name: InjectRolledBackStatus
+    type: inject
+    data:
+      finalStatus: "ROLLED_BACK"
+      finalMessage: "AMT > 500 觸發 saga 回沖 (LIFO)"
+    transition: FinalAuditAndEnd
+
+  - name: InjectRolledBackOnlyStatus
+    type: inject
+    data:
+      finalStatus: "ROLLED_BACK"
+      finalMessage: "A16220 業務失敗,僅回沖 A16229"
+    transition: FinalAuditAndEnd
+
+  - name: InjectRollbackFailedStatus
+    type: inject
+    data:
+      finalStatus: "ROLLBACK_FAILED"
+      finalMessage: "⚠️ 回沖失敗,需人工介入處理"
+    transition: FinalAuditAndEnd
+
+  # ═══════════════════════════════════════════════
+  # 統一終點: 寫入 AuditLog 並結束
+  # ═══════════════════════════════════════════════
+
+  - name: FinalAuditAndEnd
+    type: operation
+    actions:
+      - name: saveFinalAuditLog
+        functionRef:
+          refName: recordAuditLog
+          arguments:
+            workflowId: "saga2-transfer-workflow"
+            businessKey: '${ .Account_A }'
+            inputData:
+              Account_A: '${ .Account_A }'
+              Account_B: '${ .Account_B }'
+              AMT: '${ .AMT }'
+            outputData:
+              status: '${ .finalStatus }'
+              message: '${ .finalMessage }'
+              AMT: '${ .AMT }'
+              a16229Result: '${ .a16229Result }'
+              a16220Result: '${ .a16220Result }'
+              a16229Rollback: '${ .a16229Rollback }'
+              a16220Rollback: '${ .a16220Rollback }'
+    stateDataFilter:
+      output: |
+        {
+          status: .finalStatus,
+          message: .finalMessage,
+          AMT: .AMT,
+          a16229Result: (.a16229Result // null),
+          a16220Result: (.a16220Result // null),
+          a16229Rollback: (.a16229Rollback // null),
+          a16220Rollback: (.a16220Rollback // null)
+        }
+    end: true

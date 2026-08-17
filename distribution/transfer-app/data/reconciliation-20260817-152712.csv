@@ -1,0 +1,8 @@
+﻿id,created_at,workflow_id,business_key,status,message,account_a,account_b,amt,a16229_code,a16229_msg,a16220_code,a16220_msg,a16229_rollback_code,a16220_rollback_code
+1,2026-08-17 07:27:12,saga2-transfer-workflow,A123,VALIDATION_FAILED,"輸入欄位格式錯誤 (Account_A 須為 6 位數字,Account_B 須為 1 大寫 + 5 數字,AMT 須為數字)",A123,B123,100,,,,,,
+2,2026-08-17 07:27:12,saga2-transfer-workflow,A123,VALIDATION_FAILED,"輸入欄位格式錯誤 (Account_A 須為 6 位數字,Account_B 須為 1 大寫 + 5 數字,AMT 須為數字)",A123,B123,100,,,,,,
+3,2026-08-17 07:27:12,saga2-transfer-workflow,A123,VALIDATION_FAILED,"輸入欄位格式錯誤 (Account_A 須為 6 位數字,Account_B 須為 1 大寫 + 5 數字,AMT 須為數字)",A123,B123,501,,,,,,
+4,2026-08-17 07:27:12,saga2-transfer-workflow,A123,VALIDATION_FAILED,"輸入欄位格式錯誤 (Account_A 須為 6 位數字,Account_B 須為 1 大寫 + 5 數字,AMT 須為數字)",A123,B123,100,,,,,,
+5,2026-08-17 07:27:12,saga2-transfer-workflow,A123,VALIDATION_FAILED,"輸入欄位格式錯誤 (Account_A 須為 6 位數字,Account_B 須為 1 大寫 + 5 數字,AMT 須為數字)",A123,B123,30,,,,,,
+6,2026-08-17 07:27:12,saga2-transfer-workflow,A123,VALIDATION_FAILED,"輸入欄位格式錯誤 (Account_A 須為 6 位數字,Account_B 須為 1 大寫 + 5 數字,AMT 須為數字)",A123,B123,2000,,,,,,
+7,2026-08-17 07:27:12,saga2-transfer-workflow,A123,VALIDATION_FAILED,"輸入欄位格式錯誤 (Account_A 須為 6 位數字,Account_B 須為 1 大寫 + 5 數字,AMT 須為數字)",A123,B123,600,,,,,,

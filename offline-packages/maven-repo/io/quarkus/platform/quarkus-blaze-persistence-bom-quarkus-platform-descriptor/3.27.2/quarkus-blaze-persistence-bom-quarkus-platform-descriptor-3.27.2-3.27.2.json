@@ -1,0 +1,46 @@
+{
+  "id" : "io.quarkus.platform:quarkus-blaze-persistence-bom-quarkus-platform-descriptor:3.27.2:json:3.27.2",
+  "platform" : true,
+  "bom" : "io.quarkus.platform:quarkus-blaze-persistence-bom::pom:3.27.2",
+  "quarkus-core-version" : "3.27.2",
+  "extensions" : [ {
+    "name" : "Blaze-Persistence",
+    "description" : "Advanced SQL support for JPA and Entity-Views as efficient DTOs",
+    "metadata" : {
+      "built-with-quarkus-core" : "3.8.6.1",
+      "capabilities" : {
+        "provides" : [ "com.blazebit.persistence.integration.quarkus" ]
+      },
+      "categories" : [ "data" ],
+      "extension-dependencies" : [ "io.quarkus:quarkus-core", "io.quarkus:quarkus-hibernate-orm", "io.quarkus:quarkus-agroal", "io.quarkus:quarkus-arc", "io.quarkus:quarkus-datasource", "io.quarkus:quarkus-narayana-jta", "io.quarkus:quarkus-mutiny", "io.quarkus:quarkus-smallrye-context-propagation", "io.quarkus:quarkus-caffeine" ],
+      "guide" : "https://quarkus.io/guides/blaze-persistence",
+      "keywords" : [ "jpa", "hibernate", "blaze-persistence", "entity-view", "dto", "mapper", "sql" ],
+      "scm-url" : "git@github.com:Blazebit/blaze-persistence.git",
+      "short-name" : "BP",
+      "status" : "stable"
+    },
+    "artifact" : "com.blazebit:blaze-persistence-integration-quarkus-3::jar:1.6.17",
+    "origins" : [ "io.quarkus.platform:quarkus-blaze-persistence-bom-quarkus-platform-descriptor:3.27.2:json:3.27.2" ]
+  } ],
+  "categories" : [ {
+    "id" : "integration",
+    "name" : "Integration",
+    "description" : "Connectors to read to write from a skew of systems (file, S#, Twitter, etc)",
+    "metadata" : {
+      "pinned" : [ "org.apache.camel.quarkus:camel-quarkus-core", "org.apache.camel.quarkus:camel-quarkus-core-xml" ]
+    }
+  }, {
+    "id" : "business-automation",
+    "name" : "Business Automation",
+    "description" : "Rules engine, BPM, etc"
+  } ],
+  "metadata" : {
+    "last-bom-update" : "io.quarkus.platform:quarkus-blaze-persistence-bom:3.26.2",
+    "platform-release" : {
+      "members" : [ "io.quarkus.platform:quarkus-bom-quarkus-platform-descriptor:3.27.2:json:3.27.2", "io.quarkus.platform:quarkus-qpid-jms-bom-quarkus-platform-descriptor:3.27.2:json:3.27.2", "io.quarkus.platform:quarkus-cassandra-bom-quarkus-platform-descriptor:3.27.2:json:3.27.2", "io.quarkus.platform:quarkus-amazon-services-bom-quarkus-platform-descriptor:3.27.2:json:3.27.2", "io.quarkus.platform:quarkus-cxf-bom-quarkus-platform-descriptor:3.27.2:json:3.27.2", "io.quarkus.platform:quarkus-camel-bom-quarkus-platform-descriptor:3.27.2:json:3.27.2", "io.quarkus.platform:quarkus-hazelcast-client-quarkus-platform-descriptor:3.27.2:json:3.27.2", "io.quarkus.platform:quarkus-debezium-bom-quarkus-platform-descriptor:3.27.2:json:3.27.2", "io.quarkus.platform:quarkus-blaze-persistence-bom-quarkus-platform-descriptor:3.27.2:json:3.27.2", "io.quarkus.platform:quarkus-google-cloud-services-bom-quarkus-platform-descriptor:3.27.2:json:3.27.2", "io.quarkus.platform:quarkus-operator-sdk-bom-quarkus-platform-descriptor:3.27.2:json:3.27.2", "io.quarkus.platform:quarkus-langchain4j-bom-quarkus-platform-descriptor:3.27.2:json:3.27.2", "io.quarkus.platform:quarkus-mcp-server-bom-quarkus-platform-descriptor:3.27.2:json:3.27.2" ],
+      "platform-key" : "io.quarkus.platform",
+      "stream" : "3.27",
+      "version" : "3.27.2"
+    }
+  }
+}

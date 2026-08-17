@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.mvnpm</groupId>
+  <artifactId>type-fest</artifactId>
+  <version>4.41.0</version>
+  <name>type-fest</name>
+  <description>A collection of essential TypeScript types</description>
+  <url>https://github.com/sindresorhus/type-fest#readme</url>
+  <organization>
+    <name>Sindre Sorhus</name>
+    <url>https://github.com/sindresorhus/type-fest#readme</url>
+  </organization>
+  <licenses>
+    <license>
+      <name>(MIT OR CC0-1.0)</name>
+    </license>
+  </licenses>
+  <developers>
+    <developer>
+      <name>sindresorhus</name>
+      <email>sindresorhus@gmail.com</email>
+    </developer>
+  </developers>
+  <scm>
+    <connection>https://github.com/sindresorhus/type-fest.git</connection>
+    <developerConnection>https://github.com/sindresorhus/type-fest.git</developerConnection>
+    <url>https://github.com/sindresorhus/type-fest</url>
+  </scm>
+  <issueManagement>
+    <url>https://github.com/sindresorhus/type-fest/issues</url>
+  </issueManagement>
+</project>

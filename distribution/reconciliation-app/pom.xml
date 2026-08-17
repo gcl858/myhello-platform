@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.acme.platform</groupId>
+        <artifactId>distribution</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>reconciliation-app</artifactId>
+    <name>reconciliation-app (Quarkus distribution)</name>
+    <description>
+        對帳業務之可執行 Quarkus 應用。
+        組裝:
+          - platform-security
+          - platform-data-index (供 GraphQL 查詢)
+          - reconciliation-api (查詢、CSV 匯出、AuditLog)
+        不含 transfer-* workflow 與 mock — 上線環境對帳 Pod 不應跑交易流程。
+        部署目標:獨立 Pod / 主機,SLA 寬鬆 (replica = 1 即可),可排程批次。
+        注意:reconciliation-app 與 transfer-app 寫同一個 reconciliation.db
+              (透過共享 volume 或外部 storage),需在 application.properties 設定相同 jdbc.url。
+    </description>
+
+    <dependencies>
+        <!-- platform 層 -->
+        <dependency>
+            <groupId>org.acme.platform</groupId>
+            <artifactId>platform-security</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.acme.platform</groupId>
+            <artifactId>platform-data-index</artifactId>
+        </dependency>
+
+        <!-- 業務域:reconciliation -->
+        <dependency>
+            <groupId>org.acme.platform</groupId>
+            <artifactId>reconciliation-api</artifactId>
+        </dependency>
+
+        <!-- Kubernetes 部署描述 (可選) -->
+        <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-kubernetes</artifactId>
+        </dependency>
+
+        <!-- 測試 -->
+        <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-junit5</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>rest-assured</artifactId>
+            <version>${rest-assured.version}</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>${quarkus.platform.group-id}</groupId>
+                <artifactId>quarkus-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+</project>

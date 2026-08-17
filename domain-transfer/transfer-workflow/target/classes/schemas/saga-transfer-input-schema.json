@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Saga Transfer Workflow Input",
+  "description": "saga-transfer-workflow 啟動時的輸入資料結構",
+  "type": "object",
+  "properties": {
+    "Account_A": {
+      "type": "string",
+      "pattern": "^\\d{6}$",
+      "description": "A 帳號 (用於 A16229): 必須為 6 位數字 (例如: \"123456\")"
+    },
+    "Account_B": {
+      "type": "string",
+      "pattern": "^[A-Z]\\d{5}$",
+      "description": "B 帳號 (用於 A16220): 必須為 6 位數,第 1 位為英文大寫字母,其餘 5 位為數字 (例如: \"A12345\")"
+    },
+    "AMT": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "交易金額 (數字): 業務規則: <= 500 成功, > 500 觸發 saga 回沖"
+    }
+  },
+  "required": ["Account_A", "Account_B", "AMT"],
+  "additionalProperties": false
+}

@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright The WildFly Authors
+  ~ SPDX-License-Identifier: Apache-2.0
+  -->
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.wildfly.tools</groupId>
+        <artifactId>wildfly-parent</artifactId>
+        <version>1.0.4.Final</version>
+    </parent>
+
+    <artifactId>wildfly-arquillian-parent</artifactId>
+
+    <groupId>org.wildfly.arquillian</groupId>
+    <version>5.1.0.Beta9</version>
+    <packaging>pom</packaging>
+    <name>WildFly Arquillian: Parent</name>
+
+    <modules>
+        <!-- The project BOM must be built first -->
+        <module>bom/project-bom</module>
+        <module>wildfly-testing-tools</module>
+        <module>common</module>
+        <module>container-bootable</module>
+        <module>container-embedded</module>
+        <module>container-managed</module>
+        <module>container-remote</module>
+        <module>protocol-jmx</module>
+        <module>testenricher-msc</module>
+        <module>testng-integration</module>
+        <module>common-domain</module>
+        <module>container-remote-domain</module>
+        <module>container-managed-domain</module>
+        <module>junit-api</module>
+        <module>bom/bom</module>
+        <module>integration-tests</module>
+    </modules>
+
+    <scm child.scm.connection.inherit.append.path="false" child.scm.developerConnection.inherit.append.path="false"
+         child.scm.url.inherit.append.path="false">
+        <connection>scm:git:git://github.com/wildfly/wildfly-arquillian.git</connection>
+        <developerConnection>scm:git:git@github.com:wildfly/wildfly-arquillian.git</developerConnection>
+        <url>https://github.com/wildfly/wildfly-arquillian/</url>
+        <tag>HEAD</tag>
+    </scm>
+
+    <issueManagement>
+        <system>JIRA</system>
+        <url>https://issues.redhat.com/browse/WFARQ</url>
+    </issueManagement>
+
+    <properties>
+        <version.org.wildfly>34.0.0.Final</version.org.wildfly>
+        <version.org.wildfly.checkstyle-config>1.0.8.Final</version.org.wildfly.checkstyle-config>
+        <version.org.wildfly.plugins.wildfly-maven-plugin>5.1.1.Final</version.org.wildfly.plugins.wildfly-maven-plugin>
+
+        <!-- Provisioning -->
+        <galleon.fork.embedded>true</galleon.fork.embedded>
+        <jboss.home>${project.build.directory}${file.separator}wildfly</jboss.home>
+        <galleon.feature.pack.artifactId>wildfly-ee-galleon-pack</galleon.feature.pack.artifactId>
+        <server.test.feature.pack.groupId>org.wildfly</server.test.feature.pack.groupId>
+        <server.test.feature.pack.artifactId>wildfly-ee-galleon-pack</server.test.feature.pack.artifactId>
+
+        <wildfly.channel.manifest.groupId>org.wildfly.channels</wildfly.channel.manifest.groupId>
+        <wildfly.channel.manifest.artifactId>wildfly-ee</wildfly.channel.manifest.artifactId>
+
+        <!-- Other properties -->
+        <wildfly.standalone.config>standalone.xml</wildfly.standalone.config>
+
+        <maven.test.skip>false</maven.test.skip>
+        <skipTests>${maven.test.skip}</skipTests>
+
+        <!-- Surefire properties -->
+        <maven.test.redirectTestOutputToFile>true</maven.test.redirectTestOutputToFile>
+        <default.jvm.args>-Dmaven.repo.local=${settings.localRepository} -Djava.io.tmpdir=${project.build.directory}</default.jvm.args>
+        <jvm.args>${default.jvm.args}</jvm.args>
+        <debug.vm.args />
+        <debug.port>8787</debug.port>
+        <test.debug.port>5005</test.debug.port>
+
+        <!-- Release properties -->
+        <autoVersionSubmodules>true</autoVersionSubmodules>
+        <pushChanges>false</pushChanges>
+
+        <!-- Build minimums -->
+        <maven.min.version>3.8.0</maven.min.version>
+
+        <!-- Require at least Java 11 to compile -->
+        <jdk.min.version>11</jdk.min.version>
+        <maven.compiler.release>11</maven.compiler.release>
+    </properties>
+
+    <build>
+        <!-- Filter test resources -->
+        <testResources>
+            <testResource>
+                <directory>src/test/resources</directory>
+                <filtering>true</filtering>
+            </testResource>
+        </testResources>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <artifactId>maven-javadoc-plugin</artifactId>
+                    <configuration>
+                        <release>${maven.compiler.release}</release>
+                    </configuration>
+                </plugin>
+                <!-- Checkstyle -->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-checkstyle-plugin</artifactId>
+                    <version>${version.checkstyle.plugin}</version>
+                    <configuration>
+                        <configLocation>wildfly-checkstyle/checkstyle.xml</configLocation>
+                        <consoleOutput>true</consoleOutput>
+                        <failsOnError>true</failsOnError>
+                        <useFile />
+                    </configuration>
+                    <dependencies>
+                        <dependency>
+                            <groupId>org.wildfly.checkstyle</groupId>
+                            <artifactId>wildfly-checkstyle-config</artifactId>
+                            <version>${version.org.wildfly.checkstyle-config}</version>
+                        </dependency>
+                    </dependencies>
+                    <executions>
+                        <execution>
+                            <id>check-style</id>
+                            <phase>compile</phase>
+                            <goals>
+                                <goal>checkstyle</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-release-plugin</artifactId>
+                    <configuration>
+                        <arguments>-DskipTests</arguments>
+                        <autoVersionSubmodules>${autoVersionSubmodules}</autoVersionSubmodules>
+                        <localRepoDirectory>${settings.localRepository}</localRepoDirectory>
+                        <pushChanges>${pushChanges}</pushChanges>
+                        <signTag>true</signTag>
+                        <tagNameFormat>@{project.version}</tagNameFormat>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <configuration>
+                        <redirectTestOutputToFile>${maven.test.redirectTestOutputToFile}</redirectTestOutputToFile>
+                    </configuration>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.wildfly.plugins</groupId>
+                    <artifactId>wildfly-maven-plugin</artifactId>
+                    <version>${version.org.wildfly.plugins.wildfly-maven-plugin}</version>
+                    <configuration>
+                        <skip>${skipTests}</skip>
+                        <provisioning-dir>${jboss.home}</provisioning-dir>
+                        <feature-packs>
+                            <feature-pack>
+                                <groupId>${server.test.feature.pack.groupId}</groupId>
+                                <artifactId>${server.test.feature.pack.artifactId}</artifactId>
+                                <version>${version.org.wildfly}</version>
+                            </feature-pack>
+                        </feature-packs>
+                        <channels>
+                            <!-- If the server.version is blank the newest version of WildFly will be used.
+                                 Otherwise, be explicit.
+                             -->
+                            <channel>
+                                <manifest>
+                                    <groupId>${wildfly.channel.manifest.groupId}</groupId>
+                                    <artifactId>${wildfly.channel.manifest.artifactId}</artifactId>
+                                    <version>${version.org.wildfly}</version>
+                                </manifest>
+                            </channel>
+                        </channels>
+                        <galleon-options>
+                            <jboss-maven-dist/>
+                            <jboss-fork-embedded>${galleon.fork.embedded}</jboss-fork-embedded>
+                        </galleon-options>
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <id>provision-server</id>
+                            <goals>
+                                <goal>provision</goal>
+                            </goals>
+                            <phase>process-test-classes</phase>
+                        </execution>
+                    </executions>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-checkstyle-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-enforcer-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>ban-bad-dependencies</id>
+                        <goals>
+                            <goal>enforce</goal>
+                        </goals>
+                        <configuration>
+                            <rules>
+                                <bannedDependencies>
+                                    <searchTransitive>true</searchTransitive>
+                                    <excludes>
+                                        <exclude>javax.activation:activation</exclude>
+                                        <exclude>javax.activation:javax.activation-api</exclude>
+                                        <exclude>javax.enterprise:cdi-api</exclude>
+                                        <exclude>javax.inject:javax.inject</exclude>
+                                        <exclude>javax.json:javax.json-api</exclude>
+                                        <exclude>javax.security.enterprise:javax.security.enterprise-api</exclude>
+                                        <exclude>javax.servlet:servlet-api</exclude>
+                                        <exclude>javax.transaction:jta</exclude>
+                                        <exclude>javax.validation:validation-api</exclude>
+                                        <exclude>javax.xml:jaxrpc-api</exclude>
+                                        <exclude>javax.xml.bind:jaxb-api</exclude>
+                                        <exclude>javax.xml.soap:saaj-api</exclude>
+                                        <exclude>javax.xml.stream:stax-api</exclude>
+                                        <exclude>log4j:log4j</exclude>
+                                    </excludes>
+                                </bannedDependencies>
+                            </rules>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>dep-convergence</id>
+                        <goals>
+                            <goal>enforce</goal>
+                        </goals>
+                        <configuration>
+                            <!-- TODO (jrp) Disabled for now as there are too many convergences. The wildfly-protocol
+                                 is part of the issue. The protocol-jmx is another issue that exposes too many externals.
+                             -->
+                            <skip>true</skip>
+                            <rules>
+                                <dependencyConvergence />
+                            </rules>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <!-- Enable auto-formatting of source files -->
+            <plugin>
+                <groupId>net.revelc.code.formatter</groupId>
+                <artifactId>formatter-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>net.revelc.code</groupId>
+                <artifactId>impsort-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+    <profiles>
+        <profile>
+            <id>skip-log-manager-check</id>
+            <activation>
+                <property>
+                    <name>org.wildfly.logging.skipLogManagerCheck</name>
+                </property>
+            </activation>
+            <properties>
+                <!-- Skip the log manager validation in the logging subsystem -->
+                <jvm.args>${default.jvm.args} -Dorg.wildfly.logging.skipLogManagerCheck=true</jvm.args>
+            </properties>
+        </profile>
+        <profile>
+            <id>debug</id>
+            <activation>
+                <property>
+                    <name>debug</name>
+                </property>
+            </activation>
+            <properties>
+                <debug.vm.args>-agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=*:${debug.port}</debug.vm.args>
+            </properties>
+        </profile>
+        <profile>
+            <id>wildfly-preview</id>
+            <activation>
+                <property>
+                    <name>wildfly.preview</name>
+                </property>
+            </activation>
+            <properties>
+                <galleon.feature.pack.artifactId>wildfly-preview-feature-pack</galleon.feature.pack.artifactId>
+                <galleon.feature.pack.location>wildfly-preview@maven(org.jboss.universe:community-universe)#${version.org.wildfly.full}</galleon.feature.pack.location>
+            </properties>
+        </profile>
+        <profile>
+            <id>format-check</id>
+            <build>
+                <plugins>
+                    <!-- Validate formatting -->
+                    <plugin>
+                        <groupId>net.revelc.code.formatter</groupId>
+                        <artifactId>formatter-maven-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>validate-format</id>
+                                <phase>validate</phase>
+                                <goals>
+                                    <goal>validate</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <groupId>net.revelc.code</groupId>
+                        <artifactId>impsort-maven-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>check-import-sort</id>
+                                <phase>validate</phase>
+                                <goals>
+                                    <goal>check</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+
+    <repositories>
+        <repository>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>never</updatePolicy>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>never</updatePolicy>
+            </snapshots>
+            <id>jboss-public-repository</id>
+            <name>JBoss Public Repository Group</name>
+            <url>https://repository.jboss.org/nexus/content/groups/public/</url>
+            <layout>default</layout>
+        </repository>
+        <repository>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>never</updatePolicy>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>never</updatePolicy>
+            </snapshots>
+            <id>jboss-enterprise-maven-repository</id>
+            <name>JBoss Enterprise Maven Repository</name>
+            <url>https://maven.repository.redhat.com/ga/</url>
+            <layout>default</layout>
+        </repository>
+    </repositories>
+</project>

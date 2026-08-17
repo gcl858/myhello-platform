@@ -1,0 +1,211 @@
+{
+  "id" : "io.quarkus.registry:quarkus-non-platform-extensions:3.33.2.1:json:1.0-SNAPSHOT",
+  "bom" : "io.quarkus.platform:quarkus-bom::pom:3.33.2.1",
+  "quarkus-core-version" : "3.33.2.1",
+  "extensions" : [ {
+    "name" : "OpenTelemetry REST Client",
+    "description" : "OpenTelemetry tracing of Rest Client",
+    "metadata" : {
+      "quarkus-core-compatibility" : "UNKNOWN"
+    },
+    "artifact" : "io.quarkus:quarkus-opentelemetry-rest-client::jar:2.0.3.Final",
+    "origins" : [ "io.quarkus.registry:quarkus-non-platform-extensions:3.33.2.1:json:1.0-SNAPSHOT" ]
+  }, {
+    "name" : "Micrometer registry - SignalFX",
+    "description" : "Send metrics to Splunk using SignalFX",
+    "metadata" : {
+      "categories" : [ "observability" ],
+      "guide" : "https://quarkus.io/guides/micrometer-metrics",
+      "keywords" : [ "micrometer", "metrics", "metric", "prometheus", "monitoring" ],
+      "quarkus-core-compatibility" : "UNKNOWN",
+      "status" : "experimental"
+    },
+    "artifact" : "io.quarkiverse.micrometer.registry:quarkus-micrometer-registry-signalfx::jar:0.3.0",
+    "origins" : [ "io.quarkus.registry:quarkus-non-platform-extensions:3.33.2.1:json:1.0-SNAPSHOT" ]
+  }, {
+    "name" : "Micrometer registry - JMX",
+    "description" : "View metrics data using JMX",
+    "metadata" : {
+      "categories" : [ "observability" ],
+      "guide" : "https://quarkus.io/guides/micrometer-metrics",
+      "keywords" : [ "micrometer", "metrics", "metric", "prometheus", "monitoring" ],
+      "quarkus-core-compatibility" : "UNKNOWN",
+      "status" : "experimental"
+    },
+    "artifact" : "io.quarkiverse.micrometer.registry:quarkus-micrometer-registry-jmx::jar:0.3.0",
+    "origins" : [ "io.quarkus.registry:quarkus-non-platform-extensions:3.33.2.1:json:1.0-SNAPSHOT" ]
+  }, {
+    "name" : "Micrometer registry - Azure Monitor",
+    "description" : "Send data gathered by Micrometer to Azure Monitor",
+    "metadata" : {
+      "categories" : [ "observability" ],
+      "guide" : "https://quarkus.io/guides/micrometer-metrics",
+      "keywords" : [ "micrometer", "metrics", "metric", "prometheus", "monitoring" ],
+      "quarkus-core-compatibility" : "UNKNOWN",
+      "status" : "experimental"
+    },
+    "artifact" : "io.quarkiverse.micrometer.registry:quarkus-micrometer-registry-azure-monitor::jar:0.3.0",
+    "origins" : [ "io.quarkus.registry:quarkus-non-platform-extensions:3.33.2.1:json:1.0-SNAPSHOT" ]
+  }, {
+    "name" : "Micrometer registry - Datadog",
+    "description" : "Send metrics to Datadog using the Datadog API",
+    "metadata" : {
+      "categories" : [ "observability" ],
+      "guide" : "https://quarkus.io/guides/micrometer-metrics",
+      "keywords" : [ "micrometer", "metrics", "metric", "prometheus", "monitoring" ],
+      "quarkus-core-compatibility" : "UNKNOWN",
+      "status" : "experimental"
+    },
+    "artifact" : "io.quarkiverse.micrometer.registry:quarkus-micrometer-registry-datadog::jar:0.3.0",
+    "origins" : [ "io.quarkus.registry:quarkus-non-platform-extensions:3.33.2.1:json:1.0-SNAPSHOT" ]
+  }, {
+    "name" : "Logging Manager",
+    "description" : "Provides endpoints to visualize and control the log level of your loggers.",
+    "metadata" : {
+      "categories" : [ "logging" ],
+      "keywords" : [ "logging manager", "log", "logging levels", "log file" ],
+      "quarkus-core-compatibility" : "UNKNOWN",
+      "short-name" : "logging manager",
+      "status" : "stable"
+    },
+    "artifact" : "io.quarkiverse.loggingmanager:quarkus-logging-manager::jar:0.1.0",
+    "origins" : [ "io.quarkus.registry:quarkus-non-platform-extensions:3.33.2.1:json:1.0-SNAPSHOT" ]
+  }, {
+    "name" : "Maven Resolver",
+    "description" : "An extension providing a Maven resolver implementation from the Quarkus core bootstrap project",
+    "metadata" : {
+      "quarkus-core-compatibility" : "UNKNOWN"
+    },
+    "artifact" : "io.quarkiverse.mavenresolver:quarkus-maven-resolver::jar:0.0.2",
+    "origins" : [ "io.quarkus.registry:quarkus-non-platform-extensions:3.33.2.1:json:1.0-SNAPSHOT" ]
+  }, {
+    "name" : "Tekton Client",
+    "description" : "Inject the Tekton client without worrying about the complexity related to handling dependencies.",
+    "metadata" : {
+      "quarkus-core-compatibility" : "UNKNOWN"
+    },
+    "artifact" : "io.quarkiverse.tektonclient:quarkus-tekton-client::jar:0.2.0",
+    "origins" : [ "io.quarkus.registry:quarkus-non-platform-extensions:3.33.2.1:json:1.0-SNAPSHOT" ]
+  }, {
+    "name" : "Freemarker",
+    "description" : "Apache FreeMarker template engine to generate text output",
+    "metadata" : {
+      "categories" : [ "miscellaneous" ],
+      "guide" : "https://quarkus.io/guides/freemarker",
+      "keywords" : [ "freemarker", "template" ],
+      "quarkus-core-compatibility" : "UNKNOWN",
+      "status" : "preview"
+    },
+    "artifact" : "io.quarkiverse.freemarker:quarkus-freemarker::jar:0.0.7",
+    "origins" : [ "io.quarkus.registry:quarkus-non-platform-extensions:3.33.2.1:json:1.0-SNAPSHOT" ]
+  }, {
+    "name" : "Micrometer registry - Stackdriver",
+    "description" : "Send metrics to Google Cloud Operations using Stackdriver",
+    "metadata" : {
+      "categories" : [ "observability" ],
+      "guide" : "https://quarkus.io/guides/micrometer-metrics",
+      "keywords" : [ "micrometer", "metrics", "metric", "prometheus", "monitoring" ],
+      "quarkus-core-compatibility" : "UNKNOWN",
+      "status" : "experimental"
+    },
+    "artifact" : "io.quarkiverse.micrometer.registry:quarkus-micrometer-registry-stackdriver::jar:0.3.0",
+    "origins" : [ "io.quarkus.registry:quarkus-non-platform-extensions:3.33.2.1:json:1.0-SNAPSHOT" ]
+  }, {
+    "name" : "Micrometer registry - StatsD",
+    "description" : "Send metrics to a StatsD sidecar agent",
+    "metadata" : {
+      "categories" : [ "observability" ],
+      "guide" : "https://quarkus.io/guides/micrometer-metrics",
+      "keywords" : [ "micrometer", "metrics", "metric", "prometheus", "monitoring" ],
+      "quarkus-core-compatibility" : "UNKNOWN",
+      "status" : "experimental"
+    },
+    "artifact" : "io.quarkiverse.micrometer.registry:quarkus-micrometer-registry-statsd::jar:0.3.0",
+    "origins" : [ "io.quarkus.registry:quarkus-non-platform-extensions:3.33.2.1:json:1.0-SNAPSHOT" ]
+  }, {
+    "name" : "Camunda Platform 7 Engine",
+    "description" : "Quarkus Extension for the Camunda Platform 7 Engine",
+    "metadata" : {
+      "categories" : [ "business-automation" ],
+      "guide" : "https://docs.camunda.org/manual/",
+      "keywords" : [ "camunda", "camunda-platform", "processes", "decisions", "bpmn", "dmn" ],
+      "quarkus-core-compatibility" : "UNKNOWN",
+      "status" : "preview"
+    },
+    "artifact" : "org.camunda.bpm.quarkus:camunda-bpm-quarkus-engine::jar:7.18.0",
+    "origins" : [ "io.quarkus.registry:quarkus-non-platform-extensions:3.33.2.1:json:1.0-SNAPSHOT" ]
+  }, {
+    "name" : "Quarkus Support Azure Core",
+    "description" : "Quarkus Support Azure Core",
+    "metadata" : {
+      "categories" : [ "cloud" ],
+      "icon-url" : "https://learn.microsoft.com/en-us/media/logos/logo_azure.svg",
+      "keywords" : [ "azure" ],
+      "quarkus-core-compatibility" : "UNKNOWN",
+      "unlisted" : true
+    },
+    "artifact" : "${project.groupId}:${project.artifactId}::jar:${project.version}",
+    "origins" : [ "io.quarkus.registry:quarkus-non-platform-extensions:3.33.2.1:json:1.0-SNAPSHOT" ]
+  } ],
+  "categories" : [ {
+    "id" : "core",
+    "name" : "Core",
+    "description" : "Core Quarkus components: engine, logging, etc."
+  }, {
+    "id" : "web",
+    "name" : "Web",
+    "description" : "Everything you need for REST endpoints, HTTP and web formats like JSON"
+  }, {
+    "id" : "data",
+    "name" : "Data",
+    "description" : "Accessing and managing your data (RDBMS, NoSQL, caching, transaction management, etc)"
+  }, {
+    "id" : "messaging",
+    "name" : "Messaging",
+    "description" : "Send and receives message to various messaging systems (AMQP, Kafka etc)"
+  }, {
+    "id" : "reactive",
+    "name" : "Reactive",
+    "description" : "Non blocking stack and connectors"
+  }, {
+    "id" : "cloud",
+    "name" : "Cloud",
+    "description" : "Useful for Cloud Native deployments platforms like Kubernetes and cloud providers"
+  }, {
+    "id" : "observability",
+    "name" : "Observability",
+    "description" : "Metrics, tracing, etc"
+  }, {
+    "id" : "security",
+    "name" : "Security",
+    "description" : "Everything you need to secure your application"
+  }, {
+    "id" : "integration",
+    "name" : "Integration",
+    "description" : "Connectors to read to write from a skew of systems (file, S#, Twitter, etc)"
+  }, {
+    "id" : "grpc",
+    "name" : "gRPC",
+    "description" : "gRPC integration"
+  }, {
+    "id" : "business-automation",
+    "name" : "Business Automation",
+    "description" : "Rules engine, BPM, etc"
+  }, {
+    "id" : "serialization",
+    "name" : "Serialization",
+    "description" : "Serializing and deserializing various formats"
+  }, {
+    "id" : "miscellaneous",
+    "name" : "Miscellaneous",
+    "description" : "Mixed bag of good stuff"
+  }, {
+    "id" : "compatibility",
+    "name" : "Compatibility",
+    "description" : "Support for alternative programming models on Quarkus"
+  }, {
+    "id" : "alt-languages",
+    "name" : "Alternative languages",
+    "description" : "Support for other JVM based languages"
+  } ]
+}

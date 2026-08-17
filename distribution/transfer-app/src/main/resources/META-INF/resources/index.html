@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SonataFlow 10.2.0 - 門戶與控制中心 Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-color: #0b0f19;
+      --card-bg: rgba(22, 31, 49, 0.75);
+      --card-hover-bg: rgba(30, 42, 66, 0.85);
+      --card-border: rgba(255, 255, 255, 0.08);
+      --primary: #3b82f6;
+      --accent: #8b5cf6;
+      --success: #10b981;
+      --warning: #f59e0b;
+      --text-main: #f3f4f6;
+      --text-muted: #9ca3af;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      min-height: 100vh;
+      background-image: 
+        radial-gradient(circle at 20% 20%, rgba(59, 130, 246, 0.18) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.18) 0%, transparent 50%);
+      background-attachment: fixed;
+      padding-bottom: 60px;
+    }
+
+    .header {
+      background: rgba(11, 15, 25, 0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--card-border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 16px 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text-main);
+    }
+
+    .brand-logo {
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 20px;
+      box-shadow: 0 4px 16px rgba(59, 130, 246, 0.4);
+    }
+
+    .brand-title { font-size: 18px; font-weight: 700; letter-spacing: -0.02em; }
+    .brand-subtitle { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+
+    .hero-section {
+      text-align: center;
+      padding: 60px 24px 40px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(59, 130, 246, 0.12);
+      border: 1px solid rgba(59, 130, 246, 0.3);
+      color: #60a5fa;
+      padding: 6px 16px;
+      border-radius: 30px;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .hero-title {
+      font-size: 42px;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.2;
+      background: linear-gradient(135deg, #ffffff 30%, #9ca3af 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 16px;
+    }
+
+    .hero-subtitle {
+      font-size: 16px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .portal-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+      gap: 24px;
+      margin-top: 32px;
+    }
+
+    .portal-card {
+      background: var(--card-bg);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      padding: 28px;
+      text-decoration: none;
+      color: var(--text-main);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .portal-card:hover {
+      transform: translateY(-6px);
+      background: var(--card-hover-bg);
+      border-color: rgba(59, 130, 246, 0.4);
+      box-shadow: 0 20px 40px rgba(59, 130, 246, 0.15);
+    }
+
+    .card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 16px;
+    }
+
+    .card-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--card-border);
+    }
+
+    .card-status {
+      font-size: 12px;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 20px;
+    }
+
+    .status-supplemented {
+      background: rgba(16, 185, 129, 0.15);
+      color: #34d399;
+      border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+
+    .status-native {
+      background: rgba(59, 130, 246, 0.15);
+      color: #60a5fa;
+      border: 1px solid rgba(59, 130, 246, 0.3);
+    }
+
+    .card-title {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .card-desc {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin-bottom: 24px;
+    }
+
+    .card-action {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .env-info-box {
+      margin-top: 60px;
+      background: var(--card-bg);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      padding: 28px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .env-item {
+      text-align: center;
+    }
+
+    .env-label {
+      font-size: 12px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 4px;
+    }
+
+    .env-value {
+      font-size: 16px;
+      font-weight: 700;
+      font-family: 'Fira Code', monospace;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <a href="./index.html" class="brand">
+      <div class="brand-logo">SF</div>
+      <div>
+        <div class="brand-title">SonataFlow Control Center Hub</div>
+        <div class="brand-subtitle">Apache KIE SonataFlow 10.2.0</div>
+      </div>
+    </a>
+  </header>
+
+  <div class="hero-section">
+    <div class="hero-badge">⚡ Quarkus 3.27.2 + SonataFlow 10.2.0 + SQLite Data Index</div>
+    <h1 class="hero-title">SonataFlow 系統管理與控制中心門戶</h1>
+    <p class="hero-subtitle">整合 Workflow Instances 實例控制、Custom Dashboard 視覺化統計儀表板、Data Index GraphQL UI 與 Quarkus Dev UI 控制台。</p>
+  </div>
+
+  <div class="container">
+    <div class="portal-grid">
+
+      <!-- Card 1: Workflow Instances -->
+      <a href="./instances.html" class="portal-card">
+        <div>
+          <div class="card-top">
+            <div class="card-icon" style="background: rgba(59, 130, 246, 0.15); color: #60a5fa;">🔄</div>
+            <span class="card-status status-supplemented">🟢 補齊頁面 (Active)</span>
+          </div>
+          <div class="card-title">Workflow Instances 實例檢視頁</div>
+          <div class="card-desc">實時檢視已執行的工作流實例（Process Instances）、狀態、變數快照與節點軌跡，並支援一鍵觸發 Saga2 轉帳流程。</div>
+        </div>
+        <div class="card-action">進入 Workflow Instances ➔</div>
+      </a>
+
+      <!-- Card 2: Custom Dashboard -->
+      <a href="./dashboard.html" class="portal-card">
+        <div>
+          <div class="card-top">
+            <div class="card-icon" style="background: rgba(139, 92, 246, 0.15); color: #c084fc;">📊</div>
+            <span class="card-status status-supplemented">🟢 補齊頁面 (Active)</span>
+          </div>
+          <div class="card-title">Custom Dashboard 統計儀表板</div>
+          <div class="card-desc">動態 Chart.js 圖表展示工作流成功/失敗率、各 Process ID 執行次數與 SmallRye Health 系統元件健康狀態。</div>
+        </div>
+        <div class="card-action">進入 Custom Dashboard ➔</div>
+      </a>
+
+      <!-- Card 2.5: Standalone Reconciliation Portal -->
+      <a href="http://localhost:8090/reconciliation.html" target="_blank" class="portal-card">
+        <div>
+          <div class="card-top">
+            <div class="card-icon" style="background: rgba(16, 185, 129, 0.15); color: #34d399;">📋</div>
+            <span class="card-status status-supplemented" style="background: rgba(139, 92, 246, 0.15); color: #c084fc; border-color: rgba(139, 92, 246, 0.3);">✨ 獨立微服務 (8090)</span>
+          </div>
+          <div class="card-title">對帳與審計日誌檢視器</div>
+          <div class="card-desc">獨立解耦微服務 (Port 8090)，實時檢視 Saga2 雙階段轉帳審計流水、A16229/A16220 補償狀態與 CSV 報表下載。</div>
+        </div>
+        <div class="card-action" style="color: #34d399;">開啟獨立對帳 Portal ➔</div>
+      </a>
+
+      <!-- Card 2.6: Standalone Sandbox Debugger -->
+      <a href="http://localhost:8090/tester.html" target="_blank" class="portal-card">
+        <div>
+          <div class="card-top">
+            <div class="card-icon" style="background: rgba(139, 92, 246, 0.15); color: #c084fc;">🎯</div>
+            <span class="card-status status-supplemented" style="background: rgba(139, 92, 246, 0.15); color: #c084fc; border-color: rgba(139, 92, 246, 0.3);">✨ 獨立微服務 (8090)</span>
+          </div>
+          <div class="card-title">全工作流沙盒測試與除錯器</div>
+          <div class="card-desc">線上切換專案 5 大 Serverless Workflow，動態填入 Request Payload 範本，進行實時發送與 Step-by-Step 歷程除錯。</div>
+        </div>
+        <div class="card-action" style="color: #c084fc;">開啟沙盒測試除錯器 ➔</div>
+      </a>
+
+      <!-- Card 2.7: Kogito Jobs & Timers Console -->
+      <a href="http://localhost:8090/jobs.html" target="_blank" class="portal-card">
+        <div>
+          <div class="card-top">
+            <div class="card-icon" style="background: rgba(245, 158, 11, 0.15); color: #fbbf24;">⏳</div>
+            <span class="card-status status-supplemented" style="background: rgba(245, 158, 11, 0.15); color: #fbbf24; border-color: rgba(245, 158, 11, 0.3);">✨ 獨立微服務 (8090)</span>
+          </div>
+          <div class="card-title">Kogito Jobs & Timers 延遲任務管理頁</div>
+          <div class="card-desc">實時監控工作流延遲計時器 (Timers) 與重試任務，提供排程中斷 (Cancel) 與異常手動發送重試機制。</div>
+        </div>
+        <div class="card-action" style="color: #fbbf24;">開啟 Jobs & Timers 管理頁 ➔</div>
+      </a>
+
+      <!-- Card 2.8: OpenAPI Specs & Endpoints Monitor -->
+      <a href="http://localhost:8090/specs.html" target="_blank" class="portal-card">
+        <div>
+          <div class="card-top">
+            <div class="card-icon" style="background: rgba(16, 185, 129, 0.15); color: #34d399;">🌳</div>
+            <span class="card-status status-supplemented" style="background: rgba(16, 185, 129, 0.15); color: #34d399; border-color: rgba(16, 185, 129, 0.3);">✨ 獨立微服務 (8090)</span>
+          </div>
+          <div class="card-title">OpenAPI 規格與服務端點監控頁</div>
+          <div class="card-desc">視覺化樹狀瀏覽 OpenAPI (A16229/A16220) 規格結構，並一鍵診斷本機 Mock 與 API Gateway 健康狀態。</div>
+        </div>
+        <div class="card-action" style="color: #34d399;">開啟 OpenAPI 監控頁 ➔</div>
+      </a>
+
+      <!-- Card 2.9: Workflow Node Trace Visualizer -->
+      <a href="http://localhost:8090/flow-trace.html" target="_blank" class="portal-card">
+        <div>
+          <div class="card-top">
+            <div class="card-icon" style="background: rgba(139, 92, 246, 0.15); color: #c084fc;">🎨</div>
+            <span class="card-status status-supplemented" style="background: rgba(139, 92, 246, 0.15); color: #c084fc; border-color: rgba(139, 92, 246, 0.3);">✨ 獨立微服務 (8090)</span>
+          </div>
+          <div class="card-title">流程節點執行軌跡圖形化頁面</div>
+          <div class="card-desc">將 GraphQL nodes 轉化為 SVG/CSS 動態亮燈流程圖，呈現 StartNode ➔ Execute ➔ Rollback 亮燈走向。</div>
+        </div>
+        <div class="card-action" style="color: #c084fc;">開啟流程軌跡圖形化頁 ➔</div>
+      </a>
+
+      <!-- Card 3: Quarkus Dev UI Workflows -->
+      <a href="/q/dev-ui/org.apache.kie.sonataflow.sonataflow-quarkus-devui/workflows" target="_blank" class="portal-card">
+        <div>
+          <div class="card-top">
+            <div class="card-icon" style="background: rgba(245, 158, 11, 0.15); color: #fbbf24;">🛠️</div>
+            <span class="card-status status-native">🔵 Quarkus 原生</span>
+          </div>
+          <div class="card-title">SonataFlow Dev UI Workflows</div>
+          <div class="card-desc">官方 Quarkus Dev UI 頁面，預覽已登記的 5 個 Serverless Workflow 定義與架構流程圖。</div>
+        </div>
+        <div class="card-action">開啟 Dev UI Workflows ➔</div>
+      </a>
+
+      <!-- Card 4: Swagger UI -->
+      <a href="/q/swagger-ui/" target="_blank" class="portal-card">
+        <div>
+          <div class="card-top">
+            <div class="card-icon" style="background: rgba(16, 185, 129, 0.15); color: #34d399;">📖</div>
+            <span class="card-status status-native">🔵 Quarkus 原生</span>
+          </div>
+          <div class="card-title">Swagger UI / OpenAPI</div>
+          <div class="card-desc">全系統 REST API 規格互動式測試頁面，在線上發送測試 Request 觸發 Serverless Workflows。</div>
+        </div>
+        <div class="card-action">開啟 Swagger UI ➔</div>
+      </a>
+
+      <!-- Card 5: Data Index GraphQL UI -->
+      <a href="/q/dev-ui/org.kie.kogito.kogito-addons-quarkus-data-index-graphql-ui/graphql-ui" target="_blank" class="portal-card">
+        <div>
+          <div class="card-top">
+            <div class="card-icon" style="background: rgba(6, 182, 212, 0.15); color: #22d3ee;">🔍</div>
+            <span class="card-status status-native">🔵 Quarkus 原生</span>
+          </div>
+          <div class="card-title">Data Index GraphQL UI</div>
+          <div class="card-desc">GraphiQL 開發中樞，可直接下 GraphQL 查詢 ProcessDefinitions, ProcessInstances, Jobs, Tasks 等。</div>
+        </div>
+        <div class="card-action">開啟 Data Index GraphiQL ➔</div>
+      </a>
+
+      <!-- Card 6: Health Check -->
+      <a href="/q/health" target="_blank" class="portal-card">
+        <div>
+          <div class="card-top">
+            <div class="card-icon" style="background: rgba(239, 68, 68, 0.15); color: #f87171;">💚</div>
+            <span class="card-status status-native">🔵 SmallRye Health</span>
+          </div>
+          <div class="card-title">System Health Endpoint</div>
+          <div class="card-desc">檢查 SQLite Data Index、Database 連線、Reactive Messaging 與 Processes Engine 的 9 項健康檢查指標。</div>
+        </div>
+        <div class="card-action">檢視 Raw Health JSON ➔</div>
+      </a>
+
+    </div>
+
+    <div class="env-info-box">
+      <div class="env-item">
+        <div class="env-label">Quarkus Platform</div>
+        <div class="env-value" style="color: #60a5fa;">3.27.2</div>
+      </div>
+      <div class="env-item">
+        <div class="env-label">SonataFlow Version</div>
+        <div class="env-value" style="color: #c084fc;">10.2.0</div>
+      </div>
+      <div class="env-item">
+        <div class="env-label">Data Index Storage</div>
+        <div class="env-value" style="color: #34d399;">SQLite DB (Embedded)</div>
+      </div>
+      <div class="env-item">
+        <div class="env-label">Registered Workflows</div>
+        <div class="env-value" style="color: #fbbf24;">5 Definitions</div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
