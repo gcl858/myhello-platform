@@ -3,7 +3,7 @@
 > **專案名稱**：`myhello-platform`  
 > **Java 版本**：Java 21 (LTS)  
 > **框架環境**：Quarkus 3.27.2 + Apache Kogito / SonataFlow 10.2.0  
-> **文件範圍**：全專案所有正式 Java 原始程式碼（共 19 隻，排除測試程式與自動生成程式碼）
+> **文件範圍**：全專案所有正式 Java 原始程式碼（共 31 隻，包含 platform-extensions 擴充模組，排除測試程式與自動生成程式碼）
 
 ---
 
@@ -14,27 +14,31 @@
   - [2.1 SonataFlowSecurityConfig.java](#21-sonataflowsecurityconfigjava)
   - [2.2 UnwrapResponseFilter.java](#22-unwrapresponsefilterjava)
   - [2.3 OpenApiFilter.java](#23-openapifilterjava)
-- [3. 平台資料索引與持久化層 (platform-data-index)](#3-平台資料索引與持久化層-platform-data-index)
-  - [3.1 KogitoSQLiteDialect.java](#31-kogitosqlitedialectjava)
-  - [3.2 SqliteZonedDateTimeJdbcType.java](#32-sqlitezoneddatetimejdbctypejava)
-  - [3.3 MyLivenessCheck.java](#33-mylivenesscheckjava)
-- [4. 平台共用工具層 (platform-common)](#4-平台共用工具層-platform-common)
-  - [4.1 package-info.java](#41-package-infojava)
-- [5. 轉帳 API 合約與 Mock 服務 (domain-transfer / transfer-api)](#5-轉帳-api-合約與-mock-服務-domain-transfer--transfer-api)
-  - [5.1 A16229Resource.java](#51-a16229resourcejava)
-  - [5.2 A16220Resource.java](#52-a16220resourcejava)
-  - [5.3 A16229Request.java & A16229Response.java](#53-a16229requestjava--a16229responsejava)
-  - [5.4 A16220Request.java & A16220Response.java](#54-a16220requestjava--a16220responsejava)
-- [6. 轉帳流程與服務調用層 (domain-transfer / transfer-workflow)](#6-轉帳流程與服務調用層-domain-transfer--transfer-workflow)
-  - [6.1 SagaApiService.java](#61-sagaapiservicejava)
-  - [6.2 MyOpenApiService.java](#62-myopenapiservicejava)
-- [7. 範例流程服務層 (domain-transfer / transfer-samples)](#7-範例流程服務層-domain-transfer--transfer-samples)
-  - [7.1 ApiService.java](#71-apiservicejava)
-- [8. 對帳審計與報表匯出層 (domain-reconciliation / reconciliation-api)](#8-對帳審計與報表匯出層-domain-reconciliation--reconciliation-api)
-  - [8.1 AuditLogService.java](#81-auditlogservicejava)
-  - [8.2 ReconciliationResource.java](#82-reconciliationresourcejava)
-  - [8.3 ReconciliationCsvExporter.java](#83-reconciliationcsvexporterjava)
-- [9. 分發應用層代碼生成機制 (distribution/*)](#9-分發應用層代碼生成機制-distribution)
+- [3. 平台擴展與修補層 (platform-extensions)](#3-平台擴展與修補層-platform-extensions)
+  - [3.1 data-index-storage-sqlite 模組](#31-data-index-storage-sqlite-模組)
+  - [3.2 kogito-addons-quarkus-data-index-sqlite 模組](#32-kogito-addons-quarkus-data-index-sqlite-模組)
+  - [3.3 kogito-addons-quarkus-data-index-persistence-sqlite 模組](#33-kogito-addons-quarkus-data-index-persistence-sqlite-模組)
+- [4. 平台資料索引與持久化層 (platform-data-index)](#4-平台資料索引與持久化層-platform-data-index)
+  - [4.1 KogitoSQLiteDialect.java](#41-kogitosqlitedialectjava)
+  - [4.2 SqliteZonedDateTimeJdbcType.java](#42-sqlitezoneddatetimejdbctypejava)
+  - [4.3 MyLivenessCheck.java](#43-mylivenesscheckjava)
+- [5. 平台共用工具層 (platform-common)](#5-平台共用工具層-platform-common)
+  - [5.1 package-info.java](#51-package-infojava)
+- [6. 轉帳 API 合約與 Mock 服務 (domain-transfer / transfer-api)](#6-轉帳-api-合約與-mock-服務-domain-transfer--transfer-api)
+  - [6.1 A16229Resource.java](#61-a16229resourcejava)
+  - [6.2 A16220Resource.java](#62-a16220resourcejava)
+  - [6.3 A16229Request.java & A16229Response.java](#63-a16229requestjava--a16229responsejava)
+  - [6.4 A16220Request.java & A16220Response.java](#64-a16220requestjava--a16220responsejava)
+- [7. 轉帳流程與服務調用層 (domain-transfer / transfer-workflow)](#7-轉帳流程與服務調用層-domain-transfer--transfer-workflow)
+  - [7.1 SagaApiService.java](#71-sagaapiservicejava)
+  - [7.2 MyOpenApiService.java](#72-myopenapiservicejava)
+- [8. 範例流程服務層 (domain-transfer / transfer-samples)](#8-範例流程服務層-domain-transfer--transfer-samples)
+  - [8.1 ApiService.java](#81-apiservicejava)
+- [9. 對帳審計與報表匯出層 (domain-reconciliation / reconciliation-api)](#9-對帳審計與報表匯出層-domain-reconciliation--reconciliation-api)
+  - [9.1 AuditLogService.java](#91-auditlogservicejava)
+  - [9.2 ReconciliationResource.java](#92-reconciliationresourcejava)
+  - [9.3 ReconciliationCsvExporter.java](#93-reconciliationcsvexporterjava)
+- [10. 分發應用層代碼生成機制 (distribution/*)](#10-分發應用層代碼生成機制-distribution)
 
 ---
 
@@ -45,6 +49,9 @@
 | **`platform-security`** | `.../security/SonataFlowSecurityConfig.java` | HTTP 方法限制、審計日誌與狀態改寫過濾器 |
 | **`platform-security`** | `.../security/UnwrapResponseFilter.java` | SonataFlow 工作流輸出解包過濾器 |
 | **`platform-security`** | `.../security/OpenApiFilter.java` | OpenAPI 規格動態過濾器 (排除非 POST) |
+| **`platform-extensions`** | `.../data-index-storage-sqlite/...` | SQLite 儲存適配器與 22 個 Flyway SQL 遷移腳本 |
+| **`platform-extensions`** | `.../kogito-addons-quarkus-data-index-sqlite/...` | Data Index SQLite Runtime 與 Deployment 編譯處理器 |
+| **`platform-extensions`** | `.../kogito-addons-quarkus-data-index-persistence-sqlite/...` | 持久化 Runtime 與 Deployment 編譯處理器 |
 | **`platform-data-index`** | `.../dataindex/KogitoSQLiteDialect.java` | 自訂 Hibernate 6 SQLite 方言 |
 | **`platform-data-index`** | `.../dataindex/SqliteZonedDateTimeJdbcType.java` | SQLite ZonedDateTime JDBC 型別轉換處理器 |
 | **`platform-data-index`** | `.../dataindex/MyLivenessCheck.java` | SmallRye Health 存活檢查探針 |
@@ -118,9 +125,37 @@
 
 ---
 
-## 3. 平台資料索引與持久化層 (platform-data-index)
+## 3. 平台擴展與修補層 (platform-extensions)
 
-### 3.1 `KogitoSQLiteDialect.java`
+### 3.1 `data-index-storage-sqlite` 模組
+- **檔案目錄**：`platform-extensions/data-index-storage-sqlite`
+- **設計定位**：提供 Apache Kogito Data Index 的 SQLite 儲存適配器，包含底層 SQL 函數、JSON 查詢述詞解析器與全套 Flyway 資料庫結構定義。
+- **核心元件**：
+  1. `SQLiteStorageServiceCapabilities.java`：宣告 SQLite 儲存引擎能力（支援 JSON Query 等）。
+  2. `SQLiteJsonPredicateBuilder.java`：利用 SQLite 內建之 `json_extract()` 函數解析 GraphQL 過濾述詞。
+  3. `CustomFunctionsContributor.java` & `ContainsSQLFunction.java`：向 Hibernate 註冊 SQLite 自訂 JSON 包含函數。
+  4. **Flyway 遷移腳本**（`V1.32.0` ~ `V1.50.0` 共 22 個 SQL 檔）：自動建立流程定義、節點實例、歷史記錄、CloudEvents 與觸發器結構。
+
+### 3.2 `kogito-addons-quarkus-data-index-sqlite` 模組
+- **檔案目錄**：`platform-extensions/kogito-addons-quarkus-data-index-sqlite`
+- **設計定位**：Quarkus 擴展模組（包含 `runtime` 與 `deployment`），實現 Data Index 與 Quarkus / DevUI 深度整合。
+- **核心元件**：
+  1. `SqliteZonedDateTimeUserType.java` / `SqliteZonedDateTimeJavaType.java`：處理 SQLite 執行時期日期轉換。
+  2. `SQLiteDataIndexProcessor.java`：Quarkus 編譯期處理器，註冊 Data Index 實體與 capabilities。
+  3. `SqliteZonedDateTimeIntegrationProcessor.java`：編譯期 ORM 整合處理器。
+  4. `dev-templates/*.html`：Quarkus DevUI 內嵌之流程與 Data Index 視覺化頁面。
+
+### 3.3 `kogito-addons-quarkus-data-index-persistence-sqlite` 模組
+- **檔案目錄**：`platform-extensions/kogito-addons-quarkus-data-index-persistence-sqlite`
+- **設計定位**：Quarkus 擴展模組（包含 `runtime` 與 `deployment`），將 SQLite JDBC 連線池、Flyway 遷移與 Kogito 流程持久化串聯。
+- **核心元件**：
+  1. `SQLiteDataIndexPersistenceProcessor.java`：在 Quarkus 應用啟動前自動觸發 Flyway 執行 SQLite Data Index Schema 初始化與升級。
+
+---
+
+## 4. 平台資料索引與持久化層 (platform-data-index)
+
+### 4.1 `KogitoSQLiteDialect.java`
 - **檔案路徑**：`platform-data-index/src/main/java/org/acme/platform/dataindex/KogitoSQLiteDialect.java`
 - **套件名稱**：`org.acme.platform.dataindex`
 - **繼承**：`org.hibernate.community.dialect.SQLiteDialect`
@@ -132,7 +167,7 @@
 
 ---
 
-### 3.2 `SqliteZonedDateTimeJdbcType.java`
+### 4.2 `SqliteZonedDateTimeJdbcType.java`
 - **檔案路徑**：`platform-data-index/src/main/java/org/acme/platform/dataindex/SqliteZonedDateTimeJdbcType.java`
 - **套件名稱**：`org.acme.platform.dataindex`
 - **實作介面**：`org.hibernate.type.descriptor.jdbc.JdbcType`
@@ -145,7 +180,7 @@
 
 ---
 
-### 3.3 `MyLivenessCheck.java`
+### 4.3 `MyLivenessCheck.java`
 - **檔案路徑**：`platform-data-index/src/main/java/org/acme/platform/dataindex/MyLivenessCheck.java`
 - **套件名稱**：`org.acme.platform.dataindex`
 - **實作介面**：`org.eclipse.microprofile.health.HealthCheck`
@@ -155,17 +190,17 @@
 
 ---
 
-## 4. 平台共用工具層 (platform-common)
+## 5. 平台共用工具層 (platform-common)
 
-### 4.1 `package-info.java`
+### 5.1 `package-info.java`
 - **檔案路徑**：`platform-common/src/main/java/com/example/platform/common/package-info.java`
 - **設計定位**：作為無框架依賴之 Leaf 模組宣告與共用規範指引。
 
 ---
 
-## 5. 轉帳 API 合約與 Mock 服務 (domain-transfer / transfer-api)
+## 6. 轉帳 API 合約與 Mock 服務 (domain-transfer / transfer-api)
 
-### 5.1 `A16229Resource.java`
+### 6.1 `A16229Resource.java`
 - **檔案路徑**：`domain-transfer/transfer-api/src/main/java/org/acme/transfer/api/A16229Resource.java`
 - **套件名稱**：`org.acme.transfer.api`
 - **標註**：`@Path("/A16229")`, `@Consumes(MediaType.APPLICATION_JSON)`, `@Produces(MediaType.APPLICATION_JSON)`
@@ -179,7 +214,7 @@
 
 ---
 
-### 5.2 `A16220Resource.java`
+### 6.2 `A16220Resource.java`
 - **檔案路徑**：`domain-transfer/transfer-api/src/main/java/org/acme/transfer/api/A16220Resource.java`
 - **套件名稱**：`org.acme.transfer.api`
 - **標註**：`@Path("/A16220")`, `@Consumes(MediaType.APPLICATION_JSON)`, `@Produces(MediaType.APPLICATION_JSON)`
@@ -193,7 +228,7 @@
 
 ---
 
-### 5.3 `A16229Request.java` & `A16229Response.java`
+### 6.3 `A16229Request.java` & `A16229Response.java`
 - **檔案路徑**：
   - `domain-transfer/transfer-api/src/main/java/org/acme/transfer/api/dto/A16229Request.java`
   - `domain-transfer/transfer-api/src/main/java/org/acme/transfer/api/dto/A16229Response.java`
@@ -203,7 +238,7 @@
 
 ---
 
-### 5.4 `A16220Request.java` & `A16220Response.java`
+### 6.4 `A16220Request.java` & `A16220Response.java`
 - **檔案路徑**：
   - `domain-transfer/transfer-api/src/main/java/org/acme/transfer/api/dto/A16220Request.java`
   - `domain-transfer/transfer-api/src/main/java/org/acme/transfer/api/dto/A16220Response.java`
@@ -213,9 +248,9 @@
 
 ---
 
-## 6. 轉帳流程與服務調用層 (domain-transfer / transfer-workflow)
+## 7. 轉帳流程與服務調用層 (domain-transfer / transfer-workflow)
 
-### 6.1 `SagaApiService.java`
+### 7.1 `SagaApiService.java`
 - **檔案路徑**：`domain-transfer/transfer-workflow/src/main/java/com/example/transfer/workflow/SagaApiService.java`
 - **套件名稱**：`com.example.transfer.workflow`
 - **標註**：`@ApplicationScoped`
@@ -233,7 +268,7 @@
 
 ---
 
-### 6.2 `MyOpenApiService.java`
+### 7.2 `MyOpenApiService.java`
 - **檔案路徑**：`domain-transfer/transfer-workflow/src/main/java/com/example/transfer/workflow/MyOpenApiService.java`
 - **套件名稱**：`com.example.transfer.workflow`
 - **標註**：`@ApplicationScoped`
@@ -250,9 +285,9 @@
 
 ---
 
-## 7. 範例流程服務層 (domain-transfer / transfer-samples)
+## 8. 範例流程服務層 (domain-transfer / transfer-samples)
 
-### 7.1 `ApiService.java`
+### 8.1 `ApiService.java`
 - **檔案路徑**：`domain-transfer/transfer-samples/src/main/java/com/example/platform/transfer/samples/ApiService.java`
 - **套件名稱**：`com.example.platform.transfer.samples`
 - **標註**：`@ApplicationScoped`
@@ -265,9 +300,9 @@
 
 ---
 
-## 8. 對帳審計與報表匯出層 (domain-reconciliation / reconciliation-api)
+## 9. 對帳審計與報表匯出層 (domain-reconciliation / reconciliation-api)
 
-### 8.1 `AuditLogService.java`
+### 9.1 `AuditLogService.java`
 - **檔案路徑**：`domain-reconciliation/reconciliation-api/src/main/java/com/example/reconciliation/AuditLogService.java`
 - **套件名稱**：`com.example.reconciliation`
 - **標註**：`@ApplicationScoped`
@@ -286,7 +321,7 @@
 
 ---
 
-### 8.2 `ReconciliationResource.java`
+### 9.2 `ReconciliationResource.java`
 - **檔案路徑**：`domain-reconciliation/reconciliation-api/src/main/java/com/example/reconciliation/ReconciliationResource.java`
 - **套件名稱**：`com.example.reconciliation`
 - **標註**：`@Path("/reconciliation")`, `@Produces(MediaType.APPLICATION_JSON)`
@@ -297,7 +332,7 @@
 
 ---
 
-### 8.3 `ReconciliationCsvExporter.java`
+### 9.3 `ReconciliationCsvExporter.java`
 - **檔案路徑**：`domain-reconciliation/reconciliation-api/src/main/java/com/example/reconciliation/ReconciliationCsvExporter.java`
 - **套件名稱**：`com.example.reconciliation`
 - **標註**：`@ApplicationScoped`
@@ -313,7 +348,7 @@
 
 ---
 
-## 9. 分發應用層代碼生成機制 (distribution/*)
+## 10. 分發應用層代碼生成機制 (distribution/*)
 
 在 `myhello-platform` 架構中，`distribution/transfer-app` 與 `distribution/reconciliation-app` 模組內部**完全不需要手寫任何 Java 原始程式碼**：
 

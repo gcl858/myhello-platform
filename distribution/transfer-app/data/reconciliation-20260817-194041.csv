@@ -1,0 +1,17 @@
+﻿id,created_at,workflow_id,business_key,status,message,account_a,account_b,amt,a16229_code,a16229_msg,a16220_code,a16220_msg,a16229_rollback_code,a16220_rollback_code
+1,2026-08-17 11:40:38,saga2-transfer-workflow,A123,SUCCESS,交易成功,A123,B123,100,100,成功,100,成功,,
+2,2026-08-17 11:40:39,saga2-transfer-workflow,A123,SUCCESS,交易成功,A123,B123,100,100,成功,100,成功,,
+3,2026-08-17 11:40:39,saga2-transfer-workflow,A123,FAILED,業務失敗或 API 錯誤,A123,B123,30,999,AMT必須大於50,,,,
+4,2026-08-17 11:40:39,saga2-transfer-workflow,A123,ROLLED_BACK,AMT > 500 觸發 saga 回沖 (LIFO),A123,B123,600,100,成功,100,成功,100,100
+5,2026-08-17 11:40:39,saga2-transfer-workflow,A123,ROLLED_BACK,"A16220 業務失敗,僅回沖 A16229",A123,B123,2000,100,成功,999,AMT必須小於1000,100,
+6,2026-08-17 11:40:39,saga2-transfer-workflow,A123,SUCCESS,交易成功,A123,B123,500,100,成功,100,成功,,
+7,2026-08-17 11:40:39,saga2-transfer-workflow,A123,ROLLED_BACK,AMT > 500 觸發 saga 回沖 (LIFO),A123,B123,501,100,成功,100,成功,100,100
+8,2026-08-17 11:40:41,saga2-transfer-workflow,840991_S,SUCCESS,交易成功,840991_S,X,100,100,成功,100,成功,,
+9,2026-08-17 11:40:41,saga2-transfer-workflow,840991_F,FAILED,業務失敗或 API 錯誤,840991_F,X,30,999,AMT必須大於50,,,,
+10,2026-08-17 11:40:41,saga2-transfer-workflow,840991_R,ROLLED_BACK,AMT > 500 觸發 saga 回沖 (LIFO),840991_R,X,600,100,成功,100,成功,100,100
+11,2026-08-17 11:40:41,saga2-transfer-workflow,840991_P,ROLLED_BACK,"A16220 業務失敗,僅回沖 A16229",840991_P,X,2000,100,成功,999,AMT必須小於1000,100,
+12,2026-08-17 11:40:41,saga2-transfer-workflow,A123,ROLLED_BACK,AMT > 500 觸發 saga 回沖 (LIFO),A123,B123,501,100,成功,100,成功,100,100
+13,2026-08-17 11:40:41,saga2-transfer-workflow,A123,SUCCESS,交易成功,A123,B123,100,100,成功,100,成功,,
+14,2026-08-17 11:40:41,saga2-transfer-workflow,A123,FAILED,業務失敗或 API 錯誤,A123,B123,30,999,AMT必須大於50,,,,
+15,2026-08-17 11:40:41,saga2-transfer-workflow,A123,ROLLED_BACK,"A16220 業務失敗,僅回沖 A16229",A123,B123,2000,100,成功,999,AMT必須小於1000,100,
+16,2026-08-17 11:40:41,saga2-transfer-workflow,A123,ROLLED_BACK,AMT > 500 觸發 saga 回沖 (LIFO),A123,B123,600,100,成功,100,成功,100,100

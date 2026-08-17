@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.example.platform.distribution.transfer.Saga2TransferWorkflowTest
 -------------------------------------------------------------------------------
-Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.563 s -- in com.example.platform.distribution.transfer.Saga2TransferWorkflowTest
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.621 s -- in com.example.platform.distribution.transfer.Saga2TransferWorkflowTest

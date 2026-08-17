@@ -4,7 +4,8 @@
   "metadata" : {
     "annotations" : {
       "app.quarkus.io/quarkus-version" : "3.27.2",
-      "app.quarkus.io/build-timestamp" : "2026-08-17 - 08:39:00 +0000"
+      "app.quarkus.io/vcs-uri" : "https://github.com/gcl858/myhello-platform.git",
+      "app.quarkus.io/build-timestamp" : "2026-08-17 - 11:40:51 +0000"
     },
     "labels" : {
       "app.kubernetes.io/name" : "reconciliation-app",
@@ -54,7 +55,8 @@
   "metadata" : {
     "annotations" : {
       "app.quarkus.io/quarkus-version" : "3.27.2",
-      "app.quarkus.io/build-timestamp" : "2026-08-17 - 08:39:00 +0000"
+      "app.quarkus.io/vcs-uri" : "https://github.com/gcl858/myhello-platform.git",
+      "app.quarkus.io/build-timestamp" : "2026-08-17 - 11:40:51 +0000"
     },
     "labels" : {
       "app.kubernetes.io/name" : "reconciliation-app",
@@ -82,7 +84,8 @@
   "metadata" : {
     "annotations" : {
       "app.quarkus.io/quarkus-version" : "3.27.2",
-      "app.quarkus.io/build-timestamp" : "2026-08-17 - 08:39:00 +0000"
+      "app.quarkus.io/vcs-uri" : "https://github.com/gcl858/myhello-platform.git",
+      "app.quarkus.io/build-timestamp" : "2026-08-17 - 11:40:51 +0000"
     },
     "labels" : {
       "app.kubernetes.io/name" : "reconciliation-app",
@@ -103,7 +106,8 @@
       "metadata" : {
         "annotations" : {
           "app.quarkus.io/quarkus-version" : "3.27.2",
-          "app.quarkus.io/build-timestamp" : "2026-08-17 - 08:39:00 +0000"
+          "app.quarkus.io/vcs-uri" : "https://github.com/gcl858/myhello-platform.git",
+          "app.quarkus.io/build-timestamp" : "2026-08-17 - 11:40:51 +0000"
         },
         "labels" : {
           "app.kubernetes.io/managed-by" : "quarkus",

@@ -1,0 +1,5 @@
+org/kie/kogito/index/sqlite/SQLiteStorageServiceCapabilities.class
+org/kie/kogito/index/sqlite/SQLiteJsonPredicateBuilder.class
+org/kie/kogito/index/sqlite/SQLiteJsonPredicateBuilder$1.class
+org/kie/kogito/index/sqlite/ContainsSQLFunction.class
+org/kie/kogito/index/sqlite/CustomFunctionsContributor.class

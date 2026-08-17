@@ -121,6 +121,8 @@ flowchart TB
 
     PlatformSec --> PlatformCommon
     PlatformData --> PlatformCommon
+    PlatformData --> PlatformExt
+    PlatformExt --> PlatformCommon
     TransferAPI --> PlatformCommon
     ReconAPI --> PlatformCommon
 
@@ -157,6 +159,7 @@ flowchart TB
 myhello-platform/ (Root Parent POM)
 ├── platform-common/                     [平台] 公用工具層 (Leaf)
 ├── platform-security/                   [平台] JAX-RS 安全、解包與狀態碼改寫過濾器
+├── platform-extensions/                 [平台] Quarkus/Kogito SQLite 修補擴展模組
 ├── platform-data-index/                 [平台] Data Index 實例索引與 SQLite/Flyway
 ├── domain-transfer/                     [領域] 轉帳業務聚合根 (Parent POM)
 │   ├── transfer-api/                    [領域] A16229 / A16220 DTO、規格與 Mock 服務

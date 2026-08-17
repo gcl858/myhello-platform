@@ -7,6 +7,5 @@ org/kie/kogito/openapi/openapi/model/A16229Request.class
 org/kie/kogito/openapi/openapi/model/A16220Response$A16220ResponseQueryParam.class
 org/kie/kogito/openapi/openapi/model/A16220Request.class
 org/kie/kogito/openapi/openapi/model/HealthResponse.class
-openapi.yaml
 org/kie/kogito/openapi/openapi/model/A16220Request$A16220RequestQueryParam.class
 org/kie/kogito/openapi/openapi/model/HealthResponse$HealthResponseQueryParam.class

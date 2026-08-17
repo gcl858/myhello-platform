@@ -1,0 +1,1373 @@
+// ------------------------------------------------------------------
+// Transitive dependencies of this project determined from the
+// maven pom organized by organization.
+// ------------------------------------------------------------------
+
+Kogito Apps :: Kogito Addons Quarkus Data Index SQLite :: Deployment
+
+
+From: 'an unknown organization'
+
+  - brotli4j (https://github.com/hyperxpro/Brotli4j/brotli4j) com.aayushatharva.brotli4j:brotli4j:jar:1.16.0
+    License: Apache License 2.0  (https://www.apache.org/licenses/LICENSE-2.0)
+
+  - native-linux-x86_64 (https://github.com/hyperxpro/Brotli4j/natives/native-linux-x86_64) com.aayushatharva.brotli4j:native-linux-x86_64:jar:1.16.0
+    License: Apache License 2.0  (https://www.apache.org/licenses/LICENSE-2.0)
+
+  - service (https://github.com/hyperxpro/Brotli4j/service) com.aayushatharva.brotli4j:service:jar:1.16.0
+    License: Apache License 2.0  (https://www.apache.org/licenses/LICENSE-2.0)
+
+  - Caffeine cache (https://github.com/ben-manes/caffeine) com.github.ben-manes.caffeine:caffeine:jar:3.2.3
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - docker-java-api (https://github.com/docker-java/docker-java) com.github.docker-java:docker-java-api:jar:3.4.2
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - docker-java-transport (https://github.com/docker-java/docker-java) com.github.docker-java:docker-java-transport:jar:3.4.2
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - docker-java-transport-zerodep (https://github.com/docker-java/docker-java) com.github.docker-java:docker-java-transport-zerodep:jar:3.4.2
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - javaparser-core (https://github.com/javaparser/javaparser-core) com.github.javaparser:javaparser-core:jar:3.27.0
+    License: GNU Lesser General Public License  (http://www.gnu.org/licenses/lgpl-3.0.html)
+    License: Apache License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - FindBugs-jsr305 (http://findbugs.sourceforge.net/) com.google.code.findbugs:jsr305:jar:3.0.2
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Gson (https://github.com/google/gson) com.google.code.gson:gson:jar:2.13.2
+    License: Apache-2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Guava InternalFutureFailureAccess and InternalFutures (https://github.com/google/guava/failureaccess) com.google.guava:failureaccess:bundle:1.0.1
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Guava: Google Core Libraries for Java (https://github.com/google/guava) com.google.guava:guava:bundle:33.4.8-jre
+    License: Apache License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Guava ListenableFuture only (https://github.com/google/guava/listenablefuture) com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - J2ObjC Annotations (https://github.com/google/j2objc/) com.google.j2objc:j2objc-annotations:jar:2.8
+    License: Apache License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Protocol Buffers [Core] (https://developers.google.com/protocol-buffers/protobuf-java/) com.google.protobuf:protobuf-java:jar:3.25.5
+    License: BSD-3-Clause  (https://opensource.org/licenses/BSD-3-Clause)
+
+  - Protocol Buffers [Util] (https://developers.google.com/protocol-buffers/protobuf-java-util/) com.google.protobuf:protobuf-java-util:jar:3.25.5
+    License: BSD-3-Clause  (https://opensource.org/licenses/BSD-3-Clause)
+
+  - graphql-java (https://github.com/graphql-java/graphql-java) com.graphql-java:graphql-java:jar:24.3
+    License: MIT  (https://github.com/graphql-java/graphql-java/blob/master/LICENSE.md)
+
+  - graphql-java-extended-scalars (https://github.com/graphql-java/graphql-java-extended-scalars) com.graphql-java:graphql-java-extended-scalars:jar:24.0
+    License: MIT  (https://github.com/graphql-java/graphql-java/blob/master/LICENSE.md)
+
+  - java-dataloader (https://github.com/graphql-java/java-dataloader) com.graphql-java:java-dataloader:jar:5.0.3
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - json-path (https://github.com/jayway/JsonPath) com.jayway.jsonpath:json-path:jar:2.9.0
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - CloudEvents - API (https://cloudevents.github.io/sdk-java/cloudevents-api/) io.cloudevents:cloudevents-api:jar:3.0.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - CloudEvents - Core (https://cloudevents.github.io/sdk-java/cloudevents-core/) io.cloudevents:cloudevents-core:jar:3.0.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - CloudEvents - JSON Jackson (https://cloudevents.github.io/sdk-java/cloudevents-json-jackson/) io.cloudevents:cloudevents-json-jackson:jar:3.0.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - JDK Classfile API backport (Unofficial) (https://github.com/dmlloyd/jdk-classfile-backport) io.github.dmlloyd:jdk-classfile-backport:jar:24.0
+    License: GNU General Public License, version 2, with the Classpath Exception  (http://openjdk.java.net/legal/gplv2+ce.html)
+
+  - MXParser (http://x-stream.github.io/mxparser) io.github.x-stream:mxparser:jar:1.2.2
+    License: Indiana University Extreme! Lab Software License  (https://raw.githubusercontent.com/x-stream/mxparser/master/LICENSE.txt)
+
+  - Quarkus - Agroal - Runtime (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-agroal:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - Agroal - Deployment (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-agroal-deployment:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - Agroal - Runtime Dev mode (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-agroal-dev:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - Agroal - SPI (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-agroal-spi:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - ArC - Runtime (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-arc:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - ArC - Deployment (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-arc-deployment:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - ArC - Runtime Dev mode (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-arc-dev:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - Assistant - Deployment SPI (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-assistant-deployment-spi:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - Assistant - Runtime Dev mode (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-assistant-dev:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - Bootstrap - App Model (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-bootstrap-app-model:jar:3.27.2
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.html)
+
+  - Quarkus - Bootstrap - Core (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-bootstrap-core:jar:3.27.2
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.html)
+
+  - Quarkus - Bootstrap - Runner (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-bootstrap-runner:jar:3.27.2
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.html)
+
+  - Quarkus - Builder (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-builder:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - Caffeine - Runtime (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-caffeine:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - Caffeine - Deployment (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-caffeine-deployment:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - Core - Class Change Agent (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-class-change-agent:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - Bootstrap - Classloader common utilities (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-classloader-commons:jar:3.27.2
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.html)
+
+  - Quarkus - Core - Runtime (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-core:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - Core - Deployment (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-core-deployment:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - Credentials - Runtime (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-credentials:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - Credentials - Deployment (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-credentials-deployment:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - Datasource - Runtime (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-datasource:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - Datasource - Common (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-datasource-common:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - Datasource - Deployment (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-datasource-deployment:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - Datasource - Deployment SPI (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-datasource-deployment-spi:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - Datasource - Runtime Dev mode (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-datasource-dev:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - Development mode - SPI (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-development-mode-spi:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - DevServices - Common (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-devservices-common:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - DevServices - Deployment (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-devservices-deployment:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - DevServices - Keycloak (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-devservices-keycloak:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - DevServices - OIDC (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-devservices-oidc:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - Dev UI - Deployment SPI (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-devui-deployment-spi:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - Elytron Security - Runtime (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-elytron-security:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - Elytron Security - Common - Runtime (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-elytron-security-common:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - Elytron Security - Common - Deployment (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-elytron-security-common-deployment:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - Elytron Security - Deployment (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-elytron-security-deployment:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - Elytron Security Properties File - Runtime (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-elytron-security-properties-file:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - Elytron Security Properties File - Deployment (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-elytron-security-properties-file-deployment:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - Flyway - Runtime (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-flyway:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - Flyway - Deployment (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-flyway-deployment:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - Flyway - Runtime - Dev mode (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-flyway-dev:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - Hibernate ORM - Runtime (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-hibernate-orm:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - Hibernate ORM - Deployment (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-hibernate-orm-deployment:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - Hibernate ORM - Deployment - SPI (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-hibernate-orm-deployment-spi:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - Hibernate ORM - Runtime - Dev mode (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-hibernate-orm-dev:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - Hibernate Validator - SPI (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-hibernate-validator-spi:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - IDE Launcher (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-ide-launcher:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - Jackson - Runtime (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-jackson:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - Jackson - Deployment (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-jackson-deployment:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - Jackson - SPI (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-jackson-spi:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - JSON-P - Runtime (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-jsonp:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - JSON-P - Deployment (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-jsonp-deployment:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - JUnit 4 Mock (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-junit4-mock:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - Kubernetes Service Binding - SPI (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-kubernetes-service-binding-spi:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - Kubernetes - SPI (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-kubernetes-spi:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - Mutiny - Runtime (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-mutiny:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - Mutiny - Deployment (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-mutiny-deployment:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - Narayana JTA - Runtime (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-narayana-jta:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - Narayana JTA - Deployment (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-narayana-jta-deployment:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - Netty - Runtime (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-netty:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - Netty - Deployment (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-netty-deployment:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - OpenID Connect Adapter - Runtime (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-oidc:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - OpenID Connect Common - Runtime (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-oidc-common:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - OpenID Connect Common - Deployment (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-oidc-common-deployment:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - OpenID Connect Adapter - Deployment (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-oidc-deployment:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - OpenID Connect Adapter - Runtime Dev mode (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-oidc-dev:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - Panache - Common - Runtime (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-panache-common:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - Panache - Common - Deployment (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-panache-common-deployment:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - Panache - Hibernate - Common - Runtime (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-panache-hibernate-common:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - Panache - Hibernate - Common - Deployment (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-panache-hibernate-common-deployment:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - Reactive Routes - Runtime (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-reactive-routes:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - Reactive Routes - Deployment (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-reactive-routes-deployment:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - REST - Server - SPI - Deployment (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-rest-server-spi-deployment:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - REST - SPI (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-rest-spi-deployment:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - Security - Runtime (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-security:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - Security - Deployment (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-security-deployment:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - Security - Runtime SPI (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-security-runtime-spi:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - Security - SPI (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-security-spi:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - SmallRye Context Propagation - Runtime (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-smallrye-context-propagation:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - SmallRye Context Propagation - Deployment (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-smallrye-context-propagation-deployment:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - SmallRye Context Propagation - SPI (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-smallrye-context-propagation-spi:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - SmallRye Fault Tolerance - Runtime (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-smallrye-fault-tolerance:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - SmallRye Fault Tolerance - Deployment (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-smallrye-fault-tolerance-deployment:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - SmallRye Fault Tolerance - Runtime Dev mode (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-smallrye-fault-tolerance-dev:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - SmallRye Health - Runtime (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-smallrye-health:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - SmallRye Health - Deployment (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-smallrye-health-deployment:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - SmallRye Health - Runtime Dev mode (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-smallrye-health-dev:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - SmallRye Health - SPI (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-smallrye-health-spi:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - SmallRye JWT Token Build - Runtime (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-smallrye-jwt-build:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - SmallRye JWT Build - Deployment (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-smallrye-jwt-build-deployment:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - SmallRye OpenAPI - SPI (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-smallrye-openapi-spi:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - TLS Registry - Runtime (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-tls-registry:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - TLS Registry - Deployment (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-tls-registry-deployment:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - TLS registry - Deployment - SPI (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-tls-registry-deployment-spi:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - TLS Registry - Runtime SPI (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-tls-registry-spi:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - Transaction Annotations - Runtime (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-transaction-annotations:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - Vert.x - Runtime (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-vertx:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - Vert.x - Deployment (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-vertx-deployment:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - Vert.x - Deployment - SPI (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-vertx-deployment-spi:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - Quarkus - Vert.x GraphQL - Runtime (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-vertx-graphql:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - Quarkus - Vert.x GraphQL - Deployment (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-vertx-graphql-deployment:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - Vert.x - HTTP - Runtime (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-vertx-http:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - Vert.x - HTTP - Deployment (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-vertx-http-deployment:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - Vert.x - HTTP - Deployment - SPI (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-vertx-http-deployment-spi:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - Vert.x Late Bound MDC Provider (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-vertx-latebound-mdc-provider:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - Virtual Threads - Runtime (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-virtual-threads:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - Virtual Threads - Deployment (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-virtual-threads-deployment:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Quarkus - WebSockets Next - SPI (https://github.com/quarkusio/quarkus) io.quarkus:quarkus-websockets-next-spi:jar:3.27.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - ArC - Runtime (https://github.com/quarkusio/quarkus) io.quarkus.arc:arc:jar:3.27.2
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.html)
+
+  - ArC - Processor (https://github.com/quarkusio/quarkus) io.quarkus.arc:arc-processor:jar:3.27.2
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.html)
+
+  - RESTEasy Reactive - Runtime (https://github.com/quarkusio/quarkus) io.quarkus.resteasy.reactive:resteasy-reactive:jar:3.27.2
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.html)
+
+  - RESTEasy Reactive - Common Runtime (https://github.com/quarkusio/quarkus) io.quarkus.resteasy.reactive:resteasy-reactive-common:jar:3.27.2
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.html)
+
+  - RESTEasy Reactive - Common Processor (https://github.com/quarkusio/quarkus) io.quarkus.resteasy.reactive:resteasy-reactive-common-processor:jar:3.27.2
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.html)
+
+  - RESTEasy Reactive - Common Types (https://github.com/quarkusio/quarkus) io.quarkus.resteasy.reactive:resteasy-reactive-common-types:jar:3.27.2
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.html)
+
+  - RESTEasy Reactive - Processor (https://github.com/quarkusio/quarkus) io.quarkus.resteasy.reactive:resteasy-reactive-processor:jar:3.27.2
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.html)
+
+  - Jandex: Core (https://smallrye.io) io.smallrye:jandex:bundle:3.4.0
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Jandex: Gizmo2 Integration (https://smallrye.io) io.smallrye:jandex-gizmo2:jar:3.4.0
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - SmallRye Context Propagation: Core (https://github.com/smallrye/smallrye-context-propagation) io.smallrye:smallrye-context-propagation:jar:2.2.1
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - SmallRye Context Propagation: API (https://github.com/smallrye/smallrye-context-propagation) io.smallrye:smallrye-context-propagation-api:jar:2.2.1
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - SmallRye Context Propagation: JTA (https://github.com/smallrye/smallrye-context-propagation) io.smallrye:smallrye-context-propagation-jta:jar:2.2.1
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - SmallRye Context Propagation: Storage (https://github.com/smallrye/smallrye-context-propagation) io.smallrye:smallrye-context-propagation-storage:jar:2.2.1
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - SmallRye Fault Tolerance: CDI Implementation (https://smallrye.io) io.smallrye:smallrye-fault-tolerance:jar:6.9.3
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - SmallRye Fault Tolerance: API (https://smallrye.io) io.smallrye:smallrye-fault-tolerance-api:jar:6.9.3
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - SmallRye Fault Tolerance: Programmatic API Implementation (https://smallrye.io) io.smallrye:smallrye-fault-tolerance-apiimpl:jar:6.9.3
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - SmallRye Fault Tolerance: AutoConfig Core (https://smallrye.io) io.smallrye:smallrye-fault-tolerance-autoconfig-core:jar:6.9.3
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - SmallRye Fault Tolerance: Context Propagation (https://smallrye.io) io.smallrye:smallrye-fault-tolerance-context-propagation:jar:6.9.3
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - SmallRye Fault Tolerance: Core (https://smallrye.io) io.smallrye:smallrye-fault-tolerance-core:jar:6.9.3
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - SmallRye Fault Tolerance: Mutiny Integration (https://smallrye.io) io.smallrye:smallrye-fault-tolerance-mutiny:jar:6.9.3
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - SmallRye Fault Tolerance: Vert.x Integration (https://smallrye.io) io.smallrye:smallrye-fault-tolerance-vertx:jar:6.9.3
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - SmallRye Health: Implementation (http://smallrye.io) io.smallrye:smallrye-health:jar:4.2.0
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - SmallRye Health: API (http://smallrye.io) io.smallrye:smallrye-health-api:jar:4.2.0
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - SmallRye Health: Provided Health Checks (http://smallrye.io) io.smallrye:smallrye-health-provided-checks:jar:4.2.0
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - SmallRye Health: UI (http://smallrye.io) io.smallrye:smallrye-health-ui:jar:4.2.0
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - SmallRye: MicroProfile JWT Implementation (http://smallrye.io) io.smallrye:smallrye-jwt:jar:4.6.2
+    License: Apache License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - SmallRye: MicroProfile JWT Build Implementation (http://smallrye.io) io.smallrye:smallrye-jwt-build:jar:4.6.2
+    License: Apache License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - SmallRye: MicroProfile JWT Implementation Common (http://smallrye.io) io.smallrye:smallrye-jwt-common:jar:4.6.2
+    License: Apache License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - SmallRye: OpenAPI Core (http://smallrye.io) io.smallrye:smallrye-open-api-core:jar:4.0.12
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - SmallRye: OpenAPI Model (http://smallrye.io) io.smallrye:smallrye-open-api-model:jar:4.0.12
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - SmallRye Certificate Generator - Private Key PEM utilities (https://github.com/cescoffier/certificate-generator) io.smallrye.certs:smallrye-private-key-pem-parser:jar:0.9.2
+    License: Apache License 2.0  (https://www.apache.org/licenses/LICENSE-2.0)
+
+  - SmallRye Common: Annotations (http://smallrye.io) io.smallrye.common:smallrye-common-annotation:jar:2.13.9
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - SmallRye Common: Classloader (http://smallrye.io) io.smallrye.common:smallrye-common-classloader:jar:2.13.9
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - SmallRye Common: Constraints (http://smallrye.io) io.smallrye.common:smallrye-common-constraint:jar:2.13.9
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - SmallRye Common: CPU (http://smallrye.io) io.smallrye.common:smallrye-common-cpu:jar:2.13.9
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - SmallRye Common: Expressions (http://smallrye.io) io.smallrye.common:smallrye-common-expression:jar:2.13.9
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - SmallRye Common: Functions (http://smallrye.io) io.smallrye.common:smallrye-common-function:jar:2.13.9
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - SmallRye Common: IO (http://smallrye.io) io.smallrye.common:smallrye-common-io:jar:2.13.9
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - SmallRye Common: Net (http://smallrye.io) io.smallrye.common:smallrye-common-net:jar:2.13.9
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - SmallRye Common: OS (http://smallrye.io) io.smallrye.common:smallrye-common-os:jar:2.13.9
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - SmallRye Common: Process (http://smallrye.io) io.smallrye.common:smallrye-common-process:jar:2.13.9
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - SmallRye Common: References (http://smallrye.io) io.smallrye.common:smallrye-common-ref:jar:2.13.9
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - SmallRye Common: Resources (http://smallrye.io) io.smallrye.common:smallrye-common-resource:jar:2.13.9
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - SmallRye Common: Vert.x Context Utilities (http://smallrye.io) io.smallrye.common:smallrye-common-vertx-context:jar:2.13.9
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - SmallRye Config: CDI (https://smallrye.io) io.smallrye.config:smallrye-config:jar:3.13.4
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - SmallRye Config: Common (https://smallrye.io) io.smallrye.config:smallrye-config-common:jar:3.13.4
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - SmallRye Config: Core (https://smallrye.io) io.smallrye.config:smallrye-config-core:jar:3.13.4
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Jakarta Authentication (https://github.com/jakartaee/authentication) jakarta.authentication:jakarta.authentication-api:jar:3.1.0
+    License: EPL 2.0  (http://www.eclipse.org/legal/epl-2.0)
+    License: GPL2 w/ CPE  (https://www.gnu.org/software/classpath/license.html)
+
+  - Jakarta Authorization (https://github.com/jakartaee/authorization) jakarta.authorization:jakarta.authorization-api:jar:3.0.0
+    License: EPL 2.0  (http://www.eclipse.org/legal/epl-2.0)
+    License: GPL2 w/ CPE  (https://www.gnu.org/software/classpath/license.html)
+
+  - Jakarta Interceptors (https://github.com/jakartaee/interceptors) jakarta.interceptor:jakarta.interceptor-api:jar:2.2.0
+    License: EPL 2.0  (http://www.eclipse.org/legal/epl-2.0)
+    License: GPL2 w/ CPE  (https://www.gnu.org/software/classpath/license.html)
+
+  - Byte Buddy (without dependencies) (https://bytebuddy.net/byte-buddy) net.bytebuddy:byte-buddy:jar:1.17.6
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Java Native Access (https://github.com/java-native-access/jna) net.java.dev.jna:jna:jar:5.8.0
+    License: LGPL, version 2.1  (http://www.gnu.org/licenses/licenses.html)
+    License: Apache License v2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - jose4j (https://bitbucket.org/b_c/jose4j/) org.bitbucket.b_c:jose4j:jar:0.9.6
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - crac (https://github.com/crac/org.crac) org.crac:crac:jar:1.5.0
+    License: BSD-2-Clause  (https://opensource.org/licenses/BSD-2-Clause)
+
+  - flyway-core (https://flywaydb.org/flyway-core) org.flywaydb:flyway-core:jar:11.14.1
+    License: Apache License, Version 2.0  (https://github.com/flyway/flyway/blob/main/README.txt)
+
+  - Nativeimage (https://github.com/oracle/graal) org.graalvm.sdk:nativeimage:jar:23.1.2
+    License: Universal Permissive License, Version 1.0  (http://opensource.org/licenses/UPL)
+
+  - Word (https://github.com/oracle/graal) org.graalvm.sdk:word:jar:23.1.2
+    License: Universal Permissive License, Version 1.0  (http://opensource.org/licenses/UPL)
+
+  - Hibernate Tools Natural Language (http://hibernate.org/tools/) org.hibernate.tool:hibernate-tools-language:jar:7.1.12.Final
+    License: Apache License, version 2.0  (https://www.apache.org/licenses/LICENSE-2.0)
+
+  - Java Concurrency Tools Core Library (https://github.com/JCTools) org.jctools:jctools-core:bundle:4.0.5
+    License: Apache License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - JetBrains Java Annotations (https://github.com/JetBrains/java-annotations) org.jetbrains:annotations:jar:26.0.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - JSpecify annotations (http://jspecify.org/) org.jspecify:jspecify:jar:1.0.0
+    License: The Apache License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - MapStruct Core (https://mapstruct.org/mapstruct/) org.mapstruct:mapstruct:jar:1.5.5.Final
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - reactive-streams (http://www.reactive-streams.org/) org.reactivestreams:reactive-streams:jar:1.0.4
+    License: MIT-0  (https://spdx.org/licenses/MIT-0.html)
+
+  - Duct Tape (https://github.com/rnorth/duct-tape) org.rnorth.duct-tape:duct-tape:jar:1.0.8
+    License: MIT  (http://opensource.org/licenses/MIT)
+
+  - Testcontainers Core (https://java.testcontainers.org) org.testcontainers:testcontainers:jar:2.0.3
+    License: MIT  (http://opensource.org/licenses/MIT)
+
+  - SQLite JDBC (https://github.com/xerial/sqlite-jdbc) org.xerial:sqlite-jdbc:jar:3.45.1.0
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - SnakeYAML (https://bitbucket.org/snakeyaml/snakeyaml) org.yaml:snakeyaml:bundle:2.4
+    License: Apache License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - XML Pull Parsing API (http://www.xmlpull.org) xmlpull:xmlpull:jar:1.1.3.1
+    License: Public Domain  (http://www.xmlpull.org/v1/download/unpacked/LICENSE.txt)
+
+
+From: 'ANTLR' (http://www.antlr.org)
+
+  - ANTLR 3 Runtime (http://www.antlr.org) org.antlr:antlr-runtime:jar:3.5.2
+    License: BSD licence  (http://antlr.org/license.html)
+
+
+From: 'ANTLR' (https://www.antlr.org/)
+
+  - ANTLR 4 Runtime (https://www.antlr.org/antlr4-runtime/) org.antlr:antlr4-runtime:jar:4.13.2
+    License: BSD-3-Clause  (https://www.antlr.org/license.html)
+
+
+From: 'Chemouni Uriel' (https://urielch.github.io/)
+
+  - ASM based accessors helper used by json-smart (https://urielch.github.io/) net.minidev:accessors-smart:bundle:2.4.9
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - JSON Small and Fast Parser (https://urielch.github.io/) net.minidev:json-smart:bundle:2.4.10
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+
+From: 'Eclipse'
+
+  - Vert.x Auth Common (https://github.com/vert-x3/vertx-parent/vertx-ext/vertx-ext-parent/vertx-auth-parent/vertx-auth-common) io.vertx:vertx-auth-common:jar:4.5.23
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+    License: Eclipse Public License - v 1.0  (http://www.eclipse.org/legal/epl-v10.html)
+
+  - Vert.x Auth OAuth2 (https://github.com/vert-x3/vertx-parent/vertx-ext/vertx-ext-parent/vertx-auth-parent/vertx-auth-oauth2) io.vertx:vertx-auth-oauth2:jar:4.5.23
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+    License: Eclipse Public License - v 1.0  (http://www.eclipse.org/legal/epl-v10.html)
+
+  - Vert.x Bridge Common (https://github.com/vert-x3/vertx-parent/vertx-ext/vertx-ext-parent/vertx-bridge-common) io.vertx:vertx-bridge-common:jar:4.5.23
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+    License: Eclipse Public License - v 1.0  (http://www.eclipse.org/legal/epl-v10.html)
+
+  - Vert.x Codegen (https://github.com/vert-x3/vertx-parent/vertx-codegen) io.vertx:vertx-codegen:jar:4.5.23
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+    License: Eclipse Public License - v 1.0  (http://www.eclipse.org/legal/epl-v10.html)
+
+  - Vert.x Core (https://github.com/vert-x3/vertx-parent/vertx-core) io.vertx:vertx-core:jar:4.5.23
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+    License: Eclipse Public License - v 2.0  (http://www.eclipse.org/legal/epl-v20.html)
+
+  - Vert.x URI Template (https://github.com/vert-x3/vertx-parent/vertx-ext/vertx-ext-parent/vertx-uri-template) io.vertx:vertx-uri-template:jar:4.5.23
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+    License: Eclipse Public License - v 1.0  (http://www.eclipse.org/legal/epl-v10.html)
+
+  - Vert.x Web (https://github.com/vert-x3/vertx-parent/vertx-ext/vertx-ext-parent/vertx-web-parent/vertx-web) io.vertx:vertx-web:jar:4.5.23
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+    License: Eclipse Public License - v 2.0  (http://www.eclipse.org/legal/epl-v20.html)
+
+  - Vert.x Web Client (https://github.com/vert-x3/vertx-parent/vertx-ext/vertx-ext-parent/vertx-web-parent/vertx-web-client) io.vertx:vertx-web-client:jar:4.5.23
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+    License: Eclipse Public License - v 1.0  (http://www.eclipse.org/legal/epl-v10.html)
+
+  - Vert.x Web Common (https://github.com/vert-x3/vertx-parent/vertx-ext/vertx-ext-parent/vertx-web-parent/vertx-web-common) io.vertx:vertx-web-common:jar:4.5.23
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+    License: Eclipse Public License - v 1.0  (http://www.eclipse.org/legal/epl-v10.html)
+
+  - Vert.x Web GraphQL (https://github.com/vert-x3/vertx-parent/vertx-ext/vertx-ext-parent/vertx-web-parent/vertx-web-graphql) io.vertx:vertx-web-graphql:jar:4.5.23
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+    License: Eclipse Public License - v 1.0  (http://www.eclipse.org/legal/epl-v10.html)
+
+
+From: 'Eclipse Foundation' (http://www.eclipse.org/)
+
+  - MicroProfile Config API (https://microprofile.io/project/eclipse/microprofile-config/microprofile-config-api) org.eclipse.microprofile.config:microprofile-config-api:jar:3.1
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - MicroProfile Context Propagation (http://microprofile.io/microprofile-context-propagation-api) org.eclipse.microprofile.context-propagation:microprofile-context-propagation-api:jar:1.3
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - MicroProfile Fault Tolerance API (http://microprofile.io/microprofile-fault-tolerance-parent/microprofile-fault-tolerance-api) org.eclipse.microprofile.fault-tolerance:microprofile-fault-tolerance-api:jar:4.1.2
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - MicroProfile Health API (https://microprofile.io/project/eclipse/microprofile-health/microprofile-health-api) org.eclipse.microprofile.health:microprofile-health-api:jar:4.0.1
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - MicroProfile JWT Auth API (https://github.com/eclipse/microprofile-jwt-auth/microprofile-jwt-auth-api) org.eclipse.microprofile.jwt:microprofile-jwt-auth-api:jar:2.1
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - MicroProfile OpenAPI API (http://microprofile.io/microprofile-openapi-parent/microprofile-openapi-api) org.eclipse.microprofile.openapi:microprofile-openapi-api:jar:4.0.2
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Eclipse MicroProfile Reactive Streams Operators API (http://microprofile.io/microprofile-reactive-streams-operators-parent/microprofile-reactive-streams-operators-api) org.eclipse.microprofile.reactive-streams-operators:microprofile-reactive-streams-operators-api:jar:3.0.1
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+
+From: 'Eclipse Foundation' (https://www.eclipse.org)
+
+  - istack common utility code runtime (https://projects.eclipse.org/projects/ee4j/istack-commons/istack-commons-runtime) com.sun.istack:istack-commons-runtime:jar:4.1.2
+    License: Eclipse Distribution License - v 1.0  (http://www.eclipse.org/org/documents/edl-v10.php)
+
+  - Jakarta Activation API (https://github.com/jakartaee/jaf-api) jakarta.activation:jakarta.activation-api:jar:2.1.3
+    License: EDL 1.0  (http://www.eclipse.org/org/documents/edl-v10.php)
+
+  - Jakarta Annotations API (https://projects.eclipse.org/projects/ee4j.ca) jakarta.annotation:jakarta.annotation-api:jar:3.0.0
+    License: EPL 2.0  (https://www.eclipse.org/legal/epl-2.0)
+    License: GPL2 w/ CPE  (https://www.gnu.org/software/classpath/license.html)
+
+  - Jakarta Expression Language API (https://projects.eclipse.org/projects/ee4j.el) jakarta.el:jakarta.el-api:jar:6.0.1
+    License: Eclipse Public License v. 2.0  (https://www.eclipse.org/org/documents/epl-2.0/EPL-2.0.txt)
+    License: GNU General Public License, version 2 with the GNU Classpath Exception  (https://www.gnu.org/software/classpath/license.html)
+
+  - CDI APIs (http://cdi-spec.org) jakarta.enterprise:jakarta.enterprise.cdi-api:jar:4.1.0
+    License: Apache License 2.0  (https://www.apache.org/licenses/LICENSE-2.0)
+
+  - CDI Language Model (https://projects.eclipse.org/projects/ee4j/jakarta.enterprise.cdi-parent/jakarta.enterprise.lang-model) jakarta.enterprise:jakarta.enterprise.lang-model:jar:4.1.0
+    License: Apache License 2.0  (https://apache.org/licenses/LICENSE-2.0.txt)
+
+  - Jakarta Dependency Injection (https://github.com/eclipse-ee4j/injection-api) jakarta.inject:jakarta.inject-api:jar:2.0.1
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Jakarta JSON Processing API (https://github.com/eclipse-ee4j/jsonp) jakarta.json:jakarta.json-api:jar:2.1.3
+    License: Eclipse Public License 2.0  (https://projects.eclipse.org/license/epl-2.0)
+    License: GNU General Public License, version 2 with the GNU Classpath Exception  (https://projects.eclipse.org/license/secondary-gpl-2.0-cp)
+
+  - Jakarta Persistence API (https://github.com/jakartaee/persistence) jakarta.persistence:jakarta.persistence-api:jar:3.2.0
+    License: Eclipse Public License v. 2.0  (http://www.eclipse.org/legal/epl-2.0)
+    License: Eclipse Distribution License v. 1.0  (http://www.eclipse.org/org/documents/edl-v10.php)
+
+  - jakarta.resource API (https://github.com/eclipse-ee4j/jca-api) jakarta.resource:jakarta.resource-api:jar:2.1.0
+    License: EPL 2.0  (http://www.eclipse.org/legal/epl-2.0)
+    License: GPL2 w/ CPE  (https://www.gnu.org/software/classpath/license.html)
+
+  - Jakarta Servlet (https://projects.eclipse.org/projects/ee4j.servlet) jakarta.servlet:jakarta.servlet-api:jar:6.0.0
+    License: EPL 2.0  (http://www.eclipse.org/legal/epl-2.0)
+    License: GPL2 w/ CPE  (https://www.gnu.org/software/classpath/license.html)
+
+  - Jakarta Validation API (https://beanvalidation.org) jakarta.validation:jakarta.validation-api:jar:3.1.1
+    License: Apache License 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Jakarta XML Binding API (https://github.com/jakartaee/jaxb-api/jakarta.xml.bind-api) jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.4
+    License: Eclipse Distribution License - v 1.0  (http://www.eclipse.org/org/documents/edl-v10.php)
+
+  - Angus Activation Registries (https://github.com/eclipse-ee4j/angus-activation/angus-activation) org.eclipse.angus:angus-activation:jar:2.0.2
+    License: EDL 1.0  (http://www.eclipse.org/org/documents/edl-v10.php)
+
+  - Eclipse Compiler for Java(TM) (https://github.com/eclipse-jdt/eclipse.jdt.core/) org.eclipse.jdt:ecj:jar:3.44.0
+    License: EPL-2.0  (https://www.eclipse.org/legal/epl-2.0/)
+
+  - Eclipse Parsson (https://github.com/eclipse-ee4j/parsson/parsson) org.eclipse.parsson:parsson:jar:1.1.7
+    License: Eclipse Public License 2.0  (https://projects.eclipse.org/license/epl-2.0)
+    License: GNU General Public License, version 2 with the GNU Classpath Exception  (https://projects.eclipse.org/license/secondary-gpl-2.0-cp)
+
+  - JAXB Core (https://eclipse-ee4j.github.io/jaxb-ri/) org.glassfish.jaxb:jaxb-core:jar:4.0.5
+    License: Eclipse Distribution License - v 1.0  (http://www.eclipse.org/org/documents/edl-v10.php)
+
+  - JAXB Runtime (https://eclipse-ee4j.github.io/jaxb-ri/) org.glassfish.jaxb:jaxb-runtime:jar:4.0.6
+    License: Eclipse Distribution License - v 1.0  (http://www.eclipse.org/org/documents/edl-v10.php)
+
+  - TXW2 Runtime (https://eclipse-ee4j.github.io/jaxb-ri/) org.glassfish.jaxb:txw2:jar:4.0.5
+    License: Eclipse Distribution License - v 1.0  (http://www.eclipse.org/org/documents/edl-v10.php)
+
+
+From: 'Eclipse Foundation' (https://www.eclipse.org/org/foundation/)
+
+  - Jakarta RESTful WS API (https://github.com/eclipse-ee4j/jaxrs-api) jakarta.ws.rs:jakarta.ws.rs-api:bundle:3.1.0
+    License: EPL-2.0  (http://www.eclipse.org/legal/epl-2.0)
+    License: GPL-2.0-with-classpath-exception  (https://www.gnu.org/software/classpath/license.html)
+
+
+From: 'EE4J Community' (https://github.com/eclipse-ee4j)
+
+  - jakarta.transaction API (https://projects.eclipse.org/projects/ee4j.jta) jakarta.transaction:jakarta.transaction-api:jar:2.0.1
+    License: EPL 2.0  (http://www.eclipse.org/legal/epl-2.0)
+    License: GPL2 w/ CPE  (https://www.gnu.org/software/classpath/license.html)
+
+
+From: 'FasterXML' (http://fasterxml.com/)
+
+  - Jackson-annotations (https://github.com/FasterXML/jackson) com.fasterxml.jackson.core:jackson-annotations:jar:2.19.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Jackson-core (https://github.com/FasterXML/jackson-core) com.fasterxml.jackson.core:jackson-core:jar:2.19.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - jackson-databind (https://github.com/FasterXML/jackson) com.fasterxml.jackson.core:jackson-databind:jar:2.19.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Jackson-dataformat-YAML (https://github.com/FasterXML/jackson-dataformats-text) com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:jar:2.19.2
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Jackson datatype: jdk8 (https://github.com/FasterXML/jackson-modules-java8/jackson-datatype-jdk8) com.fasterxml.jackson.datatype:jackson-datatype-jdk8:bundle:2.19.2
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Jackson datatype: JSR310 (https://github.com/FasterXML/jackson-modules-java8/jackson-datatype-jsr310) com.fasterxml.jackson.datatype:jackson-datatype-jsr310:bundle:2.19.2
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Jackson-module-parameter-names (https://github.com/FasterXML/jackson-modules-java8/jackson-module-parameter-names) com.fasterxml.jackson.module:jackson-module-parameter-names:bundle:2.19.2
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+
+From: 'fasterxml.com' (https://fasterxml.com)
+
+  - ClassMate (https://github.com/FasterXML/java-classmate) com.fasterxml:classmate:bundle:1.7.0
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+
+From: 'FuseSource, Corp.' (http://fusesource.com/)
+
+  - jansi (http://fusesource.github.io/jansi) org.fusesource.jansi:jansi:jar:2.4.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+
+From: 'Google LLC' (https://www.google.com)
+
+  - error-prone annotations (https://errorprone.info/error_prone_annotations) com.google.errorprone:error_prone_annotations:jar:2.41.0
+    License: Apache 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+
+From: 'Hibernate' (http://hibernate.org/)
+
+  - Local-only Hibernate Cache for Quarkus (https://github.com/hibernate/quarkus-local-cache) org.hibernate:quarkus-local-cache:jar:0.3.1
+    License: Apache License 2.0  (http://www.apache.org/licenses/LICENSE-2.0)
+
+
+From: 'Hibernate.org' (https://hibernate.org)
+
+  - Hibernate Models (https://github.com/hibernate/hibernate-models) org.hibernate.models:hibernate-models:jar:1.0.1
+    License: Apache License Version 2.0  (http://www.apache.org/licenses/)
+
+  - Hibernate ORM - hibernate-core (https://hibernate.org/orm) org.hibernate.orm:hibernate-core:jar:7.1.14.Final
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Hibernate ORM - hibernate-graalvm (https://hibernate.org/orm) org.hibernate.orm:hibernate-graalvm:jar:7.1.14.Final
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+
+From: 'JBoss by Red Hat' (http://www.jboss.org)
+
+  - Agroal API (https://github.com/agroal) io.agroal:agroal-api:jar:2.8
+    License: Apache License 2.0  (http://www.apache.org/licenses/LICENSE-2.0.html)
+
+  - Agroal Narayana Integration (https://github.com/agroal) io.agroal:agroal-narayana:jar:2.8
+    License: Apache License 2.0  (http://www.apache.org/licenses/LICENSE-2.0.html)
+
+  - Agroal Connection Pool (https://github.com/agroal) io.agroal:agroal-pool:jar:2.8
+    License: Apache License 2.0  (http://www.apache.org/licenses/LICENSE-2.0.html)
+
+  - Quarkus - FS Util (https://quarkus.io/) io.quarkus:quarkus-fs-util:jar:1.1.0
+    License: Apache License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Gizmo (http://www.jboss.org) io.quarkus.gizmo:gizmo:jar:1.9.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Gizmo (http://www.jboss.org) io.quarkus.gizmo:gizmo2:jar:2.0.0.Beta6
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - quarkus-security (http://www.jboss.org) io.quarkus.security:quarkus-security:jar:2.2.1
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Æsh (http://www.jboss.org/aesh-all/aesh) org.aesh:aesh:jar:2.8.2
+    License: Apache License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0)
+
+  - Æsh Readline (http://www.jboss.org/readline-all/readline) org.aesh:readline:jar:2.6
+    License: Apache License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0)
+
+  - JBoss Transaction SPI (http://www.jboss.org) org.jboss:jboss-transaction-spi:jar:8.0.0.Final
+    License: Public Domain  (http://repository.jboss.org/licenses/cc0-1.0.txt)
+
+  - JBoss Invocation API - Jakarta EE Variant (http://www.jboss.org/jboss-invocation) org.jboss.invocation:jboss-invocation:jar:2.0.0.Final
+    License: Apache License 2.0  (http://repository.jboss.org/licenses/apache-2.0.txt)
+
+  - Commons Logging to JBoss Logging (http://www.jboss.org) org.jboss.logging:commons-logging-jboss-logging:jar:1.0.0.Final
+    License: Apache License 2.0  (http://repository.jboss.org/licenses/apache-2.0.txt)
+
+  - JBoss Logging 3 (http://www.jboss.org) org.jboss.logging:jboss-logging:jar:3.6.1.Final
+    License: Apache License 2.0  (https://repository.jboss.org/licenses/apache-2.0.txt)
+
+  - JBoss Log Manager (https://jboss.org) org.jboss.logmanager:jboss-logmanager:jar:3.1.2.Final
+    License: Apache License 2.0  (https://repository.jboss.org/licenses/apache-2.0.txt)
+
+  - Narayana: ArjunaJTA narayana-jta (https://narayana.io/narayana-jta-all/narayana-jta) org.jboss.narayana.jta:narayana-jta:jar:7.2.2.Final
+    License: Apache-2.0  (https://www.apache.org/licenses/LICENSE-2.0.html)
+
+  - Narayana: ArjunaJTS integration (https://narayana.io/narayana-jts-all/narayana-jts-integration) org.jboss.narayana.jts:narayana-jts-integration:jar:7.2.2.Final
+    License: Apache-2.0  (https://www.apache.org/licenses/LICENSE-2.0.html)
+
+  - SLF4J: JBoss Log Manager (http://www.jboss.org) org.jboss.slf4j:slf4j-jboss-logmanager:jar:2.0.2.Final
+    License: Apache License 2.0  (https://repository.jboss.org/licenses/apache-2.0.txt)
+
+  - JBoss Threads (https://github.com/jbossas/jboss-threads) org.jboss.threads:jboss-threads:jar:3.9.1
+    License: Apache License 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Keycloak Client Common Synced (https://keycloak.org/keycloak-client-common-synced) org.keycloak:keycloak-client-common-synced:jar:26.0.6
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0)
+
+  - wildfly-common (http://www.jboss.org) org.wildfly.common:wildfly-common:jar:2.0.1
+    License: Apache License 2.0  (http://repository.jboss.org/licenses/apache-2.0.txt)
+
+  - WildFly Elytron - ASN.1 (https://wildfly-security.github.io/wildfly-elytron/) org.wildfly.security:wildfly-elytron-asn1:jar:2.6.5.Final
+    License: Apache License 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - WildFly Elytron - Auth (https://wildfly-security.github.io/wildfly-elytron/) org.wildfly.security:wildfly-elytron-auth:jar:2.6.5.Final
+    License: Apache License 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - WildFly Elytron - Auth Server (https://wildfly-security.github.io/wildfly-elytron/) org.wildfly.security:wildfly-elytron-auth-server:jar:2.6.5.Final
+    License: Apache License 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - WildFly Elytron - Base (https://wildfly-security.github.io/wildfly-elytron/) org.wildfly.security:wildfly-elytron-base:jar:2.6.5.Final
+    License: Apache License 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - WildFly Elytron - Credential (https://wildfly-security.github.io/wildfly-elytron/) org.wildfly.security:wildfly-elytron-credential:jar:2.6.5.Final
+    License: Apache License 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - WildFly Elytron - Encryption (https://wildfly-security.github.io/wildfly-elytron/) org.wildfly.security:wildfly-elytron-encryption:jar:2.6.5.Final
+    License: Apache License 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - WildFly Elytron - Credential (https://wildfly-security.github.io/wildfly-elytron/) org.wildfly.security:wildfly-elytron-keystore:jar:2.6.5.Final
+    License: Apache License 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - WildFly Elytron - Password Implementation (https://wildfly-security.github.io/wildfly-elytron/) org.wildfly.security:wildfly-elytron-password-impl:jar:2.6.5.Final
+    License: Apache License 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - WildFly Elytron - Permission (https://wildfly-security.github.io/wildfly-elytron/) org.wildfly.security:wildfly-elytron-permission:jar:2.6.5.Final
+    License: Apache License 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - WildFly Elytron - Provider Util (https://wildfly-security.github.io/wildfly-elytron/) org.wildfly.security:wildfly-elytron-provider-util:jar:2.6.5.Final
+    License: Apache License 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - WildFly Elytron - Realm (https://wildfly-security.github.io/wildfly-elytron/) org.wildfly.security:wildfly-elytron-realm:jar:2.6.5.Final
+    License: Apache License 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - WildFly Elytron - Util (https://wildfly-security.github.io/wildfly-elytron/) org.wildfly.security:wildfly-elytron-util:jar:2.6.5.Final
+    License: Apache License 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - WildFly Elytron - X.500 (https://wildfly-security.github.io/wildfly-elytron/) org.wildfly.security:wildfly-elytron-x500:jar:2.6.5.Final
+    License: Apache License 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - WildFly Elytron - X.500 Certificates (https://wildfly-security.github.io/wildfly-elytron/) org.wildfly.security:wildfly-elytron-x500-cert:jar:2.6.5.Final
+    License: Apache License 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - WildFly Elytron - X.500 Certificate Utility Classes (https://wildfly-security.github.io/wildfly-elytron/) org.wildfly.security:wildfly-elytron-x500-cert-util:jar:2.6.5.Final
+    License: Apache License 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+
+From: 'JBoss by Red Hat' (http://www.jboss.org/)
+
+  - mvel (http://mvel.codehaus.org/) org.mvel:mvel2:jar:2.5.2.Final
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+
+From: 'JBoss, a division of Red Hat' (http://www.jboss.org)
+
+  - ProtoStream - core (https://github.com/infinispan/protostream) org.infinispan.protostream:protostream:jar:5.0.13.Final
+    License: Apache License 2.0  (https://apache.org/licenses/LICENSE-2.0)
+
+
+From: 'OW2' (http://www.ow2.org/)
+
+  - asm (http://asm.ow2.io/) org.ow2.asm:asm:jar:9.8
+    License: BSD-3-Clause  (https://asm.ow2.io/license.html)
+
+  - asm-analysis (http://asm.ow2.io/) org.ow2.asm:asm-analysis:jar:9.8
+    License: BSD-3-Clause  (https://asm.ow2.io/license.html)
+
+  - asm-commons (http://asm.ow2.io/) org.ow2.asm:asm-commons:jar:9.8
+    License: BSD-3-Clause  (https://asm.ow2.io/license.html)
+
+  - asm-tree (http://asm.ow2.io/) org.ow2.asm:asm-tree:jar:9.8
+    License: BSD-3-Clause  (https://asm.ow2.io/license.html)
+
+  - asm-util (http://asm.ow2.io/) org.ow2.asm:asm-util:jar:9.8
+    License: BSD-3-Clause  (https://asm.ow2.io/license.html)
+
+
+From: 'QOS.ch' (http://www.qos.ch)
+
+  - SLF4J API Module (http://www.slf4j.org) org.slf4j:slf4j-api:jar:2.0.17
+    License: MIT  (https://opensource.org/license/mit)
+
+
+From: 'SmallRye' (https://wwww.smallrye.io)
+
+  - SmallRye Mutiny - Core library (https://smallrye.io/smallrye-mutiny) io.smallrye.reactive:mutiny:jar:2.9.5
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - SmallRye Mutiny - Integration with SmallRye Context Propagation (https://smallrye.io/smallrye-mutiny) io.smallrye.reactive:mutiny-smallrye-context-propagation:jar:2.9.5
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - SmallRye Mutiny Zero JDK Flow / Reactive Streams Adapters (https://smallrye.io) io.smallrye.reactive:mutiny-zero-flow-adapters:jar:1.1.1
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - SmallRye Mutiny - Vert.x Auth Common (https://smallrye.io/smallrye-mutiny-vertx-bindings) io.smallrye.reactive:smallrye-mutiny-vertx-auth-common:jar:3.21.3
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - SmallRye Mutiny - Vert.x Auth - OAuth2 (https://smallrye.io/smallrye-mutiny-vertx-bindings) io.smallrye.reactive:smallrye-mutiny-vertx-auth-oauth2:jar:3.21.3
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - SmallRye Mutiny - Vert.x Bridge Common (https://smallrye.io/smallrye-mutiny-vertx-bindings) io.smallrye.reactive:smallrye-mutiny-vertx-bridge-common:jar:3.21.3
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - SmallRye Mutiny - Vert.x Core (https://smallrye.io/smallrye-mutiny-vertx-bindings) io.smallrye.reactive:smallrye-mutiny-vertx-core:jar:3.21.3
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - SmallRye Mutiny - Runtime Helpers (https://smallrye.io/smallrye-mutiny-vertx-bindings) io.smallrye.reactive:smallrye-mutiny-vertx-runtime:jar:3.21.3
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - SmallRye Mutiny - Vert.x URI Template (https://smallrye.io/smallrye-mutiny-vertx-bindings) io.smallrye.reactive:smallrye-mutiny-vertx-uri-template:jar:3.21.3
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - SmallRye Mutiny - Vert.x Web (https://smallrye.io/smallrye-mutiny-vertx-bindings) io.smallrye.reactive:smallrye-mutiny-vertx-web:jar:3.21.3
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - SmallRye Mutiny - Vert.x Web Client (https://smallrye.io/smallrye-mutiny-vertx-bindings) io.smallrye.reactive:smallrye-mutiny-vertx-web-client:jar:3.21.3
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - SmallRye Mutiny - Vert.x Web Common (https://smallrye.io/smallrye-mutiny-vertx-bindings) io.smallrye.reactive:smallrye-mutiny-vertx-web-common:jar:3.21.3
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - SmallRye Reactive Converters: API (https://smallrye.io) io.smallrye.reactive:smallrye-reactive-converter-api:jar:3.0.3
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - SmallRye Reactive Converters: Mutiny (https://smallrye.io) io.smallrye.reactive:smallrye-reactive-converter-mutiny:jar:3.0.3
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - SmallRye Mutiny - Code Generator (https://smallrye.io/smallrye-mutiny-vertx-bindings) io.smallrye.reactive:vertx-mutiny-generator:jar:3.21.3
+    License: The Apache Software License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+
+From: 'The Apache Software Foundation' (https://apache.org/)
+
+  - Drools :: base (http://www.drools.org/drools-build-parent/drools-base) org.drools:drools-base:jar:10.2.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Drools :: Canonical Model (http://www.drools.org/drools-build-parent/drools-model/drools-canonical-model) org.drools:drools-canonical-model:jar:10.2.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Drools :: Codegen :: Common (http://www.drools.org/drools-build-parent/drools-model/drools-codegen-common) org.drools:drools-codegen-common:jar:10.2.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Drools :: Commands (http://www.drools.org/drools-build-parent/drools-commands) org.drools:drools-commands:jar:10.2.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Drools :: Compiler (http://www.drools.org/drools-build-parent/drools-compiler) org.drools:drools-compiler:jar:10.2.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Drools :: Core (http://www.drools.org/drools-build-parent/drools-core) org.drools:drools-core:jar:10.2.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Drools :: DRL AST (http://www.drools.org/drools-build-parent/drools-drl/drools-drl-ast) org.drools:drools-drl-ast:jar:10.2.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Drools :: DRL :: Extensions (http://www.drools.org/drools-build-parent/drools-drl/drools-drl-extensions) org.drools:drools-drl-extensions:jar:10.2.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Drools :: DRL :: Parser (http://www.drools.org/drools-build-parent/drools-drl/drools-drl-parser) org.drools:drools-drl-parser:jar:10.2.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Drools :: ECJ (http://www.drools.org/drools-build-parent/drools-ecj) org.drools:drools-ecj:jar:10.2.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Drools :: IO (http://www.drools.org/drools-build-parent/drools-io) org.drools:drools-io:jar:10.2.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Drools :: KieSession (http://www.drools.org/drools-build-parent/drools-kiesession) org.drools:drools-kiesession:jar:10.2.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Drools :: Model :: Codegen (http://www.drools.org/drools-build-parent/drools-model/drools-model-codegen) org.drools:drools-model-codegen:jar:10.2.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Drools :: Model :: Compiler (http://www.drools.org/drools-build-parent/drools-model/drools-model-compiler) org.drools:drools-model-compiler:jar:10.2.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Drools :: Canonical Model :: Prototype (http://www.drools.org/drools-build-parent/drools-model/drools-model-prototype) org.drools:drools-model-prototype:jar:10.2.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Drools :: MVEL (http://www.drools.org/drools-build-parent/drools-mvel) org.drools:drools-mvel:jar:10.2.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Drools :: MVEL Compiler (http://www.drools.org/drools-build-parent/drools-model/drools-mvel-compiler) org.drools:drools-mvel-compiler:jar:10.2.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Drools :: MVEL Parser (http://www.drools.org/drools-build-parent/drools-model/drools-mvel-parser) org.drools:drools-mvel-parser:jar:10.2.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Drools :: Quarkus Extension :: Util :: Deployment (http://www.drools.org/drools-build-parent/drools-quarkus-extension/drools-quarkus-util-deployment) org.drools:drools-quarkus-util-deployment:jar:10.2.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Drools :: Rule Units :: API (http://www.drools.org/drools-build-parent/drools-ruleunits/drools-ruleunits-api) org.drools:drools-ruleunits-api:jar:10.2.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Drools :: Rule Units :: Implementation (http://www.drools.org/drools-build-parent/drools-ruleunits/drools-ruleunits-impl) org.drools:drools-ruleunits-impl:jar:10.2.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Drools :: Util (http://www.drools.org/drools-build-parent/drools-util) org.drools:drools-util:jar:10.2.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Drools :: Wiring :: API (http://www.drools.org/drools-build-parent/drools-wiring/drools-wiring-api) org.drools:drools-wiring-api:jar:10.2.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Drools :: Wiring :: Static (http://www.drools.org/drools-build-parent/drools-wiring/drools-wiring-static) org.drools:drools-wiring-static:jar:10.2.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Drools :: XML Support (http://www.drools.org/drools-build-parent/drools-xml-support) org.drools:drools-xml-support:jar:10.2.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Efesto :: Common :: Api (http://www.drools.org/drools-build-parent/efesto/efesto-core/efesto-common-api) org.kie:efesto-common-api:jar:10.2.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Efesto :: Common :: Core (http://www.drools.org/drools-build-parent/efesto/efesto-core/efesto-common-core) org.kie:efesto-common-core:jar:10.2.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Efesto :: Common :: Utils (http://www.drools.org/drools-build-parent/efesto/efesto-common-utils) org.kie:efesto-common-utils:jar:10.2.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Efesto :: Compilation :: Manager :: Api (http://www.drools.org/drools-build-parent/efesto/efesto-core/efesto-compilation-manager/efesto-compilation-manager-api) org.kie:efesto-compilation-manager-api:jar:10.2.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Efesto :: Compilation :: Manager :: Core (http://www.drools.org/drools-build-parent/efesto/efesto-core/efesto-compilation-manager/efesto-compilation-manager-core) org.kie:efesto-compilation-manager-core:jar:10.2.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - KIE :: Efesto :: Dependencies (http://www.drools.org/drools-build-parent/efesto/efesto-dependencies) org.kie:efesto-dependencies:jar:10.2.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Efesto :: Runtime :: Manager :: Api (http://www.drools.org/drools-build-parent/efesto/efesto-core/efesto-runtime-manager/efesto-runtime-manager-api) org.kie:efesto-runtime-manager-api:jar:10.2.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Efesto :: Runtime :: Manager :: Core (http://www.drools.org/drools-build-parent/efesto/efesto-core/efesto-runtime-manager/efesto-runtime-manager-core) org.kie:efesto-runtime-manager-core:jar:10.2.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - KIE :: Add-Ons :: Flyway (http://kogito.kie.org/kogito-build/kogito-dependencies-bom/kogito-build-no-bom-parent/kogito-build-parent/kogito-addons/kogito-addons-common-parent/kie-addons-flyway) org.kie:kie-addons-flyway:jar:10.2.0
+    License: Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - KIE :: Add-Ons :: Process SVG :: Common (http://kogito.kie.org/kogito-build/kogito-dependencies-bom/kogito-build-no-bom-parent/kogito-build-parent/kogito-addons/kogito-addons-common-parent/kie-addons-process-svg) org.kie:kie-addons-process-svg:jar:10.2.0
+    License: Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Kie :: Add-Ons :: Quarkus :: Flyway :: Runtime (http://kogito.kie.org/kogito-build/kogito-dependencies-bom/kogito-build-no-bom-parent/kogito-build-parent/quarkus/kogito-quarkus-bom/kogito-addons-quarkus-parent/kie-addons-quarkus-flyway-parent/kie-addons-quarkus-flyway) org.kie:kie-addons-quarkus-flyway:jar:10.2.0
+    License: Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Kie :: Add-Ons :: Quarkus :: Flyway :: Deployment (http://kogito.kie.org/kogito-build/kogito-dependencies-bom/kogito-build-no-bom-parent/kogito-build-parent/quarkus/kogito-quarkus-bom/kogito-addons-quarkus-parent/kie-addons-quarkus-flyway-parent/kie-addons-quarkus-flyway-deployment) org.kie:kie-addons-quarkus-flyway-deployment:jar:10.2.0
+    License: Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - KIE :: Rest Exception Handler :: Quarkus (http://kogito.kie.org/kogito-build/kogito-dependencies-bom/kogito-build-no-bom-parent/kogito-build-parent/quarkus/kogito-quarkus-bom/kogito-addons-quarkus-parent/kie-addons-quarkus-rest-exception-handler) org.kie:kie-addons-quarkus-rest-exception-handler:jar:10.2.0
+    License: Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - KIE Add-On Source Files (http://kogito.kie.org/kogito-build/kogito-dependencies-bom/kogito-build-no-bom-parent/kogito-build-parent/quarkus/kogito-quarkus-bom/kogito-addons-quarkus-parent/kie-addons-quarkus-source-files-parent/kie-addons-quarkus-source-files) org.kie:kie-addons-quarkus-source-files:jar:10.2.0
+    License: Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - KIE Add-On Source Files - Deployment (http://kogito.kie.org/kogito-build/kogito-dependencies-bom/kogito-build-no-bom-parent/kogito-build-parent/quarkus/kogito-quarkus-bom/kogito-addons-quarkus-parent/kie-addons-quarkus-source-files-parent/kie-addons-quarkus-source-files-deployment) org.kie:kie-addons-quarkus-source-files-deployment:jar:10.2.0
+    License: Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - KIE :: Rest Exception Handler :: Common (http://kogito.kie.org/kogito-build/kogito-dependencies-bom/kogito-build-no-bom-parent/kogito-build-parent/kogito-addons/kogito-addons-common-parent/kie-addons-rest-exception-handler) org.kie:kie-addons-rest-exception-handler:jar:10.2.0
+    License: Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - KIE :: Add-Ons :: Source Files :: Common (http://kogito.kie.org/kogito-build/kogito-dependencies-bom/kogito-build-no-bom-parent/kogito-build-parent/kogito-addons/kogito-addons-common-parent/kie-addons-source-files) org.kie:kie-addons-source-files:jar:10.2.0
+    License: Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - KIE :: Public API (http://www.drools.org/drools-build-parent/kie-api) org.kie:kie-api:jar:10.2.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - KIE :: Internal (http://www.drools.org/drools-build-parent/kie-internal) org.kie:kie-internal:jar:10.2.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - KIE :: Memory Compiler (http://www.drools.org/drools-build-parent/kie-memory-compiler) org.kie:kie-memory-compiler:jar:10.2.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - KIE :: Util :: Maven Support (http://www.drools.org/drools-build-parent/kie-util/kie-util-maven-support) org.kie:kie-util-maven-support:jar:10.2.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - KIE :: Util :: XML supposrt (http://www.drools.org/drools-build-parent/kie-util/kie-util-xml) org.kie:kie-util-xml:jar:10.2.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - KIE Add-On Common - Deployment (http://kogito.kie.org/kogito-build/kogito-dependencies-bom/kogito-build-no-bom-parent/kogito-build-parent/quarkus/kogito-quarkus-bom/kogito-addons-quarkus-parent/kogito-addons-quarkus-common-parent/kogito-addons-quarkus-common-deployment) org.kie:kogito-addons-quarkus-common-deployment:jar:10.2.0
+    License: Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Kogito Apps :: Kogito Addons Quarkus Data Index Common :: Deployment (http://kogito.kie.org/kogito-build/kogito-dependencies-bom/kogito-build-no-bom-parent/kogito-build-parent/kogito-apps/kogito-apps-build-parent/data-index/data-index-quarkus/kogito-addons-quarkus-data-index/kogito-addons-quarkus-data-index-common-parent/kogito-addons-quarkus-data-index-common-deployment) org.kie:kogito-addons-quarkus-data-index-common-deployment:jar:10.2.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Kogito Apps :: Kogito Addons Quarkus Data Index Common :: Runtime (http://kogito.kie.org/kogito-build/kogito-dependencies-bom/kogito-build-no-bom-parent/kogito-build-parent/kogito-apps/kogito-apps-build-parent/data-index/data-index-quarkus/kogito-addons-quarkus-data-index/kogito-addons-quarkus-data-index-common-parent/kogito-addons-quarkus-data-index-common-runtime) org.kie:kogito-addons-quarkus-data-index-common-runtime:jar:10.2.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Kogito Apps :: Kogito Addons Quarkus Data Index Persistence Common :: Deployment (http://kogito.kie.org/kogito-build/kogito-dependencies-bom/kogito-build-no-bom-parent/kogito-build-parent/kogito-apps/kogito-apps-build-parent/data-index/data-index-quarkus/kogito-addons-quarkus-data-index-persistence/kogito-addons-quarkus-data-index-persistence-common-parent/kogito-addons-quarkus-data-index-persistence-common-deployment) org.kie:kogito-addons-quarkus-data-index-persistence-common-deployment:jar:10.2.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Kogito Apps :: Kogito Addons Quarkus Data Index Persistence Common :: Runtime (http://kogito.kie.org/kogito-build/kogito-dependencies-bom/kogito-build-no-bom-parent/kogito-build-parent/kogito-apps/kogito-apps-build-parent/data-index/data-index-quarkus/kogito-addons-quarkus-data-index-persistence/kogito-addons-quarkus-data-index-persistence-common-parent/kogito-addons-quarkus-data-index-persistence-common-runtime) org.kie:kogito-addons-quarkus-data-index-persistence-common-runtime:jar:10.2.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Kogito Apps :: Kogito Addons Quarkus Data Index Persistence SQLite :: Runtime (http://kogito.kie.org/kogito-build/kogito-dependencies-bom/kogito-build-no-bom-parent/kogito-build-parent/kogito-apps/kogito-apps-build-parent/data-index/data-index-quarkus/kogito-addons-quarkus-data-index-persistence/kogito-addons-quarkus-data-index-persistence-sqlite-parent/kogito-addons-quarkus-data-index-persistence-sqlite) org.kie:kogito-addons-quarkus-data-index-persistence-sqlite:jar:10.2.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Kogito Apps :: Kogito Addons Quarkus Data Index Persistence SQLite :: Deployment (http://kogito.kie.org/kogito-build/kogito-dependencies-bom/kogito-build-no-bom-parent/kogito-build-parent/kogito-apps/kogito-apps-build-parent/data-index/data-index-quarkus/kogito-addons-quarkus-data-index-persistence/kogito-addons-quarkus-data-index-persistence-sqlite-parent/kogito-addons-quarkus-data-index-persistence-sqlite-deployment) org.kie:kogito-addons-quarkus-data-index-persistence-sqlite-deployment:jar:10.2.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Kogito Apps :: Kogito Addons Quarkus Data Index SQLite :: Runtime (http://kogito.kie.org/kogito-build/kogito-dependencies-bom/kogito-build-no-bom-parent/kogito-build-parent/kogito-apps/kogito-apps-build-parent/data-index/data-index-quarkus/kogito-addons-quarkus-data-index/kogito-addons-quarkus-data-index-sqlite-parent/kogito-addons-quarkus-data-index-sqlite) org.kie:kogito-addons-quarkus-data-index-sqlite:jar:10.2.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Kogito Apps :: Data Index Common (http://kogito.kie.org/kogito-build/kogito-dependencies-bom/kogito-build-no-bom-parent/kogito-build-parent/kogito-apps/kogito-apps-build-parent/data-index/data-index-common) org.kie.kogito:data-index-common:jar:10.2.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Kogito Apps :: Kogito Data Index Add-Ons Common (http://kogito.kie.org/kogito-build/kogito-dependencies-bom/kogito-build-no-bom-parent/kogito-build-parent/kogito-apps/kogito-apps-build-parent/data-index/data-index-common-addons) org.kie.kogito:data-index-common-addons:jar:10.2.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - data-index-common-quarkus (http://kogito.kie.org/kogito-build/kogito-dependencies-bom/kogito-build-no-bom-parent/kogito-build-parent/kogito-apps/kogito-apps-build-parent/data-index/data-index-quarkus/data-index-common-quarkus) org.kie.kogito:data-index-common-quarkus:jar:10.2.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Kogito Apps :: Data Index GraphQL (http://kogito.kie.org/kogito-build/kogito-dependencies-bom/kogito-build-no-bom-parent/kogito-build-parent/kogito-apps/kogito-apps-build-parent/data-index/data-index-graphql) org.kie.kogito:data-index-graphql:jar:10.2.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Kogito Apps :: Data Index Add-ons GraphQL (http://kogito.kie.org/kogito-build/kogito-dependencies-bom/kogito-build-no-bom-parent/kogito-build-parent/kogito-apps/kogito-apps-build-parent/data-index/data-index-graphql-addons) org.kie.kogito:data-index-graphql-addons:jar:10.2.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - data-index-graphql-quarkus (http://kogito.kie.org/kogito-build/kogito-dependencies-bom/kogito-build-no-bom-parent/kogito-build-parent/kogito-apps/kogito-apps-build-parent/data-index/data-index-quarkus/data-index-graphql-quarkus) org.kie.kogito:data-index-graphql-quarkus:jar:10.2.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Kogito Apps :: Data Index Storage API (http://kogito.kie.org/kogito-build/kogito-dependencies-bom/kogito-build-no-bom-parent/kogito-build-parent/kogito-apps/kogito-apps-build-parent/data-index/data-index-storage/data-index-storage-api) org.kie.kogito:data-index-storage-api:jar:10.2.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Kogito Apps :: Data Index Storage JPA common classes (http://kogito.kie.org/kogito-build/kogito-dependencies-bom/kogito-build-no-bom-parent/kogito-build-parent/kogito-apps/kogito-apps-build-parent/data-index/data-index-storage/data-index-storage-jpa-common) org.kie.kogito:data-index-storage-jpa-common:jar:10.2.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Kogito Apps :: Data Index Storage SQLite (http://kogito.kie.org/kogito-build/kogito-dependencies-bom/kogito-build-no-bom-parent/kogito-build-parent/kogito-apps/kogito-apps-build-parent/data-index/data-index-storage/data-index-storage-sqlite) org.kie.kogito:data-index-storage-sqlite:jar:10.2.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Kogito :: jBPM :: Dependencies Groups :: Engine (http://www.jbpm.org/jbpm-deps-groups/jbpm-deps-group-engine) org.kie.kogito:jbpm-deps-group-engine:pom:10.2.0
+    License: Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Kogito :: jBPM :: Flow (http://www.jbpm.org/jbpm-flow) org.kie.kogito:jbpm-flow:jar:10.2.0
+    License: Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Kogito :: jBPM :: Flow Migration (http://www.jbpm.org/jbpm-flow-migration) org.kie.kogito:jbpm-flow-migration:jar:10.2.0
+    License: Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Kogito :: jBPM :: User Task (http://www.jbpm.org/jbpm-usertask) org.kie.kogito:jbpm-usertask:jar:10.2.0
+    License: Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Kogito :: jBPM :: User Task WorkItem (http://www.jbpm.org/jbpm-usertask-workitem) org.kie.kogito:jbpm-usertask-workitem:jar:10.2.0
+    License: Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Kogito :: API :: Public API (http://kogito.kie.org/kogito-build/kogito-dependencies-bom/kogito-build-no-bom-parent/kogito-build-parent/kogito-api-parent/kogito-api) org.kie.kogito:kogito-api:jar:10.2.0
+    License: Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Kogito :: Codegen API (http://kogito.kie.org/kogito-build/kogito-dependencies-bom/kogito-build-no-bom-parent/kogito-build-parent/kogito-codegen-modules/kogito-codegen-api) org.kie.kogito:kogito-codegen-api:jar:10.2.0
+    License: Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Kogito :: Codegen Core Library (http://kogito.kie.org/kogito-build/kogito-dependencies-bom/kogito-build-no-bom-parent/kogito-build-parent/kogito-codegen-modules/kogito-codegen-core) org.kie.kogito:kogito-codegen-core:jar:10.2.0
+    License: Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Kogito :: Drools :: Kogito Drools (http://kogito.kie.org/kogito-build/kogito-dependencies-bom/kogito-build-no-bom-parent/kogito-build-parent/drools/kogito-drools) org.kie.kogito:kogito-drools:jar:10.2.0
+    License: Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Kogito :: API :: Events (http://kogito.kie.org/kogito-build/kogito-dependencies-bom/kogito-build-no-bom-parent/kogito-build-parent/kogito-api-parent/kogito-events-api) org.kie.kogito:kogito-events-api:jar:10.2.0
+    License: Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Kogito :: API :: Events (http://kogito.kie.org/kogito-build/kogito-dependencies-bom/kogito-build-no-bom-parent/kogito-build-parent/kogito-api-parent/kogito-events-core) org.kie.kogito:kogito-events-core:jar:10.2.0
+    License: Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Kogito :: Workitems :: Jackson utils (http://kogito.kie.org/kogito-build/kogito-dependencies-bom/kogito-build-no-bom-parent/kogito-build-parent/kogito-workitems/kogito-jackson-utils) org.kie.kogito:kogito-jackson-utils:jar:10.2.0
+    License: Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Kogito :: Quarkus Extension Common :: Runtime (http://kogito.kie.org/kogito-build/kogito-dependencies-bom/kogito-build-no-bom-parent/kogito-build-parent/quarkus/quarkus-extensions/kogito-quarkus-extension-common/kogito-quarkus-common) org.kie.kogito:kogito-quarkus-common:jar:10.2.0
+    License: Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Kogito :: Quarkus Extension Common :: Deployment (http://kogito.kie.org/kogito-build/kogito-dependencies-bom/kogito-build-no-bom-parent/kogito-build-parent/quarkus/quarkus-extensions/kogito-quarkus-extension-common/kogito-quarkus-common-deployment) org.kie.kogito:kogito-quarkus-common-deployment:jar:10.2.0
+    License: Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Kogito :: Workitems :: RestUtils (http://kogito.kie.org/kogito-build/kogito-dependencies-bom/kogito-build-no-bom-parent/kogito-build-parent/kogito-workitems/kogito-rest-utils) org.kie.kogito:kogito-rest-utils:jar:10.2.0
+    License: Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Kogito :: Workitems :: RestWorkItem (http://kogito.kie.org/kogito-build/kogito-dependencies-bom/kogito-build-no-bom-parent/kogito-build-parent/kogito-workitems/kogito-rest-workitem) org.kie.kogito:kogito-rest-workitem:jar:10.2.0
+    License: Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Kogito :: API :: Services (http://kogito.kie.org/kogito-build/kogito-dependencies-bom/kogito-build-no-bom-parent/kogito-build-parent/kogito-api-parent/kogito-services) org.kie.kogito:kogito-services:jar:10.2.0
+    License: Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Kogito :: API :: Timer (http://kogito.kie.org/kogito-build/kogito-dependencies-bom/kogito-build-no-bom-parent/kogito-build-parent/kogito-api-parent/kogito-timer) org.kie.kogito:kogito-timer:jar:10.2.0
+    License: Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Kogito Apps :: Persistence Commons API (http://kogito.kie.org/kogito-build/kogito-dependencies-bom/kogito-build-no-bom-parent/kogito-build-parent/kogito-apps/kogito-apps-build-parent/persistence-commons/persistence-commons-api) org.kie.kogito:persistence-commons-api:jar:10.2.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Kogito :: Process :: Protobuf Serialization (http://www.jbpm.org/process-serialization-protobuf) org.kie.kogito:process-serialization-protobuf:jar:10.2.0
+    License: Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Kogito :: jBPM :: WorkItems (http://www.jbpm.org/process-workitems) org.kie.kogito:process-workitems:jar:10.2.0
+    License: Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+
+From: 'The Apache Software Foundation' (https://www.apache.org/)
+
+  - Apache Commons Codec (https://commons.apache.org/proper/commons-codec/) commons-codec:commons-codec:jar:1.19.0
+    License: Apache-2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Apache Commons IO (https://commons.apache.org/proper/commons-io/) commons-io:commons-io:jar:2.20.0
+    License: Apache-2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Apache Commons Compress (https://commons.apache.org/proper/commons-compress/) org.apache.commons:commons-compress:jar:1.28.0
+    License: Apache-2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+  - Apache Commons Lang (https://commons.apache.org/proper/commons-lang/) org.apache.commons:commons-lang3:jar:3.18.0
+    License: Apache-2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+
+From: 'The Eclipse Foundation' (http://www.eclipse.org/)
+
+  - org.eclipse.sisu:org.eclipse.sisu.inject (https://eclipse.dev/sisu/org.eclipse.sisu.inject/) org.eclipse.sisu:org.eclipse.sisu.inject:jar:0.9.0.M4
+    License: Eclipse Public License, Version 2.0  (https://www.eclipse.org/legal/epl-v20.html)
+
+
+From: 'The Netty Project' (https://netty.io/)
+
+  - Netty/Buffer (https://netty.io/netty-buffer/) io.netty:netty-buffer:jar:4.1.130.Final
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0)
+
+  - Netty/Codec (https://netty.io/netty-codec/) io.netty:netty-codec:jar:4.1.130.Final
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0)
+
+  - Netty/Codec/DNS (https://netty.io/netty-codec-dns/) io.netty:netty-codec-dns:jar:4.1.130.Final
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0)
+
+  - Netty/Codec/HAProxy (https://netty.io/netty-codec-haproxy/) io.netty:netty-codec-haproxy:jar:4.1.130.Final
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0)
+
+  - Netty/Codec/HTTP (https://netty.io/netty-codec-http/) io.netty:netty-codec-http:jar:4.1.130.Final
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0)
+
+  - Netty/Codec/HTTP2 (https://netty.io/netty-codec-http2/) io.netty:netty-codec-http2:jar:4.1.130.Final
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0)
+
+  - Netty/Codec/Socks (https://netty.io/netty-codec-socks/) io.netty:netty-codec-socks:jar:4.1.130.Final
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0)
+
+  - Netty/Common (https://netty.io/netty-common/) io.netty:netty-common:jar:4.1.130.Final
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0)
+
+  - Netty/Handler (https://netty.io/netty-handler/) io.netty:netty-handler:jar:4.1.130.Final
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0)
+
+  - Netty/Handler/Proxy (https://netty.io/netty-handler-proxy/) io.netty:netty-handler-proxy:jar:4.1.130.Final
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0)
+
+  - Netty/Resolver (https://netty.io/netty-resolver/) io.netty:netty-resolver:jar:4.1.130.Final
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0)
+
+  - Netty/Resolver/DNS (https://netty.io/netty-resolver-dns/) io.netty:netty-resolver-dns:jar:4.1.130.Final
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0)
+
+  - Netty/Transport (https://netty.io/netty-transport/) io.netty:netty-transport:jar:4.1.130.Final
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0)
+
+  - Netty/Transport/Native/Unix/Common (https://netty.io/netty-transport-native-unix-common/) io.netty:netty-transport-native-unix-common:jar:4.1.130.Final
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0)
+
+
+From: 'XStream' (http://x-stream.github.io)
+
+  - XStream Core (http://x-stream.github.io/xstream) com.thoughtworks.xstream:xstream:jar:1.4.21
+    License: BSD-3-Clause  (http://x-stream.github.io/license.html)
+
+
+
+
+

@@ -1,0 +1,9 @@
+META-INF/quarkus-config-doc/quarkus-config-model.json
+org/kie/kogito/addons/quarkus/data/index/deployment/KogitoAppsPersistenceConfig.class
+META-INF/quarkus-config-doc/quarkus-config-model-version
+org/kie/kogito/addons/quarkus/data/index/deployment/SQLiteDataIndexProcessor.class
+META-INF/quarkus-config-doc/quarkus-config-javadoc.json
+META-INF/quarkus-javadoc.properties
+META-INF/quarkus-config-roots.list
+org/kie/kogito/addons/quarkus/data/index/deployment/SqliteZonedDateTimeIntegrationProcessor.class
+META-INF/quarkus-build-steps.list

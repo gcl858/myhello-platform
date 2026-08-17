@@ -4,7 +4,8 @@
   "metadata" : {
     "annotations" : {
       "app.quarkus.io/quarkus-version" : "3.27.2",
-      "app.quarkus.io/build-timestamp" : "2026-08-17 - 08:38:54 +0000"
+      "app.quarkus.io/vcs-uri" : "https://github.com/gcl858/myhello-platform.git",
+      "app.quarkus.io/build-timestamp" : "2026-08-17 - 11:40:43 +0000"
     },
     "labels" : {
       "app.kubernetes.io/name" : "transfer-app",
@@ -54,7 +55,8 @@
   "metadata" : {
     "annotations" : {
       "app.quarkus.io/quarkus-version" : "3.27.2",
-      "app.quarkus.io/build-timestamp" : "2026-08-17 - 08:38:54 +0000"
+      "app.quarkus.io/vcs-uri" : "https://github.com/gcl858/myhello-platform.git",
+      "app.quarkus.io/build-timestamp" : "2026-08-17 - 11:40:43 +0000"
     },
     "labels" : {
       "app.kubernetes.io/name" : "transfer-app",
@@ -82,7 +84,8 @@
   "metadata" : {
     "annotations" : {
       "app.quarkus.io/quarkus-version" : "3.27.2",
-      "app.quarkus.io/build-timestamp" : "2026-08-17 - 08:38:54 +0000"
+      "app.quarkus.io/vcs-uri" : "https://github.com/gcl858/myhello-platform.git",
+      "app.quarkus.io/build-timestamp" : "2026-08-17 - 11:40:43 +0000"
     },
     "labels" : {
       "app.kubernetes.io/name" : "transfer-app",
@@ -95,20 +98,21 @@
     "replicas" : 1,
     "selector" : {
       "matchLabels" : {
-        "app.kubernetes.io/name" : "transfer-app",
-        "app.kubernetes.io/version" : "1.0.0-SNAPSHOT"
+        "app.kubernetes.io/version" : "1.0.0-SNAPSHOT",
+        "app.kubernetes.io/name" : "transfer-app"
       }
     },
     "template" : {
       "metadata" : {
         "annotations" : {
           "app.quarkus.io/quarkus-version" : "3.27.2",
-          "app.quarkus.io/build-timestamp" : "2026-08-17 - 08:38:54 +0000"
+          "app.quarkus.io/vcs-uri" : "https://github.com/gcl858/myhello-platform.git",
+          "app.quarkus.io/build-timestamp" : "2026-08-17 - 11:40:43 +0000"
         },
         "labels" : {
           "app.kubernetes.io/managed-by" : "quarkus",
-          "app.kubernetes.io/name" : "transfer-app",
-          "app.kubernetes.io/version" : "1.0.0-SNAPSHOT"
+          "app.kubernetes.io/version" : "1.0.0-SNAPSHOT",
+          "app.kubernetes.io/name" : "transfer-app"
         }
       },
       "spec" : {

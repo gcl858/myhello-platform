@@ -11,7 +11,12 @@ myhello-platform/                                    ← parent POM (packaging=p
 │
 ├── platform-security/                               ← 橫切:OpenAPI filter, SonataFlow security, Response unwrap
 │
-├── platform-data-index/                             ← Kogito Data Index + SQLite 自訂 dialect + Flyway
+├── platform-extensions/                             ← Kogito / Quarkus 擴展與 SQLite 修補原始碼 (Data Index & Storage)
+│   ├── data-index-storage-sqlite/                   ← SQLite 儲存適配器與 22 個 Flyway SQL 腳本
+│   ├── kogito-addons-quarkus-data-index-sqlite/     ← Data Index Runtime 與 Deployment 擴展
+│   └── kogito-addons-quarkus-data-index-persistence-sqlite/ ← 持久化 Runtime 與 Deployment 擴展
+│
+├── platform-data-index/                             ← Kogito Data Index + SQLite 自訂 dialect + 健康檢查
 │
 ├── domain-transfer/                                 ← Bounded context: 轉帳 (parent)
 │   ├── transfer-api/                                ← OpenAPI specs + DTO + JAX-RS mock

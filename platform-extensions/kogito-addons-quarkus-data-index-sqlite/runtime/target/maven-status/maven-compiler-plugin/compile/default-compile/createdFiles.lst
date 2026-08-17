@@ -1,0 +1,6 @@
+org/kie/kogito/addons/quarkus/data/index/runtime/SqliteZonedDateTimeUserType.class
+org/kie/kogito/addons/quarkus/data/index/runtime/SqliteZonedDateTimeJdbcType.class
+org/kie/kogito/addons/quarkus/data/index/runtime/SqliteZonedDateTimeJdbcType$1.class
+org/kie/kogito/addons/quarkus/data/index/runtime/SqliteZonedDateTimeJavaType.class
+org/kie/kogito/addons/quarkus/data/index/runtime/SqliteZonedDateTimeJdbcType$2.class
+org/kie/kogito/addons/quarkus/data/index/runtime/SqliteZonedDateTimeIntegrationListener.class

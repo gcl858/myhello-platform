@@ -1,0 +1,17 @@
+---
+extension:
+  groupId: "org.kie"
+  artifactId: "kogito-addons-quarkus-data-index-sqlite"
+  name: "Kogito Apps :: Kogito Addons Quarkus Data Index SQLite :: Deployment"
+  nameSource: "POM_XML"
+  detected: true
+elements:
+  org.kie.kogito.addons.quarkus.data.index.deployment.KogitoAppsPersistenceConfig:
+    description: "Quarkus config root that registers {@code kogito"
+    format: "JAVADOC"
+  org.kie.kogito.addons.quarkus.data.index.deployment.KogitoAppsPersistenceConfig.type:
+    description: "Kogito storage backend selection. Read at runtime by\n{@code org.kie.kogito.persistence.api.factory.KogitoPersistenceEventListener}\n\
+      (and friends) via {@code org.eclipse.microprofile.config.Config}.\n\n<p>\nValid\
+      \ values: {@code inmemory}, {@code postgresql}, {@code mongodb},\n{@code sqlite}.\
+      \ Default is {@code sqlite} (set by the bundled\n{@code META-INF/resources/application.properties})."
+    format: "JAVADOC"

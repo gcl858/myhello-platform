@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.acme.platform</groupId>
+        <artifactId>myhello-platform</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>platform-extensions</artifactId>
+    <packaging>pom</packaging>
+    <name>platform-extensions</name>
+    <description>Kogito / Quarkus 平台擴展與 SQLite 修補模組群</description>
+
+    <properties>
+        <enforcer.skip>true</enforcer.skip>
+        <version.io.quarkus>${quarkus.platform.version}</version.io.quarkus>
+    </properties>
+
+    <modules>
+        <module>data-index-storage-sqlite</module>
+        <module>kogito-addons-quarkus-data-index-persistence-sqlite</module>
+        <module>kogito-addons-quarkus-data-index-sqlite</module>
+    </modules>
+</project>

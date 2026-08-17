@@ -1,0 +1,29 @@
+{
+  "configRoots" : [ {
+    "extension" : {
+      "artifactId" : "kogito-addons-quarkus-data-index-sqlite",
+      "detected" : true,
+      "groupId" : "org.kie",
+      "name" : "Kogito Apps :: Kogito Addons Quarkus Data Index SQLite :: Deployment",
+      "nameSource" : "POM_XML"
+    },
+    "items" : [ {
+      "@class" : "io.quarkus.annotation.processor.documentation.config.model.ConfigProperty",
+      "defaultValue" : "sqlite",
+      "path" : {
+        "@class" : "io.quarkus.annotation.processor.documentation.config.model.ConfigProperty$PropertyPath",
+        "environmentVariable" : "KOGITO_APPS_PERSISTENCE_TYPE",
+        "property" : "kogito.apps.persistence.type"
+      },
+      "phase" : "BUILD_TIME",
+      "sourceElementName" : "type",
+      "sourceElementType" : "METHOD",
+      "sourceType" : "org.kie.kogito.addons.quarkus.data.index.deployment.KogitoAppsPersistenceConfig",
+      "type" : "java.lang.String",
+      "typeDescription" : "string"
+    } ],
+    "prefix" : "kogito.apps.persistence",
+    "qualifiedNames" : [ "org.kie.kogito.addons.quarkus.data.index.deployment.KogitoAppsPersistenceConfig" ],
+    "topLevelPrefix" : "kogito.apps"
+  } ]
+}

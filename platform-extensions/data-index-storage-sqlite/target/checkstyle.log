@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="9.3">
+<file name="/media/op/acer_sata/2026_AI_Hack/SonataFlow/myhello-platform-src-0817/myhello-platform/platform-extensions/data-index-storage-sqlite/src/main/java/org/kie/kogito/index/sqlite/CustomFunctionsContributor.java">
+</file>
+<file name="/media/op/acer_sata/2026_AI_Hack/SonataFlow/myhello-platform-src-0817/myhello-platform/platform-extensions/data-index-storage-sqlite/src/main/java/org/kie/kogito/index/sqlite/SQLiteJsonPredicateBuilder.java">
+</file>
+<file name="/media/op/acer_sata/2026_AI_Hack/SonataFlow/myhello-platform-src-0817/myhello-platform/platform-extensions/data-index-storage-sqlite/src/main/java/org/kie/kogito/index/sqlite/SQLiteStorageServiceCapabilities.java">
+</file>
+<file name="/media/op/acer_sata/2026_AI_Hack/SonataFlow/myhello-platform-src-0817/myhello-platform/platform-extensions/data-index-storage-sqlite/src/main/java/org/kie/kogito/index/sqlite/ContainsSQLFunction.java">
+</file>
+<file name="/media/op/acer_sata/2026_AI_Hack/SonataFlow/myhello-platform-src-0817/myhello-platform/platform-extensions/data-index-storage-sqlite/src/main/resources/META-INF/kie-flyway.properties">
+</file>
+</checkstyle>
